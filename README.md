@@ -1,36 +1,64 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Agent Rank
+
+A curated directory of AI agents and tools. Agent Rank helps users discover and compare different AI agents through detailed listings, comparisons, and blog posts.
+
+## Features
+
+- Comprehensive directory of AI agents
+- Detailed agent comparisons and reviews
+- Regular blog posts about AI tools and trends
+- Categorized listings for easy discovery
+- Search functionality
+- Responsive design
+
+## Tech Stack
+
+- Next.js 14
+- TypeScript
+- Tailwind CSS
+- Framer Motion
+- Next.js App Router
 
 ## Getting Started
 
-First, run the development server:
+1. Clone the repository:
+```bash
+git clone https://github.com/yourusername/agentrank.git
+cd agentrank
+```
 
+2. Install dependencies:
+```bash
+npm install
+# or
+yarn install
+```
+
+3. Run the development server:
 ```bash
 npm run dev
 # or
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+4. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Project Structure
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- `/src/app` - Next.js app router pages and layouts
+- `/src/components` - Reusable React components
+- `/src/data` - Data files for agents and blog posts
+- `/src/lib` - Utility functions and shared code
+- `/public` - Static assets
 
-## Learn More
+## Contributing
 
-To learn more about Next.js, take a look at the following resources:
+This is a personal project that aggregates information about AI agents from public sources. The agent listings and descriptions are based on publicly available information. While we don't accept direct agent submissions, we welcome corrections and updates to existing information via email.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## License
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## Deploy on Vercel
+## Contact
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+For any questions or concerns, please contact [hugh.e.mcinnis@gmail.com](mailto:hugh.e.mcinnis@gmail.com).

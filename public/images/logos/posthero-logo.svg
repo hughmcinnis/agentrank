@@ -1,0 +1,24 @@
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="163.418 7.679442508710801 31.108 36.57839721254356" style="max-height: 500px" width="31.108" height="36.57839721254356">
+    <title>new_logo</title>
+    <defs>
+        <linearGradient id="linearGradient-1" y2="50%" x2="84.625646%" y1="50%" x1="28.0478861%">
+            <stop offset="0%" stop-color="#AB54F2"/>
+            <stop offset="100%" stop-color="#E24AA6"/>
+        </linearGradient>
+        <linearGradient id="linearGradient-2" y2="50%" x2="84.625646%" y1="50%" x1="28.0478861%">
+            <stop offset="0%" stop-color="#AB54F2"/>
+            <stop offset="100%" stop-color="#E24AA6"/>
+        </linearGradient>
+    </defs>
+    <g fill-rule="evenodd" fill="none" stroke-width="1" stroke="none" id="new_logo">
+        <g transform="translate(10.500000, 7.000000)" id="Group">
+            <text fill="#131313" letter-spacing="1.26074074" font-weight="normal" font-size="37" font-family="Montserrat-Regular, Montserrat" id="Posther">
+                <tspan y="36" x="0">Posther</tspan>
+            </text>
+            <g transform="translate(156.000000, 2.000000)" id="icon1-with-heart-full">
+                <path stroke-width="3" stroke="url(#linearGradient-1)" id="Shape" d="M8.5,32.6086957 C13.1943611,32.6086957 17,28.8030568 17,24.1086957 C17,19.4143345 13.1943611,15.6086957 8.5,15.6086957 C3.80563889,15.6086957 0,19.4143345 0,24.1086957 C0,28.8030568 3.80563889,32.6086957 8.5,32.6086957 Z"/>
+                <path fill-rule="nonzero" fill="url(#linearGradient-2)" id="Path" d="M23.0984545,0 C21.7646364,0 20.6249091,0.952112163 19.9987273,1.60852149 C19.3725455,0.952112163 18.2353636,0 16.9021818,0 C14.6042727,0 13,1.60406045 13,3.9002185 C13,6.4302622 14.9924545,8.06554989 16.92,9.64730517 C17.83,10.3948471 18.7718182,11.1672433 19.4940909,12.0237618 C19.6156364,12.1671522 19.7938182,12.25 19.9809091,12.25 L20.0178182,12.25 C20.2055455,12.25 20.3830909,12.1665149 20.504,12.0237618 C21.2275455,11.1672433 22.1687273,10.3942098 23.0793636,9.64730517 C25.0062727,8.06618718 27,6.43089949 27,3.9002185 C27,1.60406045 25.3957273,0 23.0984545,0 Z"/>
+            </g>
+        </g>
+    </g>
+</svg>
