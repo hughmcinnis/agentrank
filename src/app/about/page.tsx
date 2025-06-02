@@ -61,7 +61,7 @@ export default function AboutPage() {
                             Submit Your Agent
                         </h2>
                         <p className="text-gray-400 mb-8">
-                            Are you building an AI agent? We'd love to feature it in our directory.
+                            Are you building an AI agent? We&apos;d love to feature it in our directory.
                             Submit your agent for review and reach thousands of potential users.
                         </p>
 
