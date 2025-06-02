@@ -86,7 +86,7 @@ export default function TermsPage() {
                     <section className="mb-8">
                         <h2 className="text-2xl font-bold text-white mb-4">Disclaimer of Warranties</h2>
                         <p className="text-gray-300">
-                            The directory is provided "as is" without warranties of any kind. We do not guarantee
+                            The directory is provided &quot;as is&quot; without warranties of any kind. We do not guarantee
                             the accuracy, completeness, or reliability of any agent listings or descriptions. We are
                             not liable for any decisions made based on information found in our directory.
                         </p>

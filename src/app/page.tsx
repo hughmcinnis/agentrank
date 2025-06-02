@@ -5,6 +5,7 @@ import SearchBar from '@/components/SearchBar';
 import Link from 'next/link';
 import GradientBackground from '@/components/GradientBackground';
 import { Audiowide } from "next/font/google";
+import Image from 'next/image';
 
 const audiowide = Audiowide({ subsets: ["latin"], weight: ["400"] });
 
@@ -20,7 +21,7 @@ export default function Home() {
             <div className="inline-flex items-center justify-center group">
               <div className="relative">
                 <div className="text-fuchsia-400 group-hover:text-fuchsia-300 transition-colors duration-300">
-                  <img
+                  <Image
                     src="/images/svg/ranking.svg"
                     alt="AgentRank Logo"
                     width={48}

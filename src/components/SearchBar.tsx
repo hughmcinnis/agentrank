@@ -128,7 +128,7 @@ export default function SearchBar() {
                                         onClick={handleSubmit}
                                         className="block w-full px-4 py-2 text-sm text-cyan-300 hover:bg-gray-700/50 transition-colors duration-150"
                                     >
-                                        View all results for "{query}"
+                                        View all results for &quot;{query}&quot;
                                     </button>
                                 </div>
                             )}

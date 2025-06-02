@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react';
 import Modal from './Modal';
 import { useModal } from '@/contexts/ModalContext';
+import Image from 'next/image';
 
 interface CarouselItem {
     type: 'image' | 'video';
@@ -241,10 +242,13 @@ export default function ImageCarousel({ items }: ImageCarouselProps) {
                             </div>
                         </div>
                     ) : (
-                        <img
+                        <Image
                             src={currentItem.url}
                             alt={currentItem.alt}
+                            width={1920}
+                            height={1080}
                             className="max-w-full max-h-full object-contain rounded-[1.75rem]"
+                            priority
                         />
                     )}
                 </div>
