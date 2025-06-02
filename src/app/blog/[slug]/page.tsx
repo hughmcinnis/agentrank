@@ -8,15 +8,18 @@ import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import rehypeRaw from 'rehype-raw';
 import rehypeSanitize from 'rehype-sanitize';
+import type { ExtraProps } from 'react-markdown';
+import type { ComponentPropsWithoutRef } from 'react';
 
 interface BlogPostPageProps {
-    params: {
+    params: Promise<{
         slug: string;
-    };
+    }>;
 }
 
 export async function generateMetadata({ params }: BlogPostPageProps): Promise<Metadata> {
-    const post = blogPosts.find((post) => post.slug === params.slug);
+    const resolvedParams = await params;
+    const post = blogPosts.find((post) => post.slug === resolvedParams.slug);
 
     if (!post) {
         return {
@@ -38,8 +41,9 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
     };
 }
 
-export default function BlogPostPage({ params }: BlogPostPageProps) {
-    const post = blogPosts.find((post) => post.slug === params.slug);
+export default async function BlogPostPage({ params }: BlogPostPageProps) {
+    const resolvedParams = await params;
+    const post = blogPosts.find((post) => post.slug === resolvedParams.slug);
 
     if (!post) {
         notFound();
@@ -100,12 +104,18 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
                             ol: ({ ...props }) => <ol className="mb-6 list-decimal pl-6" {...props} />,
                             li: ({ ...props }) => <li className="mb-2" {...props} />,
                             a: ({ ...props }) => <a className="text-blue-600 hover:text-blue-800 underline" {...props} />,
-                            code: ({ inline, ...props }) =>
-                                inline ? (
-                                    <code className="bg-gray-100 dark:bg-gray-800 rounded px-1" {...props} />
+                            code: ({ inline, className, children, ...props }: ComponentPropsWithoutRef<'code'> & ExtraProps & { inline?: boolean; children?: React.ReactNode }) => {
+                                const match = /language-(\w+)/.exec(className || '');
+                                return !inline && match ? (
+                                    <code className="block bg-gray-100 dark:bg-gray-800 rounded p-4 mb-4" {...props} >
+                                        {String(children).replace(/\n$/, '')}
+                                    </code>
                                 ) : (
-                                    <code className="block bg-gray-100 dark:bg-gray-800 rounded p-4 mb-4" {...props} />
-                                ),
+                                    <code className="bg-gray-100 dark:bg-gray-800 rounded px-1" {...props}>
+                                        {children}
+                                    </code>
+                                );
+                            },
                             blockquote: ({ ...props }) => (
                                 <blockquote className="border-l-4 border-gray-300 pl-4 italic my-6" {...props} />
                             )

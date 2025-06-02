@@ -1,15 +1,17 @@
 import { getCategoryById } from '@/lib/categories';
 import { Metadata } from 'next';
+import { AgentCategory } from '@/lib/search';
 
 interface Props {
-    params: {
+    params: Promise<{
         category: string;
-    };
+    }>;
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-    const categoryId = params?.category;
-    const category = getCategoryById(categoryId);
+    const resolvedParams = await params;
+    const categoryId = resolvedParams?.category;
+    const category = getCategoryById(categoryId as AgentCategory);
     if (!category) return {};
 
     return {

@@ -1,6 +1,8 @@
 import Fuse from 'fuse.js';
 import { Agent, agents } from '@/data/agents';
 
+export type AgentCategory = 'writing' | 'coding' | 'sales' | 'customer-support' | 'data-analysis' | 'research' | 'marketing' | 'productivity' | 'email' | 'transcription' | 'document-analysis' | 'scheduling' | 'seo' | 'social-media' | 'accounting';
+
 const fuseOptions = {
     keys: [
         { name: 'name', weight: 2 },
@@ -23,7 +25,7 @@ export const searchAgents = (query: string): Agent[] => {
     return results.map(result => result.item);
 };
 
-export const filterAgentsByCategory = (category: string): Agent[] => {
+export const filterAgentsByCategory = (category: AgentCategory | 'all'): Agent[] => {
     if (category === 'all') return agents;
     return agents.filter(agent => agent.categories.includes(category));
 };

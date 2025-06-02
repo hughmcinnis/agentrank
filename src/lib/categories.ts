@@ -1,5 +1,7 @@
+import { AgentCategory } from './search';
+
 export interface Category {
-    id: string;
+    id: AgentCategory;
     name: string;
     description: string;
     icon: string;
@@ -98,10 +100,10 @@ export const categories: Category[] = [
     }
 ];
 
-export const getCategoryById = (id: string): Category | undefined => {
+export const getCategoryById = (id: AgentCategory): Category | undefined => {
     return categories.find(category => category.id === id);
 };
 
-export const getCategoryName = (id: string): string => {
+export const getCategoryName = (id: AgentCategory): string => {
     return getCategoryById(id)?.name || id;
 }; 

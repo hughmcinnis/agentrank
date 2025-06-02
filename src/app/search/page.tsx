@@ -3,21 +3,23 @@ import AgentGrid from '@/components/AgentGrid';
 import GradientBackground from '@/components/GradientBackground';
 
 interface Props {
-    searchParams: {
+    searchParams: Promise<{
         q?: string;
-    };
+    }>;
 }
 
-export function generateMetadata({ searchParams }: Props) {
-    const query = searchParams.q || '';
+export async function generateMetadata({ searchParams }: Props) {
+    const resolvedSearchParams = await searchParams;
+    const query = resolvedSearchParams.q || '';
     return {
         title: `Search: ${query} | Agent Rank`,
         description: `Search results for "${query}" on Agent Rank - Find the best AI agents for your needs.`
     };
 }
 
-export default function SearchPage({ searchParams }: Props) {
-    const query = searchParams.q || '';
+export default async function SearchPage({ searchParams }: Props) {
+    const resolvedSearchParams = await searchParams;
+    const query = resolvedSearchParams.q || '';
     const agents = searchAgents(query);
 
     return (

@@ -1,16 +1,18 @@
 import { notFound } from 'next/navigation';
 import { getCategoryById } from '@/lib/categories';
 import CategoryPageClient from './CategoryPageClient';
+import { AgentCategory } from '@/lib/search';
 
 interface Props {
-    params: {
+    params: Promise<{
         category: string;
-    };
+    }>;
 }
 
-export default function CategoryPage({ params }: Props) {
-    const categoryId = params?.category;
-    const category = getCategoryById(categoryId);
+export default async function CategoryPage({ params }: Props) {
+    const resolvedParams = await params;
+    const categoryId = resolvedParams?.category;
+    const category = getCategoryById(categoryId as AgentCategory);
 
     if (!category) {
         notFound();
