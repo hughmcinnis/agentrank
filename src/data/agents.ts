@@ -70,7 +70,7 @@ export const agents: Agent[] = [
             type: "video",
             url: "",
             alt: "GitHub Copilot Demo",
-            videoUid: "a7b9d9fea27cd6fd5bc08605d5b832dd"
+            videoUid: "ee005f82d38ca8467f23fb899679f2c2"
         }],
         features: ["Multi-model AI access", "Copilot Chat", "Coding Agent", "Code completions", "Enterprise integration"],
         useCases: ["Code generation", "Code explanation", "Debugging", "Learning new patterns"],

@@ -9,13 +9,39 @@ import { Metadata } from 'next';
 import GradientBackground from '@/components/GradientBackground';
 import Image from 'next/image';
 
+export async function generateMetadata({
+    params
+}: {
+    params: { slug: string }
+}): Promise<Metadata> {
+    const slug = params?.slug;
+    const agent = agents.find((a) => a.slug === slug);
+    if (!agent) return {};
+
+    return {
+        title: `${agent.name} | Agent Rank`,
+        description: agent.description,
+        openGraph: {
+            title: `${agent.name} | Agent Rank`,
+            description: agent.description,
+            type: 'website'
+        },
+        twitter: {
+            card: 'summary_large_image',
+            title: `${agent.name} | Agent Rank`,
+            description: agent.description
+        }
+    };
+}
+
 export default async function AgentPage({
     params,
+    searchParams,
 }: {
-    params: { slug: string };
-    searchParams?: { [key: string]: string | string[] | undefined };
+    params: Promise<{ slug: string }>;
+    searchParams?: Promise<{ [key: string]: string | string[] | undefined }>;
 }) {
-    const slug = params?.slug;
+    const { slug } = await params;
     const agent = agents.find((a) => a.slug === slug);
 
     if (!agent) {
@@ -152,25 +178,4 @@ export default async function AgentPage({
             </div>
         </GradientBackground>
     );
-}
-
-export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
-    const slug = params?.slug;
-    const agent = agents.find((a) => a.slug === slug);
-    if (!agent) return {};
-
-    return {
-        title: `${agent.name} | Agent Rank`,
-        description: agent.description,
-        openGraph: {
-            title: `${agent.name} | Agent Rank`,
-            description: agent.description,
-            type: 'website'
-        },
-        twitter: {
-            card: 'summary_large_image',
-            title: `${agent.name} | Agent Rank`,
-            description: agent.description
-        }
-    };
 } 
