@@ -9,10 +9,11 @@ import { Metadata } from 'next';
 import GradientBackground from '@/components/GradientBackground';
 import Image from 'next/image';
 
-interface Props {
+type Props = {
     params: {
         slug: string;
-    };
+    }
+    searchParams?: { [key: string]: string | string[] | undefined }
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
