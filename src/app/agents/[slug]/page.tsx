@@ -36,10 +36,8 @@ export async function generateMetadata({
 
 export default async function AgentPage({
     params,
-    searchParams,
 }: {
     params: Promise<{ slug: string }>;
-    searchParams?: Promise<{ [key: string]: string | string[] | undefined }>;
 }) {
     const { slug } = await params;
     const agent = agents.find((a) => a.slug === slug);
