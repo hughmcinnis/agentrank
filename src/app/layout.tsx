@@ -1,12 +1,11 @@
 import type { Metadata } from "next";
-import { Inter, Audiowide } from "next/font/google";
+import { Inter } from "next/font/google";
 import "./globals.css";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { ModalProvider } from "@/contexts/ModalContext";
 
 const inter = Inter({ subsets: ["latin"] });
-const audiowide = Audiowide({ subsets: ["latin"], weight: ["400"] });
 
 export const metadata: Metadata = {
   title: "Agent Rank - Discover the Best AI Agents",

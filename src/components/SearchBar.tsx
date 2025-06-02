@@ -8,6 +8,7 @@ import { searchAgents } from '@/lib/search';
 import { motion, AnimatePresence } from 'framer-motion';
 import Link from 'next/link';
 import { truncate } from '@/lib/utils';
+import Image from 'next/image';
 
 export default function SearchBar() {
     const router = useRouter();
@@ -93,10 +94,12 @@ export default function SearchBar() {
                                         <div className="flex items-center">
                                             <div className="flex-shrink-0 w-6">
                                                 {agent.logo ? (
-                                                    <img
+                                                    <Image
                                                         src={agent.logo}
-                                                        alt={agent.name}
-                                                        className="h-6 w-6 rounded-full"
+                                                        alt={`${agent.name} logo`}
+                                                        width={32}
+                                                        height={32}
+                                                        className="w-8 h-8 rounded-lg object-contain"
                                                     />
                                                 ) : (
                                                     <div className="h-6 w-6 rounded-full bg-cyan-500/20 flex items-center justify-center">

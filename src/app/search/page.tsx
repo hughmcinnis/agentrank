@@ -30,7 +30,7 @@ export default function SearchPage({ searchParams }: Props) {
                     <p className="text-xl text-gray-400 max-w-2xl mx-auto">
                         {query ? (
                             <>
-                                Showing results for <span className="text-cyan-400">"{query}"</span>
+                                Showing results for <span className="text-cyan-400">&quot;{query}&quot;</span>
                             </>
                         ) : (
                             'Enter a search term to find AI agents'

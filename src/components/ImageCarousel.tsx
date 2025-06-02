@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useRef, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import Modal from './Modal';
 import { useModal } from '@/contexts/ModalContext';
 
@@ -22,10 +22,6 @@ export default function ImageCarousel({ items }: ImageCarouselProps) {
     const [isVideoLoading, setIsVideoLoading] = useState(true);
     const [isVideoPlaying, setIsVideoPlaying] = useState(false);
     const [videoError, setVideoError] = useState<string | null>(null);
-
-    // Remove unused refs
-    // const videoRef = useRef<HTMLVideoElement>(null);
-    // const modalVideoRef = useRef<HTMLVideoElement>(null);
 
     const getVideoUrl = (item: CarouselItem, isModal: boolean = false) => {
         if (item.videoUid) {
@@ -173,7 +169,7 @@ export default function ImageCarousel({ items }: ImageCarouselProps) {
             setIsVideoPlaying(false);
             setVideoError(null);
         }
-    }, [currentIndex]);
+    }, [currentIndex, items]);
 
     const nextSlide = () => {
         setCurrentIndex((prevIndex) => (prevIndex + 1) % items.length);
@@ -200,15 +196,6 @@ export default function ImageCarousel({ items }: ImageCarouselProps) {
         setShowLocalModal(false);
         setIsModalOpen(false);
     };
-
-    // Add effect to handle initial video state
-    useEffect(() => {
-        if (items[currentIndex]?.type === 'video') {
-            setIsVideoLoading(true);
-            setIsVideoPlaying(false);
-            setVideoError(null);
-        }
-    }, [currentIndex]);
 
     if (!items.length) return null;
 

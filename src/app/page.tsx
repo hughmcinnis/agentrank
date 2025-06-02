@@ -1,4 +1,3 @@
-import { agents } from '@/data/agents';
 import { categories } from '@/lib/categories';
 import { getRecentAgents } from '@/lib/search';
 import AgentGrid from '@/components/AgentGrid';

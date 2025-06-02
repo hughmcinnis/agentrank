@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { Agent } from '@/data/agents';
 import { getCategoryById } from '@/lib/categories';
+import Image from 'next/image';
 
 interface Props {
     agent: Agent;
@@ -47,10 +48,12 @@ export default function AgentCard({ agent }: Props) {
                 <div className="w-full max-w-[90%] flex items-start space-x-3">
                     {agent.logo && (
                         <div className="flex-shrink-0">
-                            <img
+                            <Image
                                 src={agent.logo}
                                 alt={`${agent.name} logo`}
-                                className="h-10 w-10 sm:h-12 sm:w-12 rounded-lg object-contain"
+                                width={48}
+                                height={48}
+                                className="w-12 h-12 rounded-lg object-contain"
                             />
                         </div>
                     )}

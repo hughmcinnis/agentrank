@@ -6,7 +6,6 @@ import { useRouter } from 'next/navigation';
 import { MagnifyingGlassIcon } from '@heroicons/react/24/outline';
 import { ChevronDownIcon } from '@heroicons/react/20/solid';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
-import { ChartBar } from '@phosphor-icons/react';
 import { categories } from '@/lib/categories';
 import { cn } from '@/lib/utils';
 import { FormEvent, useState, useEffect, useRef } from 'react';

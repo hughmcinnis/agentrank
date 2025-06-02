@@ -92,21 +92,21 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
                         remarkPlugins={[remarkGfm]}
                         rehypePlugins={[rehypeRaw, rehypeSanitize]}
                         components={{
-                            h1: ({ node, ...props }) => <h1 className="text-4xl font-bold mb-8" {...props} />,
-                            h2: ({ node, ...props }) => <h2 className="text-3xl font-bold mt-12 mb-6" {...props} />,
-                            h3: ({ node, ...props }) => <h3 className="text-2xl font-semibold mt-8 mb-4" {...props} />,
-                            p: ({ node, ...props }) => <p className="mb-6 leading-relaxed" {...props} />,
-                            ul: ({ node, ...props }) => <ul className="mb-6 list-disc pl-6" {...props} />,
-                            ol: ({ node, ...props }) => <ol className="mb-6 list-decimal pl-6" {...props} />,
-                            li: ({ node, ...props }) => <li className="mb-2" {...props} />,
-                            a: ({ node, ...props }) => <a className="text-blue-600 hover:text-blue-800 underline" {...props} />,
-                            code: ({ node, inline, ...props }) =>
+                            h1: ({ ...props }) => <h1 className="text-4xl font-bold mb-8" {...props} />,
+                            h2: ({ ...props }) => <h2 className="text-3xl font-bold mt-12 mb-6" {...props} />,
+                            h3: ({ ...props }) => <h3 className="text-2xl font-semibold mt-8 mb-4" {...props} />,
+                            p: ({ ...props }) => <p className="mb-6 leading-relaxed" {...props} />,
+                            ul: ({ ...props }) => <ul className="mb-6 list-disc pl-6" {...props} />,
+                            ol: ({ ...props }) => <ol className="mb-6 list-decimal pl-6" {...props} />,
+                            li: ({ ...props }) => <li className="mb-2" {...props} />,
+                            a: ({ ...props }) => <a className="text-blue-600 hover:text-blue-800 underline" {...props} />,
+                            code: ({ inline, ...props }) =>
                                 inline ? (
                                     <code className="bg-gray-100 dark:bg-gray-800 rounded px-1" {...props} />
                                 ) : (
                                     <code className="block bg-gray-100 dark:bg-gray-800 rounded p-4 mb-4" {...props} />
                                 ),
-                            blockquote: ({ node, ...props }) => (
+                            blockquote: ({ ...props }) => (
                                 <blockquote className="border-l-4 border-gray-300 pl-4 italic my-6" {...props} />
                             )
                         }}

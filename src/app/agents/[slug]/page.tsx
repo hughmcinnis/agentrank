@@ -7,6 +7,7 @@ import AgentGrid from '@/components/AgentGrid';
 import ImageCarousel from '@/components/ImageCarousel';
 import { Metadata } from 'next';
 import GradientBackground from '@/components/GradientBackground';
+import Image from 'next/image';
 
 interface Props {
     params: {
@@ -75,10 +76,12 @@ export default async function AgentPage({ params }: Props) {
                         <div className="flex items-center space-x-4 mb-6">
                             {agent.logo ? (
                                 <div className="w-24 h-24 flex items-center justify-center">
-                                    <img
+                                    <Image
                                         src={agent.logo}
                                         alt={`${agent.name} logo`}
-                                        className="w-20 h-20 object-contain"
+                                        width={48}
+                                        height={48}
+                                        className="w-12 h-12 rounded-lg object-contain"
                                     />
                                 </div>
                             ) : (
