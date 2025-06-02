@@ -9,11 +9,13 @@ import { Metadata } from 'next';
 import GradientBackground from '@/components/GradientBackground';
 import Image from 'next/image';
 
+type Props = {
+    params: { slug: string }
+}
+
 export async function generateMetadata({
     params
-}: {
-    params: { slug: string }
-}): Promise<Metadata> {
+}: Props): Promise<Metadata> {
     const slug = params?.slug;
     const agent = agents.find((a) => a.slug === slug);
     if (!agent) return {};
@@ -34,11 +36,7 @@ export async function generateMetadata({
     };
 }
 
-export default async function AgentPage({
-    params,
-}: {
-    params: { slug: string };
-}) {
+export default function AgentPage({ params }: Props) {
     const { slug } = params;
     const agent = agents.find((a) => a.slug === slug);
 
