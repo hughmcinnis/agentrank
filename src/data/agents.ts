@@ -14,7 +14,12 @@ export interface Agent {
     };
     logo?: string;
     screenshots?: string[];
-    videos?: string[];
+    videos?: Array<{
+        type: 'video';
+        url: string;
+        alt: string;
+        videoUid: string;
+    }>;
     features: string[];
     useCases: string[];
     addedDate: string;
@@ -28,7 +33,7 @@ export const agents: Agent[] = [
         tagline: "Claude is AI for all of us",
         description: "Claude is Anthropic's family of large language models designed to be helpful, harmless, and honest. Built using Constitutional AI, Claude combines best-in-class jailbreak resistance and misuse prevention while providing superior performance for complex analysis, coding, and writing tasks.",
         categories: ["writing", "coding", "research"],
-        website: "https://claude.ai",
+        website: "https://www.anthropic.com/claude",
         pricing: "Free Plan available, Pro: $20/month ($17/month annual), Max: $100-200/month, Team: Contact for pricing, Enterprise: $60/seat minimum (70+ users)",
         paymentOptions: {
             isPaid: true,
@@ -36,7 +41,12 @@ export const agents: Agent[] = [
             hasFreeStarterPlan: true
         },
         logo: "/images/logos/claude-logo.svg",
-        videos: ["https://cdn.sanity.io/files/4zrzovbb/website/38fccac4003a3181499bd3c8828dc09293862da2.mp4"],
+        videos: [{
+            type: "video",
+            url: "",
+            alt: "Claude Demo",
+            videoUid: "ae0e79df9857061990dcbd1887e66dc7"
+        }],
         features: ["Constitutional AI safety", "Advanced reasoning", "Computer use capability", "Web search with citations", "200K token context"],
         useCases: ["Complex reasoning", "Software development", "Content creation", "Enterprise workflows"],
         addedDate: "2024-01-15"
@@ -56,7 +66,12 @@ export const agents: Agent[] = [
             hasFreeStarterPlan: true
         },
         logo: "/images/logos/github-copilot-logo.svg",
-        videos: ["https://videos.ctfassets.net/8aevphvgewt8/5R57iyx96ENtWp4nOHBsAl/f935b264e79099bd8ed54e2d74db7ab5/hero-animation-lg.mp4"],
+        videos: [{
+            type: "video",
+            url: "",
+            alt: "GitHub Copilot Demo",
+            videoUid: "a7b9d9fea27cd6fd5bc08605d5b832dd"
+        }],
         features: ["Multi-model AI access", "Copilot Chat", "Coding Agent", "Code completions", "Enterprise integration"],
         useCases: ["Code generation", "Code explanation", "Debugging", "Learning new patterns"],
         addedDate: "2024-01-10"
@@ -99,7 +114,12 @@ export const agents: Agent[] = [
             hasFreeStarterPlan: false
         },
         logo: "/images/logos/jasper-logo.svg",
-        videos: ["/videos/jasperoverview.mp4"],
+        videos: [{
+            type: "video",
+            url: "",
+            alt: "Jasper Overview",
+            videoUid: "37350cfef8c89a8d789bb55ffff47872"
+        }],
         features: ["Brand voice training", "Marketing intelligence layer", "Jasper Art", "Chrome extension", "50+ templates"],
         useCases: ["Enterprise content marketing", "Multi-brand campaigns", "Social media management", "Performance marketing"],
         addedDate: "2024-01-18"
@@ -111,7 +131,7 @@ export const agents: Agent[] = [
         tagline: "The highest-performing AI agent in customer service",
         description: "Fin AI Agent is an advanced AI-powered customer service agent that provides human-quality, personalized support with the highest resolution rates and industry-low hallucinations.",
         categories: ["customer-support"],
-        website: "https://www.intercom.com/resolution-bot",
+        website: "https://www.intercom.com/",
         pricing: "Base plans: $29-139/seat/month, Fin AI Agent: $0.99 per resolved conversation, Fin AI Copilot: $35/seat/month",
         paymentOptions: {
             isPaid: true,
@@ -119,7 +139,12 @@ export const agents: Agent[] = [
             hasFreeStarterPlan: false
         },
         logo: "/images/logos/intercom-bot-logo.svg",
-        videos: ["/videos/intercomdemo.mp4"],
+        videos: [{
+            type: "video",
+            url: "",
+            alt: "Intercom Demo",
+            videoUid: "1f2e90cf1ed0bad6563fc0583bc477d7"
+        }],
         features: ["Multi-source answers", "Fin AI Engine™", "45+ languages", "Custom training", "Omnichannel support"],
         useCases: ["Frontline support automation", "24/7 customer service", "Multilingual support", "Complex query resolution"],
         addedDate: "2024-01-12"
@@ -139,9 +164,12 @@ export const agents: Agent[] = [
             hasFreeStarterPlan: false
         },
         logo: "/images/logos/superhuman-logo.svg",
-        videos: [
-            "https://dms.licdn.com/playlist/vid/v2/D5605AQHNVScHntQxsg/mp4-640p-30fp-crf28/B56ZaRtpOsHABM-/0/1746201385332?e=1749164400&v=beta&t=DLaZ_aVQFW5qS8xqfhibn6vpIrE2TmHb_jkIlT8Dsb4",
-        ],
+        videos: [{
+            type: "video",
+            url: "",
+            alt: "Superhuman Demo",
+            videoUid: "a7b9d9fea27cd6fd5bc08605d5b832dd"
+        }],
         features: ["Superhuman AI", "Auto labels/archive", "AI summarization", "Ask AI", "Split inbox"],
         useCases: ["High-volume email management", "Collaborative workflows", "Inbox zero achievement", "Speed-focused processing"],
         addedDate: "2024-01-25"
@@ -161,7 +189,12 @@ export const agents: Agent[] = [
             hasFreeStarterPlan: true
         },
         logo: "/images/logos/lavender-logo.svg",
-        videos: ["/videos/lavenderoverview.mp4"],
+        videos: [{
+            type: "video",
+            url: "",
+            alt: "Lavender Overview",
+            videoUid: "67d4367457601c7ff281f2a9772f2715"
+        }],
         features: ["AI email coach", "Personalization assistant", "Team analytics", "Mobile preview", "Integration suite"],
         useCases: ["Cold email optimization", "Sales team training", "Email performance analytics", "Personalization at scale"],
         addedDate: "2024-01-25"
@@ -173,7 +206,7 @@ export const agents: Agent[] = [
         tagline: "AI-Powered Notetaker for Smarter Workflows",
         description: "Notta is an intelligent AI transcription and note-taking assistant that transforms speech into text with 98.86% accuracy.",
         categories: ["transcription"],
-        website: "https://notta.ai",
+        website: "https://www.notta.ai/en?_gl=1*cwl356*_up*MQ..*_gs*MQ..&gclid=Cj0KCQjw9O_BBhCUARIsAHQMjS6LaroTvrmHL4JAy6pckj2Jo_c3AsluuAh1cKsVTtNsqj4slUEFVXoaAmxxEALw_wcB&gbraid=0AAAAABSsTG05-US8R5ISN0C6LZyWO5BDq",
         pricing: "Free: 120 minutes/month, Pro: $14.99/month ($8.17 annual), Business: $27.99/month per seat, Enterprise: Custom pricing",
         paymentOptions: {
             isPaid: true,
@@ -181,7 +214,12 @@ export const agents: Agent[] = [
             hasFreeStarterPlan: true
         },
         logo: "/images/logos/notta-logo.svg",
-        videos: ["/videos/nottaoverview.mp4"],
+        videos: [{
+            type: "video",
+            url: "",
+            alt: "Notta Overview",
+            videoUid: "2e62104b024a770a3d1ffd4e5279d503"
+        }],
         features: ["Real-time transcription", "AI summarization", "Multi-language translation", "Smart integration", "AI-enhanced audio"],
         useCases: ["Sales calls", "Content creation", "Healthcare documentation", "Student research", "Remote teams"],
         addedDate: "2024-01-25"
@@ -201,7 +239,12 @@ export const agents: Agent[] = [
             hasFreeStarterPlan: true
         },
         logo: "/images/logos/scholarcy-logo.svg",
-        videos: ["/videos/scholarcyoverview.mp4"],
+        videos: [{
+            type: "video",
+            url: "",
+            alt: "Scholarcy Overview",
+            videoUid: "7e6276339910856a735eca3b77ea44f4"
+        }],
         features: ["AI summarization", "Summary flashcards", "Reference extraction", "Figure/table extraction", "Browser extension"],
         useCases: ["Literature reviews", "Exam preparation", "Research organization", "Policy research"],
         addedDate: "2024-01-25"
@@ -221,7 +264,12 @@ export const agents: Agent[] = [
             hasFreeStarterPlan: false
         },
         logo: "/images/logos/motion-logo.svg",
-        videos: ["/videos/motionoverview.mp4"],
+        videos: [{
+            type: "video",
+            url: "",
+            alt: "Motion Overview",
+            videoUid: "6737da00d85052fbb964c53a75cf435a"
+        }],
         features: ["AI intelligent calendar", "Auto-task prioritization", "Dynamic rescheduling", "Meeting scheduler", "Project management"],
         useCases: ["Executive planning", "Team project management", "Task prioritization", "Integrated workflow management"],
         addedDate: "2024-01-25"
@@ -260,7 +308,12 @@ export const agents: Agent[] = [
             hasFreeStarterPlan: true
         },
         logo: "/images/logos/bito-ai-logo.svg",
-        videos: ["/videos/bitooverview.mp4"],
+        videos: [{
+            type: "video",
+            url: "",
+            alt: "Bito Overview",
+            videoUid: "d58597c92c587d6a242b669f28203b61"
+        }],
         features: ["AI Code Review Agent", "Multi-platform integration", "Codebase understanding", "Chain of Thought reasoning", "Security analysis"],
         useCases: ["Automated code reviews", "Code generation", "Code explanation", "Security scanning"],
         addedDate: "2024-01-25"
@@ -280,7 +333,12 @@ export const agents: Agent[] = [
             hasFreeStarterPlan: true
         },
         logo: "/images/logos/coderabbit-logo.svg",
-        videos: ["https://www.coderabbit.ai/homevideo.webm"],
+        videos: [{
+            type: "video",
+            url: "",
+            alt: "CodeRabbit Overview",
+            videoUid: "10912784825fd43d9de756a3abbc87be"
+        }],
         features: ["Agentic chat system", "Advanced context analysis", "Sandboxed review environment", "Multi-platform integration", "Learning system"],
         useCases: ["Automated PR reviews", "Security vulnerability detection", "Code quality enforcement", "Team knowledge sharing"],
         addedDate: "2024-01-25"
@@ -300,7 +358,12 @@ export const agents: Agent[] = [
             hasFreeStarterPlan: false
         },
         logo: "/images/logos/anodot-logo.svg",
-        videos: ["/videos/anodotoverview.mp4"],
+        videos: [{
+            type: "video",
+            url: "",
+            alt: "Anodot Overview",
+            videoUid: "b592ad63b7e742b605652ae3ee933044"
+        }],
         features: ["Autonomous anomaly detection", "Root cause analysis", "Real-time monitoring", "Autonomous forecasting", "Alert management"],
         useCases: ["FinTech monitoring", "AdTech optimization", "Telecommunications", "eCommerce analytics", "Gaming analytics"],
         addedDate: "2024-01-25"
@@ -320,7 +383,12 @@ export const agents: Agent[] = [
             hasFreeStarterPlan: false
         },
         logo: "/images/logos/instantly-ai-logo.svg",
-        videos: ["/videos/instantlyoverview.mp4"],
+        videos: [{
+            type: "video",
+            url: "",
+            alt: "Instantly Overview",
+            videoUid: "6d299a6d973724b51dbe3f203f497e04"
+        }],
         features: ["Unlimited email warmup", "AI email writer", "Lead finder database", "Multi-inbox management", "Advanced analytics"],
         useCases: ["Cold email outreach", "Lead generation", "Sales pipeline management", "Deliverability optimization"],
         addedDate: "2024-01-25"
@@ -340,7 +408,12 @@ export const agents: Agent[] = [
             hasFreeStarterPlan: true
         },
         logo: "/images/logos/clay-logo.svg",
-        videos: ["/videos/clayoverview.mp4"],
+        videos: [{
+            type: "video",
+            url: "",
+            alt: "Clay Overview",
+            videoUid: "aff8f34dbce64be28c7ee6297fd2a2c5"
+        }],
         features: ["100+ data provider access", "AI research agents", "Workflow automation", "Real-time web scraping", "CRM integration"],
         useCases: ["Lead enrichment", "Intent-based outbound", "CRM data hygiene", "Market research"],
         addedDate: "2024-01-25"
@@ -360,7 +433,12 @@ export const agents: Agent[] = [
             hasFreeStarterPlan: false
         },
         logo: "/images/logos/forethought-logo.svg",
-        videos: ["/videos/forethoughtoverview.mp4"],
+        videos: [{
+            type: "video",
+            url: "",
+            alt: "Forethought Overview",
+            videoUid: "98c2d0caa714d3d0aa958199a591b95d"
+        }],
         features: ["Autoflows agentic reasoning", "Multi-agent system", "Pre-trained on historical data", "Omnichannel automation", "AI insights"],
         useCases: ["Autonomous issue resolution", "Intelligent ticket routing", "Agent productivity", "Performance optimization"],
         addedDate: "2024-01-25"
@@ -400,7 +478,12 @@ export const agents: Agent[] = [
             hasFreeStarterPlan: false
         },
         logo: "/images/logos/schema-app-logo.svg",
-        videos: ["/videos/schemaoverview.mp4"],
+        videos: [{
+            type: "video",
+            url: "",
+            alt: "Schema App Overview",
+            videoUid: "fb9d468505d609e9e15f66b12fbd6ee2"
+        }],
         features: ["Schema App Highlighter", "Schema App Editor", "Dynamic markup updates", "Performance analytics", "Entity linking"],
         useCases: ["Enterprise structured data", "Knowledge graph development", "Rich results optimization", "Multi-site management"],
         addedDate: "2024-01-25"
@@ -420,7 +503,12 @@ export const agents: Agent[] = [
             hasFreeStarterPlan: false
         },
         logo: "/images/logos/posthero-logo.svg",
-        videos: ["/videos/postherooverview.mp4"],
+        videos: [{
+            type: "video",
+            url: "",
+            alt: "PostHero Overview",
+            videoUid: "4d2428371787d51cc6af933b56850caf"
+        }],
         features: ["Voice to post", "Viral post training", "Content scheduling", "LinkedIn optimization"],
         useCases: ["LinkedIn content", "Personal branding", "Content creation", "Social media management"],
         addedDate: "2024-01-25"
@@ -440,7 +528,12 @@ export const agents: Agent[] = [
             hasFreeStarterPlan: false
         },
         logo: "/images/logos/flick-logo.svg",
-        videos: ["/videos/flickoverview.mp4"],
+        videos: [{
+            type: "video",
+            url: "",
+            alt: "Flick Overview",
+            videoUid: "26534b2840c707664d90f786166d7110"
+        }],
         features: ["Hashtag research", "Competition analysis", "Banned hashtag checker", "Analytics"],
         useCases: ["Instagram growth", "Hashtag optimization", "Content planning", "Reach improvement"],
         addedDate: "2024-01-25"
@@ -460,7 +553,12 @@ export const agents: Agent[] = [
             hasFreeStarterPlan: false
         },
         logo: "/images/logos/truewind-logo.svg",
-        videos: ["/videos/truewindoverview.mp4"],
+        videos: [{
+            type: "video",
+            url: "",
+            alt: "Truewind Overview",
+            videoUid: "ce57756b4eb1df3aec86120ba0695527"
+        }],
         features: ["Autonomous transaction classification", "Intelligent document management", "Automated month-end close", "AI prepaid tracking", "Real-time reconciliation"],
         useCases: ["Startup bookkeeping", "Accounting firm automation", "Fast-growing companies", "CFO support", "Investor relations"],
         addedDate: "2024-01-25"
@@ -480,12 +578,17 @@ export const agents: Agent[] = [
             hasFreeStarterPlan: false
         },
         logo: "/images/logos/hyperbound-logo.svg",
-        videos: ["https://cdn.loom.com/sessions/thumbnails/96351a5d7b534562990979c8ff1628d3-2aecb1e6b7a074a8.mp4 "],
+        videos: [{
+            type: "video",
+            url: "", // Fallback URL if needed
+            alt: "Hyperbound Demo",
+            videoUid: "96351a5d7b534562990979c8ff1628d3"
+        }],
         features: ["Realistic AI buyer simulation", "Custom ICP bot builder", "Real-time analytics", "Multi-scenario training", "Conversation intelligence"],
         useCases: ["Sales development training", "Rep onboarding", "Skill gap identification", "Candidate screening", "Enterprise sales practice"],
         addedDate: "2024-01-25"
     },
-    
+
     {
         id: "25",
         name: "ClickUp Brain",
@@ -493,7 +596,7 @@ export const agents: Agent[] = [
         tagline: "The world's first neural network connecting projects, docs, people, and all of your company's knowledge with AI",
         description: "ClickUp Brain is an AI add-on to ClickUp that connects all work data for intelligent assistance across the platform.",
         categories: ["productivity"],
-        website: "https://clickup.com/features/ai",
+        website: "https://clickup.com/ai",
         pricing: "ClickUp Brain: $5/user/month (add-on to paid plans), Requires base plan: $10-19/user/month, Combined: Starting at $15/user/month",
         paymentOptions: {
             isPaid: true,
@@ -501,7 +604,12 @@ export const agents: Agent[] = [
             hasFreeStarterPlan: false
         },
         logo: "/images/logos/clickup-brain-logo.svg",
-        videos: ["/videos/clickupoverview.mp4"],
+        videos: [{
+            type: "video",
+            url: "",
+            alt: "ClickUp Overview",
+            videoUid: "d7cbfe0aa207c55ddccd0ed058f42665"
+        }],
         features: ["AI knowledge manager", "AI project manager", "AI writer", "Autopilot agents", "Connected search"],
         useCases: ["AI-powered project management", "Knowledge connection", "Workflow automation", "Contextual assistance"],
         addedDate: "2024-01-25"
@@ -542,7 +650,7 @@ export const agents: Agent[] = [
         },
         logo: "/images/logos/sentisum-logo.svg",
         screenshots: ["/images/screenshots/sentisum1.png", "/images/screenshots/sentisum2.png", "/images/screenshots/sentisum3.png", "/images/screenshots/sentisum4.png", "/images/screenshots/sentisum5.png", "/images/screenshots/sentisum6.png"],
-        
+
         features: ["Custom AI models", "Multi-channel analysis", "Real-time sentiment tracking", "Automatic ticket routing", "Granular insights"],
         useCases: ["Customer sentiment analysis", "Support ticket categorization", "Trend identification", "Performance optimization"],
         addedDate: "2024-01-25"
@@ -563,7 +671,7 @@ export const agents: Agent[] = [
         },
         logo: "/images/logos/smartwriter-logo.svg",
         screenshots: ["/images/screenshots/smartwriter1.png", "/images/screenshots/smartwriter2.png", "/images/screenshots/smartwriter3.png"],
-        
+
         features: ["Hyper-personalized cold emails", "LinkedIn Chrome extension", "Automated icebreakers", "Backlink outreach", "Google Sheets integration"],
         useCases: ["B2B sales prospecting", "Link building", "LinkedIn outreach", "Large-scale personalized campaigns"],
         addedDate: "2024-01-25"
@@ -583,7 +691,12 @@ export const agents: Agent[] = [
             hasFreeStarterPlan: false
         },
         logo: "/images/logos/alli-ai-logo.svg",
-        videos: ["/videos/alliaioverview.mp4"],
+        videos: [{
+            type: "video",
+            url: "",
+            alt: "Alli AI Overview",
+            videoUid: "91a7f2b66c6a73ddde311851a5db70ec"
+        }],
         features: ["One-click fixes", "Bulk implementation", "Technical SEO automation", "Instant deployment"],
         useCases: ["Technical SEO", "Site optimization", "SEO fixes", "Ranking improvement"],
         addedDate: "2024-01-25"
@@ -603,7 +716,12 @@ export const agents: Agent[] = [
             hasFreeStarterPlan: true
         },
         logo: "/images/logos/qodo-merge-logo.svg",
-        videos: ["https://www.qodo.ai/wp-content/uploads/2025/03/Qodo-Prod-Captions.mp4"],
+        videos: [{
+            type: "video",
+            url: "",
+            alt: "Qodo Overview",
+            videoUid: "qodooverview"
+        }],
         features: ["Multi-tool orchestration", "Auto-approval", "All languages", "Self-hosted option"],
         useCases: ["Code review", "PR automation", "Quality assurance", "Team workflows"],
         addedDate: "2024-01-25"
@@ -623,7 +741,12 @@ export const agents: Agent[] = [
             hasFreeStarterPlan: false
         },
         logo: "/images/logos/zoominfo-salesos-logo.svg",
-        videos: ["/videos/zoominfooverview.mp4"],
+        videos: [{
+            type: "video",
+            url: "", // Fallback URL if needed
+            alt: "ZoomInfo SalesOS Demo",
+            videoUid: "8035831391ca6c586346f06e4b2bcd9a"
+        }],
         features: ["104M company profiles", "Intent data", "AI Copilot", "Buying group creation"],
         useCases: ["Lead intelligence", "Account targeting", "Sales intelligence", "Enterprise sales"],
         addedDate: "2024-01-25"
@@ -643,7 +766,12 @@ export const agents: Agent[] = [
             hasFreeStarterPlan: true
         },
         logo: "/images/logos/clockwise-logo.svg",
-        videos: ["/videos/clockwiseoverview.mp4"],
+        videos: [{
+            type: "video",
+            url: "",
+            alt: "Clockwise Overview",
+            videoUid: "ec8fb4c7d3c5fad06f6bfe1abc3931d5"
+        }],
         features: ["AI scheduler", "Focus time optimization", "Smart meeting management", "Team calendar sync", "GPT-powered NLP"],
         useCases: ["Team schedule optimization", "Focus time creation", "Meeting culture improvement", "Calendar coordination"],
         addedDate: "2024-01-25"
@@ -663,7 +791,12 @@ export const agents: Agent[] = [
             hasFreeStarterPlan: true
         },
         logo: "/images/logos/writesonic-logo.svg",
-        videos: ["https://videos.writesonic.com/landing-page/original/Writesonic%20Landing%20Page%20-%20Publish.mp4"],
+        videos: [{
+            type: "video",
+            url: "",
+            alt: "Writesonic Overview",
+            videoUid: "writesonicoverview"
+        }],
         features: ["AI Article Writer 6.0", "Chatsonic", "90+ content templates", "SEO optimization suite", "Brand voice creator"],
         useCases: ["Content marketing", "Digital agencies", "eCommerce", "Small businesses", "Freelance writers"],
         addedDate: "2024-01-25"

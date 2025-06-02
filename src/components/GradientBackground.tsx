@@ -10,8 +10,8 @@ export default function GradientBackground({ children, theme = 'dark' }: Props) 
 
     return (
         <div className={`relative min-h-screen ${isDark
-                ? 'bg-gradient-to-br from-gray-900 via-black to-gray-900'
-                : 'bg-gradient-to-br from-gray-800 via-gray-700 to-gray-800'
+            ? 'bg-gradient-to-br from-gray-900 via-black to-gray-900'
+            : 'bg-gradient-to-br from-gray-800 via-gray-700 to-gray-800'
             }`}>
             {/* Animated gradient orbs */}
             <div className="absolute inset-0 overflow-hidden pointer-events-none">
@@ -34,7 +34,7 @@ export default function GradientBackground({ children, theme = 'dark' }: Props) 
             />
 
             {/* Content */}
-            <div className="relative z-10">
+            <div className="relative" style={{ isolation: 'isolate' }}>
                 {children}
             </div>
         </div>

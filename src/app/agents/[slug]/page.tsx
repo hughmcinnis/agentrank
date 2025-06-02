@@ -54,8 +54,9 @@ export default async function AgentPage({ params }: Props) {
         })) : []),
         ...(agent.videos ? agent.videos.map(video => ({
             type: 'video' as const,
-            url: video,
-            alt: `${agent.name} video`
+            url: video.url || `https://customer-7w6ectfrlaic6wci.cloudflarestream.com/${video.videoUid}/iframe`,
+            alt: video.alt || `${agent.name} video`,
+            videoUid: video.videoUid
         })) : [])
     ];
 
