@@ -39,19 +39,10 @@ export async function generateMetadata({
 export default async function AgentPage({
     params,
 }: {
-    params: { slug: string }; // Keep this for the function signature, but recognize Next.js might wrap it
+    params: Promise<{ slug: string }>; // Type the destructured 'params' as a Promise
 }) {
-    // Even if Next.js passes it as a direct object, the type checker might be comparing against a PageProps that expects a Promise signature.
-    // However, the runtime value is likely a direct object. Let's assume the runtime object is { slug: string }
-    // The error was "Type '{ slug: string; }' is missing the following properties from type 'Promise<any>'"
-    // This implies the *expected* type by PageProps for params *is* a Promise.
-    // Let's revert to treating params as a direct object in usage but adjust the function signature to what PageProps might expect.
-    // The issue is tricky. Let's try to match the function signature more closely to what the error implies PageProps expects for the `params` property.
-    // The most direct interpretation of the error is that the `params` property of the component's props object is expected to be a Promise.
-
-    // Let's define the component props inline to be very specific
-    const resolvedParams = await Promise.resolve(params); // Ensure it's treated as a promise if needed by types, then resolve
-    const { slug } = resolvedParams;
+    const actualParams = await params; // Await the Promise to get the params object
+    const { slug } = actualParams;     // Destructure slug from the resolved object
 
     const agent = agents.find((a) => a.slug === slug);
 
