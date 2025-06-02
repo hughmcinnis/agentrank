@@ -37,9 +37,9 @@ export async function generateMetadata({
 export default async function AgentPage({
     params,
 }: {
-    params: Promise<{ slug: string }>;
+    params: { slug: string };
 }) {
-    const { slug } = await params;
+    const { slug } = params;
     const agent = agents.find((a) => a.slug === slug);
 
     if (!agent) {
