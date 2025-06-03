@@ -54,9 +54,11 @@ export async function POST(request: Request) {
                 { status: 500 }
             );
         }
-    } catch (error) {
+    } catch (err) {
+        const errorMessage = err instanceof Error ? err.message : 'Internal server error';
+        console.error('Error in IndexNow API:', errorMessage);
         return NextResponse.json(
-            { error: 'Internal server error' },
+            { error: errorMessage },
             { status: 500 }
         );
     }
