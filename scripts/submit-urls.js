@@ -2,6 +2,21 @@ const fs = require('fs');
 const path = require('path');
 const glob = require('glob');
 
+function extractSlugsFromTypeScript(filePath) {
+    try {
+        const content = fs.readFileSync(filePath, 'utf8');
+        // Extract slugs from export statements using regex
+        const slugMatches = content.match(/['"]slug['"]\s*:\s*['"]([^'"]+)['"]/g) || [];
+        return slugMatches.map(match => {
+            const slug = match.match(/['"]slug['"]\s*:\s*['"]([^'"]+)['"]/)[1];
+            return slug;
+        });
+    } catch (err) {
+        console.warn(`Warning: Could not read file ${filePath}:`, err.message);
+        return [];
+    }
+}
+
 async function getDynamicPaths() {
     const paths = {
         agents: [],
@@ -10,34 +25,44 @@ async function getDynamicPaths() {
     };
 
     try {
+        // Read from TypeScript data files
+        const dataDir = path.join(process.cwd(), 'src', 'data');
+
         // Get agent slugs
-        const agentsDir = path.join(process.cwd(), 'public', 'agents');
-        if (fs.existsSync(agentsDir)) {
-            const files = fs.readdirSync(agentsDir);
-            paths.agents = files
-                .filter(file => file.endsWith('.json'))
-                .map(file => file.replace('.json', ''));
+        const agentsFile = path.join(dataDir, 'agents.ts');
+        if (fs.existsSync(agentsFile)) {
+            console.log('Found agents data file:', agentsFile);
+            paths.agents = extractSlugsFromTypeScript(agentsFile);
         }
 
-        // Get blog slugs
-        const blogsDir = path.join(process.cwd(), 'public', 'blog');
-        if (fs.existsSync(blogsDir)) {
-            const files = fs.readdirSync(blogsDir);
-            paths.blogs = files
-                .filter(file => file.endsWith('.json'))
-                .map(file => file.replace('.json', ''));
+        // Get blog post slugs
+        const blogFile = path.join(dataDir, 'blog-posts.ts');
+        if (fs.existsSync(blogFile)) {
+            console.log('Found blog posts data file:', blogFile);
+            paths.blogs = extractSlugsFromTypeScript(blogFile);
         }
 
-        // Get category slugs
-        const categoriesDir = path.join(process.cwd(), 'public', 'categories');
-        if (fs.existsSync(categoriesDir)) {
-            const files = fs.readdirSync(categoriesDir);
-            paths.categories = files
-                .filter(file => file.endsWith('.json'))
-                .map(file => file.replace('.json', ''));
+        // Get category slugs (if they exist)
+        const categoryFile = path.join(dataDir, 'categories.ts');
+        if (fs.existsSync(categoryFile)) {
+            console.log('Found categories data file:', categoryFile);
+            paths.categories = extractSlugsFromTypeScript(categoryFile);
+        } else {
+            // If no categories file exists, try to extract unique categories from agents
+            if (fs.existsSync(agentsFile)) {
+                const content = fs.readFileSync(agentsFile, 'utf8');
+                const categoryMatches = content.match(/['"]category['"]\s*:\s*['"]([^'"]+)['"]/g) || [];
+                const uniqueCategories = new Set(
+                    categoryMatches.map(match =>
+                        match.match(/['"]category['"]\s*:\s*['"]([^'"]+)['"]/)[1]
+                    )
+                );
+                paths.categories = Array.from(uniqueCategories);
+            }
         }
+
     } catch (err) {
-        console.warn('Warning: Error reading dynamic content directories:', err.message);
+        console.warn('Warning: Error reading data files:', err.message);
     }
 
     return paths;
@@ -91,8 +116,8 @@ async function getAllPages() {
             return;
         }
 
-        // Add normal route
-        routes.add(`/${route}`);
+        // Add normal route (removing .tsx if it's still there)
+        routes.add(`/${route}`.replace('.tsx', ''));
     });
 
     // Add additional known routes
@@ -118,9 +143,9 @@ async function getAllPages() {
 }
 
 async function submitUrls() {
-    const baseUrl = process.env.VERCEL_URL
-        ? `https://${process.env.VERCEL_URL}`
-        : process.env.NEXT_PUBLIC_SITE_URL;
+    // Prefer NEXT_PUBLIC_SITE_URL over VERCEL_URL
+    const baseUrl = process.env.NEXT_PUBLIC_SITE_URL ||
+        (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : '');
 
     if (!baseUrl) {
         console.error('No base URL found. Set NEXT_PUBLIC_SITE_URL environment variable.');
@@ -130,7 +155,11 @@ async function submitUrls() {
     const urlObj = new URL(baseUrl);
     const host = urlObj.host;
     const pages = await getAllPages();
-    const urls = pages.map(page => `${baseUrl}${page}`);
+
+    // Remove any remaining .tsx extensions from routes
+    const urls = pages.map(page =>
+        `${baseUrl}${page}`.replace('.tsx', '')
+    );
 
     console.log(`Found ${urls.length} total URLs to submit`);
     console.log('Routes found:', pages);
