@@ -5,12 +5,30 @@ const glob = require('glob');
 function extractSlugsFromTypeScript(filePath) {
     try {
         const content = fs.readFileSync(filePath, 'utf8');
-        // Extract slugs from export statements using regex
-        const slugMatches = content.match(/['"]slug['"]\s*:\s*['"]([^'"]+)['"]/g) || [];
-        return slugMatches.map(match => {
-            const slug = match.match(/['"]slug['"]\s*:\s*['"]([^'"]+)['"]/)[1];
+
+        // First try to find the array of items
+        const arrayMatch = content.match(/export\s+const\s+(?:agents|blogPosts)\s*:\s*(?:Agent|BlogPost)\[\]\s*=\s*\[([\s\S]*?)\]\s*;/);
+        if (!arrayMatch) {
+            console.warn(`Warning: Could not find array in ${filePath}`);
+            return [];
+        }
+
+        const arrayContent = arrayMatch[1];
+        // Look for slug properties in each object
+        const slugMatches = arrayContent.match(/slug:\s*['"]([^'"]+)['"]/g) || [];
+
+        // Log the raw matches for debugging
+        console.log(`Raw slug matches in ${path.basename(filePath)}:`, slugMatches.length);
+
+        const slugs = slugMatches.map(match => {
+            const slug = match.match(/slug:\s*['"]([^'"]+)['"]/)[1];
             return slug;
         });
+
+        // Log the extracted slugs
+        console.log(`Extracted ${slugs.length} slugs from ${path.basename(filePath)}:`, slugs);
+
+        return slugs;
     } catch (err) {
         console.warn(`Warning: Could not read file ${filePath}:`, err.message);
         return [];
@@ -33,6 +51,7 @@ async function getDynamicPaths() {
         if (fs.existsSync(agentsFile)) {
             console.log('Found agents data file:', agentsFile);
             paths.agents = extractSlugsFromTypeScript(agentsFile);
+            console.log('Total agents found:', paths.agents.length);
         }
 
         // Get blog post slugs
@@ -40,24 +59,21 @@ async function getDynamicPaths() {
         if (fs.existsSync(blogFile)) {
             console.log('Found blog posts data file:', blogFile);
             paths.blogs = extractSlugsFromTypeScript(blogFile);
+            console.log('Total blog posts found:', paths.blogs.length);
         }
 
-        // Get category slugs (if they exist)
-        const categoryFile = path.join(dataDir, 'categories.ts');
-        if (fs.existsSync(categoryFile)) {
-            console.log('Found categories data file:', categoryFile);
-            paths.categories = extractSlugsFromTypeScript(categoryFile);
-        } else {
-            // If no categories file exists, try to extract unique categories from agents
-            if (fs.existsSync(agentsFile)) {
-                const content = fs.readFileSync(agentsFile, 'utf8');
-                const categoryMatches = content.match(/['"]category['"]\s*:\s*['"]([^'"]+)['"]/g) || [];
-                const uniqueCategories = new Set(
-                    categoryMatches.map(match =>
-                        match.match(/['"]category['"]\s*:\s*['"]([^'"]+)['"]/)[1]
-                    )
-                );
-                paths.categories = Array.from(uniqueCategories);
+        // Get categories from lib/search.ts
+        const searchFile = path.join(process.cwd(), 'src', 'lib', 'search.ts');
+        if (fs.existsSync(searchFile)) {
+            console.log('Found search file:', searchFile);
+            const content = fs.readFileSync(searchFile, 'utf8');
+            const categoryMatch = content.match(/AgentCategory\s*=\s*(['"][^'"]+['"]\s*\|?\s*)+/);
+            if (categoryMatch) {
+                const categoryString = categoryMatch[0];
+                const categories = categoryString.match(/['"]([^'"]+)['"]/g) || [];
+                paths.categories = categories.map(cat => cat.replace(/['"]/g, ''));
+                console.log('Total categories found:', paths.categories.length);
+                console.log('Categories:', paths.categories);
             }
         }
 
@@ -81,6 +97,9 @@ async function getAllPages() {
     const routes = new Set();
 
     pages.forEach(page => {
+        // Normalize path separators to forward slashes
+        page = page.replace(/\\/g, '/');
+
         // Remove src/app and page.tsx
         let route = page
             .replace('src/app/', '')
@@ -156,9 +175,9 @@ async function submitUrls() {
     const host = urlObj.host;
     const pages = await getAllPages();
 
-    // Remove any remaining .tsx extensions from routes
+    // Remove any remaining .tsx extensions and normalize paths
     const urls = pages.map(page =>
-        `${baseUrl}${page}`.replace('.tsx', '')
+        `${baseUrl}${page}`.replace('.tsx', '').replace(/\\/g, '/')
     );
 
     console.log(`Found ${urls.length} total URLs to submit`);
