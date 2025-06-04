@@ -519,7 +519,7 @@ The future of code review isn't human or AI—it's both, working together. And w
         publishDate: "2025-05-31",
         readTime: "10 min read",
         categories: ["Coding", "AI Trends"],
-        featuredImage: "/images/blog/Ai-Code-Review.webp",
+        featuredImage: "/images/blog/ai-code-review.png",
         tags: ["AI", "Coding"]
     }, {
         id: "4",
