@@ -4,8 +4,11 @@ import "./globals.css";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { ModalProvider } from "@/contexts/ModalContext";
+import { Analytics } from "@vercel/analytics/next";
 
 const inter = Inter({ subsets: ["latin"] });
+
+
 
 export const metadata: Metadata = {
   title: "Agent Rank - Discover the Best AI Agents",
@@ -37,6 +40,7 @@ export default function RootLayout({
             <Navigation />
             <main className="flex-1">
               {children}
+              <Analytics />
             </main>
             <Footer />
           </div>
