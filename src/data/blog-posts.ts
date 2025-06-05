@@ -1054,7 +1054,7 @@ As we stand at the intersection of artificial intelligence and cryptocurrency, t
         tags: ["AI", "crypto"]
     }, {
         id: "7",
-        title: "What ARE AI Agents, Really?",
+        title: "What IS an AI Agent, Really?",
         slug: "what-are-ai-agents-really",
         excerpt: "AI agents are a hot topic in 2025. This article looks at the reality behind the hype and the potential of AI crypto agents.",
         content: `
