@@ -716,12 +716,6 @@ export const agents: Agent[] = [
             hasFreeStarterPlan: true
         },
         logo: "/images/logos/qodo-merge-logo.svg",
-        videos: [{
-            type: "video",
-            url: "",
-            alt: "Qodo Overview",
-            videoUid: "qodooverview"
-        }],
         features: ["Multi-tool orchestration", "Auto-approval", "All languages", "Self-hosted option"],
         useCases: ["Code review", "PR automation", "Quality assurance", "Team workflows"],
         addedDate: "2024-01-25"
