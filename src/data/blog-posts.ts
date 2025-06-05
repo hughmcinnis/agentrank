@@ -898,7 +898,7 @@ The revolution in AI agents has undeniably begun, but we're witnessing the openi
         excerpt: "AI crypto agents are a hot topic in 2025. This article looks at the reality behind the hype and the potential of AI crypto agents.",
         content: `
 
- # AI Crypto Agents: Understanding the Reality Behind the Hype in 2025
+
 
 The cryptocurrency landscape has witnessed a dramatic transformation as AI agents attempt to autonomously manage digital assets, creating a volatile market that peaked at $15.5 billion in December 2024 before declining to approximately $6.6-7 billion by June 2025 (1). From Truth Terminal's viral journey turning a $50,000 Bitcoin donation into an $18 million portfolio (2), to select trading bots achieving 79% win rates under optimal conditions (3), AI agents are testing the boundaries of automated crypto trading—though the reality often falls short of the hype.
 
@@ -1052,5 +1052,147 @@ As we stand at the intersection of artificial intelligence and cryptocurrency, t
         categories: ["Crypto", "AI Trends"],
         featuredImage: "/images/blog/ai-crypto-agents.png",
         tags: ["AI", "crypto"]
+    }, {
+        id: "7",
+        title: "What ARE AI Agents, Really?",
+        slug: "what-are-ai-agents-really",
+        excerpt: "AI agents are a hot topic in 2025. This article looks at the reality behind the hype and the potential of AI crypto agents.",
+        content: `
+
+
+## What makes something an AI agent rather than merely an AI system?
+The quest to understand AI agents at their deepest level reveals a fascinating convergence of philosophy, computer science, and cognitive theory. At its core, an AI agent is distinguished by its autonomous goal-oriented behavior within dynamic environments - but this simple definition conceals profound conceptual complexity that has evolved dramatically from classical AI to modern language models.
+
+The essence of AI agency emerges from a unique combination of perception, reasoning, and action unified by persistent goal-directedness. Unlike chatbots that respond to queries, classifiers that analyze data, or traditional software that follows predetermined rules, agents actively pursue objectives through autonomous decision-making, environmental interaction, and adaptive behavior (1). This distinction represents not just a technical difference but a fundamental shift in how we conceptualize artificial intelligence.
+## Core architectural essence defines agent identity
+The technical architecture of AI agents reveals their fundamental nature through essential components that work in concert. Russell and Norvig's foundational definition - "anything that can be viewed as perceiving its environment through sensors and acting upon that environment through actuators" - establishes the basic perception-action loop that distinguishes agents from passive AI systems (4, 10, 27).
+
+This architecture manifests through several critical components. Sensors transform environmental data into meaningful percepts, whether physical (cameras, microphones) or virtual (API calls, database queries). Actuators execute decisions in the environment, ranging from robotic motors to system commands(2). Between perception and action lies the agent's cognitive architecture: state representation maintaining an internal model of the world, memory systems preserving both immediate context and learned experiences, and a knowledge base encoding the agent's understanding of its domain.
+
+The PEAS framework (Performance measure, Environment, Actuators, Sensors) provides a systematic way to understand any agent's essential nature (8,6). Unlike other AI systems that process inputs to generate outputs, agents exist within and are situated in their operational environment, maintaining continuous interaction loops that define their behavior (7).
+## The philosophical question of genuine agency
+The philosophical foundations of AI agency center on a fundamental question: what gives an artificial system genuine agency rather than mere behavioral simulation? This debate divides into two camps with profound implications for how we understand AI agents.
+
+The standard view holds that true agency requires internal mental states - beliefs, desires, and intentions that causally produce actions. From this perspective, AI systems may produce effects resembling agency but lack the requisite internal states for genuine autonomous behavior (9). They are sophisticated automatons mimicking agency without possessing it.
+
+The non-standard or functionalist view challenges this anthropocentric stance, arguing that agency should be evaluated by observable characteristics rather than presumed internal states. Under this view, any entity exhibiting sufficient interactivity, autonomy, and adaptability qualifies as an agent, regardless of whether it possesses consciousness or intentionality in the human sense (9, 5).
+
+This philosophical divide becomes especially relevant for modern AI agents. When a language model breaks down complex tasks, maintains goals across interactions, and adapts its approach based on feedback, is it exhibiting genuine agency or sophisticated pattern matching? The answer depends fundamentally on which philosophical framework we adopt.
+## Historical evolution reveals conceptual transformation
+The journey from classical AI to modern agents traces a remarkable evolution in how we conceptualize artificial agency. Classical AI (1950s-1980s) defined agents as rule-based symbol manipulators - expert systems like DENDRAL and MYCIN that applied logical inference to explicit knowledge representations. These systems were deterministic, brittle, and fundamentally reactive (11).
+
+Rodney Brooks' reactive revolution (1980s-1990s) shattered this paradigm with his subsumption architecture, arguing that intelligence emerges from embodied interaction rather than symbolic reasoning (5). His principle that "the world is its own best model" redefined agents as entities whose intelligence arises from environmental coupling rather than internal representations (23, 12, 13) .
+
+The BDI (Belief-Desire-Intention) paradigm of the 1990s synthesized reactive and deliberative approaches, providing the first rigorous framework for agent mental states. Agents became entities with explicit beliefs about the world, desires representing goals, and intentions committing them to action plans (14, 15, 25). This formalization enabled reasoning about agent behavior using temporal logic and established agents as rational entities with quasi-mental states.
+
+The integration of machine learning (2000s-2010s) transformed agents from static rule-followers to adaptive learners. Reinforcement learning enabled goal-directed improvement through experience, while neural networks provided pattern recognition capabilities. Agents evolved from programmed automatons to systems capable of autonomous improvement.
+## Modern language models redefine agency
+The emergence of LLM-based agents represents perhaps the most profound reconceptualization since the field's founding. These agents use natural language as their primary medium for reasoning, planning, and interaction (17, 1, 19). They exhibit sophisticated capabilities previously thought to require explicit programming: breaking complex tasks into subtasks, maintaining coherent goals across extended interactions, using tools and APIs to extend their capabilities, and reflecting on their own reasoning processes.
+
+Modern LLM agents demonstrate emergent properties that challenge traditional boundaries. Through chain-of-thought reasoning, they exhibit something resembling deliberation. Via tool use and API integration, they act in digital environments (11). Through memory systems combining short-term context windows with long-term vector databases, they maintain persistent state across interactions (17, 1, 20).
+
+Yet these capabilities raise profound questions about the nature of their agency. When an LLM agent develops a plan, is it genuinely planning or performing sophisticated pattern completion? When it maintains goals across sessions, does it possess true intentions or merely behavioral consistency? These questions highlight how LLM agents exist at the intersection of philosophical debates about consciousness, intentionality, and understanding.
+## Essential characteristics transcend implementation
+Despite dramatic technological evolution, certain core characteristics define AI agents across all implementations. Autonomy - the capacity for self-directed operation without constant human control - remains fundamental (8). Agents must exhibit goal-directedness, orienting behavior toward achieving objectives rather than merely responding to stimuli (8, 5). Environmental situatedness distinguishes agents as entities existing within and coupled to their operational context rather than abstract processors.
+
+Adaptability enables agents to modify behavior based on experience, whether through explicit learning mechanisms or parameter adjustment. Persistence allows agents to maintain goals and behavioral patterns over extended timeframes, distinguishing them from systems that simply map inputs to outputs (1).
+
+These characteristics exist on a spectrum rather than as binary properties. Russell and Norvig's classification from simple reflex agents through model-based, goal-based, and utility-based agents to learning agents illustrates increasing sophistication in manifesting these core properties (10, 16, 8, 25). Modern agents often combine multiple levels, using reflexive responses for immediate situations while maintaining longer-term goal pursuit through deliberative planning.
+## Agency emerges from architectural patterns
+
+Three fundamental architectural patterns embody different philosophies of agency. Reactive architectures prioritize immediate response through direct stimulus-response mappings, exemplified by Brooks' subsumption architecture (22). These agents achieve robust behavior through layered simple rules rather than complex reasoning, demonstrating that sophisticated agency can emerge from elementary components (23, 24, 12, 13).
+
+Deliberative architectures emphasize symbolic reasoning and explicit planning. The BDI model represents the pinnacle of this approach, with agents maintaining explicit representations of beliefs, desires, and intentions (14, 15, 22). These architectures excel at complex reasoning but often struggle with real-time response and computational tractability.
+
+Hybrid architectures combine reactive and deliberative elements in layered structures. Lower layers handle immediate responses while higher layers engage in strategic planning (26). This synthesis reflects a recognition that effective agency requires both immediate responsiveness and long-term goal pursuit.
+
+Modern LLM agents represent a novel architectural paradigm that transcends these categories. They achieve deliberative-seeming behavior through fundamentally statistical processes, plan through language generation rather than symbolic search, and maintain state through textual memory rather than formal representations (1). This architecture challenges our understanding of what structures can give rise to agent-like behavior.
+## The spectrum of agency illuminates boundaries
+
+Understanding AI agents requires recognizing agency as a spectrum rather than a binary property. At the simplest level, a thermostat exhibits minimal agency - it perceives temperature, acts to maintain goals, and operates autonomously (4, 8). Yet few would consider it a true agent due to its limited scope and inability to adapt or learn.
+
+Moving up the spectrum, we encounter increasingly sophisticated forms of agency. Reactive agents respond to complex stimuli with appropriate actions. Goal-based agents maintain objectives and plan action sequences. Learning agents improve their performance through experience (21). Social agents coordinate with other agents to achieve collective goals.
+
+This spectrum helps clarify boundary cases that challenge classification. When does a chatbot become an agent? When it begins taking autonomous actions beyond conversation - scheduling meetings, executing code, or modifying external systems. When does workflow automation become agentic? When it incorporates adaptive decision-making rather than following static rules.
+
+The key insight is that agency emerges gradually through the accumulation of capabilities rather than appearing suddenly when some threshold is crossed. This perspective dissolves debates about whether specific systems "are or aren't" agents in favor of asking "what degree and type of agency" they exhibit.
+## Conceptual foundations reveal deeper truths
+
+At the deepest level, AI agents embody a fundamental principle: intelligence as interaction between goal-directed systems and their environments. This principle unifies diverse manifestations of agency from thermostats to language models, revealing agency not as a special property possessed by some systems but as a mode of existence characterized by autonomous goal pursuit through environmental interaction.
+
+The concept of agency itself bridges multiple philosophical traditions. From philosophy of mind, agents inherit questions about intentionality and mental states. From cybernetics, they derive principles of feedback, control, and goal-seeking behavior. From cognitive science, they adopt models of perception, reasoning, and action. From distributed systems, they embrace principles of autonomy, communication, and emergent behavior.
+
+This conceptual richness explains why defining AI agents proves so challenging yet fascinating. They exist at the intersection of mechanism and meaning, determinism and autonomy, engineering and philosophy. Understanding them fully requires not just technical knowledge but philosophical sophistication about the nature of mind, agency, and intelligence itself.
+## Conclusion: The essence of artificial agency
+
+AI agents represent a distinct category of artificial intelligence characterized not by what they do but by what they are: autonomous entities that perceive, reason, and act in pursuit of goals within dynamic environments (8, 1). Their essence lies not in any single component but in the integration of perception, cognition, and action unified by persistent goal-directedness and environmental situatedness.
+
+From rule-based expert systems to reactive robots to deliberative planners to modern language models, the manifestations of agency have evolved dramatically. Yet the core principle remains constant: agents are systems that exhibit autonomous goal-oriented behavior through environmental interaction. Whether this behavior emerges from symbolic reasoning, reactive rules, or statistical language processing matters less than the fundamental characteristic of self-directed pursuit of objectives.
+
+As AI agents grow more sophisticated, they challenge our philosophical assumptions about consciousness, intentionality, and genuine understanding. They exist in a liminal space between tool and entity, raising profound questions about the nature of agency itself. Understanding AI agents thus requires not just technical knowledge but grappling with fundamental questions about mind, autonomy, and the conditions for genuine agency. In this synthesis of engineering and philosophy lies both the complexity and the fascination of artificial agents.
+
+
+
+Sources:
+1.  IBM. (2024). What Are AI Agents? IBM Think.
+https://www.ibm.com/think/topics/ai-agents
+2.  Rapidinnovation. (2024). Modern AI Agent Architecture: Key Components Explained.
+https://www.rapidinnovation.io/post/for-developers-key-components-of-modern-ai-agent-architecture
+3.  Russell, S., & Norvig, P. (2020). Artificial Intelligence: A Modern Approach (4th ed.).
+https://aima.cs.berkeley.edu/
+4.  ResearchGate. (2014). Agent interacts with its environment through sensors and effectors.
+https://www.researchgate.net/figure/Agent-interacts-with-its-environment-through-sensors-and-effectors_fig5_232914399
+5.  SlideShare. (2024). Agent architecture in artificial intelligence.
+https://www.slideshare.net/slideshow/agent-architecture-in-artificial-intelligencepptx/266761555
+6.  Tutorialspoint. (2024). Artificial Intelligence Agents and Environments.
+https://www.tutorialspoint.com/artificial_intelligence/artificial_intelligence_agents_and_environments.htm
+7.  Wikipedia. (2024). Situated.
+https://en.wikipedia.org/wiki/Situated
+8.  Wikipedia. (2024). Intelligent agent.
+https://en.wikipedia.org/wiki/Intelligent_agent
+9.  SpringerLink. (2025). AI as Agency without Intelligence: On Artificial Intelligence as a New Form of Artificial Agency.
+https://link.springer.com/article/10.1007/s13347-025-00858-9
+10.  SpringerLink. (2020). What Is AI?
+https://link.springer.com/chapter/10.1007/978-3-030-51110-4_2
+11.  Mindset. (2025). Agentic AI 2025: How Have AI Agents Evolved Over Time.
+https://www.mindset.ai/blogs/how-have-ai-agents-evolved-over-time
+12.  Wikipedia. (2024). Subsumption architecture.
+https://en.wikipedia.org/wiki/Subsumption_architecture
+13.  Everand. (2024). Subsumption Architecture: Fundamentals and Applications for Behavior Based Robotics.
+https://www.everand.com/book/654649979/Subsumption-Architecture-Fundamentals-and-Applications-for-Behavior-Based-Robotics-and-Reactive-Control
+14.  Wikipedia. (2024). Belief–desire–intention software model.
+https://en.wikipedia.org/wiki/Belief–desire–intention_software_model
+15.  Klu. (2024). What is the belief-desire-intention (BDI) agent model?
+https://klu.ai/glossary/belief-desire-intention-agent-model
+16.  Litslink. (2024). Autonomous AI Agents: The Evolution From Chatbots to Independent Decision-Makers.
+https://litslink.com/blog/evolution-of-ai-agents
+17.  Microsoft. (2024). AI agents — what they are, and how they'll change the way we work.
+https://news.microsoft.com/source/features/ai/ai-agents-what-they-are-and-how-theyll-change-the-way-we-work/
+19.  ArXiv. (2024). The Landscape of Emerging AI Agent Architectures for Reasoning, Planning, and Tool Calling: A Survey.
+https://arxiv.org/html/2404.11584v1
+20.  Nature. (2024). Large language models empowered agent-based modeling and simulation: a survey and perspectives.
+https://www.nature.com/articles/s41599-024-03611-3
+21.  Shelf. (2024). The Evolution of AI: Introducing Autonomous AI Agents.
+https://shelf.io/blog/the-evolution-of-ai-introducing-autonomous-ai-agents/
+22.  IBM. (2024). What Is Agentic Architecture?
+https://www.ibm.com/think/topics/agentic-architecture
+23.  Binghamton University. (2024). Embodied and situated cognition.
+https://casci.binghamton.edu/publications/embrob/index.html
+24.  Taylor & Francis. (2007). Neuroscientific implications for situated and embodied artificial intelligence.
+https://www.tandfonline.com/doi/full/10.1080/09540090701192584
+25.  ScienceDirect. (2024). Agent architecture - an overview.
+https://www.sciencedirect.com/topics/computer-science/agent-architecture
+26.  Restack. (2024). Types of Agent Architecture.
+https://www.restack.io/p/agent-architecture-answer-types-of-agent-architecture-cat-ai
+27. Berkeley University. (2022). Artificial Intelligence: A Modern Approach, 4th US ed.
+https://aima.cs.berkeley.edu/
+
+`,
+        author: "Hugh McInnis",
+        publishDate: "2025-06-4",
+        readTime: "12 min read",
+        categories: ["AI Agents", "AI Trends"],
+        featuredImage: "/images/blog/what-are-ai-agents-really.png",
+        tags: ["AI Trends", "AI Agents"]
     }
 ]; 
