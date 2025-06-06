@@ -576,12 +576,7 @@ export const agents: Agent[] = [
             hasFreeStarterPlan: false
         },
         logo: "/images/logos/hyperbound-logo.svg",
-        videos: [{
-            type: "video",
-            url: "", // Fallback URL if needed
-            alt: "Hyperbound Demo",
-            videoUid: "96351a5d7b534562990979c8ff1628d3"
-        }],
+        screenshots: ["/images/screenshots/hyperbound1.PNG"],
         features: ["Realistic AI buyer simulation", "Custom ICP bot builder", "Real-time analytics", "Multi-scenario training", "Conversation intelligence"],
         useCases: ["Sales development training", "Rep onboarding", "Skill gap identification", "Candidate screening", "Enterprise sales practice"],
         addedDate: "2024-01-25"
@@ -787,7 +782,7 @@ export const agents: Agent[] = [
             type: "video",
             url: "",
             alt: "Writesonic Overview",
-            videoUid: "writesonicoverview"
+            videoUid: "7b4b60148870ff0e860d0c6b2340cffa"
         }],
         features: ["AI Article Writer 6.0", "Chatsonic", "90+ content templates", "SEO optimization suite", "Brand voice creator"],
         useCases: ["Content marketing", "Digital agencies", "eCommerce", "Small businesses", "Freelance writers"],
