@@ -92,9 +92,7 @@ export const agents: Agent[] = [
         },
         logo: "/images/logos/copyai-logo.svg",
         screenshots: [
-            "/images/screenshots/copyai1.png",
-            "/images/screenshots/copyai2.png"
-        ],
+            "/images/screenshots/copyai1.PNG", "/images/screenshots/copyai2.PNG"],
         features: ["GTM workflows", "Brand Voice & Infobase", "Multi-channel content", "Data integration", "AI workflow builder"],
         useCases: ["Sales outreach automation", "Marketing campaign creation", "Content marketing", "Lead generation"],
         addedDate: "2024-01-20"
