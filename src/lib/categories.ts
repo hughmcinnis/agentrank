@@ -97,6 +97,12 @@ export const categories: Category[] = [
         name: 'Accounting',
         description: 'AI tools for financial management and bookkeeping',
         icon: '💵'
+    },
+    {
+        id: 'home-improvement',
+        name: 'Home Improvement',
+        description: 'AI assistants for home repair, maintenance, and DIY projects',
+        icon: '🔨'
     }
 ];
 
