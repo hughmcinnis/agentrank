@@ -4,7 +4,7 @@ export interface Agent {
     slug: string;
     tagline: string;
     description: string;
-    categories: Array<'writing' | 'coding' | 'sales' | 'customer-support' | 'data-analysis' | 'research' | 'marketing' | 'productivity' | 'email' | 'transcription' | 'document-analysis' | 'scheduling' | 'seo' | 'social-media' | 'accounting'>;
+    categories: Array<'writing' | 'coding' | 'sales' | 'customer-support' | 'data-analysis' | 'research' | 'marketing' | 'productivity' | 'email' | 'transcription' | 'document-analysis' | 'scheduling' | 'seo' | 'social-media' | 'accounting' | 'home-improvement'>;
     website: string;
     pricing: string;
     paymentOptions: {
@@ -787,5 +787,24 @@ export const agents: Agent[] = [
         features: ["AI Article Writer 6.0", "Chatsonic", "90+ content templates", "SEO optimization suite", "Brand voice creator"],
         useCases: ["Content marketing", "Digital agencies", "eCommerce", "Small businesses", "Freelance writers"],
         addedDate: "2024-01-25"
+    },
+    {
+        id: "35",
+        name: "Fixy",
+        slug: "fixy",
+        tagline: "Your AI handyman — fix it yourself or know when to call a pro",
+        description: "Fixy is an AI-powered home repair assistant that helps homeowners diagnose problems, provides step-by-step DIY guidance, and honestly tells you when to call a professional. Upload photos of issues, get personalized fixes based on your skill level, and save hundreds on unnecessary service calls.",
+        categories: ["home-improvement", "productivity"],
+        website: "https://apps.apple.com/us/app/fixy-ai-handyman/id6747599349",
+        pricing: "Free to download",
+        paymentOptions: {
+            isPaid: false,
+            hasFreeTrialPeriod: false,
+            hasFreeStarterPlan: true
+        },
+        logo: "/images/logos/fixy-logo.svg",
+        features: ["Photo-based diagnosis", "Step-by-step DIY guides", "Skill-level personalization", "Safety warnings", "Pro vs DIY recommendations", "Tool suggestions"],
+        useCases: ["Home repair diagnosis", "DIY guidance", "Cost saving on repairs", "Learning home maintenance"],
+        addedDate: "2026-02-18"
     }
 ]; 
