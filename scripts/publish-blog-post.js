@@ -75,8 +75,10 @@ async function main() {
   content = before + separator + entry + '\n' + content.substring(closingIndex);
   fs.writeFileSync(BLOG_FILE, content);
 
-  // Generate SVG featured image
-  generateSvgImage(post.title, post.slug);
+  // Generate SVG featured image using the rich image generator
+  const { generate } = require('./generate-blog-image.js');
+  const imgPath = path.resolve(__dirname, `../public/images/blog/${post.slug}.svg`);
+  generate(post.title, post.slug, imgPath);
 
   // Git commit and push
   execSync(`git add -A`, { cwd: REPO_DIR });
@@ -84,46 +86,6 @@ async function main() {
   execSync(`git push`, { cwd: REPO_DIR });
 
   console.log(JSON.stringify({ success: true, id, slug: post.slug, title: post.title }));
-}
-
-function generateSvgImage(title, slug) {
-  const palettes = [
-    ['#667eea', '#764ba2'], ['#f093fb', '#f5576c'], ['#4facfe', '#00f2fe'],
-    ['#43e97b', '#38f9d7'], ['#fa709a', '#fee140'], ['#a18cd1', '#fbc2eb'],
-    ['#fccb90', '#d57eeb'], ['#e0c3fc', '#8ec5fc']
-  ];
-  let hash = 0;
-  for (const c of slug) hash = ((hash << 5) - hash + c.charCodeAt(0)) | 0;
-  const [c1, c2] = palettes[Math.abs(hash) % palettes.length];
-
-  // Word-wrap title
-  const words = title.split(' ');
-  const lines = [];
-  let line = '';
-  for (const w of words) {
-    if ((line + ' ' + w).length > 30 && line) { lines.push(line); line = w; }
-    else { line = line ? line + ' ' + w : w; }
-  }
-  if (line) lines.push(line);
-
-  const textY = 315 - (lines.length * 22);
-  const tspans = lines.map((l, i) =>
-    `<tspan x="600" dy="${i === 0 ? 0 : 48}">${l.replace(/&/g,'&amp;').replace(/</g,'&lt;')}</tspan>`
-  ).join('');
-
-  const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630">
-  <defs><linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
-    <stop offset="0%" style="stop-color:${c1}"/>
-    <stop offset="100%" style="stop-color:${c2}"/>
-  </linearGradient></defs>
-  <rect width="1200" height="630" fill="url(#bg)"/>
-  <text x="600" y="${textY}" text-anchor="middle" fill="white" font-family="Arial,Helvetica,sans-serif" font-size="42" font-weight="bold">${tspans}</text>
-  <text x="600" y="560" text-anchor="middle" fill="rgba(255,255,255,0.7)" font-family="Arial,sans-serif" font-size="22">agentrank.tech</text>
-</svg>`;
-
-  const imgDir = path.resolve(__dirname, '../public/images/blog');
-  if (!fs.existsSync(imgDir)) fs.mkdirSync(imgDir, { recursive: true });
-  fs.writeFileSync(path.join(imgDir, `${slug}.svg`), svg);
 }
 
 main().catch(e => { console.error(e.message); process.exit(1); });
