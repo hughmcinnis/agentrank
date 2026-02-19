@@ -1412,5 +1412,89 @@ I'd bet on faster than most people think.`,
         categories: ["Agent Economy","Industry Analysis"],
         featuredImage: "/images/blog/agent-economy-standards-payments-marketplaces-2026.svg",
         tags: ["AI agents","NIST","agent standards","agent payments","agent marketplace","Contra","Moltlaunch","automation"],
+    },
+    {
+        id: "10",
+        title: "Agents Just Got Bank Accounts and Rulebooks in the Same Week",
+        slug: "agents-bank-accounts-and-rulebooks-same-week",
+        excerpt: "NIST launches AI agent standards. Contra lets agents buy from creators. The agent economy just went from hypothetical to institutional in about 72 hours.",
+        content: `# Agents Just Got Bank Accounts and Rulebooks in the Same Week
+
+Two things happened this week that, separately, are interesting. Together, they're a signal you shouldn't ignore.
+
+On Tuesday, NIST announced the **AI Agent Standards Initiative** — a formal effort to define how AI agents should interoperate and behave securely. On the same day, **Contra launched agent-native payments**, letting autonomous AI agents discover freelancers, review portfolios, and make purchases on their own.
+
+One gave agents rules. The other gave them wallets. If you've been waiting for the "agents are real" moment, this is it.
+
+## NIST Gets Serious About Agent Standards
+
+Let's start with the boring-but-important one. NIST's Center for AI Standards and Innovation (CAISI) is now building interoperability and security standards specifically for AI agents. Not LLMs. Not chatbots. *Agents* — the autonomous kind that take actions, use tools, and interact with other systems.
+
+This matters because standards are how technologies go from "cool demo" to "enterprise procurement checklist." Nobody at a Fortune 500 is deploying autonomous agents into their supply chain without some kind of compliance framework. NIST just started building that framework.
+
+What I expect to come out of this:
+
+- **Identity standards for agents.** How do you verify that an agent is who it claims to be? When Agent A calls Agent B's API, what's the handshake?
+- **Capability disclosure.** Standardized ways for agents to declare what they can and can't do, so other systems know what they're dealing with.
+- **Audit trails.** If an agent makes a decision that costs money or affects people, there needs to be a traceable chain of reasoning.
+
+None of this is glamorous. All of it is necessary. The agent ecosystem right now is like the early web before HTTP was standardized — everyone's building, nobody's interoperating, and the security model is "hope for the best."
+
+## Contra Says "Let Agents Buy Things"
+
+Now the fun one. Contra, the freelance platform, launched agent-native payments. The pitch: your AI agent can browse creator portfolios, evaluate work, and purchase services — autonomously.
+
+Think about what that means practically. You tell your agent "I need a logo for this project." The agent searches Contra, evaluates designers based on your criteria and budget, negotiates scope, and pays. You approve the final work, but the agent handled the procurement.
+
+This is the **agent-as-economic-actor** thesis becoming real. Not in some crypto-speculative way with tokens nobody uses, but on an actual marketplace where real freelancers sell real work.
+
+I have questions, obviously:
+
+- **Who's liable when an agent makes a bad purchase?** If my agent hires a designer and the work is garbage, is that on me? On Contra? On the agent's developer?
+- **How do you prevent agent-on-agent gaming?** If agents are buying, other agents will optimize for selling to agents. We're about to see the first agent-to-agent marketplace dynamics, and I promise it'll get weird.
+- **What about the freelancers?** Some creators will love the increased volume. Others will hate that their portfolio is being evaluated by an algorithm instead of a human. Both reactions are valid.
+
+But the direction is clear: agents are moving from "tools that help you work" to "entities that participate in markets."
+
+## The Bigger Pattern
+
+Zoom out and the pattern this week is obvious. We're watching agents get institutionalized in real time.
+
+NIST is building the regulatory scaffolding. Contra is building the economic plumbing. Alibaba dropped Qwen 3.5 with native agentic capabilities. Moonshot AI launched Kimi Claw. Every major player is placing bets not on better chatbots, but on better *agents*.
+
+Here's my honest take on where this goes:
+
+**Short term (2026):** The standards will be drafts, the payment systems will be clunky, and early adopters will hit every edge case imaginable. But the infrastructure is being laid. If you're building in the agent space, pay attention to NIST's working groups — what they standardize becomes what enterprises require.
+
+**Medium term (2027-2028):** Agent directories become critical infrastructure. When every business has agents that need to find and interact with other agents, discovery and trust become the bottleneck. This is why I'm bullish on the directory layer — it's the DNS of the agent economy. (Yes, that's what we're building at [AgentRank](https://agentrank.tech), and yes, I'm biased. But I'm also right.)
+
+**Long term:** The line between "employee" and "agent" gets uncomfortably blurry. Not because agents replace people, but because they start occupying economic roles that are currently filled by people. Procurement, research, first-pass evaluation, scheduling, negotiation. The humans don't disappear — they move up the decision chain.
+
+## What This Means If You're Building
+
+If you're building agents or agent-adjacent products, here's what I'd do this week:
+
+1. **Read the NIST announcement carefully.** Not for the current content, but for the *scope*. What they're choosing to standardize tells you what the market will demand.
+2. **Think about your agent's economic identity.** If your agent is going to transact, it needs a verifiable identity, a reputation, and clear capability boundaries. Start building that now.
+3. **Watch the Contra experiment.** Agent-native commerce is going to produce fascinating data about how autonomous purchasing actually works. The learnings will apply far beyond freelance marketplaces.
+4. **Don't sleep on interoperability.** The agents that win long-term won't be the most capable in isolation — they'll be the ones that play well with others. Standards compliance will be a competitive advantage, not a burden.
+
+## The Bottom Line
+
+We just watched AI agents get their first real rulebook and their first real wallet in the same week. That's not a coincidence — it's convergence. The agent economy is transitioning from "interesting idea" to "thing with actual infrastructure."
+
+The hype cycle for agents peaked months ago. What's happening now is the hard, unglamorous work of building real systems. Standards bodies, payment rails, identity frameworks, trust mechanisms.
+
+That's when you know something is actually going to work.
+
+---
+
+*Building an AI agent and want it discovered? [List it on AgentRank](https://agentrank.tech) — the directory built for the agent economy.*`,
+        author: "Hugh McInnis",
+        publishDate: "2026-02-19",
+        readTime: "4 min read",
+        categories: ["Agent Economy","Industry Analysis"],
+        featuredImage: "/images/blog/agents-bank-accounts-and-rulebooks-same-week.svg",
+        tags: ["NIST","AI standards","agent payments","Contra","agent economy","regulation","interoperability"],
     }
 ]; 
