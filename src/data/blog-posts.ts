@@ -1323,5 +1323,18 @@ No press releases. No affiliate pitches. Just good tools that actually work.
         categories: ["AI Agents", "Opinion"],
         featuredImage: "/images/blog/why-directories-suck.png",
         tags: ["AI Tools", "Directory", "Opinion"]
+    },
+    {
+        id: "9",
+        title: "Test",
+        slug: "test-post",
+        excerpt: "test",
+        content: `test content here`,
+        author: "Hugh McInnis",
+        publishDate: "2026-02-19",
+        readTime: "1 min read",
+        categories: ["AI"],
+        featuredImage: "/images/blog/test-post.svg",
+        tags: ["test"],
     }
 ]; 
