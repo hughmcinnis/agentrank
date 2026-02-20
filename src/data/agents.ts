@@ -4,7 +4,7 @@ export interface Agent {
     slug: string;
     tagline: string;
     description: string;
-    categories: Array<'writing' | 'coding' | 'sales' | 'customer-support' | 'data-analysis' | 'research' | 'marketing' | 'productivity' | 'email' | 'transcription' | 'document-analysis' | 'scheduling' | 'seo' | 'social-media' | 'accounting' | 'home-improvement'>;
+    categories: Array<'writing' | 'coding' | 'sales' | 'customer-support' | 'data-analysis' | 'research' | 'marketing' | 'productivity' | 'email' | 'transcription' | 'document-analysis' | 'scheduling' | 'seo' | 'social-media' | 'accounting' | 'home-improvement' | 'image-generation' | 'video-generation' | 'voice-audio'>;
     website: string;
     pricing: string;
     paymentOptions: {
@@ -656,7 +656,7 @@ export const agents: Agent[] = [
         description: "SmartWriter achieves 200% increased reply rates through AI that researches prospects from LinkedIn, websites, and news, generating personalized outreach 40x faster than manual methods.",
         categories: ["sales", "email"],
         website: "https://www.smartwriter.ai",
-        pricing: "Basic: $59/month (400 leads), Popular: $149/month (1,200 leads), Pro: $359/month (3,500 leads)",
+        pricing: "Basic: $49/month (400 leads), Popular: $149/month (1,200 leads), Pro: $359/month (3,500 leads)",
         paymentOptions: {
             isPaid: true,
             hasFreeTrialPeriod: true,
@@ -677,7 +677,7 @@ export const agents: Agent[] = [
         description: "Alli AI specializes in technical SEO automation, fixing issues like canonical tags and meta descriptions with one-click bulk implementation, achieving top-three rankings within seven days.",
         categories: ["seo"],
         website: "https://alliai.com",
-        pricing: "$249+/month",
+        pricing: "Small Biz: $169/month, Consultant: $399/month, Agency: $699/month, Enterprise: $1,249/month",
         paymentOptions: {
             isPaid: true,
             hasFreeTrialPeriod: true,
@@ -806,5 +806,214 @@ export const agents: Agent[] = [
         features: ["Photo-based diagnosis", "Step-by-step DIY guides", "Skill-level personalization", "Safety warnings", "Pro vs DIY recommendations", "Tool suggestions"],
         useCases: ["Home repair diagnosis", "DIY guidance", "Cost saving on repairs", "Learning home maintenance"],
         addedDate: "2026-02-18"
+    },
+    {
+        id: "36",
+        name: "Cursor",
+        slug: "cursor",
+        tagline: "The AI code editor built for productivity",
+        description: "Cursor is an AI-powered code editor built on VS Code that deeply understands your codebase. It offers intelligent completions, multi-file editing, and agentic coding capabilities that make it the go-to IDE for AI-assisted development in 2025-2026.",
+        categories: ["coding"],
+        website: "https://cursor.com",
+        pricing: "Hobby: Free (50 premium requests/month), Pro: $20/month ($16 annual), Business: $40/user/month, Ultra: Usage-based",
+        paymentOptions: {
+            isPaid: true,
+            hasFreeTrialPeriod: true,
+            hasFreeStarterPlan: true
+        },
+        logo: "/images/logos/cursor-logo.svg",
+        features: ["Codebase-aware AI chat", "Multi-file editing", "Agentic coding mode", "Tab completions", "Multi-model support (GPT-4, Claude, etc.)"],
+        useCases: ["Full-stack development", "Code refactoring", "Rapid prototyping", "AI-assisted debugging"],
+        addedDate: "2026-02-20"
+    },
+    {
+        id: "37",
+        name: "Perplexity AI",
+        slug: "perplexity-ai",
+        tagline: "Ask anything. Get answers with cited sources.",
+        description: "Perplexity AI is an AI-powered answer engine that combines real-time web search with large language models to deliver accurate, cited answers. With Pro Search, the Comet browser, and enterprise plans, it has become a primary research tool for millions.",
+        categories: ["research", "productivity"],
+        website: "https://www.perplexity.ai",
+        pricing: "Free: $0, Pro: $20/month, Max: $200/month, Enterprise: $40-325/seat/month",
+        paymentOptions: {
+            isPaid: true,
+            hasFreeTrialPeriod: false,
+            hasFreeStarterPlan: true
+        },
+        logo: "/images/logos/perplexity-logo.svg",
+        features: ["Pro Search with follow-ups", "Real-time web citations", "File & image analysis", "Comet browser", "API access"],
+        useCases: ["Academic research", "Market analysis", "Fact-checking", "Daily knowledge work"],
+        addedDate: "2026-02-20"
+    },
+    {
+        id: "38",
+        name: "Bolt",
+        slug: "bolt",
+        tagline: "Create stunning apps & websites by chatting with AI",
+        description: "Bolt.new is an AI-powered full-stack app builder by StackBlitz that lets users create, edit, and deploy web applications entirely through natural language prompts in the browser — no local setup required.",
+        categories: ["coding"],
+        website: "https://bolt.new",
+        pricing: "Free: $0 (limited), Pro: $25/month (10M tokens), Teams: $30/user/month, Enterprise: Custom",
+        paymentOptions: {
+            isPaid: true,
+            hasFreeTrialPeriod: false,
+            hasFreeStarterPlan: true
+        },
+        logo: "/images/logos/bolt-logo.svg",
+        features: ["In-browser full-stack dev", "Natural language to app", "One-click deploy", "Real-time preview", "Multi-model support"],
+        useCases: ["Rapid prototyping", "MVP creation", "Landing pages", "Internal tools"],
+        addedDate: "2026-02-20"
+    },
+    {
+        id: "39",
+        name: "v0",
+        slug: "v0",
+        tagline: "Your collaborative AI assistant to design, iterate, and scale full-stack apps",
+        description: "v0 by Vercel is an AI-powered UI generation tool that creates production-ready React components and full-stack applications from text and image prompts. Tightly integrated with the Vercel ecosystem, it's become the go-to for frontend developers.",
+        categories: ["coding"],
+        website: "https://v0.dev",
+        pricing: "Free: $5 in credits, Premium: $20/month, Team: $30/user/month",
+        paymentOptions: {
+            isPaid: true,
+            hasFreeTrialPeriod: false,
+            hasFreeStarterPlan: true
+        },
+        logo: "/images/logos/v0-logo.svg",
+        features: ["Text/image to UI", "React/Next.js code generation", "Vercel deployment integration", "Iterative design refinement", "Shadcn/Tailwind output"],
+        useCases: ["UI prototyping", "Component generation", "Design-to-code", "Full-stack web apps"],
+        addedDate: "2026-02-20"
+    },
+    {
+        id: "40",
+        name: "Devin",
+        slug: "devin",
+        tagline: "The first AI software engineer",
+        description: "Devin by Cognition AI is an autonomous AI software engineer that can plan, code, debug, and deploy software end-to-end. It operates in its own sandboxed environment with a shell, browser, and code editor, handling complex multi-step engineering tasks.",
+        categories: ["coding"],
+        website: "https://devin.ai",
+        pricing: "Core: $20/month (pay-per-use ACUs), Team: $500/month, Enterprise: Custom",
+        paymentOptions: {
+            isPaid: true,
+            hasFreeTrialPeriod: true,
+            hasFreeStarterPlan: false
+        },
+        logo: "/images/logos/devin-logo.svg",
+        features: ["Autonomous coding agent", "Sandboxed dev environment", "Jira/Linear integration", "Pull request automation", "Multi-step planning & execution"],
+        useCases: ["Automated bug fixes", "Code migrations", "Feature development", "Repository maintenance"],
+        addedDate: "2026-02-20"
+    },
+    {
+        id: "41",
+        name: "Midjourney",
+        slug: "midjourney",
+        tagline: "An independent research lab exploring new mediums of thought",
+        description: "Midjourney is an AI image generation tool that creates stunning, artistic images from text prompts. Known for its distinctive aesthetic quality and photorealistic capabilities, it remains one of the most popular AI art tools worldwide.",
+        categories: ["image-generation"],
+        website: "https://www.midjourney.com",
+        pricing: "Basic: $10/month ($8 annual), Standard: $30/month ($24 annual), Pro: $60/month ($48 annual), Mega: $120/month ($96 annual)",
+        paymentOptions: {
+            isPaid: true,
+            hasFreeTrialPeriod: false,
+            hasFreeStarterPlan: false
+        },
+        logo: "/images/logos/midjourney-logo.svg",
+        features: ["Text-to-image generation", "Image-to-image editing", "Style tuning", "High-resolution upscaling", "Web & Discord interface"],
+        useCases: ["Digital art creation", "Marketing visuals", "Concept art", "Brand imagery"],
+        addedDate: "2026-02-20"
+    },
+    {
+        id: "42",
+        name: "Runway",
+        slug: "runway",
+        tagline: "Advancing creativity with artificial intelligence",
+        description: "Runway is an AI-powered creative suite specializing in video generation and editing. With its Gen-4 model, it produces high-quality AI video from text and images, and offers a full suite of creative tools for filmmakers and content creators.",
+        categories: ["video-generation"],
+        website: "https://runwayml.com",
+        pricing: "Basic: Free (limited credits), Standard: $12/month (annual), Pro: $28/month (annual), Unlimited: $76/month (annual), Enterprise: Custom",
+        paymentOptions: {
+            isPaid: true,
+            hasFreeTrialPeriod: true,
+            hasFreeStarterPlan: true
+        },
+        logo: "/images/logos/runway-logo.svg",
+        features: ["Gen-4 text/image-to-video", "AI video editing suite", "Motion brush", "Act-Two character animation", "API access"],
+        useCases: ["Video production", "Social media content", "Film pre-visualization", "Marketing videos"],
+        addedDate: "2026-02-20"
+    },
+    {
+        id: "43",
+        name: "ElevenLabs",
+        slug: "elevenlabs",
+        tagline: "The most realistic AI voice platform",
+        description: "ElevenLabs is the leading AI voice and audio platform offering ultra-realistic text-to-speech, voice cloning, dubbing, and an AI audio agent builder. Used by creators, developers, and enterprises for high-quality synthetic speech in 32+ languages.",
+        categories: ["voice-audio"],
+        website: "https://elevenlabs.io",
+        pricing: "Free: $0 (10K characters/month), Starter: $5/month, Creator: $22/month, Pro: $99/month, Scale: $330/month, Enterprise: Custom",
+        paymentOptions: {
+            isPaid: true,
+            hasFreeTrialPeriod: false,
+            hasFreeStarterPlan: true
+        },
+        logo: "/images/logos/elevenlabs-logo.svg",
+        features: ["Ultra-realistic TTS", "Voice cloning", "32+ language support", "AI dubbing", "Conversational AI agents"],
+        useCases: ["Content narration", "Podcast production", "Game character voices", "Accessibility", "Customer support voice bots"],
+        addedDate: "2026-02-20"
+    },
+    {
+        id: "44",
+        name: "Notion AI",
+        slug: "notion-ai",
+        tagline: "One workspace. Every team. AI-powered.",
+        description: "Notion AI is an integrated AI assistant within the Notion productivity platform that helps teams write, summarize, brainstorm, and search across their workspace. Baked into Business and Enterprise plans, it connects to all your docs, projects, and wikis.",
+        categories: ["writing", "productivity"],
+        website: "https://www.notion.com/product/ai",
+        pricing: "Free Notion: Limited AI, Plus: $12/user/month, Business: $18/user/month (AI included), Enterprise: Custom, AI Add-on: $8-10/user/month on lower tiers",
+        paymentOptions: {
+            isPaid: true,
+            hasFreeTrialPeriod: true,
+            hasFreeStarterPlan: true
+        },
+        logo: "/images/logos/notion-ai-logo.svg",
+        features: ["AI writing assistant", "Q&A across workspace", "AI autofill for databases", "Meeting summaries", "Connected search"],
+        useCases: ["Team knowledge management", "Document drafting", "Meeting notes", "Project planning"],
+        addedDate: "2026-02-20"
+    },
+    {
+        id: "45",
+        name: "Replit Agent",
+        slug: "replit-agent",
+        tagline: "Build apps with AI, deploy instantly",
+        description: "Replit Agent is an autonomous AI coding assistant within the Replit cloud IDE that can build, debug, and deploy full applications from natural language instructions. With Agent 3, it handles complex multi-step development tasks end-to-end.",
+        categories: ["coding"],
+        website: "https://replit.com",
+        pricing: "Free: Limited daily Agent credits, Core: $20/month ($25 monthly credits), Teams: $35/user/month",
+        paymentOptions: {
+            isPaid: true,
+            hasFreeTrialPeriod: false,
+            hasFreeStarterPlan: true
+        },
+        logo: "/images/logos/replit-logo.svg",
+        features: ["Autonomous app building", "50+ language support", "Instant cloud deployment", "Real-time collaboration", "Ghostwriter code completion"],
+        useCases: ["Rapid prototyping", "Learning to code", "Hackathon projects", "Internal tool building"],
+        addedDate: "2026-02-20"
+    },
+    {
+        id: "46",
+        name: "Lovable",
+        slug: "lovable",
+        tagline: "The last piece of software you'll ever need to build software",
+        description: "Lovable (formerly GPT Engineer) is an AI-powered full-stack app builder that generates production-ready applications from natural language. It produces clean, maintainable code with Supabase integration, GitHub sync, and one-click deployment.",
+        categories: ["coding"],
+        website: "https://lovable.dev",
+        pricing: "Free: Limited, Starter: $25/month (100 credits), Launch: $50/month (250 credits), Scale: $100/month (500+ credits), Teams: Custom",
+        paymentOptions: {
+            isPaid: true,
+            hasFreeTrialPeriod: false,
+            hasFreeStarterPlan: true
+        },
+        logo: "/images/logos/lovable-logo.svg",
+        features: ["Natural language to full-stack app", "Supabase backend integration", "GitHub sync", "One-click deploy", "Visual editing"],
+        useCases: ["SaaS MVP building", "Internal tools", "Landing pages", "Startup prototyping"],
+        addedDate: "2026-02-20"
     }
 ]; 
