@@ -50,6 +50,25 @@ async function main() {
   const words = post.content.split(/\s+/).length;
   const readTime = `${Math.max(1, Math.ceil(words / 250))} min read`;
 
+  // Generate featured image — use AI (Together.ai FLUX) if key available, else SVG fallback
+  let imgFile;
+  if (process.env.TOGETHER_API_KEY) {
+    try {
+      const { generate: aiGen } = require('./generate-blog-image-ai.js');
+      const pngPath = path.resolve(__dirname, `../public/images/blog/${post.slug}.png`);
+      await aiGen(post.title, post.slug, pngPath);
+      imgFile = `/images/blog/${post.slug}.png`;
+    } catch (e) {
+      console.error(`AI image failed, using SVG: ${e.message}`);
+    }
+  }
+  if (!imgFile) {
+    const { generate: svgGen } = require('./generate-blog-image.js');
+    const svgPath = path.resolve(__dirname, `../public/images/blog/${post.slug}.svg`);
+    svgGen(post.title, post.slug, svgPath);
+    imgFile = `/images/blog/${post.slug}.svg`;
+  }
+
   // Build the new entry
   const entry = `    {
         id: "${id}",
@@ -77,25 +96,6 @@ async function main() {
 
   content = before + separator + entry + '\n' + content.substring(closingIndex);
   fs.writeFileSync(BLOG_FILE, content);
-
-  // Generate featured image — use AI (Together.ai FLUX) if key available, else SVG fallback
-  let imgFile;
-  if (process.env.TOGETHER_API_KEY) {
-    try {
-      const { generate: aiGen } = require('./generate-blog-image-ai.js');
-      const pngPath = path.resolve(__dirname, `../public/images/blog/${post.slug}.png`);
-      await aiGen(post.title, post.slug, pngPath);
-      imgFile = `/images/blog/${post.slug}.png`;
-    } catch (e) {
-      console.error(`AI image failed, using SVG: ${e.message}`);
-    }
-  }
-  if (!imgFile) {
-    const { generate: svgGen } = require('./generate-blog-image.js');
-    const svgPath = path.resolve(__dirname, `../public/images/blog/${post.slug}.svg`);
-    svgGen(post.title, post.slug, svgPath);
-    imgFile = `/images/blog/${post.slug}.svg`;
-  }
 
   // Git commit and push
   execSync(`git add -A`, { cwd: REPO_DIR });

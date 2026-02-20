@@ -2036,5 +2036,117 @@ Check out [Claude](https://www.anthropic.com/claude) and [Scholarcy](https://www
         categories: ["Research","Comparisons"],
         featuredImage: "/images/blog/claude-vs-scholarcy.svg",
         tags: ["claude","scholarcy","research","comparison","vs"],
+    },
+    {
+        id: "16",
+        title: "Cursor Review: Is the AI Code Editor Worth $20/Month?",
+        slug: "cursor-review-ai-code-editor-worth-it",
+        excerpt: "An honest review of Cursor, the AI-first code editor that's trying to replace VS Code. What it actually does well, where it falls short, and whether it's worth the money.",
+        content: `If you've been anywhere near developer Twitter in the last year, you've seen the Cursor hype. "I built an entire app in 20 minutes!" "Cursor replaced my junior developer!" "I'll never go back to VS Code!"
+
+So I've been using Cursor daily for months now. Here's what it actually is, what it does well, and whether you should pay for it.
+
+## What Cursor Actually Is
+
+Cursor is a code editor built on top of VS Code — literally a fork of it. So if you're already a VS Code user, you'll feel right at home. Same extensions, same keybindings, same everything. The difference is that Cursor bakes AI directly into the editing experience instead of bolting it on as an extension.
+
+That distinction matters more than you'd think.
+
+Where GitHub Copilot gives you autocomplete suggestions and a chat sidebar, Cursor gives you an AI that understands your entire codebase. You can highlight code, hit Cmd+K, and tell it what to change. You can open the composer and describe a feature across multiple files. You can ask it questions about your project and it'll actually look at the relevant code before answering.
+
+It's not just autocomplete. It's closer to pair programming — if your pair had read every file in your repo before sitting down.
+
+## The Good Stuff
+
+### Tab Completions Are Addictive
+
+Cursor's tab completion (they call it "Tab") is genuinely the best autocomplete I've used. It doesn't just finish the current line — it predicts what you're about to do next. Start writing a function signature and it'll suggest the entire implementation. Start a pattern in one place and it'll replicate it elsewhere. It feels like it's reading your mind, and it's right often enough that you start relying on it.
+
+The Pro plan gives you unlimited tab completions. That alone is worth something.
+
+### Agent Mode Changes the Game
+
+This is where Cursor really separates itself. Agent mode lets you describe what you want in natural language, and Cursor will make changes across multiple files, run terminal commands, fix errors, and iterate until the task is done. Need to add authentication to your Express app? Describe it, and the agent will create the middleware, update your routes, add the config, and install the packages.
+
+Does it get everything right the first time? No. But it gets you 80% there in 30 seconds instead of 30 minutes. You review the diff, tweak what needs tweaking, and move on.
+
+For greenfield projects and boilerplate-heavy work, this is legitimately transformative.
+
+### Codebase Awareness
+
+When you ask Cursor a question, it doesn't just look at the current file. It indexes your entire project and pulls in relevant context. Ask "how does the auth flow work?" and it'll reference your middleware, your user model, your route handlers — whatever's relevant. This makes the chat feature dramatically more useful than a generic AI chatbot.
+
+## The Not-So-Good Stuff
+
+### The Pricing Tiers Are Confusing
+
+Cursor has four individual plans: Hobby (free), Pro ($20/month), Pro+ ($60/month), and Ultra ($200/month). The difference? Mostly usage limits on premium models.
+
+The free tier is basically a demo — limited agent requests and limited tab completions. Fine for kicking the tires, but you'll hit the ceiling fast. Pro is where most people land, and it's reasonable at $20/month with extended agent limits and unlimited tab completions.
+
+But here's the thing: if you're doing serious agent work with the best models, you'll burn through Pro limits in a week or two of heavy use. Then you're looking at Pro+ at $60/month, which is starting to feel expensive for an editor. Ultra at $200/month is for teams or power users who live in agent mode all day.
+
+Compare that to GitHub Copilot at $10/month (or free for open source) and the price gap is real.
+
+### It Can Be Slow
+
+Agent mode requests hit external APIs, and sometimes you're waiting 15-30 seconds for a response. During peak hours, it can be worse. Tab completions are generally snappy, but agent and chat features depend on model availability. If you're on the free tier with "slow" requests, you'll feel it.
+
+### Not Great for Giant Monorepos
+
+Cursor's codebase indexing works well for small to medium projects. But if you're working in a massive monorepo with millions of lines, the indexing can be slow, context windows get stretched, and the AI starts hallucinating file paths that don't exist. It's getting better, but it's not there yet for enterprise-scale codebases.
+
+### You're Still the Developer
+
+This might sound obvious, but it needs saying: Cursor doesn't replace knowing how to code. The agent will confidently write code that looks right but has subtle bugs. It'll use deprecated APIs. It'll make architectural decisions that work now but create tech debt later. If you don't have the experience to review what it generates, you'll end up with a codebase that's held together with duct tape.
+
+Cursor makes good developers faster. It doesn't make non-developers into developers — not yet, anyway.
+
+## Who Should Use Cursor
+
+**Yes, get it if:**
+- You're a professional developer who lives in VS Code
+- You write a lot of boilerplate or repetitive code
+- You work on multiple projects and need fast context-switching
+- You're building MVPs or prototyping frequently
+- You want AI that understands your codebase, not just the current file
+
+**Skip it if:**
+- You're happy with GitHub Copilot and don't need multi-file editing
+- You work in a massive monorepo with strict security requirements
+- You're on a tight budget and $20/month for an editor feels steep
+- You primarily use JetBrains IDEs and don't want to switch
+
+## Cursor vs GitHub Copilot
+
+This is the comparison everyone asks about. Here's the short version:
+
+**GitHub Copilot** is better if you want reliable autocomplete that stays out of your way, costs less ($10/month), and works inside your existing IDE (VS Code, JetBrains, Neovim, etc.).
+
+**Cursor** is better if you want an AI that can make changes across multiple files, understand your whole codebase, and act more like a pair programmer than an autocomplete engine.
+
+Copilot has been catching up — their new coding agent features are solid. But as of right now, Cursor's agent mode and codebase awareness are still ahead. The gap is narrowing though.
+
+## Cursor vs Claude Code
+
+Worth mentioning since Claude Code has been gaining traction: Claude Code is a terminal-based coding agent, not an editor. It's better for large-scale refactors and complex multi-step tasks where you want the AI to drive. Cursor is better for the day-to-day editing flow where you want AI assistance while you're in control. Many developers use both — Cursor for active development, Claude Code for bigger tasks.
+
+## The Verdict
+
+Cursor is the best AI code editor available right now. The tab completions are best-in-class, agent mode is genuinely useful (not just a gimmick), and the VS Code foundation means you're not giving up anything to try it.
+
+Is it worth $20/month? If you code for a living, absolutely. The time savings on boilerplate alone pay for it. If you're a hobbyist or student, the free tier is fine for getting a taste, but you'll want Pro eventually.
+
+Is it worth $60 or $200/month? That depends on how much you use agent mode. For most developers, Pro is the sweet spot.
+
+The AI coding space is moving fast. Copilot is improving, Claude Code is maturing, and new tools pop up every month. But right now, if you want the most complete AI-integrated coding experience, Cursor is it.
+
+Just don't believe the Twitter screenshots of people building production apps in 20 minutes. That's not how any of this works.`,
+        author: "Hugh McInnis",
+        publishDate: "2026-02-20",
+        readTime: "6 min read",
+        categories: ["coding","productivity"],
+        featuredImage: "/images/blog/cursor-review-ai-code-editor-worth-it.svg",
+        tags: ["cursor","ai code editor","github copilot","vs code","coding tools","developer tools","ai programming"],
     }
 ]; 
