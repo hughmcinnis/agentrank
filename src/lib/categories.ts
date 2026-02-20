@@ -103,6 +103,24 @@ export const categories: Category[] = [
         name: 'Home Improvement',
         description: 'AI assistants for home repair, maintenance, and DIY projects',
         icon: '🔨'
+    },
+    {
+        id: 'image-generation',
+        name: 'Image Generation',
+        description: 'AI tools for creating and editing images',
+        icon: '🎨'
+    },
+    {
+        id: 'video-generation',
+        name: 'Video Generation',
+        description: 'AI tools for creating and editing video content',
+        icon: '🎬'
+    },
+    {
+        id: 'voice-audio',
+        name: 'Voice & Audio',
+        description: 'AI tools for voice synthesis, audio generation, and sound design',
+        icon: '🎙️'
     }
 ];
 

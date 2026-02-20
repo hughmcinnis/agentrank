@@ -1,7 +1,7 @@
 import Fuse from 'fuse.js';
 import { Agent, agents } from '@/data/agents';
 
-export type AgentCategory = 'writing' | 'coding' | 'sales' | 'customer-support' | 'data-analysis' | 'research' | 'marketing' | 'productivity' | 'email' | 'transcription' | 'document-analysis' | 'scheduling' | 'seo' | 'social-media' | 'accounting' | 'home-improvement';
+export type AgentCategory = 'writing' | 'coding' | 'sales' | 'customer-support' | 'data-analysis' | 'research' | 'marketing' | 'productivity' | 'email' | 'transcription' | 'document-analysis' | 'scheduling' | 'seo' | 'social-media' | 'accounting' | 'home-improvement' | 'image-generation' | 'video-generation' | 'voice-audio';
 
 const fuseOptions = {
     keys: [
