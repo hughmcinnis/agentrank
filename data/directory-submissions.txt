@@ -1,0 +1,129 @@
+AI Tool Directory Submissions Log
+===================================
+Date: 2026-02-20
+Products: AgentRank (https://agentrank.tech) & Fixy (https://apps.apple.com/us/app/fixy-ai-handyman/id6747599349)
+
+STATUS KEY: submitted | failed | already-listed | pending-manual | paid-only | needs-account
+
+=== SUBMISSION RESULTS ===
+
+1. futurepedia.io
+   URL: https://www.futurepedia.io/submit-tool
+   Status: PAID-ONLY ($247+ basic, $497 verified - basic SOLD OUT)
+   Notes: No free tier available. All listings require payment.
+
+2. theresanaiforthat.com
+   URL: https://theresanaiforthat.com/launch/
+   Status: PAID-ONLY ($49+ one-time review fee)
+   Notes: Minimum $49 for basic listing. Higher tiers for newsletter/featured.
+
+3. toolify.ai
+   URL: https://www.toolify.ai/submit
+   Status: FAILED (Cloudflare blocked access)
+   Notes: Site behind Cloudflare protection. Needs manual browser submission.
+   Action: Visit https://www.toolify.ai/submit manually.
+
+4. aitools.fyi
+   URL: https://dodo.pe/aitoolsfyi-submit
+   Status: PAID-ONLY ($30 fast-track only)
+   Notes: No free submission option found.
+
+5. topai.tools
+   URL: https://topai.tools/submit
+   Status: FAILED (Cloudflare blocked access)
+   Notes: Needs manual browser submission.
+   Action: Visit https://topai.tools/submit manually.
+
+6. producthunt.com
+   URL: https://www.producthunt.com/posts/new
+   Status: PENDING-MANUAL (Cloudflare blocked - couldn't check if already listed)
+   Notes: Free to submit but requires account login. Check if already listed first.
+   Action: Search for "AgentRank" and "Fixy" on Product Hunt manually.
+
+7. alternativeto.net
+   URL: https://alternativeto.net/submit/
+   Status: FAILED (Cloudflare blocked access)
+   Notes: Free submissions available but requires browser.
+   Action: Visit https://alternativeto.net/contribute/ manually. Free to add software.
+
+8. saashub.com
+   URL: https://www.saashub.com/submit
+   Status: PENDING-MANUAL (FREE - community submissions)
+   Notes: Free community-driven submissions. Appears to accept free tool listings.
+   Action: Visit https://www.saashub.com/submit and create posts for both tools.
+
+9. betalist.com
+   URL: https://betalist.com/submit
+   Status: NEEDS-ACCOUNT (requires login)
+   Notes: Free basic submissions available. Requires account creation first.
+   Action: Create account at betalist.com, then submit both tools.
+
+10. aitools.inc
+    URL: https://loxr142exnq.typeform.com/to/RB6ZnEf2
+    Status: PENDING-MANUAL (FREE tier available - Typeform)
+    Notes: Free listing with 30-90 day queue. Paid $129 for fast lane.
+    Action: Fill out Typeform for both AgentRank and Fixy (free tier).
+
+11. submitaitools.org
+    URL: https://submitaitools.org/submit-your-ai-tool/
+    Status: PENDING-MANUAL (FREE - requires human verification)
+    Notes: Free submissions with captcha/color verification.
+    Action: Visit URL, complete verification, submit both tools.
+
+12. altern.ai
+    URL: https://altern.ai/submit
+    Status: NEEDS-ACCOUNT (FREE - requires login)
+    Notes: Free submissions available. Requires creating an account first.
+    Action: Create account at altern.ai, then submit both tools.
+
+13. aitoolslist.io
+    URL: https://aitoolslist.io/submit
+    Status: PENDING-MANUAL (likely free)
+    Action: Check submission page manually.
+
+14. ainave.com
+    URL: https://www.ainave.com
+    Status: PENDING-MANUAL
+    Action: Check for submission form manually.
+
+15. aitoolsarena.com
+    URL: https://aitoolsarena.com/
+    Status: PENDING-MANUAL
+    Action: Check for free submission option.
+
+=== SUMMARY ===
+
+Confirmed FREE submission directories (action needed - manual browser required):
+1. aitools.inc - FREE Typeform: https://loxr142exnq.typeform.com/to/RB6ZnEf2
+2. saashub.com - FREE community: https://www.saashub.com/submit
+3. alternativeto.net - FREE: https://alternativeto.net/contribute/
+4. betalist.com - FREE with account: https://betalist.com/submit
+5. altern.ai - FREE with account: https://altern.ai/submit
+6. submitaitools.org - FREE: https://submitaitools.org/submit-your-ai-tool/
+7. producthunt.com - FREE with account: https://www.producthunt.com/posts/new
+8. toolify.ai - Check pricing: https://www.toolify.ai/submit
+9. topai.tools - Check pricing: https://topai.tools/submit
+
+Paid only (skip unless budget allows):
+- futurepedia.io ($247+)
+- theresanaiforthat.com ($49+)
+- aitools.fyi ($30)
+
+=== SUBMISSION DETAILS FOR COPY-PASTE ===
+
+--- AgentRank ---
+Name: AgentRank
+URL: https://agentrank.tech
+Tagline: The honest AI agent directory — real reviews, real comparisons, no sponsored rankings
+Category: AI Tools Directory / AI Agent Directory
+Description: AgentRank helps people discover and compare AI agents and tools with honest reviews, detailed comparisons, and transparent pricing. No pay-to-rank, no sponsored listings.
+Pricing: Free
+
+--- Fixy ---
+Name: Fixy - AI Handyman
+URL: https://apps.apple.com/us/app/fixy-ai-handyman/id6747599349
+Tagline: AI-powered home repair assistant
+Category: AI App / Home Improvement / Productivity
+Description: Fixy uses AI to help homeowners diagnose and fix common household problems. Take a photo, get step-by-step repair instructions.
+Pricing: Free (iOS App)
+Platform: iOS
