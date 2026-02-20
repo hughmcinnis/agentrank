@@ -89,9 +89,12 @@ async function main() {
   
   // Generate timestamp in PST (America/Los_Angeles)
   const now = new Date();
-  const pstDate = new Date(now.toLocaleString('en-US', { timeZone: 'America/Los_Angeles' }));
-  const publishedAt = pstDate.toISOString();
-  const today = publishedAt.split('T')[0];
+  // Format date parts in PST timezone
+  const pstFormatter = new Intl.DateTimeFormat('en-CA', { timeZone: 'America/Los_Angeles', year: 'numeric', month: '2-digit', day: '2-digit' });
+  const pstTimeFormatter = new Intl.DateTimeFormat('en-US', { timeZone: 'America/Los_Angeles', hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: false });
+  const today = pstFormatter.format(now); // YYYY-MM-DD
+  const pstTime = pstTimeFormatter.format(now); // HH:MM:SS
+  const publishedAt = `${today}T${pstTime.replace(/\u202f/g, '')}.000-08:00`;
   
   const words = post.content.split(/\s+/).length;
   const readTime = `${Math.max(1, Math.ceil(words / 250))} min read`;
