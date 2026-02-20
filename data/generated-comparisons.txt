@@ -2,3 +2,4 @@ github-copilot-vs-qodo-merge
 lavender-vs-clay
 claude-vs-copy-ai
 copy-ai-vs-jasper
+claude-vs-scholarcy
