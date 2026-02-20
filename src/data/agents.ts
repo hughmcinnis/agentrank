@@ -40,7 +40,7 @@ export const agents: Agent[] = [
             hasFreeTrialPeriod: false,
             hasFreeStarterPlan: true
         },
-        logo: "/images/logos/claude-logo.svg",
+        logo: "/images/logos/claude-logo.png",
         videos: [{
             type: "video",
             url: "",
@@ -65,7 +65,7 @@ export const agents: Agent[] = [
             hasFreeTrialPeriod: true,
             hasFreeStarterPlan: true
         },
-        logo: "/images/logos/github-copilot-logo.svg",
+        logo: "/images/logos/github-copilot-logo.png",
         videos: [{
             type: "video",
             url: "",
@@ -90,7 +90,7 @@ export const agents: Agent[] = [
             hasFreeTrialPeriod: false,
             hasFreeStarterPlan: true
         },
-        logo: "/images/logos/copyai-logo.svg",
+        logo: "/images/logos/copy-ai-logo.png",
         screenshots: [
             "/images/screenshots/copyai1.PNG", "/images/screenshots/copyai2.PNG"],
         features: ["GTM workflows", "Brand Voice & Infobase", "Multi-channel content", "Data integration", "AI workflow builder"],
@@ -111,7 +111,7 @@ export const agents: Agent[] = [
             hasFreeTrialPeriod: true,
             hasFreeStarterPlan: false
         },
-        logo: "/images/logos/jasper-logo.svg",
+        logo: "/images/logos/jasper-logo.png",
         videos: [{
             type: "video",
             url: "",
@@ -136,7 +136,7 @@ export const agents: Agent[] = [
             hasFreeTrialPeriod: true,
             hasFreeStarterPlan: false
         },
-        logo: "/images/logos/intercom-bot-logo.svg",
+        logo: "/images/logos/intercom-resolution-bot-logo.png",
         videos: [{
             type: "video",
             url: "",
@@ -161,7 +161,7 @@ export const agents: Agent[] = [
             hasFreeTrialPeriod: true,
             hasFreeStarterPlan: false
         },
-        logo: "/images/logos/superhuman-logo.svg",
+        logo: "/images/logos/superhuman-logo.png",
         videos: [{
             type: "video",
             url: "",
@@ -186,7 +186,7 @@ export const agents: Agent[] = [
             hasFreeTrialPeriod: true,
             hasFreeStarterPlan: true
         },
-        logo: "/images/logos/lavender-logo.svg",
+        logo: "/images/logos/lavender-logo.png",
         videos: [{
             type: "video",
             url: "",
@@ -211,7 +211,7 @@ export const agents: Agent[] = [
             hasFreeTrialPeriod: true,
             hasFreeStarterPlan: true
         },
-        logo: "/images/logos/notta-logo.svg",
+        logo: "/images/logos/notta-logo.png",
         videos: [{
             type: "video",
             url: "",
@@ -236,7 +236,7 @@ export const agents: Agent[] = [
             hasFreeTrialPeriod: true,
             hasFreeStarterPlan: true
         },
-        logo: "/images/logos/scholarcy-logo.svg",
+        logo: "/images/logos/scholarcy-logo.png",
         videos: [{
             type: "video",
             url: "",
@@ -261,7 +261,7 @@ export const agents: Agent[] = [
             hasFreeTrialPeriod: true,
             hasFreeStarterPlan: false
         },
-        logo: "/images/logos/motion-logo.svg",
+        logo: "/images/logos/motion-logo.png",
         videos: [{
             type: "video",
             url: "",
@@ -286,7 +286,7 @@ export const agents: Agent[] = [
             hasFreeTrialPeriod: true,
             hasFreeStarterPlan: false
         },
-        logo: "/images/logos/clara-logo.svg",
+        logo: "/images/logos/clara-logo.png",
         features: ["Natural language email processing", "Multi-party coordination", "24/7 availability", "Calendar integration", "Intelligent learning"],
         useCases: ["Executive scheduling", "Sales meeting coordination", "Consultant scheduling", "Email-based scheduling"],
         addedDate: "2024-01-25"
@@ -305,7 +305,7 @@ export const agents: Agent[] = [
             hasFreeTrialPeriod: true,
             hasFreeStarterPlan: true
         },
-        logo: "/images/logos/bito-ai-logo.svg",
+        logo: "/images/logos/bito-ai-logo.png",
         videos: [{
             type: "video",
             url: "",
@@ -330,7 +330,7 @@ export const agents: Agent[] = [
             hasFreeTrialPeriod: true,
             hasFreeStarterPlan: true
         },
-        logo: "/images/logos/coderabbit-logo.svg",
+        logo: "/images/logos/coderabbit-logo.png",
         videos: [{
             type: "video",
             url: "",
@@ -355,7 +355,7 @@ export const agents: Agent[] = [
             hasFreeTrialPeriod: true,
             hasFreeStarterPlan: false
         },
-        logo: "/images/logos/anodot-logo.svg",
+        logo: "/images/logos/anodot-logo.png",
         videos: [{
             type: "video",
             url: "",
@@ -380,7 +380,7 @@ export const agents: Agent[] = [
             hasFreeTrialPeriod: true,
             hasFreeStarterPlan: false
         },
-        logo: "/images/logos/instantly-ai-logo.svg",
+        logo: "/images/logos/instantly-ai-logo.png",
         videos: [{
             type: "video",
             url: "",
@@ -405,7 +405,7 @@ export const agents: Agent[] = [
             hasFreeTrialPeriod: true,
             hasFreeStarterPlan: true
         },
-        logo: "/images/logos/clay-logo.svg",
+        logo: "/images/logos/clay-logo.png",
         videos: [{
             type: "video",
             url: "",
@@ -430,7 +430,7 @@ export const agents: Agent[] = [
             hasFreeTrialPeriod: true,
             hasFreeStarterPlan: false
         },
-        logo: "/images/logos/forethought-logo.svg",
+        logo: "/images/logos/forethought-logo.png",
         videos: [{
             type: "video",
             url: "",
@@ -455,7 +455,7 @@ export const agents: Agent[] = [
             hasFreeTrialPeriod: false,
             hasFreeStarterPlan: false
         },
-        logo: "/images/logos/clearscope-logo.svg",
+        logo: "/images/logos/clearscope-logo.png",
         screenshots: ["/images/screenshots/clearscope1.png", "/images/screenshots/clearscope2.png", "/images/screenshots/clearscope3.png", "/images/screenshots/clearscope4.png"],
         features: ["Content reports", "Real-time grading", "AI-generated outlines", "Content inventory", "Google Docs/WordPress integration"],
         useCases: ["Content optimization", "Keyword research", "Content briefs", "Portfolio monitoring"],
@@ -475,7 +475,7 @@ export const agents: Agent[] = [
             hasFreeTrialPeriod: false,
             hasFreeStarterPlan: false
         },
-        logo: "/images/logos/schema-app-logo.svg",
+        logo: "/images/logos/schema-app-logo.png",
         videos: [{
             type: "video",
             url: "",
@@ -500,7 +500,7 @@ export const agents: Agent[] = [
             hasFreeTrialPeriod: true,
             hasFreeStarterPlan: false
         },
-        logo: "/images/logos/posthero-logo.svg",
+        logo: "/images/logos/posthero-logo.png",
         videos: [{
             type: "video",
             url: "",
@@ -525,7 +525,7 @@ export const agents: Agent[] = [
             hasFreeTrialPeriod: true,
             hasFreeStarterPlan: false
         },
-        logo: "/images/logos/flick-logo.svg",
+        logo: "/images/logos/flick-logo.png",
         videos: [{
             type: "video",
             url: "",
@@ -550,7 +550,7 @@ export const agents: Agent[] = [
             hasFreeTrialPeriod: true,
             hasFreeStarterPlan: false
         },
-        logo: "/images/logos/truewind-logo.svg",
+        logo: "/images/logos/truewind-logo.png",
         videos: [{
             type: "video",
             url: "",
@@ -575,7 +575,7 @@ export const agents: Agent[] = [
             hasFreeTrialPeriod: true,
             hasFreeStarterPlan: false
         },
-        logo: "/images/logos/hyperbound-logo.svg",
+        logo: "/images/logos/hyperbound-logo.png",
         screenshots: ["/images/screenshots/hyperbound1.PNG"],
         features: ["Realistic AI buyer simulation", "Custom ICP bot builder", "Real-time analytics", "Multi-scenario training", "Conversation intelligence"],
         useCases: ["Sales development training", "Rep onboarding", "Skill gap identification", "Candidate screening", "Enterprise sales practice"],
@@ -596,7 +596,7 @@ export const agents: Agent[] = [
             hasFreeTrialPeriod: true,
             hasFreeStarterPlan: false
         },
-        logo: "/images/logos/clickup-brain-logo.svg",
+        logo: "/images/logos/clickup-brain-logo.png",
         videos: [{
             type: "video",
             url: "",
@@ -621,7 +621,7 @@ export const agents: Agent[] = [
             hasFreeTrialPeriod: true,
             hasFreeStarterPlan: true
         },
-        logo: "/images/logos/mailmaestro-logo.svg",
+        logo: "/images/logos/mailmaestro-logo.png",
         screenshots: ["/images/screenshots/maestro2.png", "/images/screenshots/maestro3.png", "/images/screenshots/maestro4.png", "/images/screenshots/maestro5.png"],
         features: ["AI email composition", "Thread summarization", "One-click replies", "Magic templates", "Improve with AI"],
         useCases: ["Native Outlook/Gmail integration", "Multilingual communication", "HR/Finance automation", "Enterprise email"],
@@ -641,7 +641,7 @@ export const agents: Agent[] = [
             hasFreeTrialPeriod: true,
             hasFreeStarterPlan: false
         },
-        logo: "/images/logos/sentisum-logo.svg",
+        logo: "/images/logos/sentisum-logo.png",
         screenshots: ["/images/screenshots/sentisum1.png", "/images/screenshots/sentisum2.png", "/images/screenshots/sentisum3.png", "/images/screenshots/sentisum4.png", "/images/screenshots/sentisum5.png", "/images/screenshots/sentisum6.png"],
 
         features: ["Custom AI models", "Multi-channel analysis", "Real-time sentiment tracking", "Automatic ticket routing", "Granular insights"],
@@ -662,7 +662,7 @@ export const agents: Agent[] = [
             hasFreeTrialPeriod: true,
             hasFreeStarterPlan: false
         },
-        logo: "/images/logos/smartwriter-logo.svg",
+        logo: "/images/logos/smartwriter-logo.png",
         screenshots: ["/images/screenshots/smartwriter1.png", "/images/screenshots/smartwriter2.png", "/images/screenshots/smartwriter3.png"],
 
         features: ["Hyper-personalized cold emails", "LinkedIn Chrome extension", "Automated icebreakers", "Backlink outreach", "Google Sheets integration"],
@@ -683,7 +683,7 @@ export const agents: Agent[] = [
             hasFreeTrialPeriod: true,
             hasFreeStarterPlan: false
         },
-        logo: "/images/logos/alli-ai-logo.svg",
+        logo: "/images/logos/alli-ai-logo.png",
         videos: [{
             type: "video",
             url: "",
@@ -708,7 +708,7 @@ export const agents: Agent[] = [
             hasFreeTrialPeriod: false,
             hasFreeStarterPlan: true
         },
-        logo: "/images/logos/qodo-merge-logo.svg",
+        logo: "/images/logos/qodo-merge-logo.png",
         features: ["Multi-tool orchestration", "Auto-approval", "All languages", "Self-hosted option"],
         useCases: ["Code review", "PR automation", "Quality assurance", "Team workflows"],
         addedDate: "2024-01-25"
@@ -727,7 +727,7 @@ export const agents: Agent[] = [
             hasFreeTrialPeriod: true,
             hasFreeStarterPlan: false
         },
-        logo: "/images/logos/zoominfo-salesos-logo.svg",
+        logo: "/images/logos/zoominfo-salesos-logo.png",
         videos: [{
             type: "video",
             url: "", // Fallback URL if needed
@@ -752,7 +752,7 @@ export const agents: Agent[] = [
             hasFreeTrialPeriod: true,
             hasFreeStarterPlan: true
         },
-        logo: "/images/logos/clockwise-logo.svg",
+        logo: "/images/logos/clockwise-logo.png",
         videos: [{
             type: "video",
             url: "",
@@ -777,7 +777,7 @@ export const agents: Agent[] = [
             hasFreeTrialPeriod: false,
             hasFreeStarterPlan: true
         },
-        logo: "/images/logos/writesonic-logo.svg",
+        logo: "/images/logos/writesonic-logo.png",
         videos: [{
             type: "video",
             url: "",
@@ -802,7 +802,7 @@ export const agents: Agent[] = [
             hasFreeTrialPeriod: false,
             hasFreeStarterPlan: true
         },
-        logo: "/images/logos/fixy-logo.svg",
+        logo: "/images/logos/fixy-logo.png",
         features: ["Photo-based diagnosis", "Step-by-step DIY guides", "Skill-level personalization", "Safety warnings", "Pro vs DIY recommendations", "Tool suggestions"],
         useCases: ["Home repair diagnosis", "DIY guidance", "Cost saving on repairs", "Learning home maintenance"],
         addedDate: "2026-02-18"
@@ -821,7 +821,7 @@ export const agents: Agent[] = [
             hasFreeTrialPeriod: true,
             hasFreeStarterPlan: true
         },
-        logo: "/images/logos/cursor-logo.svg",
+        logo: "/images/logos/cursor-logo.png",
         features: ["Codebase-aware AI chat", "Multi-file editing", "Agentic coding mode", "Tab completions", "Multi-model support (GPT-4, Claude, etc.)"],
         useCases: ["Full-stack development", "Code refactoring", "Rapid prototyping", "AI-assisted debugging"],
         addedDate: "2026-02-20"
@@ -840,7 +840,7 @@ export const agents: Agent[] = [
             hasFreeTrialPeriod: false,
             hasFreeStarterPlan: true
         },
-        logo: "/images/logos/perplexity-logo.svg",
+        logo: "/images/logos/perplexity-ai-logo.png",
         features: ["Pro Search with follow-ups", "Real-time web citations", "File & image analysis", "Comet browser", "API access"],
         useCases: ["Academic research", "Market analysis", "Fact-checking", "Daily knowledge work"],
         addedDate: "2026-02-20"
@@ -859,7 +859,7 @@ export const agents: Agent[] = [
             hasFreeTrialPeriod: false,
             hasFreeStarterPlan: true
         },
-        logo: "/images/logos/bolt-logo.svg",
+        logo: "/images/logos/bolt-logo.png",
         features: ["In-browser full-stack dev", "Natural language to app", "One-click deploy", "Real-time preview", "Multi-model support"],
         useCases: ["Rapid prototyping", "MVP creation", "Landing pages", "Internal tools"],
         addedDate: "2026-02-20"
@@ -878,7 +878,7 @@ export const agents: Agent[] = [
             hasFreeTrialPeriod: false,
             hasFreeStarterPlan: true
         },
-        logo: "/images/logos/v0-logo.svg",
+        logo: "/images/logos/v0-logo.png",
         features: ["Text/image to UI", "React/Next.js code generation", "Vercel deployment integration", "Iterative design refinement", "Shadcn/Tailwind output"],
         useCases: ["UI prototyping", "Component generation", "Design-to-code", "Full-stack web apps"],
         addedDate: "2026-02-20"
@@ -897,7 +897,7 @@ export const agents: Agent[] = [
             hasFreeTrialPeriod: true,
             hasFreeStarterPlan: false
         },
-        logo: "/images/logos/devin-logo.svg",
+        logo: "/images/logos/devin-logo.png",
         features: ["Autonomous coding agent", "Sandboxed dev environment", "Jira/Linear integration", "Pull request automation", "Multi-step planning & execution"],
         useCases: ["Automated bug fixes", "Code migrations", "Feature development", "Repository maintenance"],
         addedDate: "2026-02-20"
@@ -916,7 +916,7 @@ export const agents: Agent[] = [
             hasFreeTrialPeriod: false,
             hasFreeStarterPlan: false
         },
-        logo: "/images/logos/midjourney-logo.svg",
+        logo: "/images/logos/midjourney-logo.png",
         features: ["Text-to-image generation", "Image-to-image editing", "Style tuning", "High-resolution upscaling", "Web & Discord interface"],
         useCases: ["Digital art creation", "Marketing visuals", "Concept art", "Brand imagery"],
         addedDate: "2026-02-20"
@@ -935,7 +935,7 @@ export const agents: Agent[] = [
             hasFreeTrialPeriod: true,
             hasFreeStarterPlan: true
         },
-        logo: "/images/logos/runway-logo.svg",
+        logo: "/images/logos/runway-logo.png",
         features: ["Gen-4 text/image-to-video", "AI video editing suite", "Motion brush", "Act-Two character animation", "API access"],
         useCases: ["Video production", "Social media content", "Film pre-visualization", "Marketing videos"],
         addedDate: "2026-02-20"
@@ -954,7 +954,7 @@ export const agents: Agent[] = [
             hasFreeTrialPeriod: false,
             hasFreeStarterPlan: true
         },
-        logo: "/images/logos/elevenlabs-logo.svg",
+        logo: "/images/logos/elevenlabs-logo.png",
         features: ["Ultra-realistic TTS", "Voice cloning", "32+ language support", "AI dubbing", "Conversational AI agents"],
         useCases: ["Content narration", "Podcast production", "Game character voices", "Accessibility", "Customer support voice bots"],
         addedDate: "2026-02-20"
@@ -973,7 +973,7 @@ export const agents: Agent[] = [
             hasFreeTrialPeriod: true,
             hasFreeStarterPlan: true
         },
-        logo: "/images/logos/notion-ai-logo.svg",
+        logo: "/images/logos/notion-ai-logo.png",
         features: ["AI writing assistant", "Q&A across workspace", "AI autofill for databases", "Meeting summaries", "Connected search"],
         useCases: ["Team knowledge management", "Document drafting", "Meeting notes", "Project planning"],
         addedDate: "2026-02-20"
@@ -992,7 +992,7 @@ export const agents: Agent[] = [
             hasFreeTrialPeriod: false,
             hasFreeStarterPlan: true
         },
-        logo: "/images/logos/replit-logo.svg",
+        logo: "/images/logos/replit-agent-logo.png",
         features: ["Autonomous app building", "50+ language support", "Instant cloud deployment", "Real-time collaboration", "Ghostwriter code completion"],
         useCases: ["Rapid prototyping", "Learning to code", "Hackathon projects", "Internal tool building"],
         addedDate: "2026-02-20"
@@ -1011,7 +1011,7 @@ export const agents: Agent[] = [
             hasFreeTrialPeriod: false,
             hasFreeStarterPlan: true
         },
-        logo: "/images/logos/lovable-logo.svg",
+        logo: "/images/logos/lovable-logo.png",
         features: ["Natural language to full-stack app", "Supabase backend integration", "GitHub sync", "One-click deploy", "Visual editing"],
         useCases: ["SaaS MVP building", "Internal tools", "Landing pages", "Startup prototyping"],
         addedDate: "2026-02-20"
