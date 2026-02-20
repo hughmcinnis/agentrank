@@ -85,6 +85,28 @@ async function main() {
   execSync(`git commit -m "blog: ${post.title}"`, { cwd: REPO_DIR });
   execSync(`git push`, { cwd: REPO_DIR });
 
+  // Cross-post to Dev.to and queue tweet (best-effort, don't fail the publish)
+  try {
+    execSync(`node ${path.resolve(__dirname, 'crosspost-devto.js')} ${fileArg || '/dev/stdin'}`, {
+      input: fileArg ? undefined : input,
+      cwd: REPO_DIR,
+      timeout: 30000,
+    });
+  } catch (e) {
+    console.error(`Dev.to crosspost failed (non-fatal): ${e.message}`);
+  }
+
+  try {
+    const tweetInput = JSON.stringify({ title: post.title, slug: post.slug, excerpt: post.excerpt });
+    execSync(`node ${path.resolve(__dirname, 'generate-tweet.js')}`, {
+      input: tweetInput,
+      cwd: REPO_DIR,
+      timeout: 10000,
+    });
+  } catch (e) {
+    console.error(`Tweet queue failed (non-fatal): ${e.message}`);
+  }
+
   console.log(JSON.stringify({ success: true, id, slug: post.slug, title: post.title }));
 }
 
