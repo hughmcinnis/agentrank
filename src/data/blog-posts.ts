@@ -5,7 +5,8 @@ export interface BlogPost {
     excerpt: string;
     content: string;
     author: string;
-    publishDate: string;
+    publishDate: string; // YYYY-MM-DD format for display
+    publishedAt?: string; // ISO 8601 datetime in PST for sorting
     readTime: string;
     categories: string[];
     featuredImage?: string;
@@ -2148,105 +2149,5 @@ Just don't believe the Twitter screenshots of people building production apps in
         categories: ["coding","productivity"],
         featuredImage: "/images/blog/cursor-review-ai-code-editor-worth-it.svg",
         tags: ["cursor","ai code editor","github copilot","vs code","coding tools","developer tools","ai programming"],
-    },
-    {
-        id: "17",
-        title: "Cursor Review: Is the AI Code Editor Worth $20/Month?",
-        slug: "cursor-review-ai-code-editor-worth-it",
-        excerpt: "An honest look at Cursor — the VS Code fork with built-in AI. What it does well, where it falls short, and whether it's actually worth paying for over GitHub Copilot.",
-        content: `## The Pitch
-
-Cursor is a fork of VS Code with AI baked directly into the editor. Not an extension. Not a plugin. The AI is the editor. It autocompletes code, edits multiple files at once, indexes your entire codebase for context, and basically tries to be the coding partner you always wanted.
-
-It launched in late 2023, gained serious traction in 2024, and by early 2026 it's one of the most talked-about developer tools on the planet. But is the hype justified? I've been using it daily, and here's what I actually think.
-
-## What Cursor Does
-
-At its core, Cursor does three things:
-
-1. **Tab Completion** — As you type, it predicts your next line (or entire block). Press Tab to accept. Similar to GitHub Copilot, but with better multi-line predictions and awareness of your project structure.
-
-2. **Composer (Cmd+I)** — This is the killer feature. Describe what you want in plain English, and Cursor edits multiple files simultaneously. Say "add authentication to all API routes" and it creates middleware, updates route handlers, and wires up error handling across your project. When it works, it's borderline magical.
-
-3. **Inline Editing (Cmd+K)** — Highlight code, press Cmd+K, type what you want changed. "Add loading state to this component" and it rewrites the component with skeleton loaders and proper state management.
-
-All of this is powered by a codebase indexing system that supports up to 200K tokens — roughly 150,000 lines of code. Cursor actually understands your file structure, naming conventions, and component relationships. It's not just pattern-matching off the current file.
-
-## Pricing
-
-Here's how the plans break down:
-
-- **Free** — 2,000 completions/month, 50 slow premium requests. Enough to test it, not enough to live in it. If you code full-time, you'll burn through the free tier in about a week.
-- **Pro ($20/month)** — Unlimited fast completions, 500 fast premium requests. This is the sweet spot for most developers. Premium requests cover Composer and complex edits — Tab completions don't count. Most people use 80-120 premium requests per month.
-- **Business ($40/month)** — Unlimited everything, plus admin controls, SSO, and team features.
-
-For comparison, GitHub Copilot Individual is $10/month. So you're paying double for Cursor Pro. The question is whether you get double the value.
-
-## What's Actually Good
-
-**Multi-file editing is a game-changer.** This is where Cursor pulls away from every competitor. Ask it to "add a delete button to all admin tables" and it finds every relevant component, adds the buttons, wires up API calls, and updates TypeScript types. Something that takes 45 minutes manually, Cursor does in 3. It doesn't always nail it — maybe 80% of the time it's perfect — but even when it misses, it gets you 90% of the way there.
-
-**Codebase awareness is real.** After indexing your project, Cursor correctly imports components, matches your naming conventions, and understands relationships between files. On well-structured projects, import accuracy hits 95%. On messy codebases with inconsistent naming, it drops to around 70%, which is still impressive.
-
-**It learns your style.** Give it a week and it starts matching your preferences — functional components over class, specific formatting patterns, your preferred error handling approach. It's subtle but meaningful.
-
-**Speed boost is measurable.** I'd estimate roughly 2x faster coding compared to vanilla Copilot, primarily because of Composer. The time savings compound — it's not just writing code faster, it's that multi-file refactors that used to eat an afternoon now take 15 minutes.
-
-## Where It Falls Short
-
-**Premium request limits can pinch.** 500/month sounds generous until you're deep in a refactor and burning through 30-40 Composer requests in a single afternoon. If you're a heavy user working on large features, you'll start rationing by the third week of the month.
-
-**It sometimes hallucinates package APIs.** Cursor occasionally suggests syntax from outdated package versions or APIs that don't exist. This is an LLM problem, not unique to Cursor, but it's more dangerous here because multi-file edits can propagate a bad pattern across your entire project before you notice.
-
-**Complex logic is still shaky.** For algorithmic work, intricate state management, or anything with lots of edge cases, Cursor's suggestions are a starting point at best. It once added a loading state to a component but forgot to clear it on error. These are the kinds of bugs that slip through code review if you're not careful.
-
-**It's a VS Code fork, for better and worse.** You get all of VS Code's extensions and familiarity, but you're also tied to VS Code's ecosystem. If you're a JetBrains person, Vim purist, or Emacs devotee, switching your entire editor for AI features is a big ask.
-
-**The free tier is basically a demo.** 2,000 completions and 50 slow premium requests isn't enough to evaluate the product properly. The slow requests take 10-30 seconds each, which kills any sense of flow. You need Pro to actually judge whether Cursor works for you.
-
-## Who Should Use Cursor
-
-**Full-stack developers working on mid-sized projects.** This is Cursor's sweet spot. If you're building a SaaS app, maintaining a Next.js frontend with an API backend, or working across multiple files daily — Cursor will save you real time.
-
-**Solo developers and small teams.** When you don't have five people to review your code and catch patterns, Cursor's codebase awareness fills that gap. It's like having a junior dev who's read every file in your project.
-
-**People already using VS Code.** Zero friction to switch. Your extensions, keybindings, and settings all carry over.
-
-## Who Should Skip It
-
-**Casual coders or students.** GitHub Copilot at $10/month (or free for students) covers 80% of what you need. The extra $10/month for Cursor makes sense when time-is-money, not when you're learning.
-
-**Backend-heavy developers writing complex algorithms.** If most of your work is intricate business logic rather than CRUD and UI, Cursor's multi-file features won't shine as much. You'll get more from a strong chat-based tool like Claude.
-
-**JetBrains users who love their IDE.** Switching editors is painful. JetBrains has their own AI assistant now, and Copilot works across IDEs. Don't uproot your workflow unless you've exhausted other options.
-
-## Cursor vs GitHub Copilot
-
-This is the comparison everyone wants. Here's the honest take:
-
-- **Tab completion**: Roughly equivalent. Cursor's is slightly better at multi-line, Copilot's is slightly faster. Call it a draw.
-- **Multi-file editing**: Cursor wins decisively. Copilot's Workspace feature exists but isn't in the same league yet.
-- **Codebase context**: Cursor wins. Its indexing is deeper and more reliable.
-- **Price**: Copilot wins at $10/month vs $20/month.
-- **Ecosystem**: Copilot wins on flexibility — it works in VS Code, JetBrains, Neovim, and more.
-- **Enterprise**: Copilot wins on maturity, integrations, and GitHub ecosystem.
-
-If you live in VS Code and do a lot of multi-file work, Cursor is worth the premium. If you want a solid AI assistant that works everywhere without switching editors, Copilot is the safer bet.
-
-## The Bottom Line
-
-Cursor is the best AI code editor available right now, and Composer is genuinely the most impressive AI coding feature I've used. The $20/month Pro plan pays for itself within a few days for any professional developer — the time savings on multi-file refactors alone justify it.
-
-But it's not perfect. The premium request limits can be frustrating, it's locked to VS Code's ecosystem, and it will occasionally introduce subtle bugs if you accept suggestions without reviewing them carefully. The AI isn't replacing your brain — it's augmenting your hands.
-
-My recommendation: if you code professionally and use VS Code, try the free tier for a week, then go Pro. If you're on a budget or don't use VS Code, stick with GitHub Copilot. Both are good tools. Cursor is just more ambitious.
-
-**Rating: 8.5/10** — Best-in-class multi-file AI editing, held back by ecosystem lock-in and premium request limits.`,
-        author: "Hugh McInnis",
-        publishDate: "2026-02-20",
-        readTime: "6 min read",
-        categories: ["coding","productivity"],
-        featuredImage: "/images/blog/cursor-review-ai-code-editor-worth-it.svg",
-        tags: ["cursor","ai code editor","github copilot","developer tools","code completion","ai coding","vs code"],
     }
 ]; 

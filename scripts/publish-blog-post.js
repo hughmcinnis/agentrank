@@ -27,6 +27,43 @@ function escapeForTemplate(str) {
   return str.replace(/`/g, '\\`').replace(/\$\{/g, '\\${');
 }
 
+function checkForDuplicates(newPost) {
+  const content = fs.readFileSync(BLOG_FILE, 'utf-8');
+  const slugMatch = content.match(/slug:\s*"([^"]+)"/g);
+  const titleMatch = content.match(/title:\s*"([^"]+)"/g);
+  
+  if (!slugMatch || !titleMatch) return;
+  
+  const existingSlugs = slugMatch.map(m => m.match(/"([^"]+)"/)[1]);
+  const existingTitles = titleMatch.map(m => m.match(/"([^"]+)"/)[1]);
+  
+  // Exact slug match
+  if (existingSlugs.includes(newPost.slug)) {
+    throw new Error(`Duplicate post detected: A post with slug "${newPost.slug}" already exists!`);
+  }
+  
+  // Check for similar slugs (potential duplicates)
+  const slugWords = newPost.slug.split('-');
+  for (const existingSlug of existingSlugs) {
+    const existingWords = existingSlug.split('-');
+    const commonWords = slugWords.filter(w => existingWords.includes(w) && w.length > 3);
+    
+    // If more than 50% of significant words match, it's likely a duplicate
+    if (commonWords.length >= Math.min(slugWords.length, existingWords.length) * 0.5) {
+      throw new Error(`Potential duplicate detected: New post slug "${newPost.slug}" is very similar to existing post "${existingSlug}". Please choose a different topic.`);
+    }
+  }
+  
+  // Check for similar titles
+  const newTitleLower = newPost.title.toLowerCase();
+  for (const existingTitle of existingTitles) {
+    const existingLower = existingTitle.toLowerCase();
+    if (newTitleLower === existingLower) {
+      throw new Error(`Duplicate post detected: A post with title "${existingTitle}" already exists!`);
+    }
+  }
+}
+
 async function main() {
   let input;
   const fileArg = process.argv[2];
@@ -41,12 +78,21 @@ async function main() {
   for (const f of required) {
     if (!post[f]) throw new Error(`Missing required field: ${f}`);
   }
+  
+  // Check for duplicates before publishing
+  checkForDuplicates(post);
 
   // Strip leading H1 title from content (the site renders title separately)
   post.content = post.content.replace(/^\s*#\s+[^\n]+\n+/, '');
 
   const id = getNextId();
-  const today = new Date().toISOString().split('T')[0];
+  
+  // Generate timestamp in PST (America/Los_Angeles)
+  const now = new Date();
+  const pstDate = new Date(now.toLocaleString('en-US', { timeZone: 'America/Los_Angeles' }));
+  const publishedAt = pstDate.toISOString();
+  const today = publishedAt.split('T')[0];
+  
   const words = post.content.split(/\s+/).length;
   const readTime = `${Math.max(1, Math.ceil(words / 250))} min read`;
 
@@ -78,6 +124,7 @@ async function main() {
         content: \`${escapeForTemplate(post.content)}\`,
         author: "Hugh McInnis",
         publishDate: "${today}",
+        publishedAt: "${publishedAt}",
         readTime: "${readTime}",
         categories: ${JSON.stringify(post.categories)},
         featuredImage: "${imgFile}",

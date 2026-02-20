@@ -31,8 +31,12 @@ export default function BlogPage() {
             posts = filterPostsByTag(posts, selectedTag);
         }
 
-        // Sort newest first
-        posts.sort((a, b) => new Date(b.publishDate).getTime() - new Date(a.publishDate).getTime());
+        // Sort newest first (by publishedAt datetime in PST, fallback to publishDate)
+        posts.sort((a, b) => {
+            const dateA = a.publishedAt ? new Date(a.publishedAt).getTime() : new Date(a.publishDate + 'T00:00:00').getTime();
+            const dateB = b.publishedAt ? new Date(b.publishedAt).getTime() : new Date(b.publishDate + 'T00:00:00').getTime();
+            return dateB - dateA;
+        });
 
         return posts;
     }, [searchQuery, selectedCategory, selectedTag]);
