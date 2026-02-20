@@ -1416,7 +1416,7 @@ I'd bet on faster than most people think.`,
         title: "Agents Just Got Bank Accounts and Rulebooks in the Same Week",
         slug: "agents-bank-accounts-and-rulebooks-same-week",
         excerpt: "NIST launches AI agent standards. Contra lets agents buy from creators. The agent economy just went from hypothetical to institutional in about 72 hours.",
-        content: `Two things happened this week that, separately, are interesting. Together, they're a wake-up call you shouldn't ignore.
+        content: `Two things happened this week that, separately, are interesting. Together, they tell you where this is all heading.
 
 On Tuesday, NIST announced the **AI Agent Standards Initiative** — a formal effort to define how AI agents should interoperate and behave securely. On the same day, **Contra launched agent-native payments**, letting autonomous AI agents discover freelancers, review portfolios, and make purchases on their own.
 
