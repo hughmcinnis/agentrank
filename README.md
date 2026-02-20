@@ -59,6 +59,10 @@ This is a personal project that aggregates information about AI agents from publ
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
+## Newsletter
+
+AgentRank has a weekly newsletter (`scripts/send-newsletter.js`) that sends a Friday roundup of new blog posts and agents. Subscribers are managed in `data/newsletter-subscribers.txt`. A signup form will be integrated into the site in a future update.
+
 ## Contact
 
 For any questions or concerns, please contact [hugh.e.mcinnis@gmail.com](mailto:hugh.e.mcinnis@gmail.com).
