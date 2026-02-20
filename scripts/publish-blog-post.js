@@ -61,7 +61,7 @@ async function main() {
         publishDate: "${today}",
         readTime: "${readTime}",
         categories: ${JSON.stringify(post.categories)},
-        featuredImage: "/images/blog/${post.slug}.svg",
+        featuredImage: "${imgFile}",
         tags: ${JSON.stringify(post.tags)},
     }`;
 
@@ -78,10 +78,24 @@ async function main() {
   content = before + separator + entry + '\n' + content.substring(closingIndex);
   fs.writeFileSync(BLOG_FILE, content);
 
-  // Generate SVG featured image using the rich image generator
-  const { generate } = require('./generate-blog-image.js');
-  const imgPath = path.resolve(__dirname, `../public/images/blog/${post.slug}.svg`);
-  generate(post.title, post.slug, imgPath);
+  // Generate featured image — use AI (Together.ai FLUX) if key available, else SVG fallback
+  let imgFile;
+  if (process.env.TOGETHER_API_KEY) {
+    try {
+      const { generate: aiGen } = require('./generate-blog-image-ai.js');
+      const pngPath = path.resolve(__dirname, `../public/images/blog/${post.slug}.png`);
+      await aiGen(post.title, post.slug, pngPath);
+      imgFile = `/images/blog/${post.slug}.png`;
+    } catch (e) {
+      console.error(`AI image failed, using SVG: ${e.message}`);
+    }
+  }
+  if (!imgFile) {
+    const { generate: svgGen } = require('./generate-blog-image.js');
+    const svgPath = path.resolve(__dirname, `../public/images/blog/${post.slug}.svg`);
+    svgGen(post.title, post.slug, svgPath);
+    imgFile = `/images/blog/${post.slug}.svg`;
+  }
 
   // Git commit and push
   execSync(`git add -A`, { cwd: REPO_DIR });
