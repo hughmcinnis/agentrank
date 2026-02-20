@@ -42,6 +42,9 @@ async function main() {
     if (!post[f]) throw new Error(`Missing required field: ${f}`);
   }
 
+  // Strip leading H1 title from content (the site renders title separately)
+  post.content = post.content.replace(/^\s*#\s+[^\n]+\n+/, '');
+
   const id = getNextId();
   const today = new Date().toISOString().split('T')[0];
   const words = post.content.split(/\s+/).length;

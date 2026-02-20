@@ -31,6 +31,9 @@ export default function BlogPage() {
             posts = filterPostsByTag(posts, selectedTag);
         }
 
+        // Sort newest first
+        posts.sort((a, b) => new Date(b.publishDate).getTime() - new Date(a.publishDate).getTime());
+
         return posts;
     }, [searchQuery, selectedCategory, selectedTag]);
 

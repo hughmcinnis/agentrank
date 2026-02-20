@@ -1329,9 +1329,7 @@ No press releases. No affiliate pitches. Just good tools that actually work.
         title: "The Agent Economy Just Got Real: Standards, Payments, and Marketplaces in One Week",
         slug: "agent-economy-standards-payments-marketplaces-2026",
         excerpt: "NIST dropped agent standards, Contra launched agent-native payments, and Moltlaunch is hiring AI freelancers. The agent economy stopped being theoretical this week.",
-        content: `# The Agent Economy Just Got Real: Standards, Payments, and Marketplaces in One Week
-
-Something shifted this week. Not the usual "Company X launches AI agent" press release cycle — though there was plenty of that too. No, this week three things happened almost simultaneously that, taken together, mark a genuine inflection point.
+        content: `Something shifted this week. Not the usual "Company X launches AI agent" press release cycle — though there was plenty of that too. No, this week three things happened almost simultaneously that, taken together, mark a genuine inflection point.
 
 NIST announced the AI Agent Standards Initiative. Contra launched agent-native payments. And Moltlaunch, a marketplace where you hire AI agents like freelancers, has been live on Base for ten days now.
 
@@ -1418,9 +1416,7 @@ I'd bet on faster than most people think.`,
         title: "Agents Just Got Bank Accounts and Rulebooks in the Same Week",
         slug: "agents-bank-accounts-and-rulebooks-same-week",
         excerpt: "NIST launches AI agent standards. Contra lets agents buy from creators. The agent economy just went from hypothetical to institutional in about 72 hours.",
-        content: `# Agents Just Got Bank Accounts and Rulebooks in the Same Week
-
-Two things happened this week that, separately, are interesting. Together, they're a signal you shouldn't ignore.
+        content: `Two things happened this week that, separately, are interesting. Together, they're a wake-up call you shouldn't ignore.
 
 On Tuesday, NIST announced the **AI Agent Standards Initiative** — a formal effort to define how AI agents should interoperate and behave securely. On the same day, **Contra launched agent-native payments**, letting autonomous AI agents discover freelancers, review portfolios, and make purchases on their own.
 
