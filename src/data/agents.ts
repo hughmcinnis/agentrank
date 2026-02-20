@@ -1015,5 +1015,62 @@ export const agents: Agent[] = [
         features: ["Natural language to full-stack app", "Supabase backend integration", "GitHub sync", "One-click deploy", "Visual editing"],
         useCases: ["SaaS MVP building", "Internal tools", "Landing pages", "Startup prototyping"],
         addedDate: "2026-02-20"
+    },
+    {
+        id: "47",
+        name: "Aident AI",
+        slug: "aident-ai",
+        tagline: "Turn plain-English SOPs into reliable AI automations",
+        description: "Aident AI is an intelligent automation builder that lets you create workflow automations by describing your process in natural language. No nodes, no code — just plain English instructions that become reliable, approval-ready automations spanning hundreds of tools. It positions itself as a smarter alternative to Zapier, Make, and n8n with AI-native workflow design.",
+        categories: ["productivity"],
+        website: "https://aident.ai",
+        pricing: "Free: 300 credits/month, Basic: $6/month (2,000 credits), Pro: $18/month (6,000 credits), Max: $60/month (20,000 credits)",
+        paymentOptions: {
+            isPaid: true,
+            hasFreeTrialPeriod: false,
+            hasFreeStarterPlan: true
+        },
+        logo: "/images/logos/aident-ai-logo.png",
+        features: ["Natural language automation builder", "Playbook editor for SOPs", "120+ app integrations", "Approval-ready workflows", "AI co-pilot for drafting automations", "Template library"],
+        useCases: ["Marketing automation", "Competitor monitoring", "Business process automation", "Data pipeline orchestration"],
+        addedDate: "2026-02-20"
+    },
+    {
+        id: "48",
+        name: "Dvina",
+        slug: "dvina",
+        tagline: "World's most connected private & reliable AI platform",
+        description: "Dvina is a governed multi-agent AI platform that connects 120+ apps and live databases to handle complex business workflows. It enables teams across sales, finance, IT, HR, and operations to pull reports, update CRMs, check incidents, and orchestrate multi-step tasks through a unified AI interface while keeping data private and secure.",
+        categories: ["productivity", "data-analysis"],
+        website: "https://dvina.ai",
+        pricing: "Free tier available, paid plans for teams",
+        paymentOptions: {
+            isPaid: true,
+            hasFreeTrialPeriod: false,
+            hasFreeStarterPlan: true
+        },
+        logo: "/images/logos/dvina-logo.png",
+        features: ["120+ app integrations", "Live database connections", "Multi-agent orchestration", "Enterprise governance", "Real-time large file processing", "Private data handling"],
+        useCases: ["Cross-app business reporting", "CRM and sales ops automation", "IT incident management", "Financial reconciliation"],
+        addedDate: "2026-02-20"
+    },
+    {
+        id: "49",
+        name: "Simple Phones",
+        slug: "simple-phones",
+        tagline: "Never miss a call from a customer",
+        description: "Simple Phones is an AI-powered phone agent that answers inbound calls and makes outbound calls on your behalf. Forward your missed calls or get a new number, and the AI agent handles customer inquiries, follows up with leads, and even makes cold calls. The agent improves over time and can be customized for your specific business needs.",
+        categories: ["sales", "customer-support"],
+        website: "https://www.simplephones.ai",
+        pricing: "Starting at $97/month for 100 calls, no commitment",
+        paymentOptions: {
+            isPaid: true,
+            hasFreeTrialPeriod: false,
+            hasFreeStarterPlan: false
+        },
+        logo: "/images/logos/simple-phones-logo.png",
+        features: ["AI inbound call answering", "Outbound calling and cold calls", "Call logging and transcripts", "Customizable AI voice agent", "Continuous agent improvement", "Dashboard with chat testing"],
+        useCases: ["Missed call recovery", "Lead follow-up automation", "Customer support phone handling", "Cold calling at scale"],
+        addedDate: "2026-02-20"
     }
 ]; 
