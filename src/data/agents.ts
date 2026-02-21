@@ -1072,5 +1072,62 @@ export const agents: Agent[] = [
         features: ["AI inbound call answering", "Outbound calling and cold calls", "Call logging and transcripts", "Customizable AI voice agent", "Continuous agent improvement", "Dashboard with chat testing"],
         useCases: ["Missed call recovery", "Lead follow-up automation", "Customer support phone handling", "Cold calling at scale"],
         addedDate: "2026-02-20"
+    },
+    {
+        id: "50",
+        name: "Aident AI",
+        slug: "aident-ai",
+        tagline: "Turn ideas into AI agents instantly",
+        description: "Aident AI is an agentic automation platform that turns natural language into executable workflows. Describe what you want in plain English and Aident turns it into a Playbook — a compiled set of scripts and prompts that run reliably. Connect 250+ tools including Gmail, Google Sheets, LinkedIn, Slack, and more. Keep updating automations through chat as your process changes, with built-in approval flows and version tracking.",
+        categories: ["productivity", "marketing"],
+        website: "https://aident.ai",
+        pricing: "Free plan (300 credits/mo), Basic: $6/mo, Pro: $18/mo, Max: $60/mo (billed annually, 50% launch discount)",
+        paymentOptions: {
+            isPaid: true,
+            hasFreeTrialPeriod: false,
+            hasFreeStarterPlan: true
+        },
+        logo: "/images/logos/aident-ai-logo.png",
+        features: ["Natural language to automation", "250+ tool integrations", "AI-powered Playbooks", "Built-in approval workflows", "Version tracking and change history", "Code interpreter support"],
+        useCases: ["Marketing automation and competitor tracking", "Sales lead enrichment", "Business process automation", "Automated reporting and analytics"],
+        addedDate: "2026-02-21"
+    },
+    {
+        id: "51",
+        name: "Warp",
+        slug: "warp",
+        tagline: "The agentic development environment",
+        description: "Warp is a modern terminal reimagined for the age of AI agents. Run a team of coding agents — including Warp's own SOTA agent, Claude Code, Codex, and Gemini CLI — all from the terminal. Warp Code ranks #1 on Terminal-bench (52%) and top three on SWE-bench Verified (75.8%). Features include codebase indexing, cloud-hosted agents, multi-agent workflows, and a beautifully designed terminal with modern editing, completions, and collaboration features.",
+        categories: ["coding"],
+        website: "https://www.warp.dev",
+        pricing: "Free plan available, Build: $18/mo, Max: $180/mo, Business: $45/user/mo, Enterprise: Custom",
+        paymentOptions: {
+            isPaid: true,
+            hasFreeTrialPeriod: false,
+            hasFreeStarterPlan: true
+        },
+        logo: "/images/logos/warp-logo.png",
+        features: ["#1 Terminal-bench coding agent", "Multi-agent orchestration", "Codebase indexing and context", "Cloud-hosted agents", "Modern terminal UI", "Bring your own LLM", "SAML SSO and Zero Data Retention"],
+        useCases: ["AI-assisted coding and debugging", "Multi-agent development workflows", "Team terminal collaboration", "Production deployment from terminal"],
+        addedDate: "2026-02-21"
+    },
+    {
+        id: "52",
+        name: "Friendware",
+        slug: "friendware",
+        tagline: "Mind-reading AI for macOS",
+        description: "Friendware is a proactive AI assistant that lives system-wide on macOS. It understands what's on your screen, predicts your intent, and helps you act instantly — just press Tab. Unlike traditional AI tools that require copy-pasting and context-switching, Friendware injects inline AI suggestions directly into any text field across any app, from emails to documents to code editors. It's the first AI designed to be with you while you work rather than in a separate window.",
+        categories: ["productivity", "writing"],
+        website: "https://www.friendware.ai",
+        pricing: "Founding Member lifetime access (limited cohort), pricing details on website",
+        paymentOptions: {
+            isPaid: true,
+            hasFreeTrialPeriod: false,
+            hasFreeStarterPlan: false
+        },
+        logo: "/images/logos/friendware-logo.png",
+        features: ["System-wide Tab-to-complete", "Screen context awareness", "Intent prediction", "Inline AI suggestions in any text field", "No context-switching required", "macOS native integration"],
+        useCases: ["Faster email and document writing", "In-context code completions", "System-wide AI assistance", "Reducing copy-paste workflows"],
+        addedDate: "2026-02-21"
     }
 ]; 
