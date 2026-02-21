@@ -76,7 +76,8 @@ export function getAllTags(posts: BlogPost[]): string[] {
 }
 
 export function formatDate(dateString: string): string {
-    const date = new Date(dateString);
+    // Parse as UTC noon to avoid timezone offset shifting the day
+    const date = new Date(dateString + 'T12:00:00');
     const month = date.toLocaleString('en-US', { month: 'long' });
     const day = date.getDate();
     const year = date.getFullYear();
