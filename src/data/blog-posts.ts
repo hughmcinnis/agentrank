@@ -2261,5 +2261,123 @@ The future of autonomous coding agents is real, but we're still in the "useful f
         categories: ["coding"],
         featuredImage: "/images/blog/devin-review-ai-software-engineer-worth-it.svg",
         tags: ["devin","ai-coding","autonomous-agents","code-review","developer-tools","cursor","github-copilot"],
+    },
+    {
+        id: "18",
+        title: "Perplexity AI Review: The Search Engine That Actually Answers Questions",
+        slug: "perplexity-ai-review-search-engine-answers-questions",
+        excerpt: "An honest review of Perplexity AI — what it does well, where it falls short, and whether the $20/month Pro plan is worth it compared to ChatGPT and Google.",
+        content: `I've been using Perplexity AI almost daily for the past several months. Not because someone asked me to review it — because it genuinely changed how I research things. But that doesn't mean it's perfect, and it definitely doesn't mean the Pro plan is right for everyone.
+
+Here's what I actually think.
+
+## What Perplexity AI Actually Is
+
+Perplexity is an AI-powered answer engine. Not a chatbot. Not a search engine. Something in between that, frankly, neither Google nor ChatGPT nailed on their own.
+
+You ask a question. Perplexity searches the web in real-time, reads the relevant pages, synthesizes an answer, and shows you exactly where every claim came from with inline citations. It's like having a research assistant who actually reads the sources instead of just linking you to ten blue links and saying "good luck."
+
+The free tier gives you basic search with their default model. Pro ($20/month or $200/year) unlocks what they call Pro Search — multi-step reasoning, follow-up questions, file uploads, and access to models like GPT-4o, Claude, and others. There's also a Max tier at $200/month for power users and an Enterprise plan for teams.
+
+## What It Does Well
+
+### Citations That Actually Work
+
+This is the killer feature. Every answer comes with numbered citations linking to real sources. You can verify claims in seconds. If you've ever used ChatGPT for research and then spent 20 minutes checking whether it hallucinated a statistic, you know why this matters.
+
+I've caught Perplexity being wrong maybe a handful of times. Compare that to ChatGPT where I treat every factual claim as "probably right but let me check." The citation system doesn't just build trust — it saves time.
+
+### Pro Search Is Genuinely Useful
+
+Pro Search doesn't just run one query. It breaks your question into sub-queries, searches multiple angles, and synthesizes a comprehensive answer. Ask "What's the best project management tool for a 10-person remote startup?" and it'll consider pricing, features, team size, remote-specific needs, and recent reviews — not just regurgitate a listicle from 2023.
+
+The follow-up system is smooth too. It maintains context across a conversation thread, so you can drill down without re-explaining everything.
+
+### File Analysis
+
+Upload a PDF, spreadsheet, or document and ask questions about it. This is table stakes for AI tools in 2026, but Perplexity does it well. I've thrown 50-page reports at it and gotten accurate summaries in seconds. The combination of document analysis plus web search means you can ask "how does this report's findings compare to current market data?" and get a genuinely useful answer.
+
+### Speed
+
+Perplexity is fast. Noticeably faster than ChatGPT for research queries, because it's optimized for that use case. The answers feel almost instant on Pro, even for complex multi-step searches.
+
+## Where It Falls Short
+
+### Creative Work Is Not Its Thing
+
+Don't use Perplexity to write marketing copy, brainstorm taglines, or draft creative content. It's a research tool that happens to use LLMs, not a general-purpose AI assistant. I've seen people complain that it's "worse than ChatGPT" and every time, they're trying to use it for something it's not designed to do.
+
+If you need creative writing help, use Claude or ChatGPT. If you need answers to questions, use Perplexity.
+
+### The Free Tier Is Limited
+
+The free version is fine for casual use, but you'll hit the ceiling quickly. Limited Pro searches per day, no model selection, slower responses during peak times. It's enough to get a taste, but if you're using it for actual work, you'll want Pro within a week.
+
+### Mobile Experience Is Just Okay
+
+The mobile app works, but it's not where Perplexity shines. The desktop experience — especially the Comet browser they launched — is significantly better. On mobile, it sometimes feels like you're fighting the interface to get to the answer.
+
+### Occasional Source Quality Issues
+
+Perplexity is only as good as what's on the web. Sometimes it'll cite a mediocre blog post with the same weight as an academic paper. It's getting better at source prioritization, but it's not perfect. You still need to glance at the citations and apply some judgment.
+
+### No Real Agent Capabilities
+
+In a world where AI agents are becoming the norm, Perplexity is still fundamentally a question-answer tool. It can't take actions, automate workflows, or integrate deeply with your other tools. It does one thing well, but that's all it does.
+
+## Pricing Breakdown
+
+| Plan | Price | What You Get |
+|------|-------|--------------|
+| Free | $0 | Basic search, limited Pro queries, default model |
+| Pro | $20/month ($200/year) | Unlimited Pro Search, multi-model access, file uploads, API credits |
+| Max | $200/month | Higher limits, priority access, advanced features |
+| Enterprise | $40-325/seat/month | Team management, SSO, admin controls, custom data connectors |
+
+The Pro plan at $20/month is the sweet spot for most people. It's the same price as ChatGPT Plus and arguably a better value if research is your primary use case.
+
+## Perplexity vs ChatGPT vs Google
+
+Let's be real about this comparison because it comes up constantly.
+
+**Google** is still unbeatable for navigational searches ("open Gmail"), local results ("pizza near me"), and quick facts. But for any question that requires synthesis, analysis, or nuance — Google gives you links and wishes you luck.
+
+**ChatGPT** is the better all-rounder. Creative writing, coding, brainstorming, role-play, analysis — it does everything reasonably well. But for research specifically, it hallucinates more than Perplexity and doesn't cite sources as reliably (even with web browsing enabled).
+
+**Perplexity** wins the research category outright. If your question is "I need accurate, cited information about X," Perplexity is the best tool available right now. Period.
+
+Most power users I know (myself included) use both ChatGPT and Perplexity. They're complementary, not competitive. ChatGPT for creative and general tasks, Perplexity for anything where accuracy and sources matter.
+
+## Who Should Pay for Pro?
+
+**Yes, get Pro if you:**
+- Do research as part of your job (analyst, journalist, consultant, student)
+- Make decisions based on data and need to verify sources
+- Currently waste time fact-checking ChatGPT outputs
+- Want one tool for both document analysis and web research
+- Value accuracy over versatility
+
+**Skip Pro if you:**
+- Only use AI occasionally (a few times a week)
+- Primarily need creative writing or coding help
+- Already pay for ChatGPT Plus and don't do heavy research
+- Are on a tight budget and the free tier covers your needs
+
+## The Bottom Line
+
+Perplexity AI carved out a genuine niche. In a world full of AI tools trying to do everything, Perplexity picked one thing — answering questions accurately with real sources — and executed it better than anyone else.
+
+The $20/month Pro plan is worth it if research is a meaningful part of your workflow. The citations alone save enough time to justify the cost. The free tier is solid for casual use, but you'll know within a few days whether you need more.
+
+It's not going to replace ChatGPT for creative work. It's not going to replace Google for quick lookups. But for the middle ground — the real, substantive questions where you need accurate, sourced answers — nothing else comes close right now.
+
+That's not marketing speak. That's just what I've found after months of daily use.`,
+        author: "Hugh McInnis",
+        publishDate: "2026-02-21",
+        publishedAt: "2026-02-21T07:03:28.000-08:00",
+        readTime: "5 min read",
+        categories: ["AI Tools","Reviews"],
+        featuredImage: "/images/blog/perplexity-ai-review-search-engine-answers-questions.svg",
+        tags: ["perplexity ai","ai search","research tools","chatgpt alternative","ai review"],
     }
 ]; 

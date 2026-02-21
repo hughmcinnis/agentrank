@@ -1,3 +1,5 @@
 aident-ai
 dvina
 simple-phones
+warp
+friendware
