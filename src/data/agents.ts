@@ -1129,5 +1129,62 @@ export const agents: Agent[] = [
         features: ["System-wide Tab-to-complete", "Screen context awareness", "Intent prediction", "Inline AI suggestions in any text field", "No context-switching required", "macOS native integration"],
         useCases: ["Faster email and document writing", "In-context code completions", "System-wide AI assistance", "Reducing copy-paste workflows"],
         addedDate: "2026-02-21"
+    },
+    {
+        id: "53",
+        name: "CogniMemo",
+        slug: "cognimemo",
+        tagline: "Universal AI memory infrastructure",
+        description: "CogniMemo is a universal, AI-powered memory infrastructure that gives any AI real long-term memory. It automatically captures important information from conversations, files, and actions, then structures it into meaningful, user-owned memory accessible across any model or product by consent. Works with any LLM including OpenAI, Anthropic, Gemini, Mistral, and local models like Ollama. Integrates with Pinecone, Weaviate, PostgreSQL, Redis, and work tools like Notion, Slack, and Google Drive.",
+        categories: ["productivity", "research"],
+        website: "https://cognimemo.com",
+        pricing: "Free tier available, paid plans on website",
+        paymentOptions: {
+            isPaid: true,
+            hasFreeTrialPeriod: false,
+            hasFreeStarterPlan: true
+        },
+        logo: "/images/logos/cognimemo-logo.svg",
+        features: ["Universal AI memory layer", "Auto-capture from conversations and files", "Permission-based memory access", "Works with any LLM", "REST API and SDK integration", "LangChain-compatible adapters", "Entity and pattern extraction", "Cross-tool memory persistence"],
+        useCases: ["Adding long-term memory to AI assistants", "Cross-app context persistence", "Building smarter AI agents", "Enterprise memory backbone for copilots"],
+        addedDate: "2026-02-22"
+    },
+    {
+        id: "54",
+        name: "CalendarJet",
+        slug: "calendarjet",
+        tagline: "AI scheduling with branded booking pages on your own domain",
+        description: "CalendarJet is an AI-powered scheduling platform that gives you custom domain booking pages (book.yourbrand.com) at a fraction of the cost of competitors like Calendly. Features AI scheduling via voice and natural language commands, fully white-labeled branding, multi-calendar sync to prevent conflicts and double bookings, and integrations with Google Calendar, Zoom, and Stripe for payments.",
+        categories: ["scheduling", "productivity"],
+        website: "https://www.calendarjet.com",
+        pricing: "Lifetime deal: $27 (normally $497), one-time payment",
+        paymentOptions: {
+            isPaid: true,
+            hasFreeTrialPeriod: false,
+            hasFreeStarterPlan: false
+        },
+        logo: "/images/logos/calendarjet-logo.ico",
+        features: ["Custom domain booking pages", "Full white-label branding", "AI voice scheduling", "Multi-calendar sync", "Stripe payment integration", "Google Calendar and Zoom integration", "Advanced analytics", "Full API access"],
+        useCases: ["Branded client booking experience", "AI-powered appointment scheduling", "Team scheduling without recurring fees", "White-label scheduling for agencies"],
+        addedDate: "2026-02-22"
+    },
+    {
+        id: "55",
+        name: "Gumloop",
+        slug: "gumloop",
+        tagline: "The AI automation platform built for everyone",
+        description: "Gumloop is a no-code AI automation platform backed by Y Combinator that lets you build and host AI-powered business automations with a drag-and-drop interface. Connect 130+ integrations, leverage AI nodes with any LLM, and deploy workflows for marketing, sales, operations, engineering, and support. Features include visual canvas builder, MCP nodes, custom nodes, webhooks, and enterprise-grade security with SOC 2 Type 2 and GDPR compliance.",
+        categories: ["productivity", "marketing", "sales"],
+        website: "https://www.gumloop.com",
+        pricing: "Free plan available, Solo: $37/mo, Team: $244/mo, Enterprise: Custom",
+        paymentOptions: {
+            isPaid: true,
+            hasFreeTrialPeriod: false,
+            hasFreeStarterPlan: true
+        },
+        logo: "/images/logos/gumloop-logo.ico",
+        features: ["Drag-and-drop visual builder", "130+ integrations", "AI nodes with any LLM", "MCP and custom nodes", "Webhooks and triggers", "SOC 2 Type 2 compliant", "Bring your own API key", "Team workspaces and analytics"],
+        useCases: ["Marketing automation workflows", "Sales lead enrichment and outreach", "Operations process automation", "Engineering CI/CD and monitoring", "Customer support automation"],
+        addedDate: "2026-02-22"
     }
 ]; 
