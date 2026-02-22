@@ -174,6 +174,18 @@ async function main() {
     console.error(`Tweet queue failed (non-fatal): ${e.message}`);
   }
 
+  // Notify search engines (Google, Bing, Yandex, Brave via IndexNow)
+  try {
+    const blogUrl = `https://www.agentrank.tech/blog/${post.slug}`;
+    execSync(`node ${path.resolve(__dirname, 'notify-search-engines.js')} ${blogUrl}`, {
+      cwd: REPO_DIR,
+      timeout: 30000,
+      stdio: 'inherit',
+    });
+  } catch (e) {
+    console.error(`Search engine notification failed (non-fatal): ${e.message}`);
+  }
+
   console.log(JSON.stringify({ success: true, id, slug: post.slug, title: post.title }));
 }
 

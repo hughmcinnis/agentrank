@@ -1,0 +1,21 @@
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://www.agentrank.tech/sitemap.xml
+
+# Welcome all search engine crawlers
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: BraveBot
+Allow: /
+
+User-agent: YandexBot
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
