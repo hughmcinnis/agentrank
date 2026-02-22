@@ -212,7 +212,7 @@ export const blogPosts: BlogPost[] = [
         publishedAt: "2025-05-31T18:42:00.000-07:00",
         readTime: "12 min read",
         categories: ["Email Tools", "AI Software", "Productivity"],
-        featuredImage: "/images/blog/superhuman-vs-lavender-comparison.png",
+        featuredImage: "/images/blog/superhuman-vs-lavender-ai-email-tool-comparison.png",
         tags: ["AI", "Email Management", "Productivity", "Sales Tools", "Email Marketing", "Superhuman", "Lavender"]
     },
     {
@@ -523,7 +523,7 @@ The future of code review isn't human or AI—it's both, working together. And w
         publishedAt: "2025-05-31T18:42:00.000-07:00",
         readTime: "10 min read",
         categories: ["Coding", "AI Trends"],
-        featuredImage: "/images/blog/ai-code-review.png",
+        featuredImage: "/images/blog/5-ai-code-review-tools-that-actually-work.png",
         tags: ["AI", "Coding"]
     }, {
         id: "4",
@@ -748,7 +748,7 @@ These tools work best when implemented thoughtfully: set them up carefully, inte
         publishedAt: "2025-05-31T18:42:00.000-07:00",
         readTime: "10 min read",
         categories: ["Coding", "AI Trends"],
-        featuredImage: "/images/blog/ai-scheduling-assistant.jpg",
+        featuredImage: "/images/blog/ai-scheduling-assistants-complete-guide.png",
         tags: ["AI", "Coding"]
     }, {
         id: "5",
@@ -895,7 +895,7 @@ The revolution in AI agents has undeniably begun, but we're witnessing the openi
         publishedAt: "2025-06-03T18:55:00.000-07:00",
         readTime: "10 min read",
         categories: ["Automation", "AI Trends"],
-        featuredImage: "/images/blog/openai-vs-claude.jpg",
+        featuredImage: "/images/blog/openai-operator-vs-claude-computer-use.png",
         tags: ["AI", "automation"]
     },  {
         id: "6",
@@ -1330,7 +1330,7 @@ No press releases. No affiliate pitches. Just good tools that actually work.
         publishedAt: "2026-02-18T12:38:00.000-08:00",
         readTime: "4 min",
         categories: ["AI Agents", "Opinion"],
-        featuredImage: "/images/blog/why-directories-suck.png",
+        featuredImage: "/images/blog/why-most-ai-agent-directories-suck.png",
         tags: ["AI Tools", "Directory", "Opinion"]
     },
     {
@@ -1418,7 +1418,7 @@ I'd bet on faster than most people think.`,
         publishedAt: "2026-02-19T11:00:00.000-08:00",
         readTime: "5 min read",
         categories: ["Agent Economy","Industry Analysis"],
-        featuredImage: "/images/blog/agent-economy-standards-payments-marketplaces-2026.svg",
+        featuredImage: "/images/blog/agent-economy-standards-payments-marketplaces-2026.png",
         tags: ["AI agents","NIST","agent standards","agent payments","agent marketplace","Contra","Moltlaunch","automation"],
     },
     {
@@ -1501,7 +1501,7 @@ That's when you know something is actually going to work.
         publishedAt: "2026-02-19T15:00:00.000-08:00",
         readTime: "4 min read",
         categories: ["Agent Economy","Industry Analysis"],
-        featuredImage: "/images/blog/agents-bank-accounts-and-rulebooks-same-week.svg",
+        featuredImage: "/images/blog/agents-bank-accounts-and-rulebooks-same-week.png",
         tags: ["NIST","AI standards","agent payments","Contra","agent economy","regulation","interoperability"],
     },
     {
@@ -1610,7 +1610,7 @@ Check out [GitHub Copilot](https://github.com/features/copilot) and [Qodo Merge]
         publishedAt: "2026-02-19T18:42:20.000-08:00",
         readTime: "3 min read",
         categories: ["Development","Comparisons"],
-        featuredImage: "/images/blog/github-copilot-vs-qodo-merge.svg",
+        featuredImage: "/images/blog/github-copilot-vs-qodo-merge.png",
         tags: ["github-copilot","qodo-merge","coding","comparison","vs"],
     },
     {
@@ -1720,7 +1720,7 @@ Check out [Lavender](https://www.lavender.ai) and [Clay](https://clay.com) and d
         publishedAt: "2026-02-19T18:42:21.000-08:00",
         readTime: "4 min read",
         categories: ["Sales","Comparisons"],
-        featuredImage: "/images/blog/lavender-vs-clay.svg",
+        featuredImage: "/images/blog/lavender-vs-clay.png",
         tags: ["lavender","clay","sales","comparison","vs"],
     },
     {
@@ -1830,7 +1830,7 @@ Check out [Claude](https://www.anthropic.com/claude) and [Copy.ai](https://www.c
         publishedAt: "2026-02-19T18:42:22.000-08:00",
         readTime: "4 min read",
         categories: ["Writing & Content","Comparisons"],
-        featuredImage: "/images/blog/claude-vs-copy-ai.svg",
+        featuredImage: "/images/blog/claude-vs-copy-ai.png",
         tags: ["claude","copy-ai","writing","comparison","vs"],
     },
     {
@@ -1940,7 +1940,7 @@ Check out [Copy.ai](https://www.copy.ai) and [Jasper](https://www.jasper.ai) and
         publishedAt: "2026-02-19T18:42:23.000-08:00",
         readTime: "4 min read",
         categories: ["Marketing","Comparisons"],
-        featuredImage: "/images/blog/copy-ai-vs-jasper.svg",
+        featuredImage: "/images/blog/copy-ai-vs-jasper.png",
         tags: ["copy-ai","jasper","marketing","comparison","vs"],
     },
     {
@@ -2050,7 +2050,7 @@ Check out [Claude](https://www.anthropic.com/claude) and [Scholarcy](https://www
         publishedAt: "2026-02-19T18:42:24.000-08:00",
         readTime: "3 min read",
         categories: ["Research","Comparisons"],
-        featuredImage: "/images/blog/claude-vs-scholarcy.svg",
+        featuredImage: "/images/blog/claude-vs-scholarcy.png",
         tags: ["claude","scholarcy","research","comparison","vs"],
     },
     {
@@ -2163,7 +2163,7 @@ Just don't believe the Twitter screenshots of people building production apps in
         publishedAt: "2026-02-20T07:03:00.000-08:00",
         readTime: "6 min read",
         categories: ["coding","productivity"],
-        featuredImage: "/images/blog/cursor-review-ai-code-editor-worth-it.svg",
+        featuredImage: "/images/blog/cursor-review-ai-code-editor-worth-it.png",
         tags: ["cursor","ai code editor","github copilot","vs code","coding tools","developer tools","ai programming"],
     },
     {
@@ -2259,7 +2259,7 @@ The future of autonomous coding agents is real, but we're still in the "useful f
         publishedAt: "2026-02-20T15:01:00.000-08:00",
         readTime: "6 min read",
         categories: ["coding"],
-        featuredImage: "/images/blog/devin-review-ai-software-engineer-worth-it.svg",
+        featuredImage: "/images/blog/devin-review-ai-software-engineer-worth-it.png",
         tags: ["devin","ai-coding","autonomous-agents","code-review","developer-tools","cursor","github-copilot"],
     },
     {
@@ -2377,7 +2377,7 @@ That's not marketing speak. That's just what I've found after months of daily us
         publishedAt: "2026-02-21T07:03:28.000-08:00",
         readTime: "5 min read",
         categories: ["AI Tools","Reviews"],
-        featuredImage: "/images/blog/perplexity-ai-review-search-engine-answers-questions.svg",
+        featuredImage: "/images/blog/perplexity-ai-review-search-engine-answers-questions.png",
         tags: ["perplexity ai","ai search","research tools","chatgpt alternative","ai review"],
     },
     {
@@ -2488,7 +2488,7 @@ My recommendation: use Bolt for what it's great at — speed, prototyping, and m
         publishedAt: "2026-02-21T11:02:09.000-08:00",
         readTime: "6 min read",
         categories: ["reviews"],
-        featuredImage: "/images/blog/bolt-new-review-can-you-build-real-apps.svg",
+        featuredImage: "/images/blog/bolt-new-review-can-you-build-real-apps.png",
         tags: ["bolt","ai-app-builder","vibe-coding","no-code","web-development","lovable","v0"],
     },
     {
@@ -2612,7 +2612,7 @@ At $20/month for the premium tier, it's an easy recommendation for any frontend 
         publishedAt: "2026-02-21T15:01:22.000-08:00",
         readTime: "6 min read",
         categories: ["coding","productivity"],
-        featuredImage: "/images/blog/v0-review-vercel-ai-app-builder.svg",
+        featuredImage: "/images/blog/v0-review-vercel-ai-app-builder.png",
         tags: ["v0","vercel","ai app builder","react","next.js","bolt","lovable","cursor","frontend","ui generation"],
     },
     {
@@ -2723,7 +2723,7 @@ For $20/month, it's worth it if you're in the target audience: learners, prototy
         publishedAt: "2026-02-22T07:03:17.000-08:00",
         readTime: "6 min read",
         categories: ["tool-reviews"],
-        featuredImage: "/images/blog/replit-agent-review-build-apps-without-coding.svg",
+        featuredImage: "/images/blog/replit-agent-review-build-apps-without-coding.png",
         tags: ["replit","ai-coding","no-code","app-builder","ai-agents","developer-tools"],
     },
     {
@@ -2846,7 +2846,7 @@ Warp is building something genuinely new. I just wish they'd let more people exp
         publishedAt: "2026-02-22T11:01:35.000-08:00",
         readTime: "6 min read",
         categories: ["coding","productivity"],
-        featuredImage: "/images/blog/warp-terminal-review-ai-powered-terminal.svg",
+        featuredImage: "/images/blog/warp-terminal-review-ai-powered-terminal.png",
         tags: ["warp","terminal","AI tools","developer tools","coding","CLI","review"],
     },
     {
@@ -2951,7 +2951,7 @@ The best time to break a monopoly is before everyone realizes it's a monopoly. W
         publishedAt: "2026-02-22T12:55:19.000-08:00",
         readTime: "6 min read",
         categories: ["Search","Privacy","Web Development"],
-        featuredImage: "/images/blog/brave-web-discovery-project-breaking-google-monopoly.svg",
+        featuredImage: "/images/blog/brave-web-discovery-project-breaking-google-monopoly.png",
         tags: ["Brave Search","SEO","Privacy","Web Discovery Project","Search Engines","Open Web"],
     }
 ]; 
