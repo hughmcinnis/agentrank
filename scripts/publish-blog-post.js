@@ -99,17 +99,15 @@ async function main() {
   const words = post.content.split(/\s+/).length;
   const readTime = `${Math.max(1, Math.ceil(words / 250))} min read`;
 
-  // Generate featured image — use AI (Together.ai FLUX) if key available, else SVG fallback
+  // Generate featured image — use OpenAI GPT Image 1, fall back to SVG
   let imgFile;
-  if (process.env.TOGETHER_API_KEY) {
-    try {
-      const { generate: aiGen } = require('./generate-blog-image-ai.js');
-      const pngPath = path.resolve(__dirname, `../public/images/blog/${post.slug}.png`);
-      await aiGen(post.title, post.slug, pngPath);
-      imgFile = `/images/blog/${post.slug}.png`;
-    } catch (e) {
-      console.error(`AI image failed, using SVG: ${e.message}`);
-    }
+  try {
+    const { generate: aiGen } = require('./generate-blog-image-ai.js');
+    const pngPath = path.resolve(__dirname, `../public/images/blog/${post.slug}.png`);
+    await aiGen(post.title, post.slug, pngPath);
+    imgFile = `/images/blog/${post.slug}.png`;
+  } catch (e) {
+    console.error(`AI image failed, using SVG: ${e.message}`);
   }
   if (!imgFile) {
     const { generate: svgGen } = require('./generate-blog-image.js');

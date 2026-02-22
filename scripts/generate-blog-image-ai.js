@@ -1,147 +1,124 @@
 #!/usr/bin/env node
 /**
  * generate-blog-image-ai.js
- * Generates blog cover images using Together.ai's free FLUX.1 schnell model.
+ * Generates blog cover images using OpenAI's GPT Image 1 model.
  * Falls back to SVG generator if API fails.
  *
- * Usage: node generate-blog-image-ai.js "Article Title" output-slug
+ * Usage: 
+ *   node generate-blog-image-ai.js "Article Title" output-slug
+ *   Called automatically by publish-blog-post.js
  * 
- * Requires TOGETHER_API_KEY env var (get free at together.ai)
+ * Requires OPENAI_API_KEY env var or key file at ~/.credentials/openai-api-key.txt
  */
 
-const https = require('https');
 const fs = require('fs');
 const path = require('path');
 
-const TOGETHER_API_KEY = process.env.TOGETHER_API_KEY || '';
 const IMG_DIR = path.resolve(__dirname, '../public/images/blog');
+const KEY_FILE = path.resolve(process.env.HOME || '/home/user', '.credentials/openai-api-key.txt');
+
+function getApiKey() {
+  if (process.env.OPENAI_API_KEY) return process.env.OPENAI_API_KEY.trim();
+  try { return fs.readFileSync(KEY_FILE, 'utf-8').trim(); } catch { return ''; }
+}
 
 function generatePrompt(title, slug) {
-  // Create a visual prompt based on the article topic
-  const lowerTitle = title.toLowerCase();
-  const lowerSlug = slug.toLowerCase();
+  const lower = (title + ' ' + slug).toLowerCase();
   
-  let style = 'modern tech blog cover image, dark background, professional, clean design, no text, no words, no letters';
-  let subject = '';
-
-  if (lowerSlug.includes('vs') || lowerSlug.includes('compar')) {
-    subject = 'two abstract geometric shapes facing each other, split composition, versus concept, contrasting colors cyan and magenta';
-  } else if (lowerSlug.includes('email') || lowerTitle.includes('email')) {
-    subject = 'floating holographic email envelope with AI circuit patterns, glowing blue and purple';
-  } else if (lowerSlug.includes('code') || lowerSlug.includes('coding') || lowerSlug.includes('developer')) {
-    subject = 'abstract code editor interface with glowing syntax highlighting, floating code blocks, neon blue and green';
-  } else if (lowerSlug.includes('sales') || lowerSlug.includes('crm')) {
-    subject = 'abstract dashboard with rising charts and connected nodes, warm gold and teal accents';
-  } else if (lowerSlug.includes('writing') || lowerSlug.includes('content')) {
-    subject = 'floating digital document pages with abstract AI pen, soft purple and white glow';
-  } else if (lowerSlug.includes('automat') || lowerSlug.includes('workflow')) {
-    subject = 'interconnected gears and lightning bolts forming a circuit, electric purple and cyan';
-  } else if (lowerSlug.includes('directory') || lowerSlug.includes('list') || lowerSlug.includes('top')) {
-    subject = 'grid of glowing app icons floating in space, organized rows, blue and teal palette';
-  } else if (lowerSlug.includes('schedul') || lowerSlug.includes('calendar')) {
-    subject = 'futuristic holographic calendar with AI assistant, soft blue glow';
-  } else if (lowerSlug.includes('research') || lowerSlug.includes('scholar')) {
-    subject = 'abstract brain made of connected data points and light beams, deep blue and white';
+  // Base style that all images share for brand consistency
+  const baseStyle = 'Photorealistic, cinematic composition, shallow depth of field, dark moody lighting. No text, no words, no letters, no watermarks, no logos.';
+  
+  // Determine the visual scene based on article content
+  let scene;
+  
+  if (lower.includes('vs') || lower.includes('compar') || lower.includes('versus')) {
+    scene = 'Two contrasting holographic interfaces floating side by side in a dark room, one glowing cyan and the other glowing magenta. Split composition suggesting comparison. Dramatic rim lighting.';
+  } else if (lower.includes('terminal') || lower.includes('warp') || lower.includes('command line') || lower.includes('cli')) {
+    scene = 'Close-up of a sleek curved monitor displaying a dark terminal with green and cyan command-line text. Mechanical keyboard in foreground, moody purple ambient LED lighting. Developer workspace aesthetic.';
+  } else if (lower.includes('code') || lower.includes('coding') || lower.includes('cursor') || lower.includes('editor') || lower.includes('copilot') || lower.includes('developer')) {
+    scene = 'A person sitting at a modern desk using a large monitor showing a code editor with colorful syntax highlighting. Dimly lit room with warm ambient lighting. Over-the-shoulder perspective.';
+  } else if (lower.includes('replit') || lower.includes('bolt') || lower.includes('v0') || lower.includes('app builder') || lower.includes('no-code') || lower.includes('build')) {
+    scene = 'Overhead shot of a creative workspace with a tablet showing a colorful app interface being designed. Scattered design elements, stylus pen, coffee mug. Clean modern desk with soft warm lighting.';
+  } else if (lower.includes('search') || lower.includes('brave') || lower.includes('perplexity') || lower.includes('browser')) {
+    scene = 'A glowing transparent holographic search interface floating in a dark space, showing abstract search results as flowing light streams. Blue and orange accent lighting, futuristic but grounded.';
+  } else if (lower.includes('email') || lower.includes('superhuman') || lower.includes('lavender')) {
+    scene = 'A sleek laptop on a minimalist desk showing an elegant email interface. Soft natural light from a window, clean modern office aesthetic. Coffee cup and small plant nearby.';
+  } else if (lower.includes('sales') || lower.includes('crm') || lower.includes('clay') || lower.includes('revenue')) {
+    scene = 'A modern dashboard on an ultrawide monitor showing sales analytics with glowing charts and graphs. Dark office environment, teal and gold accent lighting reflecting off the desk surface.';
+  } else if (lower.includes('schedul') || lower.includes('calendar') || lower.includes('meeting')) {
+    scene = 'A floating holographic calendar interface showing color-coded time blocks, hovering above a clean white desk. Soft blue ambient glow, minimalist futuristic aesthetic.';
+  } else if (lower.includes('research') || lower.includes('scholar') || lower.includes('academ')) {
+    scene = 'An open laptop surrounded by floating holographic document pages and citation links in a dark study. Warm desk lamp light mixing with cool blue screen glow. Academic but futuristic.';
+  } else if (lower.includes('writing') || lower.includes('content') || lower.includes('copy') || lower.includes('jasper')) {
+    scene = 'A writer\'s desk with a glowing screen showing a clean document editor. Warm ambient lighting, vintage typewriter nearby for contrast. Cozy creative workspace with bokeh background lights.';
+  } else if (lower.includes('automat') || lower.includes('workflow') || lower.includes('zapier') || lower.includes('agent')) {
+    scene = 'A sleek robotic hand interacting with a holographic flowchart of connected glowing nodes. Dark studio background, dramatic cyan and purple rim lighting. Hyper-detailed 3D render quality.';
+  } else if (lower.includes('devin') || lower.includes('software engineer') || lower.includes('ai engineer')) {
+    scene = 'A futuristic AI workstation with multiple floating holographic screens showing code, architecture diagrams, and terminal output simultaneously. Dark room, blue and green accent lighting.';
+  } else if (lower.includes('crypto') || lower.includes('blockchain') || lower.includes('web3')) {
+    scene = 'Abstract visualization of a blockchain network — glowing interconnected hexagonal nodes floating in dark space. Gold and cyan color accents, cinematic depth of field.';
+  } else if (lower.includes('economy') || lower.includes('market') || lower.includes('business') || lower.includes('startup')) {
+    scene = 'A cityscape at night seen through a floor-to-ceiling office window, with holographic data charts reflected in the glass. Moody blue and gold tones, executive aesthetic.';
+  } else if (lower.includes('directory') || lower.includes('list') || lower.includes('top') || lower.includes('best')) {
+    scene = 'A grid of glowing app icons floating in organized rows in dark space, like a futuristic app store. Each icon subtly different colors — cyan, purple, green, orange. Clean isometric perspective.';
   } else {
-    subject = 'abstract AI neural network visualization, glowing nodes and connections, futuristic tech aesthetic, blue and purple gradient';
+    // Default: generic AI/tech cover
+    scene = 'A sleek robotic hand reaching toward a floating holographic brain made of light particles and neural connections. Dark studio background, dramatic rim lighting in cyan and purple. Hyper-detailed.';
   }
-
-  return `${subject}, ${style}, 16:9 aspect ratio, high quality, photorealistic lighting`;
+  
+  return `${scene} ${baseStyle}`;
 }
 
-function callTogetherAPI(prompt) {
-  return new Promise((resolve, reject) => {
-    const data = JSON.stringify({
-      model: 'black-forest-labs/FLUX.1-schnell-Free',
-      prompt: prompt,
-      width: 1200,
-      height: 630,
-      steps: 4,
+async function callOpenAI(prompt, apiKey) {
+  const res = await fetch('https://api.openai.com/v1/images/generations', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      'Authorization': `Bearer ${apiKey}`,
+    },
+    body: JSON.stringify({
+      model: 'gpt-image-1',
+      prompt,
+      size: '1536x1024',
+      quality: 'medium',
       n: 1,
-      response_format: 'b64_json',
-    });
-
-    const options = {
-      hostname: 'api.together.xyz',
-      path: '/v1/images/generations',
-      method: 'POST',
-      headers: {
-        'Authorization': `Bearer ${TOGETHER_API_KEY}`,
-        'Content-Type': 'application/json',
-        'Content-Length': Buffer.byteLength(data),
-      },
-    };
-
-    const req = https.request(options, (res) => {
-      let body = '';
-      res.on('data', chunk => body += chunk);
-      res.on('end', () => {
-        if (res.statusCode !== 200) {
-          reject(new Error(`API returned ${res.statusCode}: ${body.substring(0, 200)}`));
-          return;
-        }
-        try {
-          const parsed = JSON.parse(body);
-          if (parsed.data && parsed.data[0] && parsed.data[0].b64_json) {
-            resolve(parsed.data[0].b64_json);
-          } else if (parsed.data && parsed.data[0] && parsed.data[0].url) {
-            // If URL returned instead, fetch it
-            resolve({ url: parsed.data[0].url });
-          } else {
-            reject(new Error('No image data in response'));
-          }
-        } catch (e) {
-          reject(e);
-        }
-      });
-    });
-
-    req.on('error', reject);
-    req.setTimeout(60000, () => { req.destroy(); reject(new Error('Timeout')); });
-    req.write(data);
-    req.end();
+    }),
   });
-}
 
-function downloadImage(url) {
-  return new Promise((resolve, reject) => {
-    const mod = url.startsWith('https') ? https : require('http');
-    mod.get(url, (res) => {
-      const chunks = [];
-      res.on('data', chunk => chunks.push(chunk));
-      res.on('end', () => resolve(Buffer.concat(chunks)));
-      res.on('error', reject);
-    }).on('error', reject);
-  });
+  const json = await res.json();
+  
+  if (json.error) {
+    throw new Error(`OpenAI API error: ${json.error.message}`);
+  }
+  
+  if (json.data?.[0]?.b64_json) {
+    return Buffer.from(json.data[0].b64_json, 'base64');
+  }
+  
+  throw new Error('No image data in response');
 }
 
 async function generate(title, slug, outputPath) {
-  if (!TOGETHER_API_KEY) {
-    console.error('No TOGETHER_API_KEY set, falling back to SVG');
+  const apiKey = getApiKey();
+  
+  if (!apiKey) {
+    console.error('No OpenAI API key found, falling back to SVG');
     const { generate: svgGen } = require('./generate-blog-image.js');
     return svgGen(title, slug, outputPath.replace(/\.(png|jpg|webp)$/, '.svg'));
   }
 
   const prompt = generatePrompt(title, slug);
   console.error(`Generating image for: ${title}`);
-  console.error(`Prompt: ${prompt}`);
+  console.error(`Prompt: ${prompt.substring(0, 100)}...`);
 
   try {
-    const result = await callTogetherAPI(prompt);
-    
-    let buffer;
-    if (typeof result === 'string') {
-      buffer = Buffer.from(result, 'base64');
-    } else if (result.url) {
-      buffer = await downloadImage(result.url);
-    }
+    const buffer = await callOpenAI(prompt, apiKey);
 
     if (!fs.existsSync(IMG_DIR)) fs.mkdirSync(IMG_DIR, { recursive: true });
     
-    // Save as PNG
     const pngPath = outputPath.replace(/\.[^.]+$/, '.png');
     fs.writeFileSync(pngPath, buffer);
-    console.log(pngPath);
+    console.error(`Generated: ${pngPath} (${(buffer.length / 1024).toFixed(0)}KB)`);
     return pngPath;
   } catch (e) {
     console.error(`AI image generation failed: ${e.message}, falling back to SVG`);
@@ -150,7 +127,7 @@ async function generate(title, slug, outputPath) {
   }
 }
 
-// CLI
+// CLI mode
 if (require.main === module) {
   const [,, title, slug] = process.argv;
   if (!title || !slug) {
@@ -158,7 +135,7 @@ if (require.main === module) {
     process.exit(1);
   }
   const outputPath = path.join(IMG_DIR, `${slug}.png`);
-  generate(title, slug, outputPath).catch(e => {
+  generate(title, slug, outputPath).then(() => process.exit(0)).catch(e => {
     console.error(e);
     process.exit(1);
   });
