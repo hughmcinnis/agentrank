@@ -3,3 +3,6 @@ dvina
 simple-phones
 warp
 friendware
+cognimemo
+calendarjet
+gumloop
