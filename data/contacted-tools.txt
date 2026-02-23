@@ -6,3 +6,6 @@ friendware
 cognimemo
 calendarjet
 gumloop
+deepgram
+nova-act
+caretta
