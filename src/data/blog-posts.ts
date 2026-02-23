@@ -212,7 +212,7 @@ export const blogPosts: BlogPost[] = [
         publishedAt: "2025-05-31T18:42:00.000-07:00",
         readTime: "12 min read",
         categories: ["Email Tools", "AI Software", "Productivity"],
-        featuredImage: "/images/blog/superhuman-vs-lavender-ai-email-tool-comparison.png",
+        featuredImage: "/images/blog/superhuman-vs-lavender-comparison.png",
         tags: ["AI", "Email Management", "Productivity", "Sales Tools", "Email Marketing", "Superhuman", "Lavender"]
     },
     {
@@ -523,7 +523,7 @@ The future of code review isn't human or AI—it's both, working together. And w
         publishedAt: "2025-05-31T18:42:00.000-07:00",
         readTime: "10 min read",
         categories: ["Coding", "AI Trends"],
-        featuredImage: "/images/blog/5-ai-code-review-tools-that-actually-work.png",
+        featuredImage: "/images/blog/ai-code-review.png",
         tags: ["AI", "Coding"]
     }, {
         id: "4",
@@ -748,7 +748,7 @@ These tools work best when implemented thoughtfully: set them up carefully, inte
         publishedAt: "2025-05-31T18:42:00.000-07:00",
         readTime: "10 min read",
         categories: ["Coding", "AI Trends"],
-        featuredImage: "/images/blog/ai-scheduling-assistants-complete-guide.png",
+        featuredImage: "/images/blog/ai-scheduling-assistant.jpg",
         tags: ["AI", "Coding"]
     }, {
         id: "5",
@@ -895,7 +895,7 @@ The revolution in AI agents has undeniably begun, but we're witnessing the openi
         publishedAt: "2025-06-03T18:55:00.000-07:00",
         readTime: "10 min read",
         categories: ["Automation", "AI Trends"],
-        featuredImage: "/images/blog/openai-operator-vs-claude-computer-use.png",
+        featuredImage: "/images/blog/openai-vs-claude.jpg",
         tags: ["AI", "automation"]
     },  {
         id: "6",
@@ -1330,7 +1330,7 @@ No press releases. No affiliate pitches. Just good tools that actually work.
         publishedAt: "2026-02-18T12:38:00.000-08:00",
         readTime: "4 min",
         categories: ["AI Agents", "Opinion"],
-        featuredImage: "/images/blog/why-most-ai-agent-directories-suck.png",
+        featuredImage: "/images/blog/why-directories-suck.png",
         tags: ["AI Tools", "Directory", "Opinion"]
     },
     {
