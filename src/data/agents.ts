@@ -1186,5 +1186,62 @@ export const agents: Agent[] = [
         features: ["Drag-and-drop visual builder", "130+ integrations", "AI nodes with any LLM", "MCP and custom nodes", "Webhooks and triggers", "SOC 2 Type 2 compliant", "Bring your own API key", "Team workspaces and analytics"],
         useCases: ["Marketing automation workflows", "Sales lead enrichment and outreach", "Operations process automation", "Engineering CI/CD and monitoring", "Customer support automation"],
         addedDate: "2026-02-22"
+    },
+    {
+        id: "56",
+        name: "Deepgram",
+        slug: "deepgram",
+        tagline: "Voice AI platform for developers",
+        description: "Deepgram is a voice AI platform that provides a unified Voice Agent API for building enterprise-ready conversational AI agents. It combines speech-to-text, LLM orchestration, and text-to-speech in a single API — no stitching together multiple services. Features include built-in barge-in detection, turn-taking prediction, function calling, and BYO LLM/TTS support. Deploy fully managed, dedicated single-tenant, in VPC, or self-hosted with HIPAA, GDPR, and regional data residency compliance.",
+        categories: ["customer-support", "automation"],
+        website: "https://deepgram.com",
+        pricing: "Pay-as-you-go, Voice Agent API at $4.50/hr, $200 free credits on signup, Scale: $330/mo, Business: $1,320/mo",
+        paymentOptions: {
+            isPaid: true,
+            hasFreeTrialPeriod: true,
+            hasFreeStarterPlan: true
+        },
+        logo: "/images/logos/deepgram-logo.jpg",
+        features: ["Unified Voice Agent API", "Real-time speech-to-text and text-to-speech", "Built-in barge-in and turn-taking", "BYO LLM and TTS support", "Function calling mid-conversation", "HIPAA and GDPR compliance", "Self-hosted deployment option", "Multi-language support"],
+        useCases: ["Building voice AI customer support agents", "Real-time conversational AI for call centers", "Voice-enabled enterprise applications", "Telephony and IVR automation"],
+        addedDate: "2026-02-23"
+    },
+    {
+        id: "57",
+        name: "Amazon Nova Act",
+        slug: "nova-act",
+        tagline: "Reliable AI agents for UI workflow automation",
+        description: "Amazon Nova Act is an AWS service that helps developers build, deploy, and manage fleets of reliable AI agents for automating production UI workflows. Its frontier custom computer use model is optimized for automating critical and complex browser-based workflows, breaking them down into shorter actions for higher accuracy and robustness. Achieves breakthrough 90% reliability for browser-based UI automation workflows and integrates seamlessly into existing development lifecycles.",
+        categories: ["automation", "productivity"],
+        website: "https://aws.amazon.com/nova/act/",
+        pricing: "AWS pay-as-you-go pricing",
+        paymentOptions: {
+            isPaid: true,
+            hasFreeTrialPeriod: true,
+            hasFreeStarterPlan: false
+        },
+        logo: "/images/logos/nova-act-logo.png",
+        features: ["Browser-based UI automation", "90% workflow reliability", "Fleet management for agent deployments", "Computer use model optimized for UI tasks", "Human oversight and observability", "Seamless AWS integration", "Production-grade scaling", "Multi-step workflow decomposition"],
+        useCases: ["Automating repetitive browser workflows", "Cross-tool data entry and updates", "QA and testing automation", "Enterprise process automation at scale"],
+        addedDate: "2026-02-23"
+    },
+    {
+        id: "58",
+        name: "Caretta",
+        slug: "caretta",
+        tagline: "Realtime AI for sales calls",
+        description: "Caretta is a YC-backed sales intelligence agent that joins reps in live calls, helping them handle information requests, questions, and objections in real time. It lives in Slack to join the team conversation and gets smarter automatically — every call expands its knowledge base and objection library, turning conversations into compounding organizational advantage. Built specifically for revenue teams who need instant access to product knowledge during high-stakes sales conversations.",
+        categories: ["sales"],
+        website: "https://www.caretta.so",
+        pricing: "Contact for pricing",
+        paymentOptions: {
+            isPaid: true,
+            hasFreeTrialPeriod: false,
+            hasFreeStarterPlan: false
+        },
+        logo: "/images/logos/caretta-logo.png",
+        features: ["Real-time live call assistance", "Objection handling suggestions", "Automatic knowledge base expansion", "Slack integration", "Sales intelligence from every call", "Compounding organizational knowledge", "Information request handling", "Team-wide learning from conversations"],
+        useCases: ["Live sales call support and coaching", "Real-time objection handling", "Sales team knowledge sharing", "Onboarding new sales reps faster"],
+        addedDate: "2026-02-23"
     }
 ]; 
