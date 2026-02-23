@@ -18,10 +18,19 @@ const SITE_URL = 'https://agentrank.tech';
 async function main() {
   let input;
   const fileArg = process.argv[2];
-  if (fileArg) {
+  if (fileArg && fileArg !== '/dev/stdin') {
     input = fs.readFileSync(fileArg, 'utf-8');
   } else {
-    input = fs.readFileSync('/dev/stdin', 'utf-8');
+    // Read from stdin as stream (works in non-TTY/background contexts)
+    const chunks = [];
+    const buf = Buffer.alloc(4096);
+    try {
+      let n;
+      while ((n = fs.readSync(0, buf, 0, buf.length)) > 0) {
+        chunks.push(buf.slice(0, n));
+      }
+    } catch {}
+    input = Buffer.concat(chunks).toString('utf-8');
   }
 
   const post = JSON.parse(input);
@@ -67,11 +76,13 @@ AgentRank is the honest AI agent directory — real reviews, real comparisons, n
 
   const articleData = {
     account: 'theagenteconomy',
-    title: post.title,
-    body_markdown: devtoBody,
-    tags: devtoTags,
-    published: true,
-    canonical_url: articleUrl,
+    article: {
+      title: post.title,
+      body_markdown: devtoBody,
+      tags: devtoTags,
+      published: true,
+      canonical_url: articleUrl,
+    },
   };
 
   // Use the secure wrapper

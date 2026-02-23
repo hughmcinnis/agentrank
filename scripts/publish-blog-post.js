@@ -152,7 +152,7 @@ async function main() {
 
   // Cross-post to Dev.to and queue tweet (best-effort, don't fail the publish)
   try {
-    execSync(`node ${path.resolve(__dirname, 'crosspost-devto.js')} ${fileArg || '/dev/stdin'}`, {
+    execSync(`node ${path.resolve(__dirname, 'crosspost-devto.js')}${fileArg ? ' ' + fileArg : ''}`, {
       input: fileArg ? undefined : input,
       cwd: REPO_DIR,
       timeout: 30000,

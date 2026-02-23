@@ -16,10 +16,19 @@ const QUEUE_DIR = '/tmp/tweet-queue';
 function main() {
   let input;
   const fileArg = process.argv[2];
-  if (fileArg) {
+  if (fileArg && fileArg !== '/dev/stdin') {
     input = fs.readFileSync(fileArg, 'utf-8');
   } else {
-    input = fs.readFileSync('/dev/stdin', 'utf-8');
+    // Read from stdin as stream (works in non-TTY/background contexts)
+    const chunks = [];
+    const buf = Buffer.alloc(4096);
+    try {
+      let n;
+      while ((n = fs.readSync(0, buf, 0, buf.length)) > 0) {
+        chunks.push(buf.slice(0, n));
+      }
+    } catch {}
+    input = Buffer.concat(chunks).toString('utf-8');
   }
 
   const post = JSON.parse(input);
