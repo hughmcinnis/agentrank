@@ -9,3 +9,5 @@ gumloop
 deepgram
 nova-act
 caretta
+typewise
+flowlens
