@@ -1243,5 +1243,43 @@ export const agents: Agent[] = [
         features: ["Real-time live call assistance", "Objection handling suggestions", "Automatic knowledge base expansion", "Slack integration", "Sales intelligence from every call", "Compounding organizational knowledge", "Information request handling", "Team-wide learning from conversations"],
         useCases: ["Live sales call support and coaching", "Real-time objection handling", "Sales team knowledge sharing", "Onboarding new sales reps faster"],
         addedDate: "2026-02-23"
+    },
+    {
+        id: "59",
+        name: "Typewise",
+        slug: "typewise",
+        tagline: "AI customer service platform with multi-agent orchestration",
+        description: "Typewise is an enterprise AI customer service platform that uses multi-agent orchestration to autonomously resolve customer requests across email, chat, WhatsApp, voice, and social channels. Its AI supervisor coordinates domain-specialist agents for support, sales, and commerce workflows including returns, billing, quotes, and renewals. Agents read and write across CRM, ERP, billing, ITSM, and commerce systems. Business teams define workflows in plain language — no coding required — and built-in simulation, evaluation, and approval workflows ensure safe production deployments. Trusted by enterprise teams with 10M+ tickets solved and 200+ deep integrations.",
+        categories: ["customer-support", "automation", "sales"],
+        website: "https://www.typewise.app",
+        pricing: "Starting from $1 per resolution, success-based pricing",
+        paymentOptions: {
+            isPaid: true,
+            hasFreeTrialPeriod: true,
+            hasFreeStarterPlan: false
+        },
+        logo: "/images/logos/typewise-logo.jpg",
+        features: ["Multi-agent orchestration", "Natural language workflow builder", "Omnichannel support (email, chat, WhatsApp, voice, social)", "200+ deep integrations (CRM, ERP, billing, ITSM)", "Hybrid intelligence with human handoff", "Automated evaluations and simulation", "MCP-native architecture", "Enterprise-grade security and audit trails"],
+        useCases: ["Automating enterprise customer service at scale", "Multi-channel support orchestration", "Sales and commerce workflow automation", "Reducing average handling time for support teams"],
+        addedDate: "2026-02-24"
+    },
+    {
+        id: "60",
+        name: "FlowLens",
+        slug: "flowlens",
+        tagline: "AI-native bug reports built for coding agents",
+        description: "FlowLens makes sharing web-app bugs with AI coding agents effortless. Record your browser session with one click to capture video, network activity, console logs, DOM events, and user interactions — all synchronized and AI-ready. Share a single link that both developers and AI agents understand. Via its MCP server, coding agents like Claude Code, Cursor, GitHub Copilot, and Windsurf get full browser context to debug autonomously — no copy-pasting console errors or writing long prompts. Built with privacy first: automatic PII redaction happens locally, all recordings are encrypted, and you control what gets shared.",
+        categories: ["coding", "productivity"],
+        website: "https://magentic.ai/flowlens/",
+        pricing: "Free to start",
+        paymentOptions: {
+            isPaid: false,
+            hasFreeTrialPeriod: false,
+            hasFreeStarterPlan: true
+        },
+        logo: "/images/logos/flowlens-logo.ico",
+        features: ["One-click browser session recording", "Synchronized video + network + console + DOM capture", "MCP server for AI agent integration", "Works with Claude Code, Cursor, Copilot, Windsurf", "Automatic PII redaction", "Single shareable bug link", "Storage state and navigation event capture", "1-minute setup Chrome extension"],
+        useCases: ["Sharing reproducible bugs with AI coding agents", "Autonomous AI debugging with full browser context", "QA and developer collaboration on web app issues", "Reducing back-and-forth in bug triage"],
+        addedDate: "2026-02-24"
     }
 ]; 
