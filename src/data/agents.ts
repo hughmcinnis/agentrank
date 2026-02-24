@@ -1193,7 +1193,7 @@ export const agents: Agent[] = [
         slug: "deepgram",
         tagline: "Voice AI platform for developers",
         description: "Deepgram is a voice AI platform that provides a unified Voice Agent API for building enterprise-ready conversational AI agents. It combines speech-to-text, LLM orchestration, and text-to-speech in a single API — no stitching together multiple services. Features include built-in barge-in detection, turn-taking prediction, function calling, and BYO LLM/TTS support. Deploy fully managed, dedicated single-tenant, in VPC, or self-hosted with HIPAA, GDPR, and regional data residency compliance.",
-        categories: ["customer-support", "automation"],
+        categories: ["customer-support", "productivity"],
         website: "https://deepgram.com",
         pricing: "Pay-as-you-go, Voice Agent API at $4.50/hr, $200 free credits on signup, Scale: $330/mo, Business: $1,320/mo",
         paymentOptions: {
@@ -1212,7 +1212,7 @@ export const agents: Agent[] = [
         slug: "nova-act",
         tagline: "Reliable AI agents for UI workflow automation",
         description: "Amazon Nova Act is an AWS service that helps developers build, deploy, and manage fleets of reliable AI agents for automating production UI workflows. Its frontier custom computer use model is optimized for automating critical and complex browser-based workflows, breaking them down into shorter actions for higher accuracy and robustness. Achieves breakthrough 90% reliability for browser-based UI automation workflows and integrates seamlessly into existing development lifecycles.",
-        categories: ["automation", "productivity"],
+        categories: ["productivity", "productivity"],
         website: "https://aws.amazon.com/nova/act/",
         pricing: "AWS pay-as-you-go pricing",
         paymentOptions: {
@@ -1250,7 +1250,7 @@ export const agents: Agent[] = [
         slug: "typewise",
         tagline: "AI customer service platform with multi-agent orchestration",
         description: "Typewise is an enterprise AI customer service platform that uses multi-agent orchestration to autonomously resolve customer requests across email, chat, WhatsApp, voice, and social channels. Its AI supervisor coordinates domain-specialist agents for support, sales, and commerce workflows including returns, billing, quotes, and renewals. Agents read and write across CRM, ERP, billing, ITSM, and commerce systems. Business teams define workflows in plain language — no coding required — and built-in simulation, evaluation, and approval workflows ensure safe production deployments. Trusted by enterprise teams with 10M+ tickets solved and 200+ deep integrations.",
-        categories: ["customer-support", "automation", "sales"],
+        categories: ["customer-support", "productivity", "sales"],
         website: "https://www.typewise.app",
         pricing: "Starting from $1 per resolution, success-based pricing",
         paymentOptions: {
