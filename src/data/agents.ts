@@ -4,7 +4,7 @@ export interface Agent {
     slug: string;
     tagline: string;
     description: string;
-    categories: Array<'writing' | 'coding' | 'sales' | 'customer-support' | 'data-analysis' | 'research' | 'marketing' | 'productivity' | 'email' | 'transcription' | 'document-analysis' | 'scheduling' | 'seo' | 'social-media' | 'accounting' | 'home-improvement' | 'image-generation' | 'video-generation' | 'voice-audio'>;
+    categories: Array<'writing' | 'coding' | 'sales' | 'customer-support' | 'data-analysis' | 'research' | 'marketing' | 'productivity' | 'email' | 'transcription' | 'document-analysis' | 'scheduling' | 'seo' | 'social-media' | 'accounting' | 'home-improvement' | 'image-generation' | 'video-generation' | 'voice-audio' | 'automation'>;
     website: string;
     pricing: string;
     paymentOptions: {
