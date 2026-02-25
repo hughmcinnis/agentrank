@@ -101,12 +101,12 @@ export default function Home() {
               Submit your AI agent to our directory and reach thousands of potential users.
             </p>
             <div className="mt-10 flex items-center justify-center">
-              <a
-                href="mailto:hugh.e.mcinnis@gmail.com"
+              <Link
+                href="/submit"
                 className="rounded-xl bg-gray-800/50 backdrop-blur-xl border border-white/10 px-8 py-4 text-base font-semibold text-cyan-300 hover:bg-gray-700/50 hover:text-cyan-200 transition-all duration-300"
               >
                 Submit Your Agent
-              </a>
+              </Link>
             </div>
           </div>
         </div>

@@ -147,7 +147,7 @@ export default function Navigation() {
                         </Link>
 
                         <Link
-                            href="mailto:hugh.e.mcinnis@gmail.com"
+                            href="/submit"
                             className="px-4 py-2 text-sm font-medium text-gray-400 hover:text-fuchsia-400 hover:bg-gray-800/50 rounded-full transition-all duration-300"
                         >
                             Submit Agent
@@ -233,7 +233,7 @@ export default function Navigation() {
                     </Link>
 
                     <Link
-                        href="mailto:hugh.e.mcinnis@gmail.com"
+                        href="/submit"
                         className="block px-3 py-2 text-base font-medium text-gray-400 hover:text-gray-300 hover:bg-gray-700/50 rounded-md"
                         onClick={() => setIsMobileMenuOpen(false)}
                     >

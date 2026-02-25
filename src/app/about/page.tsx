@@ -1,4 +1,5 @@
 import { Metadata } from 'next';
+import Link from 'next/link';
 import GradientBackground from '@/components/GradientBackground';
 
 export const metadata: Metadata = {
@@ -66,12 +67,12 @@ export default function AboutPage() {
                         </p>
 
                         <div className="mt-8">
-                            <a
-                                href="mailto:hugh.e.mcinnis@gmail.com"
+                            <Link
+                                href="/submit"
                                 className="inline-flex items-center justify-center rounded-xl bg-gray-900/50 backdrop-blur-xl border border-white/10 px-8 py-4 text-base font-semibold text-cyan-300 hover:bg-gray-800/50 hover:text-cyan-200 transition-all duration-300"
                             >
                                 Submit Your Agent
-                            </a>
+                            </Link>
                         </div>
                     </div>
                 </div>

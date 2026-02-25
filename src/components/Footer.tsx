@@ -68,12 +68,12 @@ export default function Footer() {
                                     </Link>
                                 </li>
                                 <li>
-                                    <a
-                                        href="mailto:hugh.e.mcinnis@gmail.com"
+                                    <Link
+                                        href="/submit"
                                         className="text-xs text-gray-300 hover:text-cyan-300 transition-colors duration-200"
                                     >
                                         Submit Agent
-                                    </a>
+                                    </Link>
                                 </li>
                                 <li>
                                     <Link
