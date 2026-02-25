@@ -121,6 +121,12 @@ export const categories: Category[] = [
         name: 'Voice & Audio',
         description: 'AI tools for voice synthesis, audio generation, and sound design',
         icon: '🎙️'
+    },
+    {
+        id: 'automation',
+        name: 'Automation',
+        description: 'AI tools for workflow automation, RPA, and process orchestration',
+        icon: '⚙️'
     }
 ];
 

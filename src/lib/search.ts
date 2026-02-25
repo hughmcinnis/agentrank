@@ -1,7 +1,7 @@
 import Fuse from 'fuse.js';
 import { Agent, agents } from '@/data/agents';
 
-export type AgentCategory = 'writing' | 'coding' | 'sales' | 'customer-support' | 'data-analysis' | 'research' | 'marketing' | 'productivity' | 'email' | 'transcription' | 'document-analysis' | 'scheduling' | 'seo' | 'social-media' | 'accounting' | 'home-improvement' | 'image-generation' | 'video-generation' | 'voice-audio';
+export type AgentCategory = 'writing' | 'coding' | 'sales' | 'customer-support' | 'data-analysis' | 'research' | 'marketing' | 'productivity' | 'email' | 'transcription' | 'document-analysis' | 'scheduling' | 'seo' | 'social-media' | 'accounting' | 'home-improvement' | 'image-generation' | 'video-generation' | 'voice-audio' | 'automation';
 
 const fuseOptions = {
     keys: [
@@ -27,7 +27,7 @@ export const searchAgents = (query: string): Agent[] => {
 
 export const filterAgentsByCategory = (category: AgentCategory | 'all'): Agent[] => {
     if (category === 'all') return agents;
-    return agents.filter(agent => agent.categories.includes(category));
+    return agents.filter(agent => agent.categories.includes(category as any));
 };
 
 export const getRecentAgents = (count: number = 5): Agent[] => {
