@@ -114,18 +114,20 @@ export default function Navigation() {
                             </button>
 
                             {showCategoryDropdown && (
-                                <div className="absolute left-0 mt-2 w-56 rounded-xl bg-gray-800/90 backdrop-blur-xl border border-white/10 shadow-lg py-2 z-50">
-                                    {categories.map((category) => (
-                                        <Link
-                                            key={category.id}
-                                            href={`/category/${category.id}`}
-                                            className="flex items-center px-4 py-2 text-sm text-gray-300 hover:bg-gray-700/50 hover:text-fuchsia-400 transition-all duration-200"
-                                            onClick={() => setShowCategoryDropdown(false)}
-                                        >
-                                            <span className="mr-2">{category.icon}</span>
-                                            {category.name}
-                                        </Link>
-                                    ))}
+                                <div className="absolute left-0 mt-2 w-[28rem] rounded-xl bg-gray-800/90 backdrop-blur-xl border border-white/10 shadow-lg p-3 z-50 max-h-[60vh] overflow-y-auto">
+                                    <div className="grid grid-cols-2 gap-1">
+                                        {categories.map((category) => (
+                                            <Link
+                                                key={category.id}
+                                                href={`/category/${category.id}`}
+                                                className="flex items-center px-3 py-2 text-sm text-gray-300 hover:bg-gray-700/50 hover:text-fuchsia-400 rounded-lg transition-all duration-200"
+                                                onClick={() => setShowCategoryDropdown(false)}
+                                            >
+                                                <span className="mr-2">{category.icon}</span>
+                                                {category.name}
+                                            </Link>
+                                        ))}
+                                    </div>
                                 </div>
                             )}
                         </div>
@@ -195,12 +197,12 @@ export default function Navigation() {
                             Categories
                         </button>
                         {showCategoryDropdown && (
-                            <div className="mt-2 space-y-1">
+                            <div className="mt-2 grid grid-cols-2 gap-1 max-h-[50vh] overflow-y-auto">
                                 {categories.map((category) => (
                                     <Link
                                         key={category.id}
                                         href={`/category/${category.id}`}
-                                        className="block px-3 py-2 text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700 rounded-md"
+                                        className="block px-3 py-2 text-sm font-medium text-gray-300 hover:text-white hover:bg-gray-700 rounded-md"
                                         onClick={() => {
                                             setShowCategoryDropdown(false);
                                             setIsMobileMenuOpen(false);
