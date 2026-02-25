@@ -1281,5 +1281,62 @@ export const agents: Agent[] = [
         features: ["One-click browser session recording", "Synchronized video + network + console + DOM capture", "MCP server for AI agent integration", "Works with Claude Code, Cursor, Copilot, Windsurf", "Automatic PII redaction", "Single shareable bug link", "Storage state and navigation event capture", "1-minute setup Chrome extension"],
         useCases: ["Sharing reproducible bugs with AI coding agents", "Autonomous AI debugging with full browser context", "QA and developer collaboration on web app issues", "Reducing back-and-forth in bug triage"],
         addedDate: "2026-02-24"
+    },
+    {
+        id: "61",
+        name: "Gamma",
+        slug: "gamma",
+        tagline: "AI-powered presentations, documents, and websites in seconds",
+        description: "Gamma is an AI presentation and document creation platform that generates polished slide decks, docs, and web pages from a simple prompt or pasted text. With over 250 million creations, it replaces traditional tools like Google Slides and PowerPoint with a modern, AI-native workflow. Import existing files, URLs, or start from scratch — Gamma handles layout, design, and formatting automatically. Features smart templates, drag-and-drop blocks, one-click restyling, and built-in analytics. Used by startups and enterprises alike for pitch decks, internal docs, landing pages, and more.",
+        categories: ["productivity", "writing"],
+        website: "https://gamma.app",
+        pricing: "Free plan available, Plus from $10/mo, Pro from $20/mo",
+        paymentOptions: {
+            isPaid: true,
+            hasFreeTrialPeriod: false,
+            hasFreeStarterPlan: true
+        },
+        logo: "/images/logos/gamma-logo.jpg",
+        features: ["AI presentation generation from prompts", "Document and webpage creation", "Smart templates and drag-and-drop blocks", "Import from PowerPoint, PDF, or URL", "One-click restyling and themes", "Built-in analytics and engagement tracking", "Collaborative editing", "Export to PDF and PowerPoint"],
+        useCases: ["Creating pitch decks and sales presentations", "Internal documentation and reports", "Landing pages and marketing sites", "Converting notes into polished presentations"],
+        addedDate: "2026-02-25"
+    },
+    {
+        id: "62",
+        name: "Wayfound",
+        slug: "wayfound",
+        tagline: "Guardian AI agent for enterprise agent supervision and compliance",
+        description: "Wayfound is the world's first independent AI agent supervision platform, designed so business users can monitor, evaluate, and optimize all their AI agents from a single dashboard. Its AI Supervisor reads 100% of agent transcripts in real time, generating scorecards, recommendations, alerts, and compliance reports. Works with any AI agent or agentic workflow — including Salesforce Agentforce — with flexible integration via API or MCP server. Enables supervised self-healing, where agents automatically improve based on real-time feedback loops. Trusted by enterprises for brand safety, regulatory compliance, and continuous agent performance optimization.",
+        categories: ["productivity", "customer-support"],
+        website: "https://www.wayfound.ai",
+        pricing: "Starting at $179/mo for 1 agent, Enterprise from $749/mo for 5 agents",
+        paymentOptions: {
+            isPaid: true,
+            hasFreeTrialPeriod: true,
+            hasFreeStarterPlan: false
+        },
+        logo: "/images/logos/wayfound-logo.png",
+        features: ["Real-time AI agent supervision", "100% transcript monitoring", "Agent scorecards and performance analytics", "Compliance and brand safety enforcement", "Supervised self-healing agents", "Salesforce Agentforce integration", "MCP server support", "Multi-agent workflow supervision", "Proactive alerts and recommendations"],
+        useCases: ["Monitoring enterprise AI chatbot performance", "Ensuring AI agent regulatory compliance", "Optimizing multi-agent workflow outcomes", "Reducing risk in production AI deployments"],
+        addedDate: "2026-02-25"
+    },
+    {
+        id: "63",
+        name: "BrowserBook",
+        slug: "browserbook",
+        tagline: "AI-powered IDE for building fast, reliable browser automations",
+        description: "BrowserBook is an AI-powered browser automation IDE built on Playwright that combines a Jupyter-style notebook with a context-aware AI coding assistant and an inline browser. Write, test, and debug deterministic browser automations in a single environment — 10x cheaper than browser agents while being more reliable. Features managed authentication, API-triggered execution, global proxies for bot detection bypass, and HIPAA-compliant infrastructure. From healthcare data pipelines to QA testing and web scraping, BrowserBook delivers speed, stability, and enterprise-grade security for any browser automation workflow.",
+        categories: ["coding", "automation", "productivity"],
+        website: "https://www.browserbook.com",
+        pricing: "Free plan, Developer $29/mo, Team $99/mo, Enterprise custom",
+        paymentOptions: {
+            isPaid: true,
+            hasFreeTrialPeriod: true,
+            hasFreeStarterPlan: true
+        },
+        logo: "/images/logos/browserbook-logo.png",
+        features: ["Jupyter-style notebook IDE", "Context-aware AI coding assistant", "Inline browser for live testing", "Built on Playwright", "Managed authentication framework", "API-triggered workflow execution", "Global proxies for bot detection bypass", "HIPAA compliant with SOC 2 in progress", "Team workspaces and collaboration"],
+        useCases: ["Browser-based QA and testing automation", "Web scraping and data extraction", "Healthcare data pipeline automation", "RPA and repetitive task automation"],
+        addedDate: "2026-02-25"
     }
 ]; 
