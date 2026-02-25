@@ -27,7 +27,7 @@ export const searchAgents = (query: string): Agent[] => {
 
 export const filterAgentsByCategory = (category: AgentCategory | 'all'): Agent[] => {
     if (category === 'all') return agents;
-    return agents.filter(agent => agent.categories.includes(category as any));
+    return agents.filter(agent => agent.categories.includes(category));
 };
 
 export const getRecentAgents = (count: number = 5): Agent[] => {
