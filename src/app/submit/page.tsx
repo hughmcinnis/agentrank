@@ -10,10 +10,12 @@ export default function SubmitPage() {
         url: '',
         description: '',
         categories: [] as string[],
+        otherCategory: '',
         pricing: '',
         email: '',
         notes: '',
     });
+    const [showOtherCategory, setShowOtherCategory] = useState(false);
     const [status, setStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle');
     const [errorMessage, setErrorMessage] = useState('');
 
@@ -47,7 +49,8 @@ export default function SubmitPage() {
             }
 
             setStatus('success');
-            setFormData({ name: '', url: '', description: '', categories: [], pricing: '', email: '', notes: '' });
+            setFormData({ name: '', url: '', description: '', categories: [], otherCategory: '', pricing: '', email: '', notes: '' });
+            setShowOtherCategory(false);
         } catch {
             setErrorMessage('Network error. Please try again.');
             setStatus('error');
@@ -162,7 +165,28 @@ export default function SubmitPage() {
                                         {cat.name}
                                     </button>
                                 ))}
+                                <button
+                                    type="button"
+                                    onClick={() => setShowOtherCategory(!showOtherCategory)}
+                                    className={`flex items-center px-3 py-2 rounded-lg text-sm transition-all duration-200 border ${
+                                        showOtherCategory
+                                            ? 'border-cyan-400/50 bg-cyan-500/10 text-cyan-300'
+                                            : 'border-white/10 bg-gray-800/30 text-gray-400 hover:bg-gray-700/50 hover:text-gray-300'
+                                    }`}
+                                >
+                                    <span className="mr-2">💡</span>
+                                    Other
+                                </button>
                             </div>
+                            {showOtherCategory && (
+                                <input
+                                    type="text"
+                                    value={formData.otherCategory}
+                                    onChange={e => setFormData(prev => ({ ...prev, otherCategory: e.target.value }))}
+                                    className="mt-3 block w-full rounded-xl border border-white/10 bg-gray-800/50 backdrop-blur-xl py-3 px-4 text-gray-100 placeholder:text-gray-500 focus:ring-2 focus:ring-fuchsia-500 focus:border-transparent transition-all duration-300"
+                                    placeholder="Suggest a category..."
+                                />
+                            )}
                         </div>
 
                         {/* Pricing */}
