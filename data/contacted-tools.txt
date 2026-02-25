@@ -11,3 +11,6 @@ nova-act
 caretta
 typewise
 flowlens
+gamma
+wayfound
+browserbook
