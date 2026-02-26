@@ -184,6 +184,18 @@ async function main() {
     console.error(`Search engine notification failed (non-fatal): ${e.message}`);
   }
 
+  // Submit to Google Search Console for fast indexing (browser automation)
+  try {
+    const blogUrl = `https://www.agentrank.tech/blog/${post.slug}`;
+    execSync(`node ${path.resolve(__dirname, 'submit-to-search-console.js')} ${blogUrl}`, {
+      cwd: REPO_DIR,
+      timeout: 120000,
+      stdio: 'inherit',
+    });
+  } catch (e) {
+    console.error(`Search Console submission failed (non-fatal): ${e.message}`);
+  }
+
   console.log(JSON.stringify({ success: true, id, slug: post.slug, title: post.title }));
 }
 

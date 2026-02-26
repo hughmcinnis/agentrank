@@ -3,144 +3,228 @@
  * submit-to-search-console.js
  * 
  * Automates Google Search Console "Request Indexing" via Playwright browser automation.
- * Uses a persistent browser profile so Google login only needs to happen once.
+ * Imports Google cookies from ~/.config/google-cookies.json for authentication.
  *
  * Usage:
  *   node submit-to-search-console.js <url> [url2] ...
- *   node submit-to-search-console.js --login   (one-time Google login)
- *
- * First run: use --login to authenticate with Google, then Ctrl+C when done.
- * Subsequent runs reuse the saved session.
+ *   node submit-to-search-console.js --test   (test if cookies/auth work)
  */
 
 const { chromium } = require('playwright-core');
+const fs = require('fs');
 const path = require('path');
 
 const CHROME_PATH = '/home/user/.cache/ms-playwright/chromium-1208/chrome-linux64/chrome';
-const USER_DATA_DIR = path.join(process.env.HOME, '.config/search-console-browser');
+const COOKIES_PATH = path.join(process.env.HOME, '.config/google-cookies.json');
 const SITE_URL = 'https://www.agentrank.tech/';
-const SC_PROPERTY = encodeURIComponent(SITE_URL);
+const SC_BASE = 'https://search.google.com/search-console';
 const TIMEOUT = 60000;
 
+function loadCookies() {
+  const raw = JSON.parse(fs.readFileSync(COOKIES_PATH, 'utf8'));
+  // Convert from cookie-editor format to Playwright format
+  return raw.map(c => {
+    const cookie = {
+      name: c.name,
+      value: c.value,
+      path: c.path || '/',
+      secure: c.secure || false,
+      httpOnly: c.httpOnly || false,
+    };
+    // Playwright needs either domain or url
+    if (c.domain) {
+      cookie.domain = c.domain;
+    }
+    // Handle sameSite
+    if (c.sameSite === 'strict') cookie.sameSite = 'Strict';
+    else if (c.sameSite === 'lax') cookie.sameSite = 'Lax';
+    else if (c.sameSite === 'no_restriction') cookie.sameSite = 'None';
+    else cookie.sameSite = 'None'; // default for Google cookies
+
+    // Handle expiration
+    if (c.expirationDate) {
+      cookie.expires = Math.floor(c.expirationDate);
+    }
+    return cookie;
+  });
+}
+
 async function requestIndexing(url) {
-  const browser = await chromium.launchPersistentContext(USER_DATA_DIR, {
+  const browser = await chromium.launch({
     executablePath: CHROME_PATH,
     headless: true,
     args: ['--no-sandbox', '--disable-gpu', '--disable-dev-shm-usage'],
-    timeout: TIMEOUT,
+  });
+
+  const context = await browser.newContext({
+    userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36',
   });
 
   try {
-    const page = await browser.newPage();
+    // Load cookies
+    const cookies = loadCookies();
+    await context.addCookies(cookies);
+
+    const page = await context.newPage();
     
-    // Navigate to URL Inspection with the URL pre-filled
-    const inspectUrl = `https://search.google.com/search-console/inspect?resource_id=${SC_PROPERTY}&id=${encodeURIComponent(url)}`;
-    console.log(`🔍 Inspecting: ${url}`);
+    // Navigate to Search Console URL Inspection
+    const encodedUrl = encodeURIComponent(url);
+    const scUrl = `${SC_BASE}/inspect?resource_id=${encodeURIComponent(SITE_URL)}`;
     
-    await page.goto(inspectUrl, { waitUntil: 'networkidle', timeout: TIMEOUT });
-    
-    // Check if we need to log in
+    console.log(`🔍 Opening Search Console...`);
+    await page.goto(scUrl, { waitUntil: 'networkidle', timeout: TIMEOUT });
+
+    // Check if we're logged in
     if (page.url().includes('accounts.google.com')) {
-      console.error('❌ Not logged in. Run with --login first to authenticate.');
+      console.error('❌ Cookies expired or invalid. Need fresh cookies from Hugh.');
       await browser.close();
-      return false;
+      return { status: 'auth_failed', url };
     }
 
-    // Wait for the inspection to complete (loading spinner)
-    // The page shows "Retrieving data from Google index" while loading
-    console.log('⏳ Waiting for inspection results...');
+    console.log(`📝 Entering URL: ${url}`);
     
-    // Wait for either the "Request Indexing" link or indexing status to appear
+    // Find the URL input field and type the URL
+    // Search Console has an input field at the top for URL inspection
+    const inputSelector = 'input[type="text"], input[aria-label*="Inspect"], input[placeholder*="Inspect"], input[name="url"]';
+    
     try {
-      await page.waitForSelector('[data-testid="request-indexing"], a[jsname], div[class*="index"]', { 
-        timeout: 45000 
-      });
+      await page.waitForSelector(inputSelector, { timeout: 15000 });
+      const input = await page.$(inputSelector);
+      if (input) {
+        await input.click({ clickCount: 3 }); // Select all
+        await input.fill(url);
+        await page.keyboard.press('Enter');
+      }
     } catch (e) {
-      // Try waiting for any actionable content
+      // Try the direct URL approach
+      console.log('⏳ Trying direct URL inspection...');
+      await page.goto(`${SC_BASE}/inspect?resource_id=${encodeURIComponent(SITE_URL)}&id=${encodedUrl}`, {
+        waitUntil: 'networkidle',
+        timeout: TIMEOUT,
+      });
+    }
+
+    // Wait for inspection results to load
+    console.log('⏳ Waiting for inspection results...');
+    await page.waitForTimeout(8000);
+
+    // Try to wait for the results to appear
+    try {
+      await page.waitForFunction(() => {
+        const body = document.body.innerText;
+        return body.includes('Request Indexing') || 
+               body.includes('URL is on Google') ||
+               body.includes('URL is not on Google') ||
+               body.includes('not found') ||
+               body.includes('Couldn\'t');
+      }, { timeout: 30000 });
+    } catch (e) {
+      console.log('⏳ Still loading, waiting more...');
       await page.waitForTimeout(10000);
     }
 
-    // Look for the "Request Indexing" button/link
-    // Search Console uses various selectors - try multiple approaches
-    const requestIndexBtn = await page.$('text=Request Indexing') 
-      || await page.$('text=REQUEST INDEXING')
-      || await page.$('[aria-label="Request Indexing"]')
-      || await page.$('a:has-text("Request Indexing")')
-      || await page.$('button:has-text("Request Indexing")');
+    const bodyText = await page.textContent('body');
 
-    if (requestIndexBtn) {
-      await requestIndexBtn.click();
-      console.log('📤 Clicked "Request Indexing"');
-      
-      // Wait for confirmation dialog/toast
-      await page.waitForTimeout(5000);
-      
-      // Check for success message or quota exceeded
-      const pageContent = await page.textContent('body');
-      if (pageContent.includes('Indexing requested') || pageContent.includes('successfully')) {
-        console.log(`✅ Indexing requested for: ${url}`);
+    // Check if already indexed
+    if (bodyText.includes('URL is on Google')) {
+      console.log(`✅ Already indexed: ${url}`);
+      await browser.close();
+      return { status: 'already_indexed', url };
+    }
+
+    // Look for and click "Request Indexing"
+    const reqBtn = await page.$('text=Request Indexing')
+      || await page.$('text=REQUEST INDEXING')
+      || await page.$('[aria-label*="Request"]')
+      || await page.$('button:has-text("Request")');
+
+    if (reqBtn) {
+      const isDisabled = await reqBtn.evaluate(el => el.disabled || el.getAttribute('aria-disabled') === 'true');
+      if (isDisabled) {
+        console.log(`⚠️  "Request Indexing" button is disabled (quota?): ${url}`);
         await browser.close();
-        return true;
-      } else if (pageContent.includes('quota') || pageContent.includes('limit')) {
-        console.log(`⚠️  Quota may be reached for: ${url}`);
+        return { status: 'disabled', url };
+      }
+
+      await reqBtn.click();
+      console.log('📤 Clicked "Request Indexing"...');
+
+      // Wait for the indexing request to process (shows a loading modal)
+      await page.waitForTimeout(15000);
+
+      const resultText = await page.textContent('body');
+      if (resultText.includes('Indexing requested') || resultText.includes('request has been received')) {
+        console.log(`✅ Indexing requested: ${url}`);
         await browser.close();
-        return false;
+        return { status: 'requested', url };
+      } else if (resultText.includes('quota') || resultText.includes('limit')) {
+        console.log(`⚠️  Daily quota reached: ${url}`);
+        await browser.close();
+        return { status: 'quota', url };
       } else {
-        // Clicked but couldn't confirm outcome - likely worked
-        console.log(`✅ Request submitted for: ${url} (confirmation pending)`);
+        console.log(`✅ Request submitted (pending confirmation): ${url}`);
         await browser.close();
-        return true;
+        return { status: 'submitted', url };
       }
     } else {
-      // Check if URL is already indexed
-      const pageContent = await page.textContent('body');
-      if (pageContent.includes('URL is on Google') || pageContent.includes('URL is available')) {
-        console.log(`ℹ️  Already indexed: ${url}`);
-        await browser.close();
-        return true;
-      }
-      
-      // Take screenshot for debugging
-      const screenshotPath = '/tmp/search-console-debug.png';
-      await page.screenshot({ path: screenshotPath, fullPage: true });
-      console.error(`❌ Could not find "Request Indexing" button. Screenshot saved: ${screenshotPath}`);
+      // Save screenshot for debugging
+      await page.screenshot({ path: '/tmp/sc-debug.png', fullPage: true });
+      console.error(`❌ Could not find "Request Indexing" button. Screenshot: /tmp/sc-debug.png`);
+      console.error(`   Page text snippet: ${bodyText.substring(0, 300)}`);
       await browser.close();
-      return false;
+      return { status: 'button_not_found', url };
     }
   } catch (e) {
-    console.error(`❌ Error: ${e.message}`);
+    console.error(`❌ Error for ${url}: ${e.message}`);
     try {
-      await page.screenshot({ path: '/tmp/search-console-error.png', fullPage: true });
+      const pages = context.pages();
+      if (pages.length > 0) {
+        await pages[0].screenshot({ path: '/tmp/sc-error.png', fullPage: true });
+      }
     } catch (_) {}
     await browser.close();
-    return false;
+    return { status: 'error', url, error: e.message };
   }
 }
 
-async function interactiveLogin() {
-  console.log('🔐 Opening browser for Google login...');
-  console.log('   Log into your Google account that has Search Console access.');
-  console.log('   The browser session will be saved for future automated runs.');
-  console.log('   Press Ctrl+C when done.\n');
-
-  const browser = await chromium.launchPersistentContext(USER_DATA_DIR, {
+async function testAuth() {
+  console.log('🔐 Testing Google Search Console authentication...');
+  const browser = await chromium.launch({
     executablePath: CHROME_PATH,
-    headless: false,
-    args: ['--no-sandbox', '--disable-gpu'],
+    headless: true,
+    args: ['--no-sandbox', '--disable-gpu', '--disable-dev-shm-usage'],
   });
-
-  const page = await browser.newPage();
-  await page.goto('https://search.google.com/search-console');
+  const context = await browser.newContext({
+    userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36',
+  });
+  const cookies = loadCookies();
+  await context.addCookies(cookies);
+  const page = await context.newPage();
+  await page.goto(SC_BASE, { waitUntil: 'networkidle', timeout: TIMEOUT });
   
-  // Keep browser open for manual login
-  await new Promise(() => {}); // Wait forever until Ctrl+C
+  if (page.url().includes('accounts.google.com')) {
+    console.error('❌ Authentication failed — cookies expired or invalid.');
+    await browser.close();
+    process.exit(1);
+  }
+
+  await page.screenshot({ path: '/tmp/sc-auth-test.png', fullPage: true });
+  console.log(`✅ Authenticated! Current URL: ${page.url()}`);
+  console.log('   Screenshot saved: /tmp/sc-auth-test.png');
+  
+  const bodyText = await page.textContent('body');
+  if (bodyText.includes('agentrank')) {
+    console.log('✅ AgentRank property found in Search Console');
+  }
+  
+  await browser.close();
 }
 
 async function main() {
   const args = process.argv.slice(2);
 
-  if (args.includes('--login')) {
-    await interactiveLogin();
+  if (args.includes('--test')) {
+    await testAuth();
     return;
   }
 
@@ -148,25 +232,27 @@ async function main() {
   if (urls.length === 0) {
     console.error('Usage:');
     console.error('  node submit-to-search-console.js <url> [url2] ...');
-    console.error('  node submit-to-search-console.js --login');
+    console.error('  node submit-to-search-console.js --test');
     process.exit(1);
   }
 
-  let success = 0;
-  let failed = 0;
-
+  const results = [];
   for (const url of urls) {
     const result = await requestIndexing(url);
-    if (result) success++;
-    else failed++;
+    results.push(result);
+    console.log(`   → ${result.status}`);
     
-    // Small delay between submissions to avoid rate limiting
+    // Delay between submissions
     if (urls.length > 1) {
-      await new Promise(r => setTimeout(r, 3000));
+      await new Promise(r => setTimeout(r, 5000));
     }
   }
 
-  console.log(`\n📊 Results: ${success} submitted, ${failed} failed out of ${urls.length} URL(s)`);
+  const requested = results.filter(r => ['requested', 'submitted'].includes(r.status)).length;
+  const indexed = results.filter(r => r.status === 'already_indexed').length;
+  const failed = results.filter(r => ['error', 'auth_failed', 'button_not_found'].includes(r.status)).length;
+
+  console.log(`\n📊 Results: ${requested} requested, ${indexed} already indexed, ${failed} failed`);
   process.exit(failed > 0 ? 1 : 0);
 }
 

@@ -1,0 +1,162 @@
+{
+  "generatedAt": "2026-02-26T23:00:05.347Z",
+  "dataRange": "3 months",
+  "summary": {
+    "totalOpportunities": 8,
+    "strikingDistance": 0,
+    "lowCtr": 1,
+    "agentNeedsReview": 4,
+    "winnerExpand": 2,
+    "contentGaps": 1
+  },
+  "topRecommendations": [
+    {
+      "type": "low_ctr",
+      "query": "\"superhuman\" \"500 emails\"",
+      "impressions": 27,
+      "clicks": 0,
+      "position": 5.037037037037037,
+      "ctr": 0,
+      "recommendation": "\"\"superhuman\" \"500 emails\"\" gets 27 impressions but 0.0% CTR — improve title/meta description or write a more targeted article",
+      "priority": 270
+    },
+    {
+      "type": "winner_expand",
+      "query": "5-ai-code-review-tools-that-actually-work",
+      "impressions": 966,
+      "clicks": 2,
+      "position": 58.51242236024845,
+      "recommendation": "\"5-ai-code-review-tools-that-actually-work\" is getting clicks — write related/follow-up content to build topical authority",
+      "priority": 137
+    },
+    {
+      "type": "agent_needs_review",
+      "query": "clara",
+      "impressions": 57,
+      "clicks": 0,
+      "position": 34.1578947368421,
+      "recommendation": "Agent \"clara\" has 57 impressions — write a detailed review blog post to capture this traffic",
+      "priority": 114
+    },
+    {
+      "type": "content_gap",
+      "query": "\"superhuman\" \"500 emails\"",
+      "impressions": 27,
+      "clicks": 0,
+      "position": 5.037037037037037,
+      "recommendation": "No dedicated content for \"\"superhuman\" \"500 emails\"\" (27 impressions) — create a targeted article",
+      "priority": 41
+    },
+    {
+      "type": "agent_needs_review",
+      "query": "motion",
+      "impressions": 20,
+      "clicks": 0,
+      "position": 23.3,
+      "recommendation": "Agent \"motion\" has 20 impressions — write a detailed review blog post to capture this traffic",
+      "priority": 40
+    },
+    {
+      "type": "winner_expand",
+      "query": "v0-review-vercel-ai-app-builder",
+      "impressions": 143,
+      "clicks": 1,
+      "position": 16.517482517482517,
+      "recommendation": "\"v0-review-vercel-ai-app-builder\" is getting clicks — write related/follow-up content to build topical authority",
+      "priority": 34
+    },
+    {
+      "type": "agent_needs_review",
+      "query": "hyperbound",
+      "impressions": 8,
+      "clicks": 0,
+      "position": 26.75,
+      "recommendation": "Agent \"hyperbound\" has 8 impressions — write a detailed review blog post to capture this traffic",
+      "priority": 16
+    },
+    {
+      "type": "agent_needs_review",
+      "query": "notta",
+      "impressions": 5,
+      "clicks": 0,
+      "position": 20,
+      "recommendation": "Agent \"notta\" has 5 impressions — write a detailed review blog post to capture this traffic",
+      "priority": 10
+    }
+  ],
+  "allOpportunities": [
+    {
+      "type": "low_ctr",
+      "query": "\"superhuman\" \"500 emails\"",
+      "impressions": 27,
+      "clicks": 0,
+      "position": 5.037037037037037,
+      "ctr": 0,
+      "recommendation": "\"\"superhuman\" \"500 emails\"\" gets 27 impressions but 0.0% CTR — improve title/meta description or write a more targeted article",
+      "priority": 270
+    },
+    {
+      "type": "winner_expand",
+      "query": "5-ai-code-review-tools-that-actually-work",
+      "impressions": 966,
+      "clicks": 2,
+      "position": 58.51242236024845,
+      "recommendation": "\"5-ai-code-review-tools-that-actually-work\" is getting clicks — write related/follow-up content to build topical authority",
+      "priority": 137
+    },
+    {
+      "type": "agent_needs_review",
+      "query": "clara",
+      "impressions": 57,
+      "clicks": 0,
+      "position": 34.1578947368421,
+      "recommendation": "Agent \"clara\" has 57 impressions — write a detailed review blog post to capture this traffic",
+      "priority": 114
+    },
+    {
+      "type": "content_gap",
+      "query": "\"superhuman\" \"500 emails\"",
+      "impressions": 27,
+      "clicks": 0,
+      "position": 5.037037037037037,
+      "recommendation": "No dedicated content for \"\"superhuman\" \"500 emails\"\" (27 impressions) — create a targeted article",
+      "priority": 41
+    },
+    {
+      "type": "agent_needs_review",
+      "query": "motion",
+      "impressions": 20,
+      "clicks": 0,
+      "position": 23.3,
+      "recommendation": "Agent \"motion\" has 20 impressions — write a detailed review blog post to capture this traffic",
+      "priority": 40
+    },
+    {
+      "type": "winner_expand",
+      "query": "v0-review-vercel-ai-app-builder",
+      "impressions": 143,
+      "clicks": 1,
+      "position": 16.517482517482517,
+      "recommendation": "\"v0-review-vercel-ai-app-builder\" is getting clicks — write related/follow-up content to build topical authority",
+      "priority": 34
+    },
+    {
+      "type": "agent_needs_review",
+      "query": "hyperbound",
+      "impressions": 8,
+      "clicks": 0,
+      "position": 26.75,
+      "recommendation": "Agent \"hyperbound\" has 8 impressions — write a detailed review blog post to capture this traffic",
+      "priority": 16
+    },
+    {
+      "type": "agent_needs_review",
+      "query": "notta",
+      "impressions": 5,
+      "clicks": 0,
+      "position": 20,
+      "recommendation": "Agent \"notta\" has 5 impressions — write a detailed review blog post to capture this traffic",
+      "priority": 10
+    }
+  ]
+}
