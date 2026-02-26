@@ -1338,5 +1338,62 @@ export const agents: Agent[] = [
         features: ["Jupyter-style notebook IDE", "Context-aware AI coding assistant", "Inline browser for live testing", "Built on Playwright", "Managed authentication framework", "API-triggered workflow execution", "Global proxies for bot detection bypass", "HIPAA compliant with SOC 2 in progress", "Team workspaces and collaboration"],
         useCases: ["Browser-based QA and testing automation", "Web scraping and data extraction", "Healthcare data pipeline automation", "RPA and repetitive task automation"],
         addedDate: "2026-02-25"
+    },
+    {
+        id: "64",
+        name: "Sybill",
+        slug: "sybill",
+        tagline: "AI sales assistant that automates CRM updates, follow-ups, and deal intelligence",
+        description: "Sybill is an AI sales assistant that acts as a sales coordinator, personal assistant, and deal strategist for revenue teams. It captures and connects every call, email, Slack message, and CRM update to build a complete picture of every deal. Reps can ask ChatGPT-like questions across all their deals and conversations, while Sybill handles busywork like email follow-ups, CRM autofill, pre-meeting briefs, and task automation. For sales managers, it provides real-time deal inspection, pipeline reviews, win/loss analysis, and personalized coaching briefs — all without binging call recordings.",
+        categories: ["sales", "productivity"],
+        website: "https://www.sybill.ai",
+        pricing: "Free Starter plan, Essentials $30/user/mo, Business $90/user/mo",
+        paymentOptions: {
+            isPaid: true,
+            hasFreeTrialPeriod: false,
+            hasFreeStarterPlan: true
+        },
+        logo: "/images/logos/sybill-logo.svg",
+        features: ["AI-powered CRM autofill", "Automated email follow-ups in your voice", "AI meeting notetaking", "Pre-meeting deal prep briefs", "Ask Sybill natural language queries", "Deal inspection and pipeline reviews", "Win/loss analysis", "Sales collateral generation", "Task automation", "Salesforce, HubSpot, Zoho, and Dynamics 365 integration"],
+        useCases: ["Automating post-call CRM updates and follow-ups", "Preparing reps for customer meetings with AI briefs", "Coaching sales teams with data-driven insights", "Inspecting deal health and pipeline risks"],
+        addedDate: "2026-02-26"
+    },
+    {
+        id: "65",
+        name: "Letter AI",
+        slug: "letter-ai",
+        tagline: "AI-native revenue enablement platform for content, training, coaching, and buyer engagement",
+        description: "Letter AI is an AI-native revenue enablement platform that gives sales teams superpowers across content management, training, coaching, and buyer engagement. Its Letter Compass feature delivers account-specific enablement to every seller so they stay prepared for calls and move deals faster. Build interactive training, video-based learning, and certification pathways in minutes using existing docs. The AI agent provides personalized responses with deep expertise in your company and products. Recently launched a $40M Series B and Letter Compass for deal-specific AI coaching. Trusted by enterprises like Lenovo, Domo, and InvoiceCloud.",
+        categories: ["sales", "productivity"],
+        website: "https://www.letter.ai",
+        pricing: "Contact for pricing (enterprise-focused)",
+        paymentOptions: {
+            isPaid: true,
+            hasFreeTrialPeriod: true,
+            hasFreeStarterPlan: false
+        },
+        logo: "/images/logos/letter-ai-logo.png",
+        features: ["Letter Compass deal-specific coaching", "AI-powered sales training and certification", "Content creation and management with AI", "AI sales agent with company knowledge", "End-to-end RFP automation", "Mock persona practice for sales pitches", "Video-based learning modules", "Buyer engagement tracking", "Slack and CRM integrations"],
+        useCases: ["Onboarding and training new sales reps", "Preparing sellers with account-specific enablement", "Automating RFP responses and proposals", "Coaching reps with AI-powered role-play"],
+        addedDate: "2026-02-26"
+    },
+    {
+        id: "66",
+        name: "2-b.ai",
+        slug: "2b-ai",
+        tagline: "Zero-setup AI to-do list built into your browser",
+        description: "2-b.ai is a browser-based AI task management tool that combines the structure of a to-do list with LLM intelligence. With a single drag, turn any web context from Gmail, Google Docs, Notion, or articles into an AI-assisted task that breaks down automatically. The Chrome extension works across most web pages, letting you capture and organize tasks without leaving your workflow. Features AI chat for creating, deleting, and refining tasks, Google Calendar sync, and GPAI-compliant AI models for security. Launched on Product Hunt in January 2026 as 'Todoist meets ChatGPT inside your browser.'",
+        categories: ["productivity"],
+        website: "https://2-b.ai",
+        pricing: "Free plan (50 AI calls), Pro $5.99/mo",
+        paymentOptions: {
+            isPaid: true,
+            hasFreeTrialPeriod: false,
+            hasFreeStarterPlan: true
+        },
+        logo: "/images/logos/2b-ai-logo.png",
+        features: ["Browser extension for instant task capture", "AI-powered task breakdown", "Drag-and-drop web context to task", "AI chat for task management", "Google Calendar sync", "GPAI-compliant AI models", "Works across Gmail, Google Docs, Notion", "Priority support on Pro plan"],
+        useCases: ["Capturing tasks from emails and documents without switching apps", "Breaking down complex projects into AI-generated subtasks", "Managing daily to-dos with AI assistance", "Syncing browser-based tasks with Google Calendar"],
+        addedDate: "2026-02-26"
     }
 ]; 
