@@ -1395,5 +1395,62 @@ export const agents: Agent[] = [
         features: ["Browser extension for instant task capture", "AI-powered task breakdown", "Drag-and-drop web context to task", "AI chat for task management", "Google Calendar sync", "GPAI-compliant AI models", "Works across Gmail, Google Docs, Notion", "Priority support on Pro plan"],
         useCases: ["Capturing tasks from emails and documents without switching apps", "Breaking down complex projects into AI-generated subtasks", "Managing daily to-dos with AI assistance", "Syncing browser-based tasks with Google Calendar"],
         addedDate: "2026-02-26"
+    },
+    {
+        id: "67",
+        name: "Sonix",
+        slug: "sonix",
+        tagline: "99% accurate AI transcription, translation, and subtitling in 53+ languages",
+        description: "Sonix is an enterprise-grade AI transcription platform that converts audio and video to text with 99% accuracy in over 53 languages. Founded in 2017, it has grown to over 6.2 million users and 21,000+ companies including Cloudflare. Every conversation becomes a structured dataset with named speakers, topics, key statements, action items, and timestamps — not just a block of text. Features include multi-transcript analysis for cross-document insights, sentiment analysis, automated summaries, and speaker diarization that tracks who said what even across interruptions and overlaps. SOC 2 Type II and HIPAA compliant, making it trusted by healthcare, legal, media, and research teams. At $5/audio hour vs $100+ for manual transcription, it delivers 95% cost savings with enterprise-grade security.",
+        categories: ["transcription", "productivity"],
+        website: "https://sonix.ai",
+        pricing: "Free trial (30 min), Standard $10/hr, Premium $5/hr (subscription)",
+        paymentOptions: {
+            isPaid: true,
+            hasFreeTrialPeriod: true,
+            hasFreeStarterPlan: false
+        },
+        logo: "/images/logos/sonix-logo.png",
+        features: ["99% transcription accuracy", "53+ language support", "Speaker diarization and labeling", "Multi-transcript analysis", "Sentiment analysis", "Automated summaries and chapters", "SOC 2 Type II and HIPAA compliant", "Automated subtitling and translation", "Custom vocabulary support", "Batch processing API", "SSO and granular permissions"],
+        useCases: ["Transcribing medical consultations with HIPAA compliance", "Legal deposition and court proceeding transcription", "Journalist interview transcription and analysis", "Research qualitative analysis across multiple transcripts", "Filmmaker subtitle and caption generation"],
+        addedDate: "2026-02-27"
+    },
+    {
+        id: "68",
+        name: "docAnalyzer",
+        slug: "docanalyzer",
+        tagline: "AI-powered document analysis with intelligent chat, OCR, and workflow automation",
+        description: "docAnalyzer is an AI document analysis platform that lets you chat with single documents or massive multi-doc datasets to extract insights, automate repetitive tasks, and focus on what matters. Upload documents in PDF, DOCX, Excel, HTML, EPUB, and more — the AI autonomously searches, retrieves, and cross-references content to build evidence-backed answers. Features agentic workflow automation for document sorting, data extraction, and custom integrations. Offers a constantly updated selection of the best AI models from Anthropic, OpenAI, Google Gemini, DeepSeek, and xAI. Includes OCR for scanned documents, embeddable chatbots, shareable chat links, and team collaboration workspaces. Trusted by professionals who report cutting document work time by 50% or more.",
+        categories: ["document-analysis", "productivity"],
+        website: "https://docanalyzer.ai",
+        pricing: "Free plan, Basic $5/mo, Pro $10/mo, Team $15/seat/mo, Enterprise $20/seat/mo",
+        paymentOptions: {
+            isPaid: true,
+            hasFreeTrialPeriod: false,
+            hasFreeStarterPlan: true
+        },
+        logo: "/images/logos/docanalyzer-logo.png",
+        features: ["Intelligent multi-document chat", "Agentic workflow automation", "OCR for scanned and image-based documents", "Multiple AI model selection", "Embeddable chatbot deployment", "Shareable chat links", "Team collaboration workspaces", "API access for programmatic use", "Expert mode with BYOK", "Cross-reference and evidence-backed answers"],
+        useCases: ["Analyzing large legal document collections", "Extracting structured data from scanned PDFs", "Cross-referencing research papers and reports", "Automating document sorting and classification", "Building customer-facing document chatbots"],
+        addedDate: "2026-02-27"
+    },
+    {
+        id: "69",
+        name: "Krea",
+        slug: "krea",
+        tagline: "AI creative suite for generating, enhancing, and editing images, videos, and 3D meshes",
+        description: "Krea is an AI creative suite used by over 30 million users across 191 countries to generate, enhance, and edit images, videos, and 3D objects. Features its flagship Krea 1 model for ultra-realistic image generation at native 4K resolution, along with industry-leading inference speed. Includes a real-time canvas for live AI-assisted editing, image-to-image transformation across 1000+ styles, lipsync capabilities, video upscaling, and a full asset manager. Users can fine-tune models with their own data and access the latest models on release day. The platform is designed for both professionals and beginners, with a minimalist UI and comprehensive tool suite covering the full creative pipeline from concept to final output.",
+        categories: ["image-generation", "video-generation"],
+        website: "https://www.krea.ai",
+        pricing: "Free plan, Pro from $8/mo, teams and enterprise plans available",
+        paymentOptions: {
+            isPaid: true,
+            hasFreeTrialPeriod: false,
+            hasFreeStarterPlan: true
+        },
+        logo: "/images/logos/krea-logo.png",
+        features: ["Krea 1 ultra-realistic flagship model", "Native 4K image generation", "Real-time canvas for live editing", "Image-to-image style transfer", "Video generation and upscaling", "3D mesh generation", "1000+ styles library", "Model fine-tuning with custom data", "Lipsync capabilities", "Full asset manager", "Bleeding-edge model access on release day"],
+        useCases: ["Generating product imagery and marketing visuals", "Transforming sketches into polished artwork", "Creating video content with AI animation", "Upscaling low-resolution images and video to 4K", "Rapid prototyping of 3D assets for games and design"],
+        addedDate: "2026-02-27"
     }
 ]; 
