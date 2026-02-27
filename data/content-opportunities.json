@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-02-26T23:00:05.347Z",
+  "generatedAt": "2026-02-27T15:10:07.676Z",
   "dataRange": "3 months",
   "summary": {
-    "totalOpportunities": 8,
-    "strikingDistance": 0,
-    "lowCtr": 1,
+    "totalOpportunities": 18,
+    "strikingDistance": 4,
+    "lowCtr": 7,
     "agentNeedsReview": 4,
     "winnerExpand": 2,
     "contentGaps": 1
@@ -12,79 +12,34 @@
   "topRecommendations": [
     {
       "type": "low_ctr",
-      "query": "\"superhuman\" \"500 emails\"",
-      "impressions": 27,
+      "query": "claude computer use vs openai operator 2025",
+      "impressions": 82,
       "clicks": 0,
-      "position": 5.037037037037037,
+      "position": 6.926829268292683,
       "ctr": 0,
-      "recommendation": "\"\"superhuman\" \"500 emails\"\" gets 27 impressions but 0.0% CTR — improve title/meta description or write a more targeted article",
-      "priority": 270
+      "recommendation": "\"claude computer use vs openai operator 2025\" gets 82 impressions but 0.0% CTR — improve title/meta description or write a more targeted article",
+      "priority": 820
     },
     {
-      "type": "winner_expand",
-      "query": "5-ai-code-review-tools-that-actually-work",
-      "impressions": 966,
-      "clicks": 2,
-      "position": 58.51242236024845,
-      "recommendation": "\"5-ai-code-review-tools-that-actually-work\" is getting clicks — write related/follow-up content to build topical authority",
-      "priority": 137
-    },
-    {
-      "type": "agent_needs_review",
-      "query": "clara",
-      "impressions": 57,
+      "type": "low_ctr",
+      "query": "claude computer use vs openai operator comparison 2025",
+      "impressions": 31,
       "clicks": 0,
-      "position": 34.1578947368421,
-      "recommendation": "Agent \"clara\" has 57 impressions — write a detailed review blog post to capture this traffic",
-      "priority": 114
+      "position": 3.903225806451613,
+      "ctr": 0,
+      "recommendation": "\"claude computer use vs openai operator comparison 2025\" gets 31 impressions but 0.0% CTR — improve title/meta description or write a more targeted article",
+      "priority": 310
     },
     {
-      "type": "content_gap",
-      "query": "\"superhuman\" \"500 emails\"",
-      "impressions": 27,
+      "type": "low_ctr",
+      "query": "claude computer use vs openai operator 2026",
+      "impressions": 30,
       "clicks": 0,
-      "position": 5.037037037037037,
-      "recommendation": "No dedicated content for \"\"superhuman\" \"500 emails\"\" (27 impressions) — create a targeted article",
-      "priority": 41
+      "position": 9.766666666666667,
+      "ctr": 0,
+      "recommendation": "\"claude computer use vs openai operator 2026\" gets 30 impressions but 0.0% CTR — improve title/meta description or write a more targeted article",
+      "priority": 300
     },
-    {
-      "type": "agent_needs_review",
-      "query": "motion",
-      "impressions": 20,
-      "clicks": 0,
-      "position": 23.3,
-      "recommendation": "Agent \"motion\" has 20 impressions — write a detailed review blog post to capture this traffic",
-      "priority": 40
-    },
-    {
-      "type": "winner_expand",
-      "query": "v0-review-vercel-ai-app-builder",
-      "impressions": 143,
-      "clicks": 1,
-      "position": 16.517482517482517,
-      "recommendation": "\"v0-review-vercel-ai-app-builder\" is getting clicks — write related/follow-up content to build topical authority",
-      "priority": 34
-    },
-    {
-      "type": "agent_needs_review",
-      "query": "hyperbound",
-      "impressions": 8,
-      "clicks": 0,
-      "position": 26.75,
-      "recommendation": "Agent \"hyperbound\" has 8 impressions — write a detailed review blog post to capture this traffic",
-      "priority": 16
-    },
-    {
-      "type": "agent_needs_review",
-      "query": "notta",
-      "impressions": 5,
-      "clicks": 0,
-      "position": 20,
-      "recommendation": "Agent \"notta\" has 5 impressions — write a detailed review blog post to capture this traffic",
-      "priority": 10
-    }
-  ],
-  "allOpportunities": [
     {
       "type": "low_ctr",
       "query": "\"superhuman\" \"500 emails\"",
@@ -96,13 +51,43 @@
       "priority": 270
     },
     {
+      "type": "low_ctr",
+      "query": "claude computer use vs openai operator comparison 2026",
+      "impressions": 22,
+      "clicks": 0,
+      "position": 7.954545454545454,
+      "ctr": 0,
+      "recommendation": "\"claude computer use vs openai operator comparison 2026\" gets 22 impressions but 0.0% CTR — improve title/meta description or write a more targeted article",
+      "priority": 220
+    },
+    {
+      "type": "low_ctr",
+      "query": "claude computer use vs openai operator benchmarks",
+      "impressions": 21,
+      "clicks": 0,
+      "position": 7.857142857142857,
+      "ctr": 0,
+      "recommendation": "\"claude computer use vs openai operator benchmarks\" gets 21 impressions but 0.0% CTR — improve title/meta description or write a more targeted article",
+      "priority": 210
+    },
+    {
+      "type": "low_ctr",
+      "query": "claude computer use vs openai operator comparison",
+      "impressions": 18,
+      "clicks": 0,
+      "position": 9.555555555555555,
+      "ctr": 0,
+      "recommendation": "\"claude computer use vs openai operator comparison\" gets 18 impressions but 0.0% CTR — improve title/meta description or write a more targeted article",
+      "priority": 180
+    },
+    {
       "type": "winner_expand",
       "query": "5-ai-code-review-tools-that-actually-work",
-      "impressions": 966,
+      "impressions": 954,
       "clicks": 2,
-      "position": 58.51242236024845,
+      "position": 58.422431865828095,
       "recommendation": "\"5-ai-code-review-tools-that-actually-work\" is getting clicks — write related/follow-up content to build topical authority",
-      "priority": 137
+      "priority": 135
     },
     {
       "type": "agent_needs_review",
@@ -112,6 +97,17 @@
       "position": 34.1578947368421,
       "recommendation": "Agent \"clara\" has 57 impressions — write a detailed review blog post to capture this traffic",
       "priority": 114
+    },
+    {
+      "type": "striking_distance",
+      "query": "claude computer use vs openai operator 2026",
+      "impressions": 30,
+      "clicks": 0,
+      "position": 9.766666666666667,
+      "ctr": 0,
+      "recentTrend": "active",
+      "recommendation": "Optimize or create focused content for \"claude computer use vs openai operator 2026\" — currently at position 9.8, could reach page 1",
+      "priority": 61
     },
     {
       "type": "content_gap",
@@ -132,6 +128,17 @@
       "priority": 40
     },
     {
+      "type": "striking_distance",
+      "query": "claude computer use vs openai operator comparison",
+      "impressions": 18,
+      "clicks": 0,
+      "position": 9.555555555555555,
+      "ctr": 0,
+      "recentTrend": "active",
+      "recommendation": "Optimize or create focused content for \"claude computer use vs openai operator comparison\" — currently at position 9.6, could reach page 1",
+      "priority": 37
+    },
+    {
       "type": "winner_expand",
       "query": "v0-review-vercel-ai-app-builder",
       "impressions": 143,
@@ -141,13 +148,174 @@
       "priority": 34
     },
     {
-      "type": "agent_needs_review",
-      "query": "hyperbound",
+      "type": "striking_distance",
+      "query": "claude computer use success rate",
       "impressions": 8,
       "clicks": 0,
-      "position": 26.75,
-      "recommendation": "Agent \"hyperbound\" has 8 impressions — write a detailed review blog post to capture this traffic",
+      "position": 10.625,
+      "ctr": 0,
+      "recentTrend": "active",
+      "recommendation": "Optimize or create focused content for \"claude computer use success rate\" — currently at position 10.6, could reach page 1",
       "priority": 16
+    }
+  ],
+  "allOpportunities": [
+    {
+      "type": "low_ctr",
+      "query": "claude computer use vs openai operator 2025",
+      "impressions": 82,
+      "clicks": 0,
+      "position": 6.926829268292683,
+      "ctr": 0,
+      "recommendation": "\"claude computer use vs openai operator 2025\" gets 82 impressions but 0.0% CTR — improve title/meta description or write a more targeted article",
+      "priority": 820
+    },
+    {
+      "type": "low_ctr",
+      "query": "claude computer use vs openai operator comparison 2025",
+      "impressions": 31,
+      "clicks": 0,
+      "position": 3.903225806451613,
+      "ctr": 0,
+      "recommendation": "\"claude computer use vs openai operator comparison 2025\" gets 31 impressions but 0.0% CTR — improve title/meta description or write a more targeted article",
+      "priority": 310
+    },
+    {
+      "type": "low_ctr",
+      "query": "claude computer use vs openai operator 2026",
+      "impressions": 30,
+      "clicks": 0,
+      "position": 9.766666666666667,
+      "ctr": 0,
+      "recommendation": "\"claude computer use vs openai operator 2026\" gets 30 impressions but 0.0% CTR — improve title/meta description or write a more targeted article",
+      "priority": 300
+    },
+    {
+      "type": "low_ctr",
+      "query": "\"superhuman\" \"500 emails\"",
+      "impressions": 27,
+      "clicks": 0,
+      "position": 5.037037037037037,
+      "ctr": 0,
+      "recommendation": "\"\"superhuman\" \"500 emails\"\" gets 27 impressions but 0.0% CTR — improve title/meta description or write a more targeted article",
+      "priority": 270
+    },
+    {
+      "type": "low_ctr",
+      "query": "claude computer use vs openai operator comparison 2026",
+      "impressions": 22,
+      "clicks": 0,
+      "position": 7.954545454545454,
+      "ctr": 0,
+      "recommendation": "\"claude computer use vs openai operator comparison 2026\" gets 22 impressions but 0.0% CTR — improve title/meta description or write a more targeted article",
+      "priority": 220
+    },
+    {
+      "type": "low_ctr",
+      "query": "claude computer use vs openai operator benchmarks",
+      "impressions": 21,
+      "clicks": 0,
+      "position": 7.857142857142857,
+      "ctr": 0,
+      "recommendation": "\"claude computer use vs openai operator benchmarks\" gets 21 impressions but 0.0% CTR — improve title/meta description or write a more targeted article",
+      "priority": 210
+    },
+    {
+      "type": "low_ctr",
+      "query": "claude computer use vs openai operator comparison",
+      "impressions": 18,
+      "clicks": 0,
+      "position": 9.555555555555555,
+      "ctr": 0,
+      "recommendation": "\"claude computer use vs openai operator comparison\" gets 18 impressions but 0.0% CTR — improve title/meta description or write a more targeted article",
+      "priority": 180
+    },
+    {
+      "type": "winner_expand",
+      "query": "5-ai-code-review-tools-that-actually-work",
+      "impressions": 954,
+      "clicks": 2,
+      "position": 58.422431865828095,
+      "recommendation": "\"5-ai-code-review-tools-that-actually-work\" is getting clicks — write related/follow-up content to build topical authority",
+      "priority": 135
+    },
+    {
+      "type": "agent_needs_review",
+      "query": "clara",
+      "impressions": 57,
+      "clicks": 0,
+      "position": 34.1578947368421,
+      "recommendation": "Agent \"clara\" has 57 impressions — write a detailed review blog post to capture this traffic",
+      "priority": 114
+    },
+    {
+      "type": "striking_distance",
+      "query": "claude computer use vs openai operator 2026",
+      "impressions": 30,
+      "clicks": 0,
+      "position": 9.766666666666667,
+      "ctr": 0,
+      "recentTrend": "active",
+      "recommendation": "Optimize or create focused content for \"claude computer use vs openai operator 2026\" — currently at position 9.8, could reach page 1",
+      "priority": 61
+    },
+    {
+      "type": "content_gap",
+      "query": "\"superhuman\" \"500 emails\"",
+      "impressions": 27,
+      "clicks": 0,
+      "position": 5.037037037037037,
+      "recommendation": "No dedicated content for \"\"superhuman\" \"500 emails\"\" (27 impressions) — create a targeted article",
+      "priority": 41
+    },
+    {
+      "type": "agent_needs_review",
+      "query": "motion",
+      "impressions": 20,
+      "clicks": 0,
+      "position": 23.3,
+      "recommendation": "Agent \"motion\" has 20 impressions — write a detailed review blog post to capture this traffic",
+      "priority": 40
+    },
+    {
+      "type": "striking_distance",
+      "query": "claude computer use vs openai operator comparison",
+      "impressions": 18,
+      "clicks": 0,
+      "position": 9.555555555555555,
+      "ctr": 0,
+      "recentTrend": "active",
+      "recommendation": "Optimize or create focused content for \"claude computer use vs openai operator comparison\" — currently at position 9.6, could reach page 1",
+      "priority": 37
+    },
+    {
+      "type": "winner_expand",
+      "query": "v0-review-vercel-ai-app-builder",
+      "impressions": 143,
+      "clicks": 1,
+      "position": 16.517482517482517,
+      "recommendation": "\"v0-review-vercel-ai-app-builder\" is getting clicks — write related/follow-up content to build topical authority",
+      "priority": 34
+    },
+    {
+      "type": "striking_distance",
+      "query": "claude computer use success rate",
+      "impressions": 8,
+      "clicks": 0,
+      "position": 10.625,
+      "ctr": 0,
+      "recentTrend": "active",
+      "recommendation": "Optimize or create focused content for \"claude computer use success rate\" — currently at position 10.6, could reach page 1",
+      "priority": 16
+    },
+    {
+      "type": "agent_needs_review",
+      "query": "hyperbound",
+      "impressions": 7,
+      "clicks": 0,
+      "position": 29.428571428571427,
+      "recommendation": "Agent \"hyperbound\" has 7 impressions — write a detailed review blog post to capture this traffic",
+      "priority": 14
     },
     {
       "type": "agent_needs_review",
@@ -157,6 +325,17 @@
       "position": 20,
       "recommendation": "Agent \"notta\" has 5 impressions — write a detailed review blog post to capture this traffic",
       "priority": 10
+    },
+    {
+      "type": "striking_distance",
+      "query": "claude computer use vs openai operator",
+      "impressions": 5,
+      "clicks": 0,
+      "position": 17.6,
+      "ctr": 0,
+      "recentTrend": "active",
+      "recommendation": "Optimize or create focused content for \"claude computer use vs openai operator\" — currently at position 17.6, could reach page 1",
+      "priority": 6
     }
   ]
 }

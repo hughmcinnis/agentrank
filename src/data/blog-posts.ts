@@ -4567,5 +4567,127 @@ But if you're not drowning in email, you don't need it. There's no shame in Gmai
         categories: ["Reviews","Productivity"],
         featuredImage: "/images/blog/superhuman-review-handle-500-emails-a-day.png",
         tags: ["superhuman","email","productivity","ai email","inbox management","superhuman review","500 emails"],
+    },
+    {
+        id: "38",
+        title: "Motion Review 2026: Is This AI Scheduling Tool Worth $29/Month?",
+        slug: "motion-review-ai-scheduling-tool",
+        excerpt: "Motion promises to auto-schedule your entire day with AI. After looking at what it actually delivers — the good, the bad, and the $29/month price tag — here's whether it's worth it for you.",
+        content: `Motion has been making noise in the AI productivity space for a while now, but in 2026 it's evolved into something much bigger than a calendar app. They're calling themselves an "AI Employee SuperApp" — which is either brilliant positioning or peak Silicon Valley hype.
+
+After digging into what Motion actually does, who it works for, and where it falls short, here's my honest take.
+
+## What Motion Actually Does
+
+At its core, Motion takes your tasks, deadlines, and calendar events, then uses AI to build your optimal daily schedule automatically. You tell it what you need to do, how long it'll take, and when it's due — and Motion figures out when you should actually do it.
+
+The magic is in the dynamic rescheduling. When a meeting runs long or you add a new urgent task, Motion reorganizes your entire day automatically. No manual shuffling. No staring at your calendar trying to play Tetris with time blocks.
+
+In 2025-2026, they expanded beyond scheduling into full workflow automation with what they call "AI Employees" — pre-built AI agents for sales, support, marketing, project management, HR, and research. You can also create custom roles. It's ambitious, and it signals where they think the market is heading.
+
+## Motion Pricing: What You're Actually Paying
+
+Motion starts at **$29/month per user** on the individual plan (billed annually — it's more monthly). Team plans scale from there.
+
+For a solo professional billing $50+/hour, the math works out quickly. If Motion saves you even 30 minutes of daily planning and rescheduling, it pays for itself in two days. For someone making $20/hour or working a job where you don't control your own schedule, it's a harder sell.
+
+They raised a **$60M Series C in December 2025 at a $550M valuation**, so they've got runway and momentum. That said, pricing transparency has gotten worse in 2026 — you might need to dig around to find exact team pricing.
+
+## The Good: What Motion Gets Right
+
+### Intelligent Task-to-Calendar Automation
+
+This is Motion's killer feature. Most productivity tools make you manage two separate systems — a task list AND a calendar. Motion merges them. Your tasks automatically get time blocks on your calendar based on priority, deadline, and available time.
+
+When priorities shift, everything reshuffles. It's genuinely useful if you're juggling multiple projects with hard deadlines.
+
+### Dependency Awareness
+
+Motion understands that Task B can't start until Task A is done. This sounds basic, but most calendar apps don't handle it at all. For project managers and consultants running multi-step workflows, this alone might justify the price.
+
+### Desktop Experience
+
+The web and desktop experience is solid — G2 ratings sit around 4.5/5. The interface combines a task list on one side with your calendar on the other. Clean, functional, and the AI scheduling works well once you've set it up properly.
+
+### Meeting Coordination
+
+Motion finds optimal meeting times across team calendars and prevents double-booking. It also offers smart booking links that only show genuinely available slots — no more back-and-forth emails trying to find 30 minutes.
+
+## The Bad: Where Motion Falls Short
+
+### The Mobile App Is Rough
+
+This is Motion's biggest weakness right now. The mobile app sits at a **2.7/5 rating** — and that's being generous based on recent reviews. If you rely heavily on your phone for task management, this is a dealbreaker. The desktop app is great; the mobile app feels like an afterthought.
+
+### Steep Setup Investment
+
+Motion isn't a quick-capture tool. You can't just dump tasks into a list and go. Every task needs context: estimated duration, deadline, priority level. The AI needs 2-4 weeks of consistent input before it really starts delivering value.
+
+If you're the type who just wants to jot down "buy groceries" and move on, Motion will feel like overkill. It's built for people willing to invest upfront for long-term payoff.
+
+### No Dedicated Focus Time Protection
+
+This is surprising for a productivity tool in 2026. Unlike Reclaim AI, Motion doesn't automatically protect blocks of deep work time. You have to manually create "No-Meeting Time" blocks. For knowledge workers who need uninterrupted focus periods, this is a notable gap.
+
+### AI Misjudgments
+
+If you don't provide accurate time estimates, the AI will make bad scheduling decisions. Garbage in, garbage out. New users often underestimate task durations, leading to overpacked schedules that feel worse than no AI at all.
+
+## Motion vs Reclaim AI: Which One Should You Pick?
+
+This is the comparison most people are actually trying to make, so let's be direct:
+
+**Choose Motion if:**
+- You want tasks and calendar fully integrated in one tool
+- You manage projects with task dependencies
+- You work primarily on desktop
+- You're willing to invest 2-4 weeks in setup
+- You want the AI Employee workflow features
+
+**Choose Reclaim AI if:**
+- Focus Time protection is critical to your workflow
+- You want a lighter-touch setup with faster time-to-value
+- Mobile experience matters to you
+- You're happy keeping your task manager separate (Todoist, Asana, etc.)
+- You want better calendar analytics
+
+Both are solid tools. Motion is more ambitious and comprehensive. Reclaim is more focused and easier to adopt.
+
+## Motion vs Clockwise vs SkedPal
+
+**Clockwise** is more of a team calendar optimizer than a personal productivity tool. It's great for organizations trying to protect focus time across teams, but it doesn't do task management.
+
+**SkedPal** is the indie alternative — cheaper, simpler, and surprisingly capable for individual users. If Motion's price tag makes you flinch, SkedPal is worth a look.
+
+## Who Motion Is Actually For
+
+**Best fit:**
+- Solo consultants and freelancers juggling multiple clients
+- Executives with packed calendars and competing priorities
+- Small teams (3-10 people) with interdependent projects
+- Anyone who bills by the hour and values time optimization
+
+**Not a good fit:**
+- Budget-conscious users (sub-$29/month)
+- Mobile-first workers
+- People who prefer Kanban boards or Gantt charts
+- Teams that just need a shared calendar
+
+## The Bottom Line
+
+Motion is one of the most ambitious AI productivity tools on the market right now. The core scheduling AI genuinely works — once you get past the setup curve, having your day automatically organized around deadlines and priorities is a real quality-of-life upgrade.
+
+But it's not for everyone. The mobile app needs serious work, the setup investment is real, and at $29/month it needs to earn its keep. If you're a busy professional who lives on desktop and is willing to spend a few weeks teaching the AI your workflow, Motion will probably save you hours every week.
+
+If you just want a better calendar, there are simpler (and cheaper) options.
+
+**Rating: 7.5/10** — Powerful AI scheduling with real workflow benefits, held back by a rough mobile experience and steep learning curve.`,
+        author: "Hugh McInnis",
+        publishDate: "2026-02-27",
+        publishedAt: "2026-02-27T07:11:26.000-08:00",
+        readTime: "5 min read",
+        categories: ["Reviews","Productivity"],
+        featuredImage: "/images/blog/motion-review-ai-scheduling-tool.png",
+        tags: ["motion","ai scheduling","productivity","calendar ai","task management","reclaim ai","motion review"],
     }
 ]; 

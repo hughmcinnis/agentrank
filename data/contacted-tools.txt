@@ -17,3 +17,6 @@ browserbook
 sybill
 letter-ai
 2b-ai
+sonix
+docanalyzer
+krea
