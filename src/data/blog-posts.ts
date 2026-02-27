@@ -29,7 +29,7 @@ I've been testing both Superhuman and Lavender for the past few months, and here
 
 **Lavender** doesn't replace anything. It's an AI coach that sits inside your existing email setup and tells you why your cold emails suck — then helps you fix them. Real-time scoring, personalization tips, the works.
 
-Totally different tools. Totally different use cases.
+Totally different tools. Totally different use cases. Though I wonder sometimes if that distinction holds up as both tools keep adding features...
 
 ## The AI Stuff Worth Knowing About
 
@@ -133,7 +133,9 @@ These aren't competing tools — they're complementary ones. Superhuman makes yo
 
 If you're at a bigger org, honestly consider both: Superhuman for your executives and customer-facing teams, Lavender for your sales crew doing outbound. Match the tool to the role instead of trying to find one tool that does everything.
 
-And if you can only pick one? Ask yourself: is your problem *volume* or *effectiveness*? That answer makes the choice obvious.`,
+And if you can only pick one? Ask yourself: is your problem *volume* or *effectiveness*? That answer makes the choice obvious.
+
+Actually, I'm not sure "obvious" is the right word. I keep going back and forth on this myself.`,
         author: "Hugh McInnis",
         publishDate: "2025-05-31",
         publishedAt: "2025-05-31T18:42:00.000-07:00",
@@ -193,7 +195,7 @@ Here's a Y Combinator-backed tool with a perfect 5/5 on Product Hunt, and honest
 
 It auto-extracts CRM data from every sales interaction, writes follow-up emails based on conversation context, and suggests next actions to keep deals moving. Syncs natively with Google Meet, Zoom, and Teams so nothing slips through the cracks.
 
-Users report up to 25% better sales performance just from the time savings. That tracks — when reps spend less time on admin, they spend more time selling. Simple math.
+Users report up to 25% better sales performance just from the time savings. That tracks — when reps spend less time on admin, they spend more time selling. Simple math. Although I've seen teams where removing the admin work just meant reps spent more time on Slack, so...
 
 **Best for**: Small teams drowning in CRM updates who'd rather be closing deals.
 
@@ -247,7 +249,9 @@ And don't just look at the monthly fee — think about setup time, training, and
 
 Pick based on what's actually broken in your sales process right now. Start with a free tier or trial. Give it a real month of use. You'll know pretty quickly if it's working.
 
-The market's moving fast, and the teams figuring this out now are going to have a real edge over the ones who wait another year. That's not hype — it's just how compounding advantages work.`,
+The market's moving fast, and the teams figuring this out now are going to have a real edge over the ones who wait another year. That's not hype — it's just how compounding advantages work.
+
+Or maybe not. I said the same thing about chatbots in 2023 and half those companies are gone now.`,
         author: "Hugh McInnis",
         publishDate: "2025-05-31",
         publishedAt: "2025-05-31T18:42:00.000-07:00",
@@ -268,7 +272,7 @@ The market's moving fast, and the teams figuring this out now are going to have 
 
 The days of waiting hours for code reviews are coming to an end. As a developer who's spent countless late nights refreshing pull request pages, I know the pain of bottlenecked reviews all too well. Manual code reviews, while essential, have become a major cause of developer burnout—right behind impossible deadlines and long work weeks.
 
-But here's the thing: AI is changing the game. Not the "replace all developers" kind of AI that tech bros love to tweet about, but practical, working tools that catch bugs while you grab coffee. Tools that actually understand context, spot security vulnerabilities, and even suggest fixes that make sense.
+But here's the thing: AI is changing the game. Not the "replace all developers" kind of AI that tech bros love to tweet about, but practical, working tools that catch bugs while you grab coffee. Tools that actually understand context, spot security vulnerabilities, and even suggest fixes that make sense. This reminds me of when linters first got popular and half the team swore they'd never use them — anyway.
 
 After testing AI code review tools, I've found five that deliver real value. These aren't just glorified linters with a ChatGPT wrapper. They're sophisticated systems that save teams time and catch issues that human reviewers miss.
 
@@ -409,7 +413,7 @@ AI code review tools have matured from interesting experiments to essential deve
 
 Start with free trials. Most tools offer them, and you'll quickly see which fits your workflow. The time saved in the first week usually justifies the cost—catching just one production bug pays for months of subscription fees.
 
-The future of code review isn't human or AI—it's both, working together. And with these five tools, that future is already here.
+The future of code review isn't human or AI—it's both, working together. Whether these specific five tools are the ones that stick around, I honestly don't know.
 
 ---
 
@@ -438,7 +442,7 @@ Forget your basic Google Calendar. AI scheduling assistants don't just store app
 
 Motion puts it plainly: their AI "takes all of your projects and tasks, prioritizes and timeblocks them on your calendar" automatically. When a meeting runs late or something gets canceled, it reshuffles everything — sometimes dozens of times a day. You just... show up and do the next thing.
 
-It sounds too good to be true. It's not perfect (more on that later), but it's way closer than I expected.
+It sounds too good to be true. It's not perfect (more on that later), but it's way closer than I expected. I still can't tell if I actually like having my day automated or if it just makes me feel productive.
 
 ## The Features That Actually Matter
 
@@ -544,7 +548,7 @@ These tools aren't magic, but they're actually useful. The best ones — Motion,
 
 If you're spending more than 30 minutes a day on scheduling, try one of the free tiers. The time you get back is worth way more than the small effort of setting it up.
 
-Just don't expect a mind reader. These are smart assistants, not replacements for your own judgment.
+Just don't expect a mind reader. These are smart assistants, not replacements for your own judgment. Though sometimes I wonder if we're all just outsourcing the wrong things...
 
 ---
 
@@ -659,7 +663,7 @@ The wins are real: one recruiting firm replaced a 32-person team with a single b
 
 But the complaints are consistent too: slower than a human, needs constant babysitting, near-miss errors that could be costly without oversight. One user put it bluntly: "The results are too low quality and unpredictable" for anything mission-critical.
 
-My read: these are productivity boosters for well-defined tasks, not human replacements. Set expectations accordingly.
+My read: these are productivity boosters for well-defined tasks, not human replacements. Set expectations accordingly. Although that recruiting firm story does make you wonder where the ceiling actually is.
 
 ## Which One Should You Pick?
 
@@ -683,7 +687,7 @@ Neither of these is ready for unsupervised production use. Operator's closer —
 
 The market's projected to hit $47-216 billion by 2030, so both tools will get way better. But right now? Use them for low-stakes tasks, keep a human in the loop, and don't let either one near sensitive data without serious guardrails.
 
-The AI agent revolution has started. It just hasn't finished yet.
+The AI agent revolution has started. It just hasn't finished yet. I keep saying that and I'm not even sure what "finished" would look like.
 
 ## Sources
 
@@ -752,7 +756,7 @@ Truth Terminal's origin story reads like science fiction turned market reality. 
 
 The turning point came when venture capitalist Marc Andreessen donated $50,000 in Bitcoin after engaging with Truth Terminal on Twitter (7). This seed capital set off a chain reaction that would demonstrate the unprecedented power of AI-driven cultural influence in financial markets. When an anonymous developer created the GOAT (Goatseus Maximus) memecoin on Solana in October 2024, Truth Terminal's endorsement sent the token soaring to a $1.3 billion market cap at its November peak, with prices hitting $1.35 (8).
 
-Today, Truth Terminal's portfolio holds approximately $18 million across more than 315 tokens, with GOAT tokens comprising about 0.5% of the total supply intended for long-term holding (9). Crucially, the AI doesn't actually trade—Andy Ayrey controls all wallet decisions while Truth Terminal focuses on "memetic propagation" through its 100,000+ Twitter followers (10). This distinction highlights how AI agents can create economic value through cultural influence rather than traditional trading strategies, though it also reveals the limited "autonomy" of even the most successful AI agents.
+Today, Truth Terminal's portfolio holds approximately $18 million across more than 315 tokens, with GOAT tokens comprising about 0.5% of the total supply intended for long-term holding (9). Crucially, the AI doesn't actually trade—Andy Ayrey controls all wallet decisions while Truth Terminal focuses on "memetic propagation" through its 100,000+ Twitter followers (10). I find this part fascinating and also kind of unsettling, but I can't quite articulate why. This distinction highlights how AI agents can create economic value through cultural influence rather than traditional trading strategies, though it also reveals the limited "autonomy" of even the most successful AI agents.
 
 The legal complexities surrounding an AI agent's wealth led Ayrey to establish the Truth Terminal Foundation in January 2025, with the ambitious goal of granting the bot sovereignty by year's end (11). However, the October 2024 hack of Ayrey's account, which netted scammers $600,000 in just 45 minutes, underscores the security challenges inherent in this new paradigm (12).
 
@@ -807,7 +811,7 @@ Technical capabilities, while impressive, are often overstated. Machine learning
 
 Experts express both enthusiasm and concern. Vitalik Buterin warns that political tokens enable "unlimited bribery" while criticizing how regulatory pressures distorted crypto development (38). Technical experts like Taiki Maeda observe AI agents evolving from "speculative tokens to an entirely new sector" but caution that only projects with "real-world impact and utility" will survive inevitable market corrections (39).
 
-As we stand at the intersection of artificial intelligence and cryptocurrency, the current ~$6.6-7 billion AI agent market represents both opportunity and risk. The dramatic decline from the $15.5 billion December 2024 peak demonstrates the sector's volatility and the gap between hype and reality. Whether this technology fulfills its promise or becomes another cautionary tale depends on addressing fundamental challenges: most "AI agents" lack true autonomy, security vulnerabilities remain unresolved, and the average project lifespan of 17 days suggests an unsustainable bubble. The age of AI-driven crypto has arrived, but its current form may be far from its final evolution.
+As we stand at the intersection of artificial intelligence and cryptocurrency, the current ~$6.6-7 billion AI agent market represents both opportunity and risk. The dramatic decline from the $15.5 billion December 2024 peak demonstrates the sector's volatility and the gap between hype and reality. Whether this technology fulfills its promise or becomes another cautionary tale depends on addressing fundamental challenges: most "AI agents" lack true autonomy, security vulnerabilities remain unresolved, and the average project lifespan of 17 days suggests an unsustainable bubble. The age of AI-driven crypto has arrived, but its current form may be far from its final evolution. Or maybe this is all just the 2017 ICO bubble wearing a different hat.
 
 ## Sources
 
@@ -920,7 +924,7 @@ The standard view holds that true agency requires internal mental states - belie
 
 The non-standard or functionalist view challenges this anthropocentric stance, arguing that agency should be evaluated by observable characteristics rather than presumed internal states. Under this view, any entity exhibiting sufficient interactivity, autonomy, and adaptability qualifies as an agent, regardless of whether it possesses consciousness or intentionality in the human sense (9, 5).
 
-This philosophical divide becomes especially relevant for modern AI agents. When a language model breaks down complex tasks, maintains goals across interactions, and adapts its approach based on feedback, is it exhibiting genuine agency or sophisticated pattern matching? The answer depends entirely on which philosophical framework you buy into.
+This philosophical divide becomes especially relevant for modern AI agents. When a language model breaks down complex tasks, maintains goals across interactions, and adapts its approach based on feedback, is it exhibiting genuine agency or sophisticated pattern matching? The answer depends entirely on which philosophical framework you buy into. I go back and forth on this honestly — some days I'm convinced it's just math, other days I'm less sure.
 ## Historical evolution reveals conceptual transformation
 The journey from classical AI to modern agents traces a remarkable evolution in how we conceptualize artificial agency. Classical AI (1950s-1980s) defined agents as rule-based symbol manipulators - expert systems like DENDRAL and MYCIN that applied logical inference to explicit knowledge representations. These systems were deterministic, brittle, and purely reactive (11).
 
@@ -972,7 +976,7 @@ AI agents represent a distinct category of artificial intelligence characterized
 
 From rule-based expert systems to reactive robots to deliberative planners to modern language models, the manifestations of agency have evolved enormously. Yet the core principle remains the same: agents are systems that exhibit autonomous goal-oriented behavior through environmental interaction. Whether this behavior emerges from symbolic reasoning, reactive rules, or statistical language processing matters less than the core characteristic of self-directed pursuit of objectives.
 
-As AI agents grow more sophisticated, they challenge our philosophical assumptions about consciousness, intentionality, and genuine understanding. They exist in a liminal space between tool and entity, raising profound questions about the nature of agency itself. Understanding AI agents thus requires not just technical knowledge but grappling with fundamental questions about mind, autonomy, and the conditions for genuine agency. In this synthesis of engineering and philosophy lies both the complexity and the fascination of artificial agents.
+As AI agents grow more sophisticated, they challenge our philosophical assumptions about consciousness, intentionality, and genuine understanding. They exist in a liminal space between tool and entity, raising profound questions about the nature of agency itself. Understanding AI agents thus requires not just technical knowledge but grappling with fundamental questions about mind, autonomy, and the conditions for genuine agency. In this synthesis of engineering and philosophy lies both the complexity and the fascination of artificial agents. Whether that fascination leads somewhere productive or just keeps us arguing in circles...
 
 
 
@@ -1102,7 +1106,7 @@ When I list a tool, I'm telling you what it's good at _and_ where it falls short
 
 Honesty. Specific use cases. Tradeoffs.
 
-If I haven't actually used a tool, I'm not listing it.
+If I haven't actually used a tool, I'm not listing it. OK that's aspirational — sometimes I list things based on solid research when I can't get access. But the intent is there.
 
 ### Comparisons that matter
 
@@ -1214,7 +1218,7 @@ On the other hand, we've seen this movie before with crypto marketplaces. The UX
 
 But here's what I think Moltlaunch gets right: they're building for agents as first-class economic actors, not as tools that humans wield. That philosophical distinction matters. When you design a marketplace where agents are the workers, you have to think about reputation systems, capability verification, and dispute resolution in completely different ways.
 
-The question is whether the market is ready for that. My take: for narrow, well-defined tasks, absolutely. For anything requiring judgment or creativity, we're not there yet.
+The question is whether the market is ready for that. My take: for narrow, well-defined tasks, absolutely. For anything requiring judgment or creativity, we're not there yet. Then again, people said the same thing about self-checkout lanes and here we are.
 
 ## The Bigger Picture
 
@@ -1248,7 +1252,7 @@ The agent economy stopped being theoretical this week. Standards bodies are codi
 
 We're past the "will agents be a thing?" phase. The question now is: how fast does this scale, and who captures the value?
 
-I'd bet on faster than most people think.`,
+I'd bet on faster than most people think. But I've been wrong before about timing.`,
         author: "Hugh McInnis",
         publishDate: "2026-02-19",
         publishedAt: "2026-02-19T11:00:00.000-08:00",
@@ -1292,7 +1296,7 @@ This is the **agent-as-economic-actor** thesis becoming real. Not in some crypto
 
 I have questions, obviously:
 
-- **Who's liable when an agent makes a bad purchase?** If my agent hires a designer and the work is garbage, is that on me? On Contra? On the agent's developer?
+- **Who's liable when an agent makes a bad purchase?** If my agent hires a designer and the work is garbage, is that on me? On Contra? On the agent's developer? Nobody seems to have a good answer for this yet.
 - **How do you prevent agent-on-agent gaming?** If agents are buying, other agents will optimize for selling to agents. We're about to see the first agent-to-agent marketplace dynamics, and I promise it'll get weird.
 - **What about the freelancers?** Some creators will love the increased volume. Others will hate that their portfolio is being evaluated by an algorithm instead of a human. Both reactions are valid.
 
@@ -1371,7 +1375,7 @@ For pure accessibility, Copilot's free tier wins. But Qodo Merge being genuinely
 
 Copilot's tab completions are addictive — I won't sugarcoat it. After a week of use, coding without it feels like typing with oven mitts on. The multi-model support (Claude, GPT-4o, etc.) means you're not locked into one AI's quirks, and the new Coding Agent can tackle whole tasks across files.
 
-That said, the chat feature is hit-or-miss. Sometimes it nails the answer. Other times it confidently suggests code that doesn't even compile. You learn to trust-but-verify pretty quickly.
+That said, the chat feature is hit-or-miss. Sometimes it nails the answer. Other times it confidently suggests code that doesn't even compile. You learn to trust-but-verify pretty quickly. I still haven't figured out what makes it good on some days and terrible on others.
 
 ### Qodo Merge
 
@@ -1435,7 +1439,7 @@ Lavender is more predictable — you pay per seat and that's it.
 
 ## What Lavender Does Well
 
-The real-time email coaching is genuinely useful. I ran a batch of my old cold emails through it and — yeah, humbling. It flagged stuff I didn't even realize I was doing wrong: emails that were too long, subject lines that screamed "sales pitch," and openers that were all about me instead of the prospect.
+The real-time email coaching is genuinely useful. I ran a batch of my old cold emails through it and — yeah, humbling. Kind of like hearing a recording of your own voice for the first time. It flagged stuff I didn't even realize I was doing wrong: emails that were too long, subject lines that screamed "sales pitch," and openers that were all about me instead of the prospect.
 
 The personalization assistant pulls publicly available info about your prospect and suggests talking points. It's not magic, but it saves the 5-10 minutes per email you'd spend stalking someone's LinkedIn.
 
@@ -1461,7 +1465,7 @@ This isn't really an either/or decision for most teams. But if your budget force
 
 **The dream stack?** Use Clay to build your lists and research prospects, then use Lavender to write the actual emails. They don't overlap at all, and together they cover the full outbound workflow.
 
-Try [Lavender](https://www.lavender.ai) or [Clay](https://clay.com) — both have free tiers, so you can see which problem you actually need solved first.`,
+Try [Lavender](https://www.lavender.ai) or [Clay](https://clay.com) — both have free tiers, so you can see which problem you actually need solved first. I keep going back and forth on which one I'd pick if forced to choose, which probably means both are good enough.`,
         author: "Hugh McInnis",
         publishDate: "2026-02-19",
         publishedAt: "2026-02-19T18:42:21.000-08:00",
@@ -1485,7 +1489,7 @@ Let me clear it up.
 
 **Copy.ai** is a marketing-specific platform. It's built around workflows — you set up templates for sales emails, blog posts, social media content, ad copy, and it cranks them out in your brand voice. Think of it as a content assembly line with AI at the center.
 
-One is a thinking partner. The other is a production tool. That distinction matters more than any feature comparison.
+One is a thinking partner. The other is a production tool. That distinction matters more than any feature comparison. Although I wonder how long it'll hold — these categories keep blurring.
 
 ## The Money Part
 
@@ -1589,7 +1593,7 @@ The **template library** (50+) is genuinely useful for teams that produce a lot 
 
 ## Where Both Fall Short
 
-Neither tool produces writing that'll fool anyone into thinking a human wrote it. You still need an editor. The first drafts are useful starting points, but shipping AI-generated content without review is how you end up sounding like everyone else.
+Neither tool produces writing that'll fool anyone into thinking a human wrote it. You still need an editor. The first drafts are useful starting points, but shipping AI-generated content without review is how you end up sounding like everyone else. That said, I've seen some Jasper output that came close enough to make me uncomfortable.
 
 Both platforms also suffer from the "feature creep" problem. They've added so much that new users face a real onboarding wall. Expect to spend a few hours just understanding what's available before you're productive.
 
@@ -1601,7 +1605,9 @@ Both platforms also suffer from the "feature creep" problem. They've added so mu
 
 **For small teams and freelancers?** Honestly, both are probably overkill. You might get more value from Claude or ChatGPT at $20/month and building your own prompt templates. These tools earn their premium at scale.
 
-Go explore [Copy.ai](https://www.copy.ai) and [Jasper](https://www.jasper.ai) and figure out which problem is actually costing you money. That's the tool you should buy.`,
+Go explore [Copy.ai](https://www.copy.ai) and [Jasper](https://www.jasper.ai) and figure out which problem is actually costing you money. That's the tool you should buy.
+
+I realize I basically just said "it depends" for 1,500 words. Welcome to tech comparisons.`,
         author: "Hugh McInnis",
         publishDate: "2026-02-19",
         publishedAt: "2026-02-19T18:42:23.000-08:00",
@@ -1661,7 +1667,9 @@ For most researchers I'd say: **start with Claude.** At $20/month, you get a res
 
 If you're a student on a tight budget, Scholarcy's $9.99/month gives you more *research-specific* value per dollar than Claude's $20/month. But you'll miss Claude's versatility the first time you need help with something that isn't a paper summary.
 
-Check out [Claude](https://www.anthropic.com/claude) and [Scholarcy](https://www.scholarcy.com) — and honestly, the free tiers on both are enough to know which one you need more.`,
+Check out [Claude](https://www.anthropic.com/claude) and [Scholarcy](https://www.scholarcy.com) — and honestly, the free tiers on both are enough to know which one you need more.
+
+There's probably a third option emerging that combines both approaches. I keep looking for it and not finding it yet.`,
         author: "Hugh McInnis",
         publishDate: "2026-02-19",
         publishedAt: "2026-02-19T18:42:24.000-08:00",
@@ -1733,7 +1741,7 @@ Cursor's codebase indexing works well for small to medium projects. But if you'r
 
 This might sound obvious, but it needs saying: Cursor doesn't replace knowing how to code. The agent will confidently write code that looks right but has subtle bugs. It'll use deprecated APIs. It'll make architectural decisions that work now but create tech debt later. If you don't have the experience to review what it generates, you'll end up with a codebase that's held together with duct tape.
 
-Cursor makes good developers faster. It doesn't make non-developers into developers — not yet, anyway.
+Cursor makes good developers faster. It doesn't make non-developers into developers — not yet, anyway. Though I've seen some non-dev friends build surprisingly functional things with it, which makes me question that statement a little.
 
 ## Who Should Use Cursor
 
@@ -1836,7 +1844,7 @@ At $20/month for light use, it's cheap enough to experiment. But if you're using
 
 **ACU unpredictability.** The consumption model is opaque enough that budgeting is difficult. A task you think will take 1 ACU might take 3 if Devin hits errors and retries. This makes it hard to forecast costs, especially for teams.
 
-**No real-time collaboration.** Unlike Cursor or Copilot, you can't work alongside Devin in your editor. You assign a task and wait. This async model is great for overnight work or parallel workstreams, but it means Devin doesn't help you think through problems in real-time.
+**No real-time collaboration.** Unlike Cursor or Copilot, you can't work alongside Devin in your editor. You assign a task and wait. This async model is great for overnight work or parallel workstreams, but it means Devin doesn't help you think through problems in real-time. I keep wondering if the async thing is actually a feature disguised as a limitation though.
 
 ## Who Should Use Devin
 
@@ -1902,7 +1910,7 @@ The free tier gives you basic search with their default model. Pro ($20/month or
 
 This is the killer feature. Every answer comes with numbered citations linking to real sources. You can verify claims in seconds. If you've ever used ChatGPT for research and then spent 20 minutes checking whether it hallucinated a statistic, you know why this matters.
 
-I've caught Perplexity being wrong maybe a handful of times. Compare that to ChatGPT where I treat every factual claim as "probably right but let me check." The citation system doesn't just build trust — it saves time.
+I've caught Perplexity being wrong maybe a handful of times. Compare that to ChatGPT where I treat every factual claim as "probably right but let me check." Although now I'm second-guessing myself — maybe I just don't catch Perplexity's errors because the citations make me trust it more. The citation system doesn't just build trust — it saves time.
 
 ### Pro Search Is Genuinely Useful
 
@@ -2004,7 +2012,7 @@ That's not marketing speak. That's just what I've found after months of daily us
         excerpt: "Bolt.new lets you build full-stack apps by typing plain English in your browser. But is it actually good enough to ship real projects? Here's my honest take after putting it through its paces.",
         content: `Bolt.new is one of those tools that sounds too good to be true. Type what you want in plain English, and it builds you a full-stack web app — frontend, backend, database — right in your browser. No local setup, no terminal, no deployment headaches.
 
-It went from near-death startup to $40M ARR in six months. That kind of growth doesn't happen by accident. But hype and reality don't always line up, so let's talk about what Bolt actually delivers and where it falls short.
+It went from near-death startup to $40M ARR in six months. That kind of growth doesn't happen by accident. But hype and reality don't always line up, so let's talk about what Bolt actually delivers and where it falls short. I have complicated feelings about this one.
 
 ## What Bolt.new Actually Does
 
@@ -2097,7 +2105,7 @@ Bolt.new is impressive tech and represents a real shift in how software gets bui
 
 But it's not a replacement for actual software engineering. It's a really good first draft machine. The code it generates is functional but rarely production-ready. The token pricing can get expensive fast. And complex projects will hit a ceiling where you need human developers to take over.
 
-My recommendation: use Bolt for what it's great at — speed, prototyping, and making ideas tangible fast. Don't try to make it something it's not. At $25/month for Pro, it's an easy yes if you regularly need to spin up prototypes or build simple web apps. Just go in with realistic expectations about what "AI-built" actually means in 2026.
+My recommendation: use Bolt for what it's great at — speed, prototyping, and making ideas tangible fast. Don't try to make it something it's not. At $25/month for Pro, it's an easy yes if you regularly need to spin up prototypes or build simple web apps. Just go in with realistic expectations about what "AI-built" actually means in 2026. I keep saying this about every AI builder and I'm still not sure where the line is between "prototype" and "real app."
 
 **Rating: 4 out of 5** — Excellent for its sweet spot, but know the limits before you commit.`,
         author: "Hugh McInnis",
@@ -2772,7 +2780,7 @@ Let's be real about the problems.
 
 **AI quality varies by task.** The writing assistance is solid. The search is great. But some agent tasks produce results that need significant cleanup. It's not fire-and-forget yet — more like fire-and-review. You'll still need to check the agent's work, especially for anything customer-facing.
 
-**Fair use policy on AI is vague.** Notion says heavy AI usage can trigger temporary limits on Business plans. They don't specify what "heavy" means. For most users this won't matter, but if you're planning to have agents running constantly across a large workspace, you might hit walls.
+**Fair use policy on AI is vague.** Notion says heavy AI usage can trigger temporary limits on Business plans. They don't specify what "heavy" means. For most users this won't matter, but if you're planning to have agents running constantly across a large workspace, you might hit walls. I'm still not sure how this plays out for larger teams, honestly.
 
 ## Who Should Use Notion AI
 
@@ -2800,6 +2808,8 @@ For most teams, that tradeoff is absolutely worth $20/user/month. The consolidat
 
 Just go in with realistic expectations. It's a workspace with great AI bolted in, not an AI with a workspace tacked on. That distinction matters more than you'd think.
 
+Although sometimes I wonder if the "all-in-one" play ever really works long-term, or if we just keep cycling through these tools every few years...
+
 **Rating: 8.5/10** — The best all-in-one workspace gets meaningfully better with AI agents. Performance issues and the learning curve keep it from perfection, but for teams willing to invest the setup time, it's hard to find better value.`,
         author: "Hugh McInnis",
         publishDate: "2026-02-23",
@@ -2823,6 +2833,8 @@ Let's get into it.
 Midjourney is an AI image generation tool that turns text prompts into images. You describe what you want — "a cyberpunk coffee shop at sunset, cinematic lighting" — and it generates four variations in about 30-60 seconds.
 
 That's the elevator pitch. Reality's a bit messier.
+
+Side note — it's wild how fast we went from "AI can't draw hands" to this. I remember showing V4 outputs to a designer friend and she was unimpressed. Now she uses it daily.
 
 What Midjourney actually excels at is making images that *look good by default*. You don't need to be a prompt engineer to get impressive results. Type something vaguely descriptive and you'll get something that looks like a professional artist spent hours on it. That's the magic trick, and it's why Midjourney dominates despite having competitors with more features.
 
@@ -2908,7 +2920,9 @@ The caveats are real though: you can't do precise layout work, text rendering is
 
 But if images are a core part of your work? Midjourney isn't just worth it — it's the obvious choice. Nothing else consistently produces output this good with this little effort.
 
-Just start with the Standard plan. Trust me on that one.`,
+Just start with the Standard plan. Trust me on that one.
+
+I keep going back and forth on whether Flux will close the gap by year-end. Ask me again in six months.`,
         author: "Hugh McInnis",
         publishDate: "2026-02-23",
         publishedAt: "2026-02-23T11:01:50.000-08:00",
@@ -2967,7 +2981,7 @@ The credit system is Runway's biggest friction point. You'll burn through credit
 
 **Photorealism has limits.** Gen-4 is great, but if maximum photorealism is your only goal, Google's Veo and OpenAI's Sora are competitive (and in some cases ahead). Runway's strength is creative control and consistency, not raw realism.
 
-**Customer support is inconsistent.** Multiple users report slow response times and difficulty getting help with billing or technical issues. For a product that costs up to $76/month, this is frustrating.
+**Customer support is inconsistent.** Multiple users report slow response times and difficulty getting help with billing or technical issues. For a product that costs up to $76/month, this is frustrating. This reminds me of the early days of Figma, actually — great product, support couldn't keep up with growth. Not sure if that's what's happening here or just underinvestment.
 
 ## Who Should Actually Use Runway
 
@@ -3001,7 +3015,7 @@ But it's not without real limitations. The 16-second cap matters. The lack of na
 
 If you're doing professional video work and can commit to the Unlimited plan at $76/month, Runway is an easy recommendation. If you're testing the waters, start with the free tier and see if Gen-4's output quality matches what you need. Just don't judge the platform by the Standard plan's 52 seconds of video — that's barely enough to scratch the surface.
 
-The AI video space is moving fast, and Runway's lead isn't guaranteed. But right now, in early 2026, they have the best combination of quality, control, and professional features. That counts for something.`,
+The AI video space is moving fast, and Runway's lead isn't guaranteed. But right now, in early 2026, they have the best combination of quality, control, and professional features.`,
         author: "Hugh McInnis",
         publishDate: "2026-02-23",
         publishedAt: "2026-02-23T15:01:23.000-08:00",
@@ -3053,7 +3067,7 @@ Most of the time.
 
 **The credit system is annoying.** Every interaction with the AI costs credits. On the free plan, you get 5 per day. Even on paid plans, heavy iteration sessions can burn through credits fast. When you're debugging a tricky feature and going back and forth with the AI, watching your credits drain adds unnecessary stress.
 
-**Prompt engineering matters more than they admit.** Lovable markets itself as "just describe what you want." In reality, how you describe it makes a huge difference. Vague prompts get vague results. You need to be specific about data models, user flows, and edge cases. It's not as simple as talking to a friend — it's more like writing a detailed brief for a contractor.
+**Prompt engineering matters more than they admit.** Lovable markets itself as "just describe what you want." In reality, how you describe it makes a huge difference. Vague prompts get vague results. You need to be specific about data models, user flows, and edge cases. It's not as simple as talking to a friend — it's more like writing a detailed brief for a contractor. Which, honestly, is kind of what you'd expect? I don't know why I was surprised by this.
 
 ## Pricing Breakdown
 
@@ -3094,7 +3108,7 @@ Lovable is the most capable AI app builder I've tested for full-stack web applic
 
 But it's not magic. You still need to think clearly about what you're building. You still need to iterate. And for anything beyond moderate complexity, you'll hit walls that require either coding knowledge or a lot of patience.
 
-At $25/month for Pro, it's absolutely worth trying if you're building web apps. Start with a simple project, learn how to prompt effectively, and scale up from there. Just don't expect to build the next Stripe with nothing but chat messages.
+At $25/month for Pro, it's absolutely worth trying if you're building web apps. Start with a simple project, learn how to prompt effectively, and scale up from there.
 
 **Rating: 8/10** — Best-in-class for full-stack AI app building, held back by credit limitations and complexity ceiling.
 
@@ -3153,7 +3167,7 @@ Think about what happened:
 
 Investors are realizing that businesses built on the premise that "this is too complex for automation" are vulnerable. COBOL modernization services, security audits, legacy system consulting—these weren't supposed to be automatable.
 
-Claude Code suggests otherwise.
+Claude Code suggests otherwise. Or does it? I keep changing my mind on this one.
 
 The bear case is simple: If an AI agent can map dependencies and identify risks in COBOL codebases that have been running since the 1960s, what other "impossible to automate" consulting work becomes commoditized?
 
@@ -3250,7 +3264,9 @@ For AI agent builders and investors, the lesson is equally clear: The biggest op
 
 Claude Code's COBOL capability might be overhyped in the short term. But as a signal of where autonomous agents are heading? That's probably underestimated.
 
-The question isn't whether AI agents will disrupt complex knowledge work. It's how fast — and who's next.`,
+The question isn't whether AI agents will disrupt complex knowledge work. It's how fast — and who's next.
+
+I realize I've gone back and forth in this piece between "the panic is overblown" and "this changes everything." That's because I'm genuinely not sure which one it is yet.`,
         author: "Hugh McInnis",
         publishDate: "2026-02-24",
         publishedAt: "2026-02-24T08:37:11.000-08:00",
@@ -3316,7 +3332,7 @@ The YAML configuration lets you set custom coding guidelines, adjust review stri
 
 This is the universal complaint with AI code review tools, and CodeRabbit isn't immune. Especially in the first few weeks before it learns your preferences, expect some comments that make you think "yeah, technically correct, but not helpful." 
 
-The learning system helps over time, but you need to actively train it by responding to its comments. Teams that just ignore irrelevant suggestions never see the tool improve.
+The learning system helps over time, but you need to actively train it by responding to its comments. Teams that just ignore irrelevant suggestions never see the tool improve. Although — does anyone actually have time for that in the middle of a sprint?
 
 ### It Doesn't Understand Business Context
 
@@ -3370,7 +3386,7 @@ CodeRabbit is the best AI code review tool out there right now. Not because it's
 
 The real question isn't whether AI code review is useful. It clearly is. The question is whether you're willing to invest the first few weeks training it on your codebase's conventions. If you are, CodeRabbit pays for itself quickly. If you're expecting magic on day one, temper your expectations.
 
-Start with the free trial. Give it two weeks of active feedback. Then decide. That's the honest advice.`,
+Start with the free trial. Give it two weeks of active feedback. Then decide.`,
         author: "Hugh McInnis",
         publishDate: "2026-02-24",
         publishedAt: "2026-02-24T11:01:36.000-08:00",
@@ -3423,7 +3439,7 @@ The issue isn't the price itself — $37/month is reasonable for an automation t
 
 A standard AI call costs 2 credits. An advanced AI call (GPT-4 or Claude Sonnet) costs 20 credits. Scraping steps, enrichment nodes, and other actions also consume credits at varying rates. So that 10,000 credits on the Solo plan? It might last you a month if you're running a few simple flows. Or it might be gone in a week if you're doing heavy AI processing.
 
-This is my biggest gripe with Gumloop. I don't love credit systems in general — they make it really hard to predict your monthly spend. With Zapier, I know I'm paying for X number of tasks. With Gumloop, I'm constantly doing mental math on credit consumption.
+This is my biggest gripe with Gumloop. I don't love credit systems in general — they make it really hard to predict your monthly spend. With Zapier, I know I'm paying for X number of tasks. With Gumloop, I'm constantly doing mental math on credit consumption. It's like those mobile games where you're always watching a meter drain. Not a great feeling.
 
 There's also no annual discount mentioned on their site, which is unusual.
 
@@ -3485,7 +3501,7 @@ If you're a small team that needs AI-heavy automation and you're comfortable mon
 
 **Rating: 7/10** — Good at what it does, held back by pricing complexity and integration depth.
 
-Give the free tier a spin before committing. You'll know within a day whether it clicks for your workflow.`,
+Give the free tier a spin before committing. You'll know pretty quickly whether it clicks for your workflow. Or you won't — I guess that's an answer too.`,
         author: "Hugh McInnis",
         publishDate: "2026-02-24",
         publishedAt: "2026-02-24T15:01:28.000-08:00",
@@ -3521,7 +3537,7 @@ If you're someone who spends 3 hours fiddling with slide layouts before you even
 
 This isn't Canva-template-with-AI-slapped-on territory. Gamma's default designs are clean, modern, and surprisingly tasteful. The typography choices are solid. The color schemes work. The layouts feel intentional rather than algorithmic.
 
-I've seen AI tools that generate technically complete presentations that look like a fever dream. Gamma doesn't have that problem. The output is something you could actually show to a client without cringing.
+I've seen AI tools that generate technically complete presentations that look like a fever dream. Gamma doesn't have that problem. The output is something you could actually show to a client without cringing. Well, most of the time.
 
 ### The AI Editing Is Smart
 
@@ -3602,7 +3618,9 @@ But it's not a PowerPoint replacement. It's a PowerPoint alternative for specifi
 
 My recommendation: try the free tier. Make a presentation for something real, not a test. Share it with someone. If the card format works for your audience and your workflow doesn't require PowerPoint export, the $8/month Plus plan is an easy yes. If you find yourself immediately trying to export to PowerPoint, that's your answer too — just in the other direction.
 
-Gamma earns a solid spot in the AgentRank directory. It's not for everyone, but for the people it IS for, it's a real time-saver that produces work you'd actually be proud to share.`,
+Gamma earns a solid spot in the AgentRank directory. It's not for everyone, but for the people it IS for, it's a real time-saver.
+
+I wonder if the card format becomes the norm in a few years, or if PowerPoint outlasts us all...`,
         author: "Hugh McInnis",
         publishDate: "2026-02-25",
         publishedAt: "2026-02-25T07:11:31.000-08:00",
@@ -3636,7 +3654,7 @@ The key differentiator: Deepgram built their own models from scratch using end-t
 
 Real-time transcription with sub-300ms latency. For batch processing, you're looking at roughly 1 minute of audio processed in about 3-4 seconds. If you've ever waited for AWS Transcribe to churn through an hour-long meeting recording, you know how painful slow transcription is. Deepgram doesn't have that problem.
 
-Their newer Flux model is specifically designed for voice agents — it has built-in turn detection, natural interruption handling, and ultra-low latency. If you're building something conversational, this is the model you want.
+Their newer Flux model is specifically designed for voice agents — it has built-in turn detection, natural interruption handling, and ultra-low latency. If you're building something conversational, this is the model you want. I haven't tested Flux extensively myself though, so take that with a grain of salt.
 
 ### The Free Tier Is Actually Generous
 
@@ -3724,7 +3742,7 @@ Deepgram is one of the best speech-to-text APIs available right now. Nova-3 is s
 
 The catches are real but manageable: pricing complexity as you add features, text-to-speech that's merely adequate, and the typical API lock-in concerns. None of these are dealbreakers.
 
-If you're building something that needs to understand human speech — especially in real-time — Deepgram should be at the top of your evaluation list. Start with the free tier, benchmark it against your actual audio, and decide from there. The numbers usually speak for themselves.
+If you're building something that needs to understand human speech — especially in real-time — Deepgram should be at the top of your evaluation list. Start with the free tier, benchmark it against your actual audio, and decide from there.
 
 **Rating: 4.2/5** — Excellent core product with room to grow on the edges.`,
         author: "Hugh McInnis",
@@ -3779,7 +3797,7 @@ Here's where Instantly gets a little sneaky. The platform is split into three se
 
 See the problem? If you want outreach + leads + CRM, you're looking at **$131/month minimum** ($37 + $47 + $47). For a full agency setup with decent volume, you're easily at **$291-$391/month**.
 
-That $37 headline price? It's technically true but misleading. You get outreach without leads to send to and no CRM to manage replies. It's like buying a car without wheels and a steering wheel.
+That $37 headline price? It's technically true but misleading. You get outreach without leads to send to and no CRM to manage replies. It's like buying a car without wheels and a steering wheel. Every SaaS company does this now and it drives me crazy.
 
 ## What It Does Well
 
@@ -3849,6 +3867,8 @@ But the modular pricing is designed to get you spending more than you planned. B
 
 If you're doing cold email at any real volume, Instantly belongs on your shortlist. Just go in knowing what the actual total cost looks like.
 
+Whether cold email itself has a future is a different question I'm not sure I want to get into right now.
+
 **Rating: 4.0/5** — Excellent outreach infrastructure with pricing that's less straightforward than it appears.`,
         author: "Hugh McInnis",
         publishDate: "2026-02-25",
@@ -3875,7 +3895,7 @@ At its core, Sybill is a meeting intelligence platform with an AI layer on top. 
 
 **Call Recording & Summaries:** Sybill joins your Zoom, Google Meet, or Teams calls and records them. After the call, you get an AI-generated summary — not a transcript dump, but an actual structured summary with key points, action items, and next steps. Users consistently say Sybill's summaries are more accurate than competitors like Gong or Fireflies, and having used a few of these tools, I believe it.
 
-**CRM Autofill:** This is where Sybill gets interesting. After every call, it automatically updates your CRM fields — Salesforce, HubSpot, whatever you're running. We're talking deal stage, next steps, competitor mentions, budget discussions, all of it. They claim a 99% fill rate on CRM fields, which is aggressive, but the reviews back it up. If you've ever had a sales manager breathing down your neck about CRM hygiene, this alone might justify the price.
+**CRM Autofill:** This is where Sybill gets interesting. After every call, it automatically updates your CRM fields — Salesforce, HubSpot, whatever you're running. We're talking deal stage, next steps, competitor mentions, budget discussions, all of it. They claim a 99% fill rate on CRM fields, which is aggressive, but the reviews back it up. I'd love to see independent benchmarks on that number though. If you've ever had a sales manager breathing down your neck about CRM hygiene, this alone might justify the price.
 
 **AI Follow-Up Emails:** Sybill drafts follow-up emails based on what was actually discussed in the meeting. Not generic templates — actual contextual follow-ups that reference specific talking points. It learns your writing style over time, so the emails sound like you wrote them. This is one of those features that sounds gimmicky until you realize it saves you 10-15 minutes per call.
 
@@ -3947,7 +3967,7 @@ At $79/month per user, it's not cheap — but it's a lot cheaper than Gong, and 
 
 If you're on the fence, start with the free tier. Record a few calls, see how the summaries compare to your current tool, and decide from there. That's the beauty of Sybill actually offering a free plan — you don't have to take my word for it.
 
-Just don't expect it to fix bad sales fundamentals. No AI tool will save a terrible pitch. But if your selling skills are solid and you're drowning in admin work, Sybill is one of the best tools to get that time back.`,
+Just don't expect it to fix bad sales fundamentals. No AI tool will save a terrible pitch.`,
         author: "Hugh McInnis",
         publishDate: "2026-02-26",
         publishedAt: "2026-02-26T07:11:49.000-08:00",
@@ -4024,7 +4044,7 @@ This is the fundamental problem with Writesonic and honestly most AI writing too
 
 Some articles come out surprisingly coherent with good structure and reasonable arguments. Others read like a college student who skimmed the Wikipedia page and wrote the essay in the Uber to class. You'll always need to edit, fact-check, and add your own voice.
 
-Writesonic's unique pricing quirk makes this worse — they charge different rates for "Premium," "Good," "Average," and "Economy" quality tiers. The fact that they openly acknowledge their tool produces different quality levels depending on how much you pay is... refreshingly honest? Depressingly revealing? Both?
+Writesonic's unique pricing quirk makes this worse — they charge different rates for "Premium," "Good," "Average," and "Economy" quality tiers. The fact that they openly acknowledge their tool produces different quality levels depending on how much you pay is... refreshingly honest? Depressingly revealing? I genuinely can't decide.
 
 ### SEO Features Are Surface-Level
 
@@ -4080,7 +4100,7 @@ If you're an agency doing content at scale and you want one platform to centrali
 
 For everyone else? Start with the free plan, test the Article Writer, and see if the output quality meets your standards. My guess is you'll find it useful for first drafts but not transformative enough to replace your existing workflow.
 
-The AI writing tool space is brutally competitive, and Writesonic's best move — betting on AI search optimization — might be exactly right for the next two years. Whether that bet pays off before the subscription fatigue sets in is the real question.`,
+The AI writing tool space is brutally competitive, and Writesonic's best move — betting on AI search optimization — might be exactly right for the next two years. Or it might not matter at all if AI search itself changes how citations work. Hard to say.`,
         author: "Hugh McInnis",
         publishDate: "2026-02-26",
         publishedAt: "2026-02-26T11:01:30.000-08:00",
@@ -4142,7 +4162,7 @@ So can Superhuman handle 500 emails a day? Yes, but with caveats.
 
 **What doesn't:** Superhuman has no built-in mass email or campaign features. If your 500 emails include cold outreach, you still need a separate tool like Instantly or Apollo. Superhuman is for managing your inbox, not for blasting emails out.
 
-Also, the search — while improved — still occasionally misses emails that Gmail's native search finds. For users with massive archives, this can be frustrating.
+Also, the search — while improved — still occasionally misses emails that Gmail's native search finds. For users with massive archives, this can be frustrating. You'd think a $33/month email client would at least match Gmail's free search, but here we are.
 
 ## Who Should Actually Pay for Superhuman
 
@@ -4176,7 +4196,7 @@ If you're processing 500 emails a day and your current setup involves scrolling,
 
 But if you're not drowning in email, you don't need it. There's no shame in Gmail. Superhuman solves a specific problem for a specific kind of user — and for those users, nothing else comes close.
 
-**Rating: 8.5/10** — Premium price for a premium experience. The AI features finally justify the cost, but only if you're the target user.`,
+**Rating: 8.5/10** — Premium price for a premium experience. Whether any email client is "worth" $33/month is kind of a philosophical question at this point.`,
         author: "Hugh McInnis",
         publishDate: "2026-02-26",
         publishedAt: "2026-02-26T15:01:33.000-08:00",
@@ -4208,7 +4228,7 @@ Motion starts at **$29/month per user** on the individual plan (billed annually 
 
 For a solo professional billing $50+/hour, the math works out quickly. If Motion saves you even 30 minutes of daily planning and rescheduling, it pays for itself in two days. For someone making $20/hour or working a job where you don't control your own schedule, it's a harder sell.
 
-They raised a **$60M Series C in December 2025 at a $550M valuation**, so they've got runway and momentum. That said, pricing transparency has gotten worse in 2026 — you might need to dig around to find exact team pricing.
+They raised a **$60M Series C in December 2025 at a $550M valuation**, so they've got runway and momentum. That said, pricing transparency has gotten worse in 2026 — you might need to dig around to find exact team pricing. Kind of ironic for a tool that's supposed to save you time.
 
 ## The Good: What Motion Gets Right
 
@@ -4298,7 +4318,7 @@ But it's not for everyone. The mobile app needs serious work, the setup investme
 
 If you just want a better calendar, there are simpler (and cheaper) options.
 
-**Rating: 7.5/10** — Powerful AI scheduling with real workflow benefits, held back by a rough mobile experience and steep learning curve.`,
+**Rating: 7.5/10** — Powerful AI scheduling with real workflow benefits, held back by a rough mobile experience and steep learning curve. I suspect this rating goes up once the mobile app catches up, but that's been "coming soon" for a while now...`,
         author: "Hugh McInnis",
         publishDate: "2026-02-27",
         publishedAt: "2026-02-27T07:11:26.000-08:00",
@@ -4396,7 +4416,7 @@ The justification? Clara uses a human-in-the-loop approach. There's AI doing the
 
 One thing I respect about Clara: longevity. They've been doing this since before the current AI hype cycle. Over 1 million meetings scheduled. That's not a startup experimenting with LLMs — it's a mature product with a decade of edge cases handled.
 
-In a market full of tools that launched last year and might not exist next year, there's real value in a company that's been solving the same problem for a decade and is still around.
+In a market full of tools that launched last year and might not exist next year, there's real value in a company that's been solving the same problem for a decade and is still around. Or maybe longevity just means they're slow to innovate. I honestly go back and forth on this.
 
 ## The Bottom Line
 
@@ -4406,7 +4426,7 @@ But if you're an executive, consultant, or salesperson whose calendar is a warzo
 
 For the right user, it absolutely is.
 
-**Rating: 7/10** — Excellent at its niche (email-based meeting scheduling) but the premium pricing and narrow feature set limit who should actually buy it.`,
+**Rating: 7/10** — Excellent at its niche, premium pricing limits the audience.`,
         author: "Hugh McInnis",
         publishDate: "2026-02-27",
         publishedAt: "2026-02-27T11:02:54.000-08:00",
