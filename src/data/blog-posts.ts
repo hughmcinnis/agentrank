@@ -4306,5 +4306,113 @@ If you just want a better calendar, there are simpler (and cheaper) options.
         categories: ["Reviews","Productivity"],
         featuredImage: "/images/blog/motion-review-ai-scheduling-tool.png",
         tags: ["motion","ai scheduling","productivity","calendar ai","task management","reclaim ai","motion review"],
+    },
+    {
+        id: "39",
+        title: "Clara Review: Is This AI Scheduling Assistant Worth It in 2026?",
+        slug: "clara-review-ai-scheduling-assistant",
+        excerpt: "Clara from Clara Labs handles meeting scheduling over email like a human assistant. After 10+ years and 1M+ meetings, is it still worth the price? Here's an honest review.",
+        content: `Clara has been around longer than most AI tools on this list. While everyone else is launching shiny new agents that can browse the web and write code, Clara has spent over a decade doing one thing: scheduling your meetings over email. And honestly? There's something refreshing about that focus.
+
+## What Clara Actually Does
+
+Clara is an AI scheduling assistant that works entirely through email. You CC Clara on an email thread, and it handles the back-and-forth of finding a time, checking calendars, sending invites, and following up with reminders. No app to open. No dashboard to check. It just lives in your inbox.
+
+The pitch is simple: Clara acts like a human executive assistant who never sleeps, never forgets, and never double-books you. You set your preferences — available hours, meeting lengths, buffer time between calls — and Clara handles everything else.
+
+What makes Clara different from tools like Calendly is that it's **conversational**. It doesn't send a booking link. It actually emails your contacts back and forth, negotiating times in natural language. To the person on the other end, it feels like they're talking to your assistant, not a scheduling bot.
+
+## How It Works Day-to-Day
+
+The workflow is dead simple:
+
+1. Someone emails you wanting to meet
+2. You forward it to Clara (or CC Clara from the start)
+3. Clara reads the context, checks your calendar, and proposes times
+4. Your contact picks a time
+5. Clara sends the calendar invite with video link, location, whatever you've configured
+6. Clara sends reminders before the meeting
+
+If someone reschedules? Clara handles it. If there's a timezone confusion? Clara sorts it out. If three people need to coordinate? Clara manages the multi-party scheduling.
+
+The natural language processing is genuinely good. Clara picks up on context clues — "let's meet next week" or "I'm flexible except Tuesdays" — and works around them. It doesn't feel robotic. People regularly don't realize they're emailing an AI.
+
+## Clara's Pricing and Plans
+
+Here's where it gets interesting — and potentially painful.
+
+Clara has historically been on the expensive side for what it does. While they offer a 14-day free trial, the paid plans have been priced more like hiring a part-time assistant than buying a SaaS tool. Previous reports put pricing in the range of $99-$399/month depending on the tier and meeting volume.
+
+For context, Calendly's premium plan is $16/month. Reclaim.ai is $10/month. Motion (which we recently reviewed) is $29/month. Clara is playing in a completely different price bracket.
+
+The justification? Clara uses a human-in-the-loop approach. There's AI doing the heavy lifting, but Clara Labs has a support team that catches edge cases and ensures quality. That hybrid model costs more to operate than pure software.
+
+## Who Clara Is Actually For
+
+**Clara makes sense if:**
+- You schedule 10+ external meetings per week
+- Your contacts are senior executives who won't click a Calendly link
+- The "human feel" of email scheduling matters for your business relationships
+- You're a consultant, advisor, or salesperson where scheduling friction costs you revenue
+- You'd otherwise pay $500-2000/month for a human assistant to handle scheduling
+
+**Clara doesn't make sense if:**
+- You schedule mostly internal team meetings (Slack/Teams handles this fine)
+- You're comfortable sending booking links (Calendly is 90% cheaper)
+- You're budget-conscious and scheduling isn't a major pain point
+- You need an assistant for tasks beyond scheduling
+
+## What Clara Does Well
+
+**The email-native approach is genuinely brilliant.** No one needs another app. Email is where scheduling conversations happen naturally, and Clara meets people there. Zero adoption friction for you or your contacts.
+
+**Multi-party scheduling.** Coordinating three or more people's calendars is a special kind of hell. Clara handles it gracefully — and this is where the time savings really compound.
+
+**Preference learning.** Over time, Clara learns your quirks. Prefer mornings for sales calls? No meetings on Fridays? 30-minute buffer between calls? It remembers and applies these automatically.
+
+**Calendar integration.** Works with Google Calendar and Microsoft Outlook out of the box. Also integrates with Zoom, Google Meet, and Microsoft Teams for automatic video link generation.
+
+## Where Clara Falls Short
+
+**Price is the elephant in the room.** For a single-function tool, Clara is expensive. If you're not scheduling a high volume of meetings with external contacts, the ROI math doesn't work.
+
+**It only does scheduling.** In 2026, when AI assistants can write emails, manage projects, and browse the web, Clara's narrow focus feels limiting. You're paying premium prices for one capability.
+
+**No real-time chat interface.** Everything happens over email, which means there's inherent latency. If you need to schedule something urgently in the next hour, email back-and-forth isn't ideal.
+
+**The "human-in-the-loop" question.** Clara's hybrid AI+human model is a double-edged sword. It ensures quality but also means your scheduling data is being reviewed by people. For privacy-conscious users, that's worth considering.
+
+## Clara vs the Competition
+
+**Clara vs Calendly:** Calendly is cheaper and simpler, but sends booking links instead of having conversations. If your contacts are fine with clicking a link, save your money. If they expect a personal touch, Clara wins.
+
+**Clara vs Reclaim.ai:** Reclaim focuses on internal time management — blocking focus time, defending your calendar from overload. Different use case entirely. They complement each other more than compete.
+
+**Clara vs Motion:** Motion is a full productivity suite (tasks + calendar + scheduling). It does scheduling well but not with Clara's email-native, conversational approach. Motion is better for personal productivity; Clara is better for external meeting coordination.
+
+**Clara vs a Human Assistant:** A good virtual assistant costs $500-2000/month and handles scheduling plus a dozen other tasks. If you need the other tasks too, hire a human. If it's purely scheduling volume, Clara is cheaper and available 24/7.
+
+## The 10-Year Track Record
+
+One thing I respect about Clara: longevity. They've been doing this since before the current AI hype cycle. Over 1 million meetings scheduled. That's not a startup experimenting with LLMs — it's a mature product with a decade of edge cases handled.
+
+In a market full of tools that launched last year and might not exist next year, there's real value in a company that's been solving the same problem for a decade and is still around.
+
+## The Bottom Line
+
+Clara is the best AI scheduling assistant for people who need the human touch of email-based coordination and schedule enough meetings to justify the premium pricing. It's not for everyone — most people should just use Calendly and move on with their lives.
+
+But if you're an executive, consultant, or salesperson whose calendar is a warzone of competing external meetings, Clara genuinely saves hours per week and removes a constant source of cognitive overhead. The question is whether that's worth the price premium over simpler alternatives.
+
+For the right user, it absolutely is.
+
+**Rating: 7/10** — Excellent at its niche (email-based meeting scheduling) but the premium pricing and narrow feature set limit who should actually buy it.`,
+        author: "Hugh McInnis",
+        publishDate: "2026-02-27",
+        publishedAt: "2026-02-27T11:02:54.000-08:00",
+        readTime: "5 min read",
+        categories: ["Reviews","Productivity"],
+        featuredImage: "/images/blog/clara-review-ai-scheduling-assistant.png",
+        tags: ["clara","ai scheduling","meeting scheduler","virtual assistant","clara labs","calendar ai","scheduling automation"],
     }
 ]; 
