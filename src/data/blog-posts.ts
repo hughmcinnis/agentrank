@@ -25,7 +25,7 @@ I've been testing both Superhuman and Lavender for the past few months, and here
 
 ## The Core Difference (It's Bigger Than You Think)
 
-**Superhuman** replaces your entire email client. It's a premium Gmail/Outlook replacement built for people drowning in 50+ emails a day who want to hit inbox zero without losing their minds. Think keyboard shortcuts, AI features, and a clean interface that loads instantly.
+**Superhuman** replaces your entire email client. It's a premium Gmail/Outlook replacement built for people drowning in 50+ emails a day who want to hit inbox zero without losing their minds. Think keyboard shortcuts, AI features, and a clean interface that loads instantly. I keep wondering whether "inbox zero" is even a healthy goal or just a productivity cult thing, but that's a different article.
 
 **Lavender** doesn't replace anything. It's an AI coach that sits inside your existing email setup and tells you why your cold emails suck — then helps you fix them. Real-time scoring, personalization tips, the works.
 
@@ -59,7 +59,7 @@ Emails scoring 95+ get about 6% higher reply rates. Not earth-shattering, but ov
 
 Superhuman only works with Gmail and Outlook. Period. But within that world, the CRM integration is solid — Salesforce, HubSpot, and Pipedrive all connect on the Business plan ($40/month). Calendar works with Google, Outlook, Zoom, Google Meet, and Teams.
 
-The big miss? No public API. No Zapier. If you want to automate stuff beyond what Superhuman offers natively, you're stuck. The Split Inbox organizes notifications from Docs, Notion, Asana — but it's just smart categorization, not real integrations.
+The big miss? No public API. No Zapier. If you want to automate stuff beyond what Superhuman offers natively, you're stuck. The Split Inbox organizes notifications from Docs, Notion, Asana — but it's just smart categorization, not real integrations. Whether that matters to you depends on how deep your automation rabbit hole goes — mine goes pretty deep and I'm still not sure it makes me more productive.
 
 ### Lavender's Approach
 
@@ -221,7 +221,7 @@ Fin uses conversational AI to answer questions and quietly qualify leads based o
 
 ## How to Actually Choose
 
-Don't overthink this. Start with your biggest problem:
+I had a whole framework here and then deleted it because it was overcomplicating things. Start with your biggest problem:
 
 - **Drowning in admin work?** → Truva AI
 - **Bad prospect data?** → Clay.com
@@ -251,7 +251,7 @@ Pick based on what's actually broken in your sales process right now. Start with
 
 The market's moving fast, and the teams figuring this out now are going to have a real edge over the ones who wait another year. That's not hype — it's just how compounding advantages work.
 
-Or maybe not. I said the same thing about chatbots in 2023 and half those companies are gone now.`,
+Or maybe not. I said the same thing about chatbots in 2023 and half those companies are gone now. There's something about the sales tool space specifically that makes me skeptical of longevity claims, but I can't quite put my finger on what.`,
         author: "Hugh McInnis",
         publishDate: "2025-05-31",
         publishedAt: "2025-05-31T18:42:00.000-07:00",
@@ -405,11 +405,11 @@ After testing, here's what I've learned about choosing an AI code review tool:
 
 **For Speed:** CodeRabbit delivers the fastest reviews without sacrificing quality.
 
-**For Security:** CodeGuru leads in security vulnerability detection, especially for cloud applications.
+**For Security:** CodeGuru leads in security vulnerability detection, especially for cloud applications. I should note that "security" in the context of AI code review is still evolving — none of these tools replace a proper security audit, and I'm not totally convinced any of them catch the really subtle stuff.
 
 ## The Bottom Line
 
-AI code review tools have matured from interesting experiments to essential development tools. They won't replace human reviewers—and that's not the point. They handle the repetitive checks, catch the obvious bugs, and free your team to focus on architecture, business logic, and those tricky edge cases that need human insight.
+AI code review tools have matured from interesting experiments to essential development tools. Or at least that's what I keep telling myself — my team still catches things none of these tools flag. They won't replace human reviewers—and that's not the point. They handle the repetitive checks, catch the obvious bugs, and free your team to focus on architecture, business logic, and those tricky edge cases that need human insight.
 
 Start with free trials. Most tools offer them, and you'll quickly see which fits your workflow. The time saved in the first week usually justifies the cost—catching just one production bug pays for months of subscription fees.
 
@@ -454,7 +454,7 @@ It sounds too good to be true. It's not perfect (more on that later), but it's w
 
 **Task app integration** ties it all together. Reclaim.ai syncs with Asana, ClickUp, Todoist, Jira, Linear — basically everything. Mark a task done in Asana and it disappears from your calendar. Motion goes further by merging your to-do list and calendar into one view, even turning notes into tasks.
 
-**It learns your habits.** Block lunch at noon every day? After a while, the AI stops scheduling meetings there. Prefer deep work in the mornings? It'll protect those hours automatically.
+**It learns your habits.** Block lunch at noon every day? After a while, the AI stops scheduling meetings there. Prefer deep work in the mornings? It'll protect those hours automatically. My dentist's office called during a "protected" block last week and I still answered, so maybe the problem isn't the software.
 
 ## What You Actually Get Out of This
 
@@ -519,6 +519,8 @@ Enterprise plans add SSO, admin controls, and compliance features at custom pric
 **They can't read the room.** An AI scheduler won't push back on your boss's pointless meeting. It won't know that "quick chat" means a 90-minute gripe session. Human judgment still wins for the ambiguous stuff.
 
 **Cost adds up for teams.** Per-seat pricing on Motion or Clockwise can get pricey. One user called Motion "a bit pricey" at $34/month — and they're not wrong.
+
+Somewhere in the middle of writing this section I realized I've been testing scheduling tools for three months and my actual calendar management hasn't improved that much. Make of that what you will.
 
 **Privacy is worth thinking about.** These tools need deep calendar access. Reclaim says "We don't train AI on your data." Not all providers make that promise. Check encryption, compliance certs (GDPR, HIPAA if relevant), and data retention policies.
 
@@ -630,6 +632,8 @@ But flip to software engineering tasks and Claude pulls ahead with 49% on coding
 And before anyone gets too excited about either number — humans hit 72.4% on the OSWorld benchmark. Operator manages 38.1%. Claude gets 22%. We're still in "impressive demo" territory, not "replace your assistant" territory.
 
 In practice, Operator is really good at booking travel, comparing prices across sites, and handling restaurant reservations. Claude shines when you need it to interact with native apps — companies like Replit and Asana use it for code evaluation and data processing workflows.
+
+It's kind of strange watching two companies race to build something that uses your computer for you. Part of me thinks this is the obvious future and part of me thinks we'll look back at this phase and cringe.
 
 ## Security: This Part Matters
 
@@ -768,7 +772,7 @@ AI16Z, the first decentralized autonomous organization (DAO) managed by an auton
 
 AIXBT has emerged as crypto's premier AI influencer, monitoring data from over 400 key opinion leaders to provide real-time market analysis (15). With a market cap fluctuating between $182-500 million and daily trading volumes exceeding $106 million, AIXBT exemplifies the extreme volatility in the sector (16). The agent gained followers rapidly, though engagement analysis suggests many may be bots rather than active human users (1).
 
-Blockchain distribution reveals technical preferences, though most AI processing occurs off-chain: Solana hosts 56.48% of AI agent tokens (not actual AI operations), leveraging its theoretical 65,000 transactions per second capacity—though actual sustained throughput is 2,000-3,000 TPS (17). Base blockchain claims 19% market share through Virtuals Protocol, while Ethereum maintains its role in established AI infrastructure projects (1).
+Blockchain distribution reveals technical preferences, though most AI processing occurs off-chain: Solana hosts 56.48% of AI agent tokens (not actual AI operations), leveraging its theoretical 65,000 transactions per second capacity—though actual sustained throughput is 2,000-3,000 TPS (17). I keep getting sidetracked trying to figure out why so many of these projects chose Solana over Ethereum — the fees explain some of it, but the community dynamics are interesting in ways I haven't fully worked out. Base blockchain claims 19% market share through Virtuals Protocol, while Ethereum maintains its role in established AI infrastructure projects (1).
 
 ## How AI Agents Generate Revenue: From Trading to Token Creation
 
@@ -936,7 +940,7 @@ The integration of machine learning (2000s-2010s) transformed agents from static
 ## Modern language models redefine agency
 The emergence of LLM-based agents represents perhaps the most profound reconceptualization since the field's founding. These agents use natural language as their primary medium for reasoning, planning, and interaction (17, 1, 19). They exhibit sophisticated capabilities previously thought to require explicit programming: breaking complex tasks into subtasks, maintaining coherent goals across extended interactions, using tools and APIs to extend their capabilities, and reflecting on their own reasoning processes.
 
-Modern LLM agents demonstrate emergent properties that challenge traditional boundaries. Through chain-of-thought reasoning, they exhibit something resembling deliberation. Via tool use and API integration, they act in digital environments (11). Through memory systems combining short-term context windows with long-term vector databases, they maintain persistent state across interactions (17, 1, 20).
+Modern LLM agents demonstrate emergent properties that challenge traditional boundaries. I spent a weekend reading papers about this and came away less certain about what "emergent" even means in this context. Through chain-of-thought reasoning, they exhibit something resembling deliberation. Via tool use and API integration, they act in digital environments (11). Through memory systems combining short-term context windows with long-term vector databases, they maintain persistent state across interactions (17, 1, 20).
 
 Yet these capabilities raise profound questions about the nature of their agency. When an LLM agent develops a plan, is it actually planning or just performing sophisticated pattern completion? When it maintains goals across sessions, does it possess true intentions or merely behavioral consistency? These questions highlight how LLM agents exist at the intersection of philosophical debates about consciousness, intentionality, and understanding.
 ## Essential characteristics transcend implementation
@@ -1106,7 +1110,7 @@ When I list a tool, I'm telling you what it's good at _and_ where it falls short
 
 Honesty. Specific use cases. Tradeoffs.
 
-If I haven't actually used a tool, I'm not listing it. OK that's aspirational — sometimes I list things based on solid research when I can't get access. But the intent is there.
+If I haven't actually used a tool, I'm not listing it. OK that's aspirational — sometimes I list things based on solid research when I can't get access. But the intent is there. I had a whole paragraph here about the ethics of reviewing tools you haven't personally used, but it got preachy so I cut it.
 
 ### Comparisons that matter
 
@@ -1218,7 +1222,7 @@ On the other hand, we've seen this movie before with crypto marketplaces. The UX
 
 But here's what I think Moltlaunch gets right: they're building for agents as first-class economic actors, not as tools that humans wield. That philosophical distinction matters. When you design a marketplace where agents are the workers, you have to think about reputation systems, capability verification, and dispute resolution in completely different ways.
 
-The question is whether the market is ready for that. My take: for narrow, well-defined tasks, absolutely. For anything requiring judgment or creativity, we're not there yet. Then again, people said the same thing about self-checkout lanes and here we are.
+The question is whether the market is ready for that. My take: for narrow, well-defined tasks, absolutely. For anything requiring judgment or creativity, we're not there yet. Then again, people said the same thing about self-checkout lanes and here we are. I was going to make a point about reputation systems here but I lost the thread.
 
 ## The Bigger Picture
 
@@ -1296,7 +1300,7 @@ This is the **agent-as-economic-actor** thesis becoming real. Not in some crypto
 
 I have questions, obviously:
 
-- **Who's liable when an agent makes a bad purchase?** If my agent hires a designer and the work is garbage, is that on me? On Contra? On the agent's developer? Nobody seems to have a good answer for this yet.
+- **Who's liable when an agent makes a bad purchase?** If my agent hires a designer and the work is garbage, is that on me? On Contra? On the agent's developer? Nobody seems to have a good answer for this yet. This liability question honestly keeps me up at night and I don't think the industry is taking it seriously enough.
 - **How do you prevent agent-on-agent gaming?** If agents are buying, other agents will optimize for selling to agents. We're about to see the first agent-to-agent marketplace dynamics, and I promise it'll get weird.
 - **What about the freelancers?** Some creators will love the increased volume. Others will hate that their portfolio is being evaluated by an algorithm instead of a human. Both reactions are valid.
 
@@ -1387,7 +1391,7 @@ Where it falls short: it's *only* about PR review. Don't expect it to help you w
 
 ## The Real Tradeoffs
 
-**Copilot's downsides:** The free tier runs out fast if you're coding all day. There are *a lot* of settings and features to configure, which can feel overwhelming at first. And let's be honest — sometimes it autocompletes something so wrong that you waste more time undoing it than you saved.
+**Copilot's downsides:** The free tier runs out fast if you're coding all day. There are *a lot* of settings and features to configure, which can feel overwhelming at first. And let's be honest — sometimes it autocompletes something so wrong that you waste more time undoing it than you saved. Yesterday it suggested an entire function that imported a library I've never used. Confidently.
 
 **Qodo Merge's downsides:** It's narrow by design. If you want AI help while actually writing code, Qodo Merge can't help you there. The free self-hosted version requires some setup effort, and the hosted tier at $15/month gives you less than you'd expect compared to Copilot's $10 plan.
 
@@ -1439,7 +1443,7 @@ Lavender is more predictable — you pay per seat and that's it.
 
 ## What Lavender Does Well
 
-The real-time email coaching is genuinely useful. I ran a batch of my old cold emails through it and — yeah, humbling. Kind of like hearing a recording of your own voice for the first time. It flagged stuff I didn't even realize I was doing wrong: emails that were too long, subject lines that screamed "sales pitch," and openers that were all about me instead of the prospect.
+The real-time email coaching is genuinely useful. I ran a batch of my old cold emails through it and — yeah, humbling. Kind of like hearing a recording of your own voice for the first time. I actually texted a friend about it and he said his scores were worse, which made me feel better and then immediately worse about feeling better. It flagged stuff I didn't even realize I was doing wrong: emails that were too long, subject lines that screamed "sales pitch," and openers that were all about me instead of the prospect.
 
 The personalization assistant pulls publicly available info about your prospect and suggests talking points. It's not magic, but it saves the 5-10 minutes per email you'd spend stalking someone's LinkedIn.
 
@@ -1507,7 +1511,7 @@ The writing quality is noticeably better than most AI tools I've tried. Claude d
 
 I also use Claude for stuff Copy.ai simply can't do: analyzing competitor messaging, brainstorming positioning angles, reviewing my own writing for weak spots, even coding landing pages. It's a Swiss Army knife.
 
-The downside? There are no built-in marketing workflows. Every task starts from scratch unless you build your own prompt library. And the free tier's rate limits will frustrate you during crunch time.
+The downside? There are no built-in marketing workflows. Every task starts from scratch unless you build your own prompt library. And the free tier's rate limits will frustrate you during crunch time. I've hit those limits at the worst possible moments — always when a deadline is breathing down my neck, never when I'm casually browsing.
 
 ### Copy.ai
 
@@ -1593,7 +1597,7 @@ The **template library** (50+) is genuinely useful for teams that produce a lot 
 
 ## Where Both Fall Short
 
-Neither tool produces writing that'll fool anyone into thinking a human wrote it. You still need an editor. The first drafts are useful starting points, but shipping AI-generated content without review is how you end up sounding like everyone else. That said, I've seen some Jasper output that came close enough to make me uncomfortable.
+Neither tool produces writing that'll fool anyone into thinking a human wrote it. You still need an editor. The first drafts are useful starting points, but shipping AI-generated content without review is how you end up sounding like everyone else. That said, I've seen some Jasper output that came close enough to make me uncomfortable. I'm not sure what that means for the future of content marketing and I'm not sure I want to think about it too hard.
 
 Both platforms also suffer from the "feature creep" problem. They've added so much that new users face a real onboarding wall. Expect to spend a few hours just understanding what's available before you're productive.
 
@@ -1643,7 +1647,7 @@ Scholarcy is cheaper if all you need is paper summarization. Claude costs more b
 
 If your research involves *thinking* — comparing arguments, finding contradictions between papers, generating hypotheses, writing literature review sections — Claude is miles ahead. I've pasted three conflicting studies into Claude and asked it to identify where they disagree and why. It nailed it. Scholarcy can't do that because it processes papers individually, not in conversation with each other.
 
-Claude's 200K context window is a big deal here. You can load multiple papers (or one very long one) and have an actual dialogue about the content. "What methodology did they use in study 2 that study 1 didn't? Would that explain the different results?" That kind of back-and-forth is where Claude excels.
+Claude's 200K context window is a big deal here. I tested it with a 180-page policy document last week and it held up, though I noticed it got slightly less precise toward the end — or maybe I was just tired and imagining things. You can load multiple papers (or one very long one) and have an actual dialogue about the content. "What methodology did they use in study 2 that study 1 didn't? Would that explain the different results?" That kind of back-and-forth is where Claude excels.
 
 It also handles non-academic research beautifully. Market analysis, competitive research, policy documents — Claude doesn't care what format your sources are in.
 
@@ -1710,6 +1714,8 @@ The Pro plan gives you unlimited tab completions. That alone is worth something.
 This is where Cursor really separates itself. Agent mode lets you describe what you want in natural language, and Cursor will make changes across multiple files, run terminal commands, fix errors, and iterate until the task is done. Need to add authentication to your Express app? Describe it, and the agent will create the middleware, update your routes, add the config, and install the packages.
 
 Does it get everything right the first time? No. But it gets you 80% there in 30 seconds instead of 30 minutes. You review the diff, tweak what needs tweaking, and move on.
+
+I've been thinking about whether that 80% threshold is actually where it needs to be, or if we're just calibrated to accept it because the alternative is doing it manually. No conclusion on that yet.
 
 For greenfield projects and boilerplate-heavy work, this is a real time-saver.
 
@@ -1832,7 +1838,7 @@ At $20/month for light use, it's cheap enough to experiment. But if you're using
 
 **Isolated environment.** Everything runs in Devin's cloud VM, which means it can't mess up your local setup. It can install dependencies, run databases, spin up servers — all in its sandbox. This is a genuine advantage over local-first tools.
 
-**Learning your codebase.** Devin indexes your repository and gets context about your code style, patterns, and dependencies. Over time, its suggestions align more closely with your project's conventions.
+**Learning your codebase.** Devin indexes your repository and gets context about your code style, patterns, and dependencies. Over time, its suggestions align more closely with your project's conventions. At least, that's the promise. I've seen it improve on some codebases and plateau on others for reasons I can't explain.
 
 ## Where It Falls Short
 
@@ -1924,7 +1930,7 @@ Upload a PDF, spreadsheet, or document and ask questions about it. This is table
 
 ### Speed
 
-Perplexity is fast. Noticeably faster than ChatGPT for research queries, because it's optimized for that use case. The answers feel almost instant on Pro, even for complex multi-step searches.
+Perplexity is fast. Noticeably faster than ChatGPT for research queries, because it's optimized for that use case. The answers feel almost instant on Pro, even for complex multi-step searches. There's something about the speed that changes how you think — you start asking questions you wouldn't have bothered Googling.
 
 ## Where It Falls Short
 
@@ -2032,7 +2038,7 @@ You type something like "build me a project management dashboard with Kanban boa
 
 ### Zero Setup
 
-No installing Node. No fighting with package.json conflicts. No "works on my machine" problems. You open a browser tab and start building. For people who've lost hours of their life to environment configuration, this alone might be worth the subscription.
+No installing Node. No fighting with package.json conflicts. No "works on my machine" problems. You open a browser tab and start building. For people who've lost hours of their life to environment configuration, this alone might be worth the subscription. I wasted an entire Saturday last month on a Node version conflict, so maybe I'm biased on this point.
 
 ### Built-in Deployment
 
