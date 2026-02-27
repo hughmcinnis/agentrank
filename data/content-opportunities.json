@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-02-27T19:00:05.689Z",
+  "generatedAt": "2026-02-27T23:00:04.709Z",
   "dataRange": "3 months",
   "summary": {
-    "totalOpportunities": 19,
+    "totalOpportunities": 18,
     "strikingDistance": 5,
     "lowCtr": 7,
-    "agentNeedsReview": 3,
+    "agentNeedsReview": 2,
     "winnerExpand": 3,
     "contentGaps": 1
   },
@@ -90,15 +90,6 @@
       "priority": 136
     },
     {
-      "type": "agent_needs_review",
-      "query": "clara",
-      "impressions": 57,
-      "clicks": 0,
-      "position": 34.1578947368421,
-      "recommendation": "Agent \"clara\" has 57 impressions — write a detailed review blog post to capture this traffic",
-      "priority": 114
-    },
-    {
       "type": "striking_distance",
       "query": "claude computer use vs openai operator 2026",
       "impressions": 33,
@@ -157,6 +148,17 @@
       "position": 9.89090909090909,
       "recommendation": "\"brave-web-discovery-project-breaking-google-monopoly\" is getting clicks — write related/follow-up content to build topical authority",
       "priority": 37
+    },
+    {
+      "type": "striking_distance",
+      "query": "claude computer use success rate",
+      "impressions": 8,
+      "clicks": 0,
+      "position": 10.625,
+      "ctr": 0,
+      "recentTrend": "active",
+      "recommendation": "Optimize or create focused content for \"claude computer use success rate\" — currently at position 10.6, could reach page 1",
+      "priority": 16
     }
   ],
   "allOpportunities": [
@@ -238,15 +240,6 @@
       "position": 58.23566214807091,
       "recommendation": "\"5-ai-code-review-tools-that-actually-work\" is getting clicks — write related/follow-up content to build topical authority",
       "priority": 136
-    },
-    {
-      "type": "agent_needs_review",
-      "query": "clara",
-      "impressions": 57,
-      "clicks": 0,
-      "position": 34.1578947368421,
-      "recommendation": "Agent \"clara\" has 57 impressions — write a detailed review blog post to capture this traffic",
-      "priority": 114
     },
     {
       "type": "striking_distance",
