@@ -20,3 +20,6 @@ letter-ai
 sonix
 docanalyzer
 krea
+pilot-ai-accountant
+ramp-accounting-agent
+fish-audio
