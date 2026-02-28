@@ -1452,5 +1452,62 @@ export const agents: Agent[] = [
         features: ["Krea 1 ultra-realistic flagship model", "Native 4K image generation", "Real-time canvas for live editing", "Image-to-image style transfer", "Video generation and upscaling", "3D mesh generation", "1000+ styles library", "Model fine-tuning with custom data", "Lipsync capabilities", "Full asset manager", "Bleeding-edge model access on release day"],
         useCases: ["Generating product imagery and marketing visuals", "Transforming sketches into polished artwork", "Creating video content with AI animation", "Upscaling low-resolution images and video to 4K", "Rapid prototyping of 3D assets for games and design"],
         addedDate: "2026-02-27"
+    },
+    {
+        id: "70",
+        name: "Pilot AI Accountant",
+        slug: "pilot-ai-accountant",
+        tagline: "Fully autonomous AI bookkeeper that runs your entire bookkeeping and financial reporting end to end",
+        description: "Pilot AI Accountant is a fully autonomous virtual worker that handles the entire bookkeeping and financial reporting process with zero human intervention. It manages transaction import, reconciliation, categorization, revenue recognition, payroll, asset capitalization and depreciation, supporting schedules, and financial statement construction — all autonomously. Built on Pilot's years of professional bookkeeping expertise, the AI is trained on their specific methodology and can onboard new businesses, configure accounting systems, and complete monthly closes in hours instead of weeks. Every transaction and decision is logged for full audit transparency. When a judgment call could have material impact, it flags for human review. Includes a 24/7 AI chat advisor for real-time insights into cash flow, spending trends, and business drivers. Used by startups and growing businesses from seed stage through exit.",
+        categories: ["accounting", "productivity"],
+        website: "https://pilot.com",
+        pricing: "Essentials $99/mo, Core custom pricing, Select custom pricing, Tax from $1,000/yr",
+        paymentOptions: {
+            isPaid: true,
+            hasFreeTrialPeriod: true,
+            hasFreeStarterPlan: false
+        },
+        logo: "/images/logos/pilot-ai-logo.png",
+        features: ["Fully autonomous bookkeeping", "Accrual and cash-basis accounting", "Automated transaction categorization and reconciliation", "Revenue recognition and asset depreciation", "Financial statement generation", "Full audit trail and decision logging", "24/7 AI chat advisor", "Automated business onboarding", "Custom chart of accounts", "CFO advisory services"],
+        useCases: ["Automating monthly bookkeeping close for startups", "Catching up on years of backlogged bookkeeping", "Getting investor-ready financial statements", "Real-time cash flow monitoring and scenario planning", "Replacing manual bookkeeping with autonomous AI"],
+        addedDate: "2026-02-28"
+    },
+    {
+        id: "71",
+        name: "Ramp Accounting Agent",
+        slug: "ramp-accounting-agent",
+        tagline: "AI agent that automates bookkeeping and month-end close with 90%+ accuracy and real-time transaction coding",
+        description: "Ramp Accounting Agent is a specialized AI agent built into Ramp's financial operations platform that automates the manual parts of bookkeeping and month-end close. Trained on millions of transactions and tailored to each business's individual coding behaviors, it auto-codes every transaction and bill across GL, department, class, location, and custom fields the moment they happen. Smart Review checks policy adherence, accuracy, and completeness for 100% of spend in the background, giving every transaction a suggested action. Customers see up to 3.5x more auto-coding than legacy tools with 90%+ accuracy. Finance teams deliver clean books 3x faster on average, saving 40+ hours per month. The agent learns automatically from feedback and corrections, improving over time. Integrates with major ERPs and 200+ apps.",
+        categories: ["accounting", "automation"],
+        website: "https://ramp.com",
+        pricing: "Free (included with Ramp platform), Ramp Plus and Enterprise tiers available",
+        paymentOptions: {
+            isPaid: false,
+            hasFreeTrialPeriod: false,
+            hasFreeStarterPlan: true
+        },
+        logo: "/images/logos/ramp-logo.jpg",
+        features: ["AI transaction auto-coding across all fields", "Smart Review for 100% spend policy adherence", "Real-time transaction processing", "3.5x more auto-coding than legacy tools", "90%+ coding accuracy", "Learns from corrections and feedback", "Item-level invoice coding", "200+ app integrations", "ERP sync automation", "Custom approval workflows"],
+        useCases: ["Automating month-end close for finance teams", "Eliminating manual transaction categorization", "Enforcing spend policies automatically", "Reducing bookkeeping hours by 40+ per month", "Scaling accounting operations without adding headcount"],
+        addedDate: "2026-02-28"
+    },
+    {
+        id: "72",
+        name: "Fish Audio",
+        slug: "fish-audio",
+        tagline: "The most expressive AI speech platform with emotion control, voice cloning, and 2M+ community voices",
+        description: "Fish Audio is an AI voice platform powering millions of creators with studio-quality text-to-speech, voice cloning, and real-time streaming capabilities. Their flagship Fish Audio S1 model delivers the most expressive AI speech with fine-grained emotion control, and Fish Speech V1.5 ranks among the top 3 open-source voice models with an ELO score of 1339 in independent TTS Arena evaluations. Clone any voice with as little as 15 seconds of audio, access over 2 million community-uploaded voices, and generate speech in 30+ languages. Features include a unified streaming API, voice activity detection, push-to-send controls, and multilingual support with any voice. Used by top creators for voiceovers, audiobooks, character voices, real-time avatars, and content production at scale.",
+        categories: ["voice-audio", "productivity"],
+        website: "https://fish.audio",
+        pricing: "Free plan (limited monthly generations), paid plans available for commercial use",
+        paymentOptions: {
+            isPaid: true,
+            hasFreeTrialPeriod: false,
+            hasFreeStarterPlan: true
+        },
+        logo: "/images/logos/fish-audio-logo.png",
+        features: ["Fish Audio S1 with emotion control", "Voice cloning from 15 seconds of audio", "2M+ community voice library", "30+ language support", "Unified streaming API", "Voice activity detection", "Real-time avatar voice generation", "Push-to-send audio control", "Open-source Fish Speech model", "Multilingual voice transfer"],
+        useCases: ["Creating voiceovers for YouTube and social media content", "Generating audiobook narration at scale", "Building real-time voice agents and avatars", "Cloning voices for personalized content", "Multilingual content production with consistent voice identity"],
+        addedDate: "2026-02-28"
     }
 ]; 
