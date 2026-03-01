@@ -1,0 +1,32 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8" data-next-head=""/><meta name="viewport" content="width=device-width" data-next-head=""/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous"/><link rel="preload" href="/_next/static/chunks/2d5a1314aa628e8d.css?dpl=dpl_C4N3JLNjBbFvBpGPbbxUKqXsi8jR" as="style"/><link rel="preload" href="/_next/static/chunks/d781672d35aa0557.css?dpl=dpl_C4N3JLNjBbFvBpGPbbxUKqXsi8jR" as="style"/><link rel="preload" href="/_next/static/chunks/29b003f1dd9e9d12.css?dpl=dpl_C4N3JLNjBbFvBpGPbbxUKqXsi8jR" as="style"/><script>
+    (function() {
+      var DARK = "dark-mode";
+      var LIGHT = "light-mode";
+      var root = document.documentElement;
+
+      // 1. Check forced-theme routes (highest priority, ignores user preference)
+      var routes = {"/ai":"dark"};
+      var path = window.location.pathname;
+      var keys = Object.keys(routes);
+      for (var i = 0; i < keys.length; i++) {
+        var r = keys[i];
+        if (path === r || path.indexOf(r + "/") === 0) {
+          var theme = routes[r];
+          root.classList.add(theme === "dark" ? DARK : LIGHT);
+          root.classList.remove(theme === "dark" ? LIGHT : DARK);
+          return;
+        }
+      }
+
+      // 2. Fall back to user preference from localStorage
+      var userDarkMode = localStorage["dark-mode-enabled"];
+      if (userDarkMode === "true") {
+        root.classList.add(DARK);
+        root.classList.remove(LIGHT);
+      } else if (userDarkMode === "false") {
+        root.classList.add(LIGHT);
+        root.classList.remove(DARK);
+      }
+      // 3. If neither, no classes — CSS @media prefers-color-scheme handles it
+    })()
+  </script><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Roboto:wght@100..900&amp;display=swap" rel="stylesheet"/><link rel="stylesheet" href="/_next/static/chunks/2d5a1314aa628e8d.css?dpl=dpl_C4N3JLNjBbFvBpGPbbxUKqXsi8jR" data-n-g=""/><link rel="stylesheet" href="/_next/static/chunks/d781672d35aa0557.css?dpl=dpl_C4N3JLNjBbFvBpGPbbxUKqXsi8jR" data-n-g=""/><link rel="stylesheet" href="/_next/static/chunks/29b003f1dd9e9d12.css?dpl=dpl_C4N3JLNjBbFvBpGPbbxUKqXsi8jR" data-n-p=""/><noscript data-n-css=""></noscript><script defer="" noModule="" src="/_next/static/chunks/a6dad97d9634a72d.js?dpl=dpl_C4N3JLNjBbFvBpGPbbxUKqXsi8jR"></script><script src="/_next/static/chunks/171dc39f1650b0ac.js?dpl=dpl_C4N3JLNjBbFvBpGPbbxUKqXsi8jR" defer=""></script><script src="/_next/static/chunks/2551d9089115d786.js?dpl=dpl_C4N3JLNjBbFvBpGPbbxUKqXsi8jR" defer=""></script><script src="/_next/static/chunks/6337cc9af6d8c2e8.js?dpl=dpl_C4N3JLNjBbFvBpGPbbxUKqXsi8jR" defer=""></script><script src="/_next/static/chunks/510ed708df0956d5.js?dpl=dpl_C4N3JLNjBbFvBpGPbbxUKqXsi8jR" defer=""></script><script src="/_next/static/chunks/6286d52129962e8f.js?dpl=dpl_C4N3JLNjBbFvBpGPbbxUKqXsi8jR" defer=""></script><script src="/_next/static/chunks/7096be71b7ddd06d.js?dpl=dpl_C4N3JLNjBbFvBpGPbbxUKqXsi8jR" defer=""></script><script src="/_next/static/chunks/bd7db58339592c80.js?dpl=dpl_C4N3JLNjBbFvBpGPbbxUKqXsi8jR" defer=""></script><script src="/_next/static/chunks/turbopack-6729767740d0d0e4.js?dpl=dpl_C4N3JLNjBbFvBpGPbbxUKqXsi8jR" defer=""></script><script src="/_next/static/chunks/26f1b750e8320857.js?dpl=dpl_C4N3JLNjBbFvBpGPbbxUKqXsi8jR" defer=""></script><script src="/_next/static/chunks/840699c8e8db59e2.js?dpl=dpl_C4N3JLNjBbFvBpGPbbxUKqXsi8jR" defer=""></script><script src="/_next/static/chunks/059832858d63897e.js?dpl=dpl_C4N3JLNjBbFvBpGPbbxUKqXsi8jR" defer=""></script><script src="/_next/static/chunks/afbcfba5ce9b6686.js?dpl=dpl_C4N3JLNjBbFvBpGPbbxUKqXsi8jR" defer=""></script><script src="/_next/static/chunks/c7bbc25f08a349a0.js?dpl=dpl_C4N3JLNjBbFvBpGPbbxUKqXsi8jR" defer=""></script><script src="/_next/static/chunks/81add0aaf03eb470.js?dpl=dpl_C4N3JLNjBbFvBpGPbbxUKqXsi8jR" defer=""></script><script src="/_next/static/chunks/216b507911f22e29.js?dpl=dpl_C4N3JLNjBbFvBpGPbbxUKqXsi8jR" defer=""></script><script src="/_next/static/chunks/aa98b56579572eb9.js?dpl=dpl_C4N3JLNjBbFvBpGPbbxUKqXsi8jR" defer=""></script><script src="/_next/static/chunks/8e1b2303cde348c2.js?dpl=dpl_C4N3JLNjBbFvBpGPbbxUKqXsi8jR" defer=""></script><script src="/_next/static/chunks/turbopack-cc844b31c4a9317f.js?dpl=dpl_C4N3JLNjBbFvBpGPbbxUKqXsi8jR" defer=""></script><script src="/_next/static/6MA1nnzFz3TZ-hefSGo2c/_ssgManifest.js?dpl=dpl_C4N3JLNjBbFvBpGPbbxUKqXsi8jR" defer=""></script><script src="/_next/static/6MA1nnzFz3TZ-hefSGo2c/_buildManifest.js?dpl=dpl_C4N3JLNjBbFvBpGPbbxUKqXsi8jR" defer=""></script></head><body><div id="__next"><div id="_rht_toaster" style="position:fixed;z-index:9999;top:var(--toaster-top-offset);left:16px;right:16px;bottom:16px;pointer-events:none" class="custom-toaster"></div></div><script id="__NEXT_DATA__" type="application/json">{"props":{"pageProps":{},"__N_SSP":true},"page":"/[account_username]","query":{"account_username":"favicon.ico"},"buildId":"6MA1nnzFz3TZ-hefSGo2c","isFallback":false,"isExperimentalCompile":false,"gssp":true,"scriptLoader":[]}</script></body></html>

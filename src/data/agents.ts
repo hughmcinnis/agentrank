@@ -1509,5 +1509,62 @@ export const agents: Agent[] = [
         features: ["Fish Audio S1 with emotion control", "Voice cloning from 15 seconds of audio", "2M+ community voice library", "30+ language support", "Unified streaming API", "Voice activity detection", "Real-time avatar voice generation", "Push-to-send audio control", "Open-source Fish Speech model", "Multilingual voice transfer"],
         useCases: ["Creating voiceovers for YouTube and social media content", "Generating audiobook narration at scale", "Building real-time voice agents and avatars", "Cloning voices for personalized content", "Multilingual content production with consistent voice identity"],
         addedDate: "2026-02-28"
+    },
+    {
+        id: "73",
+        name: "Fathom",
+        slug: "fathom",
+        tagline: "AI notetaker that records, transcribes, and summarizes meetings so you never take notes again",
+        description: "Fathom is an AI-powered meeting assistant that joins your Zoom, Google Meet, or Microsoft Teams calls to automatically record, transcribe, and summarize everything discussed. It delivers shockingly accurate transcripts with instant AI summaries, action items, and key highlights straight to your inbox after every call. The 'Ask Fathom' feature lets you search across all your meetings and get answers from your conversation history instantly. Meeting notes, insights, and action items sync automatically with Slack, Salesforce, HubSpot, Notion, Asana, and other tools. Teams get real-time coaching metrics, AI scorecards, deal view insights, and global search across shared calls. 95% of users report staying fully present in meetings, and teams save 6+ hours per member weekly on follow-up work. Free plan includes unlimited recordings and transcriptions.",
+        categories: ["transcription", "productivity"],
+        website: "https://fathom.video",
+        pricing: "Free forever (unlimited recordings + transcriptions), Premium $16/mo, Team $15/mo/user, Business $20/mo/user",
+        paymentOptions: {
+            isPaid: true,
+            hasFreeTrialPeriod: false,
+            hasFreeStarterPlan: true
+        },
+        logo: "/images/logos/fathom-logo.png",
+        features: ["Unlimited free recordings and transcriptions", "Instant AI call summaries", "Action item extraction", "Ask Fathom conversational search", "Clips and playlists", "CRM sync (Salesforce, HubSpot)", "Slack, Notion, Asana integrations", "AI coaching scorecards", "Deal view insights", "Custom meeting bot and vocabulary"],
+        useCases: ["Automatically transcribing and summarizing team meetings", "Searching across months of meeting history for key decisions", "Syncing meeting action items to project management tools", "Coaching sales reps with AI-powered call scorecards", "Staying fully present in meetings without manual note-taking"],
+        addedDate: "2026-03-01"
+    },
+    {
+        id: "74",
+        name: "Julius AI",
+        slug: "julius-ai",
+        tagline: "Your personal AI data analyst — chat with your data and get instant insights, charts, and answers",
+        description: "Julius AI is an AI-powered data analysis platform that lets anyone analyze data and create visualizations just by asking questions in plain English. Upload a CSV, Excel file, or connect to a live data source like Snowflake or BigQuery, then ask questions like 'What were our top-selling products last quarter?' Julius writes and runs the necessary Python or R code behind the scenes and presents clean charts, tables, and statistical analysis. It handles everything from basic exploratory analysis to advanced regression, forecasting, and machine learning workflows. Julius Teams enables real-time collaboration with shared workspaces and data connectors. Built for people who need data answers without a data science degree — business analysts, researchers, marketers, and founders all use it to turn messy spreadsheets into actionable insights in seconds.",
+        categories: ["data-analysis", "productivity"],
+        website: "https://julius.ai",
+        pricing: "Free (limited messages), Essential $20/mo, Pro custom pricing",
+        paymentOptions: {
+            isPaid: true,
+            hasFreeTrialPeriod: false,
+            hasFreeStarterPlan: true
+        },
+        logo: "/images/logos/julius-ai-logo.ico",
+        features: ["Natural language data querying", "Automatic Python/R code generation", "Interactive chart and visualization creation", "CSV, Excel, and database connectors", "Snowflake and BigQuery integration", "Statistical analysis and regression", "Forecasting and ML workflows", "Julius Teams collaboration", "Shared workspaces", "Export to PDF and presentations"],
+        useCases: ["Analyzing sales data without writing code", "Creating investor-ready charts from raw spreadsheets", "Running statistical analysis on survey or research data", "Connecting to live databases for real-time business intelligence", "Collaborating on data analysis across teams"],
+        addedDate: "2026-03-01"
+    },
+    {
+        id: "75",
+        name: "Typefully",
+        slug: "typefully",
+        tagline: "The best social media tool for creators and businesses to write, schedule, and grow on X and LinkedIn",
+        description: "Typefully is an AI-powered social media management platform built for creators and businesses who want to grow on X (Twitter) and LinkedIn. It offers a distraction-free writing editor optimized for threads and long-form posts, AI-powered content suggestions and rewrites, smart scheduling with optimal posting times, and detailed engagement analytics. Features include cross-posting to multiple platforms, auto-retweet and auto-plug for evergreen content promotion, content inspiration feeds, and team collaboration tools. The analytics dashboard provides deep insights into follower growth, engagement rates, and best-performing content. Typefully has helped creators grow audiences from zero to hundreds of thousands of followers with its data-driven approach to social media content. Used by solo creators, marketing teams, and agencies managing multiple brand accounts.",
+        categories: ["social-media", "marketing"],
+        website: "https://typefully.com",
+        pricing: "Free plan, Creator $11/mo, Team $29/mo, Agency custom pricing",
+        paymentOptions: {
+            isPaid: true,
+            hasFreeTrialPeriod: true,
+            hasFreeStarterPlan: true
+        },
+        logo: "/images/logos/typefully-logo.png",
+        features: ["Distraction-free thread editor", "AI content suggestions and rewrites", "Smart scheduling with optimal times", "Cross-posting to X and LinkedIn", "Auto-retweet and auto-plug", "Detailed engagement analytics", "Follower growth tracking", "Content inspiration feeds", "Team collaboration and approvals", "Multi-account management"],
+        useCases: ["Growing a personal brand on X and LinkedIn", "Scheduling and optimizing social media content", "Writing viral Twitter threads with AI assistance", "Managing multiple brand accounts for an agency", "Analyzing engagement to improve content strategy"],
+        addedDate: "2026-03-01"
     }
 ]; 

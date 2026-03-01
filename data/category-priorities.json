@@ -1,33 +1,12 @@
 {
-  "generatedAt": "2026-02-28T14:00:04.609Z",
-  "totalAgents": 67,
+  "generatedAt": "2026-03-01T14:00:04.450Z",
+  "totalAgents": 70,
   "totalCategories": 20,
   "minTarget": 5,
   "categoriesBelow": 13,
   "priorities": [
     {
-      "category": "accounting",
-      "currentCount": 1,
-      "deficit": 4,
-      "priorityScore": 120,
-      "status": "LOW"
-    },
-    {
       "category": "home-improvement",
-      "currentCount": 1,
-      "deficit": 4,
-      "priorityScore": 120,
-      "status": "LOW"
-    },
-    {
-      "category": "voice-audio",
-      "currentCount": 1,
-      "deficit": 4,
-      "priorityScore": 120,
-      "status": "LOW"
-    },
-    {
-      "category": "automation",
       "currentCount": 1,
       "deficit": 4,
       "priorityScore": 120,
@@ -76,7 +55,28 @@
       "status": "LOW"
     },
     {
+      "category": "voice-audio",
+      "currentCount": 2,
+      "deficit": 3,
+      "priorityScore": 90,
+      "status": "LOW"
+    },
+    {
+      "category": "automation",
+      "currentCount": 2,
+      "deficit": 3,
+      "priorityScore": 90,
+      "status": "LOW"
+    },
+    {
       "category": "seo",
+      "currentCount": 3,
+      "deficit": 2,
+      "priorityScore": 60,
+      "status": "BELOW_TARGET"
+    },
+    {
+      "category": "accounting",
       "currentCount": 3,
       "deficit": 2,
       "priorityScore": 60,
@@ -140,21 +140,21 @@
     },
     {
       "category": "productivity",
-      "currentCount": 26,
+      "currentCount": 28,
       "deficit": 0,
       "priorityScore": 0,
       "status": "OK"
     }
   ],
   "topPriority": [
-    "accounting",
     "home-improvement",
-    "voice-audio",
-    "automation",
-    "data-analysis"
+    "data-analysis",
+    "transcription",
+    "document-analysis",
+    "social-media"
   ],
   "distribution": {
-    "productivity": 26,
+    "productivity": 28,
     "coding": 14,
     "sales": 12,
     "customer-support": 7,
@@ -164,15 +164,15 @@
     "research": 4,
     "marketing": 4,
     "seo": 3,
+    "accounting": 3,
     "data-analysis": 2,
     "transcription": 2,
     "document-analysis": 2,
     "social-media": 2,
     "image-generation": 2,
     "video-generation": 2,
-    "accounting": 1,
-    "home-improvement": 1,
-    "voice-audio": 1,
-    "automation": 1
+    "voice-audio": 2,
+    "automation": 2,
+    "home-improvement": 1
   }
 }
