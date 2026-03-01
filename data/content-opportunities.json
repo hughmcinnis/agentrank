@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-02-28T23:00:04.886Z",
+  "generatedAt": "2026-03-01T15:10:05.495Z",
   "dataRange": "3 months",
   "summary": {
-    "totalOpportunities": 18,
+    "totalOpportunities": 17,
     "strikingDistance": 5,
     "lowCtr": 7,
-    "agentNeedsReview": 2,
+    "agentNeedsReview": 1,
     "winnerExpand": 3,
     "contentGaps": 1
   },
@@ -311,15 +311,6 @@
       "recentTrend": "active",
       "recommendation": "Optimize or create focused content for \"claude computer use success rate\" — currently at position 10.6, could reach page 1",
       "priority": 16
-    },
-    {
-      "type": "agent_needs_review",
-      "query": "hyperbound",
-      "impressions": 7,
-      "clicks": 0,
-      "position": 29.428571428571427,
-      "recommendation": "Agent \"hyperbound\" has 7 impressions — write a detailed review blog post to capture this traffic",
-      "priority": 14
     },
     {
       "type": "agent_needs_review",

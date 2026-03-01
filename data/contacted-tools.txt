@@ -23,3 +23,6 @@ krea
 pilot-ai-accountant
 ramp-accounting-agent
 fish-audio
+fathom
+julius-ai
+typefully
