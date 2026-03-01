@@ -10,7 +10,7 @@ const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 
-const SITE_URL = 'https://agentrank.tech';
+const SITE_URL = 'https://www.agentrank.tech';
 const SUBSCRIBERS_FILE = path.join(__dirname, '..', 'data', 'newsletter-subscribers.txt');
 const BLOG_POSTS_FILE = path.join(__dirname, '..', 'src', 'data', 'blog-posts.ts');
 const AGENTS_FILE = path.join(__dirname, '..', 'src', 'data', 'agents.ts');

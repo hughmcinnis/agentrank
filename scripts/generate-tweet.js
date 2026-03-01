@@ -10,7 +10,7 @@
 const fs = require('fs');
 const path = require('path');
 
-const SITE_URL = 'https://agentrank.tech';
+const SITE_URL = 'https://www.agentrank.tech';
 const QUEUE_DIR = '/tmp/tweet-queue';
 
 function main() {

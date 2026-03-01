@@ -15,7 +15,7 @@ const https = require('https');
 const http = require('http');
 const { URL } = require('url');
 
-const SITE_URL = 'https://agentrank.tech';
+const SITE_URL = 'https://www.agentrank.tech';
 const CONTACTED_FILE = path.resolve('/home/user/agentrank/data/contacted-tools.txt');
 const MANUAL_OUTREACH_FILE = path.resolve('/home/user/agentrank/data/tools-need-manual-outreach.txt');
 const GMAIL_USER = 'hugh.e.mcinnis@gmail.com';
@@ -77,7 +77,7 @@ function fetchUrl(url, timeout = 10000) {
     const options = {
       timeout,
       headers: {
-        'User-Agent': 'Mozilla/5.0 (compatible; AgentRank/1.0; +https://agentrank.tech)'
+        'User-Agent': 'Mozilla/5.0 (compatible; AgentRank/1.0; +https://www.agentrank.tech)'
       }
     };
     

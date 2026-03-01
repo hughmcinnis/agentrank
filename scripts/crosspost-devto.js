@@ -13,7 +13,7 @@ const { execSync } = require('child_process');
 const path = require('path');
 
 const DEVTO_WRAPPER = path.resolve('/home/user/devto-api-secure.js');
-const SITE_URL = 'https://agentrank.tech';
+const SITE_URL = 'https://www.agentrank.tech';
 
 async function main() {
   let input;
