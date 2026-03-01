@@ -19,7 +19,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
         url: `${baseUrl}/category/${category.id}`,
         lastModified: new Date(), // Assuming categories don't change often, or use a specific date
         changeFrequency: 'monthly' as const, // Or adjust as needed
-        priority: 0.6,
+        priority: 0.8,
     }));
 
     // Get all agent URLs
@@ -72,7 +72,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
             url: `${baseUrl}/category`, // Static category listing page
             lastModified: new Date(),
             changeFrequency: 'weekly' as const,
-            priority: 0.6,
+            priority: 0.8,
         },
         ...categoryUrls, // Add dynamic category URLs
         {

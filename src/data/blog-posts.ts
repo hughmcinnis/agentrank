@@ -5128,5 +5128,94 @@ My recommendation: start with the self-hosted community edition and build one re
         categories: ["AI Agents","Reviews"],
         featuredImage: "/images/blog/n8n-ai-agent-builder-honest-take.png",
         tags: ["n8n","AI Agents","Automation","No-Code","Low-Code","Workflow Automation","Review","2026"],
+    },
+    {
+        id: "46",
+        title: "Notta Review: Is This AI Meeting Transcription Tool Worth It?",
+        slug: "notta-ai-review-is-it-worth-it",
+        excerpt: "Notta promises AI-powered meeting transcription with multilingual support and smart summaries. But with a restrictive free plan and billing complaints, is it actually worth paying for? Here's my honest take.",
+        content: `Notta is an AI meeting transcription tool that's been quietly racking up over 10 million users since launching in 2020. It records your meetings, transcribes them in real-time, generates AI summaries, and supports 50+ languages. Sounds great on paper. But after digging into what Notta actually delivers — and what real users are saying — the picture gets more complicated.
+
+Let me break down what Notta does well, where it falls short, and whether it's worth your money in 2026.
+
+## What Notta Actually Does
+
+At its core, Notta is a meeting assistant. It joins your Zoom, Google Meet, Microsoft Teams, or Webex calls, records them, and produces a transcript with speaker labels. After the meeting, it generates an AI summary with key decisions and action items.
+
+The standout feature is multilingual support. Notta handles 58 languages for live transcription, with particularly strong Japanese-English bilingual workflows. If you're on a global team where meetings bounce between languages, this is genuinely useful — most competitors are English-first and treat everything else as an afterthought.
+
+You also get file uploads (drop in audio/video and get a transcript), a mobile app for in-person recording, and integrations with CRMs and Zapier on higher-tier plans.
+
+## Notta Pricing Breakdown
+
+Here's where things get real:
+
+- **Free:** $0/month — 120 transcription minutes, but only 3 minutes per conversation. Yes, three minutes. That's essentially useless for actual meetings.
+- **Pro:** $8.17/month (billed annually at $98/year) — 1,800 minutes/month, up to 5-hour recordings, transcript exports, translation, custom vocabulary. This is the minimum viable plan.
+- **Business:** $16.67/month (billed annually at $200/year) — Unlimited transcription, video recording, CRM integration, usage reports, Zapier.
+- **Enterprise:** Custom pricing, starting at 51 seats — SSO, audit logs, unlimited everything, data not used for AI training.
+
+Add-ons run extra: monolingual translation is $6/month, bilingual transcription and translation is $9/month.
+
+The free plan is basically a demo. Three minutes per conversation means you can't even use it for a real meeting. You're either paying $8+/month or you're not really using Notta.
+
+## What Notta Gets Right
+
+**Multilingual transcription is genuinely best-in-class.** If your team operates across languages — especially Japanese, Chinese, Korean, or European languages alongside English — Notta handles this better than Otter.ai, Fireflies, or most competitors. The bilingual transcription feature that handles two languages simultaneously in one meeting is a real differentiator.
+
+**AI summaries are practical.** For standard business calls, the summaries capture decisions and action items without requiring much cleanup. They're not perfect, but they save you from rewatching a 45-minute call to find that one thing someone committed to.
+
+**The interface is clean.** Recording starts and stops easily, the transcript editor is intuitive, and you can search across past meetings. Nothing revolutionary, but it works without friction.
+
+**Speaker identification is decent.** In structured meetings with clear turn-taking, Notta correctly labels who said what. You can manually correct labels too, which helps build accuracy over time.
+
+## Where Notta Falls Short
+
+**Accuracy drops in messy meetings.** Heavy accents, technical jargon, overlapping speakers, background noise — all the things that happen in real meetings — cause noticeable quality drops. This isn't unique to Notta, but it's worth knowing that the polished demo experience doesn't always match reality.
+
+**The free plan is a joke.** 120 minutes sounds okay until you hit the 3-minute-per-conversation cap. You literally cannot transcribe a single real meeting. It's a trial disguised as a free tier, and it feels dishonest.
+
+**Billing complaints are a red flag.** Notta has a 4.6/5 on G2, but a roughly 1.8/5 on Trustpilot. The gap tells a story. Trustpilot reviews are full of complaints about unexpected charges after trial periods, difficulty canceling, slow support responses, and refund friction. When a product has great feature reviews but terrible billing reviews, that's a pattern worth paying attention to.
+
+**No offline processing on lower tiers.** If you want to drop in a recorded file and get a transcript, you're limited on uploads per month. Power users who record lots of interviews or calls will bump into these limits fast.
+
+**Enterprise data privacy has caveats.** Only Enterprise plans explicitly guarantee your data won't be used for AI training. If you're on Pro or Business, the privacy picture is murkier.
+
+## Notta vs the Competition
+
+**Notta vs Otter.ai:** Otter is the more established name in English-language transcription and has better native integrations with Slack and other tools. But Notta wins decisively on multilingual support. If all your meetings are in English, Otter is probably the safer bet. If you need multiple languages, Notta.
+
+**Notta vs Fireflies.ai:** Fireflies offers more robust search and analytics across meetings, plus a more generous free tier. Notta's edge is again multilingual and the cleaner mobile experience. Fireflies is better for teams that want to mine insights across hundreds of meetings.
+
+**Notta vs Fathom:** Fathom has a genuinely free tier with no per-conversation limits and focuses heavily on the Zoom experience. If you're a solo professional on Zoom who just wants transcripts without paying, Fathom is hard to beat. Notta is the better choice for teams and multilingual needs.
+
+## Who Should Use Notta
+
+**It's a good fit if:**
+- Your team operates in multiple languages, especially with Asian language needs
+- You want clean, no-fuss meeting transcription with AI summaries
+- You're willing to pay for Pro or Business (the free plan isn't worth evaluating)
+- You need mobile recording for in-person meetings or interviews
+
+**Look elsewhere if:**
+- All your meetings are in English (Otter or Fathom will serve you better)
+- You want deep meeting analytics and searchable conversation intelligence (Fireflies)
+- You're budget-sensitive and want a real free tier (Fathom)
+- Billing transparency matters to you (the Trustpilot reviews should give you pause)
+
+## The Bottom Line
+
+Notta is a solid meeting transcription tool with a genuine competitive advantage in multilingual support. The core product works well — transcription is accurate in clean conditions, summaries are useful, and the interface stays out of your way.
+
+But the restrictive free plan, billing complaints, and accuracy limitations in noisy real-world conditions keep it from being a slam dunk. At $8-17/month per user, you need to be sure the multilingual angle is something you actually need, because competitors match or beat Notta in almost every other dimension.
+
+If you're on a global team juggling multiple languages in meetings, Notta is probably your best option right now. For everyone else, there are better choices.`,
+        author: "Hugh McInnis",
+        publishDate: "2026-03-01",
+        publishedAt: "2026-03-01T15:01:59.000-08:00",
+        readTime: "5 min read",
+        categories: ["AI Tools","Productivity"],
+        featuredImage: "/images/blog/notta-ai-review-is-it-worth-it.png",
+        tags: ["notta","meeting transcription","ai notes","otter alternative","meeting assistant","ai transcription"],
     }
 ]; 
