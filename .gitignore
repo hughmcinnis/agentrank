@@ -39,3 +39,6 @@ next-env.d.ts
 .idea/
 
 *.mp4
+
+# community data
+data/community/
