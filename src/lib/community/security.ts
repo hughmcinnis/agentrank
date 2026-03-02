@@ -6,6 +6,7 @@
  * - IP extraction helpers
  */
 
+import crypto from 'crypto';
 // ─── Rate Limiting ───────────────────────────────────────────────
 
 interface RateBucket {
@@ -117,10 +118,5 @@ export function authenticateAdmin(authHeader: string | null): boolean {
   if (secret.length !== ADMIN_SECRET.length) return false;
   const a = Buffer.from(secret);
   const b = Buffer.from(ADMIN_SECRET);
-  try {
-    const crypto = require('crypto');
-    return crypto.timingSafeEqual(a, b);
-  } catch {
-    return secret === ADMIN_SECRET;
-  }
+  return crypto.timingSafeEqual(a, b);
 }

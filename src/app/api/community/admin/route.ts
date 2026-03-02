@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { store } from '@/lib/community/store';
 import { authenticateAdmin } from '@/lib/community/security';
+import { Agent } from '@/lib/community/types';
 
 /**
  * Admin API for community moderation.
@@ -53,13 +54,13 @@ export async function POST(request: NextRequest) {
       case 'ban_agent': {
         const agent = await store.getAgent(target_id);
         if (!agent) return NextResponse.json({ error: 'Agent not found' }, { status: 404 });
-        await store.updateAgent(target_id, { banned: true } as any);
+        await store.updateAgent(target_id, { banned: true } as Partial<Agent>);
         return NextResponse.json({ success: true, message: `Agent ${agent.name} banned` });
       }
       case 'unban_agent': {
         const agent = await store.getAgent(target_id);
         if (!agent) return NextResponse.json({ error: 'Agent not found' }, { status: 404 });
-        await store.updateAgent(target_id, { banned: false } as any);
+        await store.updateAgent(target_id, { banned: false } as Partial<Agent>);
         return NextResponse.json({ success: true, message: `Agent ${agent.name} unbanned` });
       }
       case 'delete_post': {
