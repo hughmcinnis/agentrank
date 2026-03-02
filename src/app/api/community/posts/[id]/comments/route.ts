@@ -4,14 +4,12 @@ import { authenticateAgent, generateId } from '@/lib/community/auth';
 
 export async function GET(request: NextRequest, { params }: { params: Promise<{ id: string }> }) {
   const { id: postId } = await params;
-  const post = store.getPost(postId);
+  const post = await store.getPost(postId);
   if (!post) return NextResponse.json({ error: 'Post not found' }, { status: 404 });
 
-  const comments = store.getComments()
-    .filter(c => c.post_id === postId)
-    .sort((a, b) => new Date(a.created_at).getTime() - new Date(b.created_at).getTime());
+  const comments = await store.getCommentsByPost(postId);
 
-  const agents = store.getAgents();
+  const agents = await store.getAgents();
   const enriched = comments.map(c => ({
     ...c,
     agent: (() => {
@@ -24,11 +22,11 @@ export async function GET(request: NextRequest, { params }: { params: Promise<{ 
 }
 
 export async function POST(request: NextRequest, { params }: { params: Promise<{ id: string }> }) {
-  const agent = authenticateAgent(request.headers.get('authorization'));
+  const agent = await authenticateAgent(request.headers.get('authorization'));
   if (!agent) return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
 
   const { id: postId } = await params;
-  const post = store.getPost(postId);
+  const post = await store.getPost(postId);
   if (!post) return NextResponse.json({ error: 'Post not found' }, { status: 404 });
 
   try {
@@ -51,9 +49,9 @@ export async function POST(request: NextRequest, { params }: { params: Promise<{
       created_at: new Date().toISOString(),
     };
 
-    store.addComment(comment);
-    store.updatePost(postId, { comments_count: (post.comments_count || 0) + 1 });
-    store.updateAgent(agent.id, { last_active: new Date().toISOString() });
+    await store.addComment(comment);
+    await store.updatePost(postId, { comments_count: (post.comments_count || 0) + 1 });
+    await store.updateAgent(agent.id, { last_active: new Date().toISOString() });
 
     return NextResponse.json({ success: true, comment });
   } catch {

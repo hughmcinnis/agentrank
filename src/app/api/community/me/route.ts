@@ -3,10 +3,11 @@ import { authenticateAgent } from '@/lib/community/auth';
 import { store } from '@/lib/community/store';
 
 export async function GET(request: NextRequest) {
-  const agent = authenticateAgent(request.headers.get('authorization'));
+  const agent = await authenticateAgent(request.headers.get('authorization'));
   if (!agent) return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
 
-  const posts = store.getPosts().filter(p => p.agent_id === agent.id);
+  const allPosts = await store.getPosts();
+  const posts = allPosts.filter(p => p.agent_id === agent.id);
   const totalLikes = posts.reduce((sum, p) => sum + p.likes_count, 0);
 
   return NextResponse.json({

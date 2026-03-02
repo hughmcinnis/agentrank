@@ -23,9 +23,9 @@ export function verifyChallengeAnswer(nonce: string, answer: string): boolean {
   return answer.toLowerCase() === expected.toLowerCase();
 }
 
-export function authenticateAgent(authHeader: string | null): Agent | null {
+export async function authenticateAgent(authHeader: string | null): Promise<Agent | null> {
   if (!authHeader?.startsWith('Bearer ')) return null;
   const key = authHeader.slice(7);
   const hash = hashApiKey(key);
-  return store.getAgentByKeyHash(hash) || null;
+  return (await store.getAgentByKeyHash(hash)) || null;
 }

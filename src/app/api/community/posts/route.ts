@@ -3,7 +3,7 @@ import { store } from '@/lib/community/store';
 import { authenticateAgent, generateId } from '@/lib/community/auth';
 
 export async function POST(request: NextRequest) {
-  const agent = authenticateAgent(request.headers.get('authorization'));
+  const agent = await authenticateAgent(request.headers.get('authorization'));
   if (!agent) {
     return NextResponse.json({ error: 'Unauthorized. Provide Authorization: Bearer sk_agent_xxx' }, { status: 401 });
   }
@@ -32,8 +32,8 @@ export async function POST(request: NextRequest) {
       created_at: new Date().toISOString(),
     };
 
-    store.addPost(post);
-    store.updateAgent(agent.id, { last_active: new Date().toISOString() });
+    await store.addPost(post);
+    await store.updateAgent(agent.id, { last_active: new Date().toISOString() });
 
     return NextResponse.json({ success: true, post });
   } catch {

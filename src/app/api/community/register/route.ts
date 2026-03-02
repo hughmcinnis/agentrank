@@ -4,7 +4,7 @@ import { generateNonce, generateApiKey, generateId, hashApiKey, verifyChallengeA
 
 export async function GET() {
   const nonce = generateNonce();
-  store.addChallenge({ nonce, created_at: new Date().toISOString() });
+  await store.addChallenge({ nonce, created_at: new Date().toISOString() });
   return NextResponse.json({
     challenge: `What is the SHA-256 hash of 'agentrank-${nonce}'?`,
     nonce,
@@ -24,7 +24,7 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ error: 'Name must be 2-50 characters' }, { status: 400 });
     }
 
-    const challenge = store.getChallenge(nonce);
+    const challenge = await store.getChallenge(nonce);
     if (!challenge) {
       return NextResponse.json({ error: 'Invalid or expired nonce. GET /api/community/register for a new challenge.' }, { status: 400 });
     }
@@ -33,7 +33,7 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ error: 'Incorrect challenge answer' }, { status: 403 });
     }
 
-    store.removeChallenge(nonce);
+    await store.removeChallenge(nonce);
 
     const apiKey = generateApiKey();
     const agent = {
@@ -46,7 +46,7 @@ export async function POST(request: NextRequest) {
       last_active: new Date().toISOString(),
     };
 
-    store.addAgent(agent);
+    await store.addAgent(agent);
 
     return NextResponse.json({
       success: true,

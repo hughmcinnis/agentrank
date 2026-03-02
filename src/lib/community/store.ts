@@ -1,112 +1,116 @@
-import fs from 'fs';
-import path from 'path';
+import { sql } from '@vercel/postgres';
 import { Agent, Post, Comment, Like, Challenge } from './types';
-
-const DATA_DIR = path.join(process.cwd(), 'data', 'community');
-
-function ensureDir() {
-  if (!fs.existsSync(DATA_DIR)) {
-    fs.mkdirSync(DATA_DIR, { recursive: true });
-  }
-}
-
-function readJSON<T>(filename: string): T[] {
-  ensureDir();
-  const filepath = path.join(DATA_DIR, filename);
-  if (!fs.existsSync(filepath)) return [];
-  try {
-    return JSON.parse(fs.readFileSync(filepath, 'utf-8'));
-  } catch {
-    return [];
-  }
-}
-
-function writeJSON<T>(filename: string, data: T[]) {
-  ensureDir();
-  fs.writeFileSync(path.join(DATA_DIR, filename), JSON.stringify(data, null, 2));
-}
-
-// Challenges (ephemeral, in-memory is fine for V1, but use file for serverless)
-function readChallenges(): Challenge[] {
-  return readJSON<Challenge>('challenges.json');
-}
-function writeChallenges(data: Challenge[]) {
-  writeJSON('challenges.json', data);
-}
 
 export const store = {
   // Agents
-  getAgents: () => readJSON<Agent>('agents.json'),
-  getAgent: (id: string) => readJSON<Agent>('agents.json').find(a => a.id === id),
-  getAgentByKeyHash: (hash: string) => readJSON<Agent>('agents.json').find(a => a.api_key_hash === hash),
-  addAgent: (agent: Agent) => {
-    const agents = readJSON<Agent>('agents.json');
-    agents.push(agent);
-    writeJSON('agents.json', agents);
+  async getAgents(): Promise<Agent[]> {
+    const { rows } = await sql`SELECT * FROM community_agents`;
+    return rows as Agent[];
   },
-  updateAgent: (id: string, updates: Partial<Agent>) => {
-    const agents = readJSON<Agent>('agents.json');
-    const idx = agents.findIndex(a => a.id === id);
-    if (idx >= 0) {
-      agents[idx] = { ...agents[idx], ...updates };
-      writeJSON('agents.json', agents);
-    }
+  async getAgent(id: string): Promise<Agent | undefined> {
+    const { rows } = await sql`SELECT * FROM community_agents WHERE id = ${id}`;
+    return rows[0] as Agent | undefined;
+  },
+  async getAgentByKeyHash(hash: string): Promise<Agent | undefined> {
+    const { rows } = await sql`SELECT * FROM community_agents WHERE api_key_hash = ${hash}`;
+    return rows[0] as Agent | undefined;
+  },
+  async addAgent(agent: Agent): Promise<void> {
+    await sql`
+      INSERT INTO community_agents (id, name, bio, api_key_hash, verified, created_at, last_active)
+      VALUES (${agent.id}, ${agent.name}, ${agent.bio}, ${agent.api_key_hash}, ${agent.verified}, ${agent.created_at}, ${agent.last_active})
+    `;
+  },
+  async updateAgent(id: string, updates: Partial<Agent>): Promise<void> {
+    // Build dynamic update - only handle known fields
+    const agent = await store.getAgent(id);
+    if (!agent) return;
+    const merged = { ...agent, ...updates };
+    await sql`
+      UPDATE community_agents
+      SET name = ${merged.name}, bio = ${merged.bio}, verified = ${merged.verified},
+          last_active = ${merged.last_active}
+      WHERE id = ${id}
+    `;
   },
 
   // Posts
-  getPosts: () => readJSON<Post>('posts.json'),
-  getPost: (id: string) => readJSON<Post>('posts.json').find(p => p.id === id),
-  addPost: (post: Post) => {
-    const posts = readJSON<Post>('posts.json');
-    posts.push(post);
-    writeJSON('posts.json', posts);
+  async getPosts(): Promise<Post[]> {
+    const { rows } = await sql`SELECT * FROM community_posts ORDER BY created_at DESC`;
+    return rows.map(r => ({ ...r, tags: r.tags || [] })) as Post[];
   },
-  updatePost: (id: string, updates: Partial<Post>) => {
-    const posts = readJSON<Post>('posts.json');
-    const idx = posts.findIndex(p => p.id === id);
-    if (idx >= 0) {
-      posts[idx] = { ...posts[idx], ...updates };
-      writeJSON('posts.json', posts);
-    }
+  async getPost(id: string): Promise<Post | undefined> {
+    const { rows } = await sql`SELECT * FROM community_posts WHERE id = ${id}`;
+    if (!rows[0]) return undefined;
+    return { ...rows[0], tags: rows[0].tags || [] } as Post | undefined;
+  },
+  async addPost(post: Post): Promise<void> {
+    await sql`
+      INSERT INTO community_posts (id, agent_id, content, tags, likes_count, comments_count, created_at)
+      VALUES (${post.id}, ${post.agent_id}, ${post.content}, ${JSON.stringify(post.tags)}, ${post.likes_count}, ${post.comments_count}, ${post.created_at})
+    `;
+  },
+  async updatePost(id: string, updates: Partial<Post>): Promise<void> {
+    const post = await store.getPost(id);
+    if (!post) return;
+    const merged = { ...post, ...updates };
+    await sql`
+      UPDATE community_posts
+      SET content = ${merged.content}, tags = ${JSON.stringify(merged.tags)},
+          likes_count = ${merged.likes_count}, comments_count = ${merged.comments_count}
+      WHERE id = ${id}
+    `;
   },
 
   // Comments
-  getComments: () => readJSON<Comment>('comments.json'),
-  addComment: (comment: Comment) => {
-    const comments = readJSON<Comment>('comments.json');
-    comments.push(comment);
-    writeJSON('comments.json', comments);
+  async getComments(): Promise<Comment[]> {
+    const { rows } = await sql`SELECT * FROM community_comments`;
+    return rows as Comment[];
+  },
+  async getCommentsByPost(postId: string): Promise<Comment[]> {
+    const { rows } = await sql`SELECT * FROM community_comments WHERE post_id = ${postId} ORDER BY created_at ASC`;
+    return rows as Comment[];
+  },
+  async addComment(comment: Comment): Promise<void> {
+    await sql`
+      INSERT INTO community_comments (id, post_id, agent_id, content, created_at)
+      VALUES (${comment.id}, ${comment.post_id}, ${comment.agent_id}, ${comment.content}, ${comment.created_at})
+    `;
   },
 
   // Likes
-  getLikes: () => readJSON<Like>('likes.json'),
-  addLike: (like: Like) => {
-    const likes = readJSON<Like>('likes.json');
-    likes.push(like);
-    writeJSON('likes.json', likes);
+  async getLikes(): Promise<Like[]> {
+    const { rows } = await sql`SELECT * FROM community_likes`;
+    return rows as Like[];
   },
-  removeLike: (postId: string, agentId: string) => {
-    const likes = readJSON<Like>('likes.json');
-    writeJSON('likes.json', likes.filter(l => !(l.post_id === postId && l.agent_id === agentId)));
+  async addLike(like: Like): Promise<void> {
+    await sql`
+      INSERT INTO community_likes (id, post_id, agent_id, created_at)
+      VALUES (${like.id}, ${like.post_id}, ${like.agent_id}, ${like.created_at})
+    `;
   },
-  getLike: (postId: string, agentId: string) => {
-    return readJSON<Like>('likes.json').find(l => l.post_id === postId && l.agent_id === agentId);
+  async removeLike(postId: string, agentId: string): Promise<void> {
+    await sql`DELETE FROM community_likes WHERE post_id = ${postId} AND agent_id = ${agentId}`;
+  },
+  async getLike(postId: string, agentId: string): Promise<Like | undefined> {
+    const { rows } = await sql`SELECT * FROM community_likes WHERE post_id = ${postId} AND agent_id = ${agentId}`;
+    return rows[0] as Like | undefined;
   },
 
   // Challenges
-  addChallenge: (challenge: Challenge) => {
-    const challenges = readChallenges();
+  async addChallenge(challenge: Challenge): Promise<void> {
     // Clean old challenges (>10 min)
-    const now = Date.now();
-    const fresh = challenges.filter(c => now - new Date(c.created_at).getTime() < 600000);
-    fresh.push(challenge);
-    writeChallenges(fresh);
+    await sql`DELETE FROM community_challenges WHERE created_at < NOW() - INTERVAL '10 minutes'`;
+    await sql`
+      INSERT INTO community_challenges (nonce, created_at)
+      VALUES (${challenge.nonce}, ${challenge.created_at})
+    `;
   },
-  getChallenge: (nonce: string) => {
-    return readChallenges().find(c => c.nonce === nonce);
+  async getChallenge(nonce: string): Promise<Challenge | undefined> {
+    const { rows } = await sql`SELECT * FROM community_challenges WHERE nonce = ${nonce}`;
+    return rows[0] as Challenge | undefined;
   },
-  removeChallenge: (nonce: string) => {
-    const challenges = readChallenges();
-    writeChallenges(challenges.filter(c => c.nonce !== nonce));
+  async removeChallenge(nonce: string): Promise<void> {
+    await sql`DELETE FROM community_challenges WHERE nonce = ${nonce}`;
   },
 };

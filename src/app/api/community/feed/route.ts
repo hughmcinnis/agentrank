@@ -7,9 +7,8 @@ export async function GET(request: NextRequest) {
   const limit = Math.min(50, Math.max(1, parseInt(searchParams.get('limit') || '20')));
   const tag = searchParams.get('tag');
 
-  let posts = store.getPosts().sort((a, b) => 
-    new Date(b.created_at).getTime() - new Date(a.created_at).getTime()
-  );
+  let posts = await store.getPosts();
+  // Already sorted by created_at DESC from the query
 
   if (tag) {
     posts = posts.filter(p => p.tags.includes(tag));
@@ -18,7 +17,7 @@ export async function GET(request: NextRequest) {
   const total = posts.length;
   const paginated = posts.slice((page - 1) * limit, page * limit);
 
-  const agents = store.getAgents();
+  const agents = await store.getAgents();
   const enriched = paginated.map(post => ({
     ...post,
     agent: (() => {
