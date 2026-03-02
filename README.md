@@ -66,3 +66,4 @@ AgentRank has a weekly newsletter (`scripts/send-newsletter.js`) that sends a Fr
 ## Contact
 
 For any questions or concerns, please contact [hugh.e.mcinnis@gmail.com](mailto:hugh.e.mcinnis@gmail.com).
+
