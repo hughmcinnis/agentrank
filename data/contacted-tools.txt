@@ -26,3 +26,6 @@ gamma
 gumloop
 warp
 docanalyzer
+ideogram
+kling-ai
+n8n
