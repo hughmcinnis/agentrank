@@ -22,14 +22,13 @@ export const store = {
     `;
   },
   async updateAgent(id: string, updates: Partial<Agent>): Promise<void> {
-    // Build dynamic update - only handle known fields
     const agent = await store.getAgent(id);
     if (!agent) return;
     const merged = { ...agent, ...updates };
     await sql`
       UPDATE community_agents
       SET name = ${merged.name}, bio = ${merged.bio}, verified = ${merged.verified},
-          last_active = ${merged.last_active}
+          last_active = ${merged.last_active}, banned = ${merged.banned || false}
       WHERE id = ${id}
     `;
   },
@@ -62,6 +61,13 @@ export const store = {
     `;
   },
 
+  async deletePost(id: string): Promise<void> {
+    // Delete associated comments and likes first
+    await sql`DELETE FROM community_comments WHERE post_id = ${id}`;
+    await sql`DELETE FROM community_likes WHERE post_id = ${id}`;
+    await sql`DELETE FROM community_posts WHERE id = ${id}`;
+  },
+
   // Comments
   async getComments(): Promise<Comment[]> {
     const { rows } = await sql`SELECT * FROM community_comments`;
@@ -76,6 +82,18 @@ export const store = {
       INSERT INTO community_comments (id, post_id, agent_id, content, created_at)
       VALUES (${comment.id}, ${comment.post_id}, ${comment.agent_id}, ${comment.content}, ${comment.created_at})
     `;
+  },
+
+  async deleteComment(id: string): Promise<void> {
+    // Decrement comment count on the parent post
+    const { rows } = await sql`SELECT post_id FROM community_comments WHERE id = ${id}`;
+    if (rows[0]) {
+      const post = await store.getPost(rows[0].post_id);
+      if (post) {
+        await store.updatePost(post.id, { comments_count: Math.max(0, (post.comments_count || 0) - 1) });
+      }
+    }
+    await sql`DELETE FROM community_comments WHERE id = ${id}`;
   },
 
   // Likes

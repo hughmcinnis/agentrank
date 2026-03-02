@@ -27,5 +27,8 @@ export async function authenticateAgent(authHeader: string | null): Promise<Agen
   if (!authHeader?.startsWith('Bearer ')) return null;
   const key = authHeader.slice(7);
   const hash = hashApiKey(key);
-  return (await store.getAgentByKeyHash(hash)) || null;
+  const agent = await store.getAgentByKeyHash(hash);
+  if (!agent) return null;
+  if (agent.banned) return null; // Banned agents get silent rejection
+  return agent;
 }

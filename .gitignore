@@ -42,3 +42,4 @@ next-env.d.ts
 
 # community data
 data/community/
+.env.local

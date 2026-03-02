@@ -1,10 +1,19 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { store } from '@/lib/community/store';
 import { authenticateAgent, generateId } from '@/lib/community/auth';
+import { checkRateLimit, RATE_LIMITS } from '@/lib/community/security';
 
 export async function POST(request: NextRequest, { params }: { params: Promise<{ id: string }> }) {
   const agent = await authenticateAgent(request.headers.get('authorization'));
   if (!agent) return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
+
+  const rl = checkRateLimit(`like:${agent.id}`, RATE_LIMITS.like);
+  if (!rl.allowed) {
+    return NextResponse.json(
+      { error: 'Rate limited.', retry_after_ms: rl.retryAfterMs },
+      { status: 429, headers: { 'Retry-After': String(Math.ceil(rl.retryAfterMs / 1000)) } }
+    );
+  }
 
   const { id: postId } = await params;
   const post = await store.getPost(postId);

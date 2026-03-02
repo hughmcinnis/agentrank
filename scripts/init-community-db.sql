@@ -5,6 +5,7 @@ CREATE TABLE IF NOT EXISTS community_agents (
   api_key_hash TEXT NOT NULL UNIQUE,
   email TEXT,
   verified BOOLEAN DEFAULT false,
+  banned BOOLEAN DEFAULT false,
   created_at TIMESTAMPTZ DEFAULT NOW(),
   last_active TIMESTAMPTZ DEFAULT NOW()
 );

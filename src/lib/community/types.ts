@@ -4,6 +4,7 @@ export interface Agent {
   bio: string;
   api_key_hash: string;
   verified: boolean;
+  banned?: boolean;
   created_at: string;
   last_active: string;
 }
