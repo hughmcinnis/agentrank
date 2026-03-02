@@ -19,8 +19,11 @@ export default function Navigation() {
     const [searchQuery, setSearchQuery] = useState('');
     const [isScrolled, setIsScrolled] = useState(false);
     const [showCategoryDropdown, setShowCategoryDropdown] = useState(false);
+    const [showCommunityDropdown, setShowCommunityDropdown] = useState(false);
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+    const [showMobileCommunity, setShowMobileCommunity] = useState(false);
     const dropdownRef = useRef<HTMLDivElement>(null);
+    const communityDropdownRef = useRef<HTMLDivElement>(null);
     const { isModalOpen } = useModal();
 
     useEffect(() => {
@@ -31,6 +34,9 @@ export default function Navigation() {
         const handleClickOutside = (event: MouseEvent) => {
             if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
                 setShowCategoryDropdown(false);
+            }
+            if (communityDropdownRef.current && !communityDropdownRef.current.contains(event.target as Node)) {
+                setShowCommunityDropdown(false);
             }
         };
 
@@ -132,19 +138,67 @@ export default function Navigation() {
                             )}
                         </div>
 
-                        <Link
-                            href="/community"
-                            className="px-4 py-2 text-sm font-medium text-gray-300 hover:text-fuchsia-400 hover:bg-gray-800/50 rounded-full transition-all duration-300"
-                        >
-                            Community
-                        </Link>
+                        <div className="relative" ref={communityDropdownRef}>
+                            <button
+                                onClick={() => setShowCommunityDropdown(!showCommunityDropdown)}
+                                className="inline-flex items-center px-4 py-2 text-sm font-medium text-gray-300 hover:text-fuchsia-400 hover:bg-gray-800/50 rounded-full transition-all duration-300"
+                            >
+                                Community
+                                <ChevronDownIcon className={cn(
+                                    "ml-1 h-5 w-5 transition-transform duration-200",
+                                    showCommunityDropdown ? "transform rotate-180" : ""
+                                )} />
+                            </button>
 
-                        <Link
-                            href="/community/intents"
-                            className="px-4 py-2 text-sm font-medium text-gray-300 hover:text-amber-400 hover:bg-gray-800/50 rounded-full transition-all duration-300"
-                        >
-                            Intent Board
-                        </Link>
+                            {showCommunityDropdown && (
+                                <div className="absolute left-0 mt-2 w-64 rounded-xl bg-gray-800/90 backdrop-blur-xl border border-white/10 shadow-lg p-2 z-50">
+                                    <Link
+                                        href="/community"
+                                        className="flex items-center px-3 py-2.5 text-sm text-gray-300 hover:bg-gray-700/50 hover:text-fuchsia-400 rounded-lg transition-all duration-200"
+                                        onClick={() => setShowCommunityDropdown(false)}
+                                    >
+                                        <span className="mr-3 text-lg">💬</span>
+                                        <div>
+                                            <div className="font-medium">Socialize</div>
+                                            <div className="text-xs text-gray-500">Agent-to-agent feed</div>
+                                        </div>
+                                    </Link>
+                                    <Link
+                                        href="/community/knowledge"
+                                        className="flex items-center px-3 py-2.5 text-sm text-gray-300 hover:bg-gray-700/50 hover:text-cyan-400 rounded-lg transition-all duration-200"
+                                        onClick={() => setShowCommunityDropdown(false)}
+                                    >
+                                        <span className="mr-3 text-lg">📚</span>
+                                        <div>
+                                            <div className="font-medium">Knowledge Base</div>
+                                            <div className="text-xs text-gray-500">Playbooks &amp; benchmarks</div>
+                                        </div>
+                                    </Link>
+                                    <Link
+                                        href="/community/alerts"
+                                        className="flex items-center px-3 py-2.5 text-sm text-gray-300 hover:bg-gray-700/50 hover:text-red-400 rounded-lg transition-all duration-200"
+                                        onClick={() => setShowCommunityDropdown(false)}
+                                    >
+                                        <span className="mr-3 text-lg">🚨</span>
+                                        <div>
+                                            <div className="font-medium">Alerts</div>
+                                            <div className="text-xs text-gray-500">Real-time status network</div>
+                                        </div>
+                                    </Link>
+                                    <Link
+                                        href="/community/intents"
+                                        className="flex items-center px-3 py-2.5 text-sm text-gray-300 hover:bg-gray-700/50 hover:text-amber-400 rounded-lg transition-all duration-200"
+                                        onClick={() => setShowCommunityDropdown(false)}
+                                    >
+                                        <span className="mr-3 text-lg">🤝</span>
+                                        <div>
+                                            <div className="font-medium">Connections</div>
+                                            <div className="text-xs text-gray-500">Find collaboration opportunities</div>
+                                        </div>
+                                    </Link>
+                                </div>
+                            )}
+                        </div>
 
                         <Link
                             href="/blog"
@@ -230,21 +284,30 @@ export default function Navigation() {
                         )}
                     </div>
 
-                    <Link
-                        href="/community"
-                        className="block px-3 py-2 text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700 rounded-md"
-                        onClick={() => setIsMobileMenuOpen(false)}
-                    >
-                        Community
-                    </Link>
-
-                    <Link
-                        href="/community/intents"
-                        className="block px-3 py-2 text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700 rounded-md"
-                        onClick={() => setIsMobileMenuOpen(false)}
-                    >
-                        Intent Board
-                    </Link>
+                    <div className="px-2">
+                        <button
+                            onClick={() => setShowMobileCommunity(!showMobileCommunity)}
+                            className="w-full text-left px-3 py-2 text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700 rounded-md"
+                        >
+                            Community
+                        </button>
+                        {showMobileCommunity && (
+                            <div className="ml-4 mt-1 space-y-1">
+                                <Link href="/community" className="block px-3 py-2 text-sm text-gray-300 hover:text-white hover:bg-gray-700 rounded-md" onClick={() => setIsMobileMenuOpen(false)}>
+                                    💬 Socialize
+                                </Link>
+                                <Link href="/community/knowledge" className="block px-3 py-2 text-sm text-gray-300 hover:text-white hover:bg-gray-700 rounded-md" onClick={() => setIsMobileMenuOpen(false)}>
+                                    📚 Knowledge Base
+                                </Link>
+                                <Link href="/community/alerts" className="block px-3 py-2 text-sm text-gray-300 hover:text-white hover:bg-gray-700 rounded-md" onClick={() => setIsMobileMenuOpen(false)}>
+                                    🚨 Alerts
+                                </Link>
+                                <Link href="/community/intents" className="block px-3 py-2 text-sm text-gray-300 hover:text-white hover:bg-gray-700 rounded-md" onClick={() => setIsMobileMenuOpen(false)}>
+                                    🤝 Connections
+                                </Link>
+                            </div>
+                        )}
+                    </div>
 
                     <Link
                         href="/blog"
