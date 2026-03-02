@@ -1566,5 +1566,62 @@ export const agents: Agent[] = [
         features: ["Distraction-free thread editor", "AI content suggestions and rewrites", "Smart scheduling with optimal times", "Cross-posting to X and LinkedIn", "Auto-retweet and auto-plug", "Detailed engagement analytics", "Follower growth tracking", "Content inspiration feeds", "Team collaboration and approvals", "Multi-account management"],
         useCases: ["Growing a personal brand on X and LinkedIn", "Scheduling and optimizing social media content", "Writing viral Twitter threads with AI assistance", "Managing multiple brand accounts for an agency", "Analyzing engagement to improve content strategy"],
         addedDate: "2026-03-01"
+    },
+    {
+        id: "76",
+        name: "Ideogram",
+        slug: "ideogram",
+        tagline: "AI image generation with best-in-class text rendering and photorealistic output",
+        description: "Ideogram is an AI image generation platform known for its industry-leading ability to render readable text within generated images — a problem that has historically plagued other image generators. Built by a team of ex-Google Brain researchers, Ideogram produces photorealistic images, illustrations, 3D renders, and typography-heavy designs from text prompts. Its latest model, Ideogram 2.0, delivers exceptional prompt adherence and coherent compositions across styles from photorealism to anime. The platform includes features like Magic Prompt (auto-enhances your prompts), style references, negative prompts, and aspect ratio controls. The free tier offers generous daily generations, making it accessible for casual users, while paid tiers unlock higher resolution, faster generation, and private mode. Ideogram has become a go-to tool for designers, marketers, and content creators who need text-in-image capabilities that other AI generators simply can't match.",
+        categories: ["image-generation", "productivity"],
+        website: "https://ideogram.ai",
+        pricing: "Free (10 prompts/day), Basic $8/mo, Plus $20/mo, Pro $60/mo",
+        paymentOptions: {
+            isPaid: true,
+            hasFreeTrialPeriod: false,
+            hasFreeStarterPlan: true
+        },
+        logo: "/images/logos/ideogram-logo.png",
+        features: ["Best-in-class text rendering in images", "Photorealistic image generation", "Magic Prompt auto-enhancement", "Style references and negative prompts", "Multiple aspect ratios and resolutions", "Illustration, 3D, and anime styles", "Private generation mode", "API access for developers", "Community gallery and remix", "High prompt adherence"],
+        useCases: ["Creating social media graphics with embedded text", "Generating marketing banners and ad creatives", "Designing logos and typography-heavy visuals", "Producing photorealistic product mockups", "Creating illustrations and concept art for projects"],
+        addedDate: "2026-03-02"
+    },
+    {
+        id: "77",
+        name: "Kling AI",
+        slug: "kling-ai",
+        tagline: "Next-generation AI creative studio for video, image, and sound generation",
+        description: "Kling AI is a comprehensive AI creative studio developed by Kuaishou Technology that excels at generating high-quality videos, images, and sound from text and image prompts. Its flagship video generation models (up to Kling 3.0) produce cinematic-quality clips with realistic motion, physics, and scene coherence that rival industry leaders like Runway and Sora. Kling supports text-to-video, image-to-video, video effects, motion control, and sound generation — making it a complete multimedia creation platform. Key differentiators include native scene generation capabilities, lip-sync for talking head videos, motion brush for precise animation control, and a professional-grade output quality at competitive pricing. The platform offers both a consumer app and developer API with volume-tiered pricing. Kling AI has quickly become one of the most popular AI video generators globally, particularly strong in long-form coherent video generation and creative effects.",
+        categories: ["video-generation", "image-generation"],
+        website: "https://klingai.com",
+        pricing: "Free tier (limited credits), Pro $8/mo, Premium $28/mo, API pay-per-use",
+        paymentOptions: {
+            isPaid: true,
+            hasFreeTrialPeriod: false,
+            hasFreeStarterPlan: true
+        },
+        logo: "/images/logos/kling-ai-logo.ico",
+        features: ["Text-to-video generation up to 1080p", "Image-to-video animation", "AI sound and music generation", "Motion brush and motion control", "Lip-sync for talking head videos", "Video effects and transitions", "Multiple model versions (V1 to V3)", "Developer API with volume pricing", "Mobile apps for iOS and Android", "Professional-grade scene coherence"],
+        useCases: ["Creating short-form video content for social media", "Animating product images into dynamic video ads", "Generating cinematic B-roll footage from text descriptions", "Producing talking head videos with lip-sync", "Building creative video effects and transitions for content"],
+        addedDate: "2026-03-02"
+    },
+    {
+        id: "78",
+        name: "n8n",
+        slug: "n8n",
+        tagline: "AI workflow automation platform that combines code flexibility with no-code speed",
+        description: "n8n is an open-source workflow automation platform that uniquely combines AI capabilities with business process automation, giving technical teams the flexibility of code with the speed of no-code. With 500+ native integrations and the ability to write custom JavaScript or Python within any workflow, n8n lets you build everything from simple Zapier-style automations to complex AI agent pipelines. The platform supports self-hosting for complete data control or can run on n8n's managed cloud. Key AI features include native LLM nodes for OpenAI, Anthropic, and other providers, AI agent workflows with tool use, RAG pipelines, and vector store integrations. n8n's visual workflow editor makes it easy to design, test, and debug complex multi-step automations. Enterprise features include SSO, RBAC, audit logs, git-based version control, and isolated environments. With over 60,000 GitHub stars and a massive community, n8n has become the go-to automation platform for developers and technical teams who need more power than Zapier but less complexity than custom code.",
+        categories: ["automation", "productivity"],
+        website: "https://n8n.io",
+        pricing: "Free (self-hosted), Pro €20/mo, Business custom, Enterprise custom",
+        paymentOptions: {
+            isPaid: true,
+            hasFreeTrialPeriod: true,
+            hasFreeStarterPlan: true
+        },
+        logo: "/images/logos/n8n-logo.ico",
+        features: ["500+ native app integrations", "Visual workflow editor", "Custom JavaScript and Python nodes", "AI agent and LLM workflow nodes", "RAG and vector store support", "Self-hosted or cloud deployment", "Git-based version control", "SSO SAML and LDAP authentication", "Webhook and cron triggers", "White-label embedding (n8n Embed)"],
+        useCases: ["Automating repetitive business processes across tools", "Building AI agent pipelines with tool use and RAG", "Syncing data between CRM, email, and project management tools", "Creating webhook-triggered workflows for real-time automation", "Self-hosting automation infrastructure for data privacy compliance"],
+        addedDate: "2026-03-02"
     }
 ]; 

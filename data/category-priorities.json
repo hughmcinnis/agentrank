@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-03-01T14:00:04.450Z",
-  "totalAgents": 70,
+  "generatedAt": "2026-03-02T14:00:06.818Z",
+  "totalAgents": 73,
   "totalCategories": 20,
   "minTarget": 5,
-  "categoriesBelow": 13,
+  "categoriesBelow": 12,
   "priorities": [
     {
       "category": "home-improvement",
@@ -13,28 +13,7 @@
       "status": "LOW"
     },
     {
-      "category": "data-analysis",
-      "currentCount": 2,
-      "deficit": 3,
-      "priorityScore": 90,
-      "status": "LOW"
-    },
-    {
-      "category": "transcription",
-      "currentCount": 2,
-      "deficit": 3,
-      "priorityScore": 90,
-      "status": "LOW"
-    },
-    {
       "category": "document-analysis",
-      "currentCount": 2,
-      "deficit": 3,
-      "priorityScore": 90,
-      "status": "LOW"
-    },
-    {
-      "category": "social-media",
       "currentCount": 2,
       "deficit": 3,
       "priorityScore": 90,
@@ -69,7 +48,28 @@
       "status": "LOW"
     },
     {
+      "category": "data-analysis",
+      "currentCount": 3,
+      "deficit": 2,
+      "priorityScore": 60,
+      "status": "BELOW_TARGET"
+    },
+    {
+      "category": "transcription",
+      "currentCount": 3,
+      "deficit": 2,
+      "priorityScore": 60,
+      "status": "BELOW_TARGET"
+    },
+    {
       "category": "seo",
+      "currentCount": 3,
+      "deficit": 2,
+      "priorityScore": 60,
+      "status": "BELOW_TARGET"
+    },
+    {
+      "category": "social-media",
       "currentCount": 3,
       "deficit": 2,
       "priorityScore": 60,
@@ -91,10 +91,10 @@
     },
     {
       "category": "marketing",
-      "currentCount": 4,
-      "deficit": 1,
-      "priorityScore": 30,
-      "status": "BELOW_TARGET"
+      "currentCount": 5,
+      "deficit": 0,
+      "priorityScore": 5,
+      "status": "OK"
     },
     {
       "category": "email",
@@ -140,7 +140,7 @@
     },
     {
       "category": "productivity",
-      "currentCount": 28,
+      "currentCount": 30,
       "deficit": 0,
       "priorityScore": 0,
       "status": "OK"
@@ -148,27 +148,27 @@
   ],
   "topPriority": [
     "home-improvement",
-    "data-analysis",
-    "transcription",
     "document-analysis",
-    "social-media"
+    "image-generation",
+    "video-generation",
+    "voice-audio"
   ],
   "distribution": {
-    "productivity": 28,
+    "productivity": 30,
     "coding": 14,
     "sales": 12,
     "customer-support": 7,
     "writing": 6,
+    "marketing": 5,
     "email": 5,
     "scheduling": 5,
     "research": 4,
-    "marketing": 4,
+    "data-analysis": 3,
+    "transcription": 3,
     "seo": 3,
+    "social-media": 3,
     "accounting": 3,
-    "data-analysis": 2,
-    "transcription": 2,
     "document-analysis": 2,
-    "social-media": 2,
     "image-generation": 2,
     "video-generation": 2,
     "voice-audio": 2,
