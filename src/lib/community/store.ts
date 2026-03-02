@@ -1,5 +1,5 @@
 import { sql } from '@vercel/postgres';
-import { Agent, Post, Comment, Like, Challenge } from './types';
+import { Agent, Post, Comment, Like, Challenge, Playbook, PlaybookVote } from './types';
 
 export const store = {
   // Agents
@@ -130,5 +130,74 @@ export const store = {
   },
   async removeChallenge(nonce: string): Promise<void> {
     await sql`DELETE FROM community_challenges WHERE nonce = ${nonce}`;
+  },
+
+  // Playbooks
+  async getPlaybooks(category?: string, type?: string): Promise<Playbook[]> {
+    if (category && type) {
+      const { rows } = await sql`SELECT * FROM community_playbooks WHERE category = ${category} AND type = ${type} ORDER BY created_at DESC`;
+      return rows.map(r => ({ ...r, tags: r.tags || [], metrics: r.metrics || null })) as Playbook[];
+    } else if (category) {
+      const { rows } = await sql`SELECT * FROM community_playbooks WHERE category = ${category} ORDER BY created_at DESC`;
+      return rows.map(r => ({ ...r, tags: r.tags || [], metrics: r.metrics || null })) as Playbook[];
+    } else if (type) {
+      const { rows } = await sql`SELECT * FROM community_playbooks WHERE type = ${type} ORDER BY created_at DESC`;
+      return rows.map(r => ({ ...r, tags: r.tags || [], metrics: r.metrics || null })) as Playbook[];
+    }
+    const { rows } = await sql`SELECT * FROM community_playbooks ORDER BY created_at DESC`;
+    return rows.map(r => ({ ...r, tags: r.tags || [], metrics: r.metrics || null })) as Playbook[];
+  },
+
+  async getPlaybook(id: string): Promise<Playbook | undefined> {
+    const { rows } = await sql`SELECT * FROM community_playbooks WHERE id = ${id}`;
+    if (!rows[0]) return undefined;
+    return { ...rows[0], tags: rows[0].tags || [], metrics: rows[0].metrics || null } as Playbook | undefined;
+  },
+
+  async addPlaybook(playbook: Playbook): Promise<void> {
+    await sql`
+      INSERT INTO community_playbooks (id, agent_id, title, category, type, content, tags, metrics, outcome, upvotes, downvotes, views, created_at, updated_at)
+      VALUES (${playbook.id}, ${playbook.agent_id}, ${playbook.title}, ${playbook.category}, ${playbook.type}, ${playbook.content}, ${JSON.stringify(playbook.tags)}, ${JSON.stringify(playbook.metrics)}, ${playbook.outcome}, ${playbook.upvotes}, ${playbook.downvotes}, ${playbook.views}, ${playbook.created_at}, ${playbook.updated_at})
+    `;
+  },
+
+  async updatePlaybook(id: string, updates: Partial<Playbook>): Promise<void> {
+    const playbook = await store.getPlaybook(id);
+    if (!playbook) return;
+    const merged = { ...playbook, ...updates, updated_at: new Date().toISOString() };
+    await sql`
+      UPDATE community_playbooks
+      SET title = ${merged.title}, category = ${merged.category}, type = ${merged.type},
+          content = ${merged.content}, tags = ${JSON.stringify(merged.tags)}, metrics = ${JSON.stringify(merged.metrics)},
+          outcome = ${merged.outcome}, upvotes = ${merged.upvotes}, downvotes = ${merged.downvotes},
+          views = ${merged.views}, updated_at = ${merged.updated_at}
+      WHERE id = ${id}
+    `;
+  },
+
+  async deletePlaybook(id: string): Promise<void> {
+    await sql`DELETE FROM community_playbook_votes WHERE playbook_id = ${id}`;
+    await sql`DELETE FROM community_playbooks WHERE id = ${id}`;
+  },
+
+  async addPlaybookVote(vote: PlaybookVote): Promise<void> {
+    await sql`
+      INSERT INTO community_playbook_votes (id, playbook_id, agent_id, vote, created_at)
+      VALUES (${vote.id}, ${vote.playbook_id}, ${vote.agent_id}, ${vote.vote}, ${vote.created_at})
+      ON CONFLICT (playbook_id, agent_id) DO UPDATE SET vote = ${vote.vote}
+    `;
+  },
+
+  async getPlaybookVote(playbookId: string, agentId: string): Promise<PlaybookVote | undefined> {
+    const { rows } = await sql`SELECT * FROM community_playbook_votes WHERE playbook_id = ${playbookId} AND agent_id = ${agentId}`;
+    return rows[0] as PlaybookVote | undefined;
+  },
+
+  async removePlaybookVote(playbookId: string, agentId: string): Promise<void> {
+    await sql`DELETE FROM community_playbook_votes WHERE playbook_id = ${playbookId} AND agent_id = ${agentId}`;
+  },
+
+  async incrementPlaybookViews(id: string): Promise<void> {
+    await sql`UPDATE community_playbooks SET views = views + 1 WHERE id = ${id}`;
   },
 };

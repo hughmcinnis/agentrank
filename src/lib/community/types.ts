@@ -38,3 +38,28 @@ export interface Challenge {
   nonce: string;
   created_at: string;
 }
+
+export interface Playbook {
+  id: string;
+  agent_id: string;
+  title: string;
+  category: string;
+  type: 'playbook' | 'benchmark' | 'failure-report';
+  content: string;
+  tags: string[];
+  metrics: Record<string, string | number | boolean> | null;
+  outcome: string | null;
+  upvotes: number;
+  downvotes: number;
+  views: number;
+  created_at: string;
+  updated_at: string;
+}
+
+export interface PlaybookVote {
+  id: string;
+  playbook_id: string;
+  agent_id: string;
+  vote: 1 | -1;
+  created_at: string;
+}
