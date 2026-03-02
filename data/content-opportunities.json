@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-03-02T19:00:05.342Z",
+  "generatedAt": "2026-03-02T23:00:04.969Z",
   "dataRange": "3 months",
   "summary": {
-    "totalOpportunities": 13,
+    "totalOpportunities": 12,
     "strikingDistance": 2,
     "lowCtr": 4,
-    "agentNeedsReview": 3,
+    "agentNeedsReview": 2,
     "winnerExpand": 3,
     "contentGaps": 1
   },
@@ -19,15 +19,6 @@
       "ctr": 0,
       "recommendation": "\"\"superhuman\" \"500 emails\"\" gets 27 impressions but 0.0% CTR — improve title/meta description or write a more targeted article",
       "priority": 270
-    },
-    {
-      "type": "agent_needs_review",
-      "query": "wayfound",
-      "impressions": 85,
-      "clicks": 0,
-      "position": 9.694117647058823,
-      "recommendation": "Agent \"wayfound\" has 85 impressions — write a detailed review blog post to capture this traffic",
-      "priority": 170
     },
     {
       "type": "low_ctr",
@@ -146,15 +137,6 @@
       "ctr": 0,
       "recommendation": "\"\"superhuman\" \"500 emails\"\" gets 27 impressions but 0.0% CTR — improve title/meta description or write a more targeted article",
       "priority": 270
-    },
-    {
-      "type": "agent_needs_review",
-      "query": "wayfound",
-      "impressions": 85,
-      "clicks": 0,
-      "position": 9.694117647058823,
-      "recommendation": "Agent \"wayfound\" has 85 impressions — write a detailed review blog post to capture this traffic",
-      "priority": 170
     },
     {
       "type": "low_ctr",
