@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-03T19:00:04.500Z",
+  "generatedAt": "2026-03-03T23:00:05.587Z",
   "dataRange": "3 months",
   "summary": {
     "totalOpportunities": 11,
@@ -23,59 +23,70 @@
     {
       "type": "low_ctr",
       "query": "brave search independent index size",
-      "impressions": 16,
+      "impressions": 20,
       "clicks": 0,
-      "position": 9.375,
+      "position": 9.3,
       "ctr": 0,
-      "recommendation": "\"brave search independent index size\" gets 16 impressions but 0.0% CTR — improve title/meta description or write a more targeted article",
-      "priority": 160
-    },
-    {
-      "type": "winner_expand",
-      "query": "5-ai-code-review-tools-that-actually-work",
-      "impressions": 1003,
-      "clicks": 2,
-      "position": 55.76271186440678,
-      "recommendation": "\"5-ai-code-review-tools-that-actually-work\" is getting clicks — write related/follow-up content to build topical authority",
-      "priority": 140
+      "recommendation": "\"brave search independent index size\" gets 20 impressions but 0.0% CTR — improve title/meta description or write a more targeted article",
+      "priority": 200
     },
     {
       "type": "low_ctr",
       "query": "aident ai",
-      "impressions": 11,
+      "impressions": 15,
       "clicks": 0,
-      "position": 12,
+      "position": 10.933333333333334,
       "ctr": 0,
-      "recommendation": "\"aident ai\" gets 11 impressions but 0.0% CTR — improve title/meta description or write a more targeted article",
-      "priority": 110
+      "recommendation": "\"aident ai\" gets 15 impressions but 0.0% CTR — improve title/meta description or write a more targeted article",
+      "priority": 150
     },
     {
       "type": "low_ctr",
       "query": "bolt hosting review",
-      "impressions": 10,
+      "impressions": 15,
       "clicks": 0,
-      "position": 7.1,
+      "position": 7.066666666666666,
       "ctr": 0,
-      "recommendation": "\"bolt hosting review\" gets 10 impressions but 0.0% CTR — improve title/meta description or write a more targeted article",
-      "priority": 100
+      "recommendation": "\"bolt hosting review\" gets 15 impressions but 0.0% CTR — improve title/meta description or write a more targeted article",
+      "priority": 150
+    },
+    {
+      "type": "winner_expand",
+      "query": "5-ai-code-review-tools-that-actually-work",
+      "impressions": 1023,
+      "clicks": 2,
+      "position": 53.655913978494624,
+      "recommendation": "\"5-ai-code-review-tools-that-actually-work\" is getting clicks — write related/follow-up content to build topical authority",
+      "priority": 142
     },
     {
       "type": "winner_expand",
       "query": "v0-review-vercel-ai-app-builder",
-      "impressions": 776,
+      "impressions": 824,
       "clicks": 1,
-      "position": 14.39561855670103,
+      "position": 14.555825242718447,
       "recommendation": "\"v0-review-vercel-ai-app-builder\" is getting clicks — write related/follow-up content to build topical authority",
-      "priority": 98
+      "priority": 102
     },
     {
       "type": "winner_expand",
       "query": "brave-web-discovery-project-breaking-google-monopoly",
-      "impressions": 450,
+      "impressions": 572,
       "clicks": 1,
-      "position": 10.5,
+      "position": 10.012237762237762,
       "recommendation": "\"brave-web-discovery-project-breaking-google-monopoly\" is getting clicks — write related/follow-up content to build topical authority",
-      "priority": 65
+      "priority": 77
+    },
+    {
+      "type": "striking_distance",
+      "query": "brave search independent index size",
+      "impressions": 20,
+      "clicks": 0,
+      "position": 9.3,
+      "ctr": 0,
+      "recentTrend": "active",
+      "recommendation": "Optimize or create focused content for \"brave search independent index size\" — currently at position 9.3, could reach page 1",
+      "priority": 41
     },
     {
       "type": "content_gap",
@@ -88,34 +99,23 @@
     },
     {
       "type": "striking_distance",
-      "query": "brave search independent index size",
-      "impressions": 16,
-      "clicks": 0,
-      "position": 9.375,
-      "ctr": 0,
-      "recentTrend": "active",
-      "recommendation": "Optimize or create focused content for \"brave search independent index size\" — currently at position 9.4, could reach page 1",
-      "priority": 33
-    },
-    {
-      "type": "striking_distance",
       "query": "aident ai",
-      "impressions": 11,
+      "impressions": 15,
       "clicks": 0,
-      "position": 12,
+      "position": 10.933333333333334,
       "ctr": 0,
       "recentTrend": "active",
-      "recommendation": "Optimize or create focused content for \"aident ai\" — currently at position 12.0, could reach page 1",
-      "priority": 20
+      "recommendation": "Optimize or create focused content for \"aident ai\" — currently at position 10.9, could reach page 1",
+      "priority": 29
     },
     {
       "type": "agent_needs_review",
       "query": "browserbook",
-      "impressions": 5,
+      "impressions": 6,
       "clicks": 0,
-      "position": 7,
-      "recommendation": "Agent \"browserbook\" has 5 impressions — write a detailed review blog post to capture this traffic",
-      "priority": 10
+      "position": 7.166666666666667,
+      "recommendation": "Agent \"browserbook\" has 6 impressions — write a detailed review blog post to capture this traffic",
+      "priority": 12
     }
   ],
   "allOpportunities": [
@@ -132,59 +132,70 @@
     {
       "type": "low_ctr",
       "query": "brave search independent index size",
-      "impressions": 16,
+      "impressions": 20,
       "clicks": 0,
-      "position": 9.375,
+      "position": 9.3,
       "ctr": 0,
-      "recommendation": "\"brave search independent index size\" gets 16 impressions but 0.0% CTR — improve title/meta description or write a more targeted article",
-      "priority": 160
-    },
-    {
-      "type": "winner_expand",
-      "query": "5-ai-code-review-tools-that-actually-work",
-      "impressions": 1003,
-      "clicks": 2,
-      "position": 55.76271186440678,
-      "recommendation": "\"5-ai-code-review-tools-that-actually-work\" is getting clicks — write related/follow-up content to build topical authority",
-      "priority": 140
+      "recommendation": "\"brave search independent index size\" gets 20 impressions but 0.0% CTR — improve title/meta description or write a more targeted article",
+      "priority": 200
     },
     {
       "type": "low_ctr",
       "query": "aident ai",
-      "impressions": 11,
+      "impressions": 15,
       "clicks": 0,
-      "position": 12,
+      "position": 10.933333333333334,
       "ctr": 0,
-      "recommendation": "\"aident ai\" gets 11 impressions but 0.0% CTR — improve title/meta description or write a more targeted article",
-      "priority": 110
+      "recommendation": "\"aident ai\" gets 15 impressions but 0.0% CTR — improve title/meta description or write a more targeted article",
+      "priority": 150
     },
     {
       "type": "low_ctr",
       "query": "bolt hosting review",
-      "impressions": 10,
+      "impressions": 15,
       "clicks": 0,
-      "position": 7.1,
+      "position": 7.066666666666666,
       "ctr": 0,
-      "recommendation": "\"bolt hosting review\" gets 10 impressions but 0.0% CTR — improve title/meta description or write a more targeted article",
-      "priority": 100
+      "recommendation": "\"bolt hosting review\" gets 15 impressions but 0.0% CTR — improve title/meta description or write a more targeted article",
+      "priority": 150
+    },
+    {
+      "type": "winner_expand",
+      "query": "5-ai-code-review-tools-that-actually-work",
+      "impressions": 1023,
+      "clicks": 2,
+      "position": 53.655913978494624,
+      "recommendation": "\"5-ai-code-review-tools-that-actually-work\" is getting clicks — write related/follow-up content to build topical authority",
+      "priority": 142
     },
     {
       "type": "winner_expand",
       "query": "v0-review-vercel-ai-app-builder",
-      "impressions": 776,
+      "impressions": 824,
       "clicks": 1,
-      "position": 14.39561855670103,
+      "position": 14.555825242718447,
       "recommendation": "\"v0-review-vercel-ai-app-builder\" is getting clicks — write related/follow-up content to build topical authority",
-      "priority": 98
+      "priority": 102
     },
     {
       "type": "winner_expand",
       "query": "brave-web-discovery-project-breaking-google-monopoly",
-      "impressions": 450,
+      "impressions": 572,
       "clicks": 1,
-      "position": 10.5,
+      "position": 10.012237762237762,
       "recommendation": "\"brave-web-discovery-project-breaking-google-monopoly\" is getting clicks — write related/follow-up content to build topical authority",
-      "priority": 65
+      "priority": 77
+    },
+    {
+      "type": "striking_distance",
+      "query": "brave search independent index size",
+      "impressions": 20,
+      "clicks": 0,
+      "position": 9.3,
+      "ctr": 0,
+      "recentTrend": "active",
+      "recommendation": "Optimize or create focused content for \"brave search independent index size\" — currently at position 9.3, could reach page 1",
+      "priority": 41
     },
     {
       "type": "content_gap",
@@ -197,34 +208,23 @@
     },
     {
       "type": "striking_distance",
-      "query": "brave search independent index size",
-      "impressions": 16,
-      "clicks": 0,
-      "position": 9.375,
-      "ctr": 0,
-      "recentTrend": "active",
-      "recommendation": "Optimize or create focused content for \"brave search independent index size\" — currently at position 9.4, could reach page 1",
-      "priority": 33
-    },
-    {
-      "type": "striking_distance",
       "query": "aident ai",
-      "impressions": 11,
+      "impressions": 15,
       "clicks": 0,
-      "position": 12,
+      "position": 10.933333333333334,
       "ctr": 0,
       "recentTrend": "active",
-      "recommendation": "Optimize or create focused content for \"aident ai\" — currently at position 12.0, could reach page 1",
-      "priority": 20
+      "recommendation": "Optimize or create focused content for \"aident ai\" — currently at position 10.9, could reach page 1",
+      "priority": 29
     },
     {
       "type": "agent_needs_review",
       "query": "browserbook",
-      "impressions": 5,
+      "impressions": 6,
       "clicks": 0,
-      "position": 7,
-      "recommendation": "Agent \"browserbook\" has 5 impressions — write a detailed review blog post to capture this traffic",
-      "priority": 10
+      "position": 7.166666666666667,
+      "recommendation": "Agent \"browserbook\" has 6 impressions — write a detailed review blog post to capture this traffic",
+      "priority": 12
     }
   ]
 }
