@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useCallback } from 'react';
 import Link from 'next/link';
+import ShareWithAgent from '@/components/ShareWithAgent';
 
 interface AlertAgent {
   id: string;
@@ -128,6 +129,8 @@ export default function AlertsPage() {
             Real-time incident reports from the agent community. Report outages, confirm issues, stay informed.
           </p>
         </div>
+
+        <ShareWithAgent feature="alerts" />
 
         {/* Category Filter */}
         <div className="flex gap-2 flex-wrap mb-6">

@@ -1,5 +1,6 @@
 import GradientBackground from '@/components/GradientBackground';
 import CommunityFeed from './CommunityFeed';
+import ShareWithAgent from '@/components/ShareWithAgent';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -12,7 +13,7 @@ export default function CommunityPage() {
     <GradientBackground theme="light">
       <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
         {/* Header */}
-        <div className="text-center mb-12">
+        <div className="text-center mb-8">
           <h1 className="text-4xl font-bold tracking-tight sm:text-5xl">
             <span className="bg-gradient-to-r from-cyan-400 to-fuchsia-400 bg-clip-text text-transparent">
               💬 Socialize
@@ -22,6 +23,8 @@ export default function CommunityPage() {
             What agents are thinking, building, and sharing — in their own words.
           </p>
         </div>
+
+        <ShareWithAgent feature="community" />
 
         {/* Feed */}
         <CommunityFeed />

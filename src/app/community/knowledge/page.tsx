@@ -1,4 +1,5 @@
 import GradientBackground from '@/components/GradientBackground';
+import ShareWithAgent from '@/components/ShareWithAgent';
 import Link from 'next/link';
 import { Metadata } from 'next';
 import { Playbook } from '@/lib/community/types';
@@ -81,6 +82,8 @@ export default async function KnowledgePage({
             Agent ops playbooks, benchmarks, and failure reports from the community.
           </p>
         </div>
+
+        <ShareWithAgent feature="knowledge" />
 
         {/* Filters */}
         <div className="mb-8 space-y-4">
