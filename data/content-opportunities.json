@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-03-02T23:00:04.969Z",
+  "generatedAt": "2026-03-03T15:10:08.474Z",
   "dataRange": "3 months",
   "summary": {
-    "totalOpportunities": 12,
+    "totalOpportunities": 11,
     "strikingDistance": 2,
     "lowCtr": 4,
-    "agentNeedsReview": 2,
+    "agentNeedsReview": 1,
     "winnerExpand": 3,
     "contentGaps": 1
   },
@@ -85,15 +85,6 @@
       "position": 5.037037037037037,
       "recommendation": "No dedicated content for \"\"superhuman\" \"500 emails\"\" (27 impressions) — create a targeted article",
       "priority": 41
-    },
-    {
-      "type": "agent_needs_review",
-      "query": "aident-ai",
-      "impressions": 20,
-      "clicks": 0,
-      "position": 14.1,
-      "recommendation": "Agent \"aident-ai\" has 20 impressions — write a detailed review blog post to capture this traffic",
-      "priority": 40
     },
     {
       "type": "striking_distance",
@@ -203,15 +194,6 @@
       "position": 5.037037037037037,
       "recommendation": "No dedicated content for \"\"superhuman\" \"500 emails\"\" (27 impressions) — create a targeted article",
       "priority": 41
-    },
-    {
-      "type": "agent_needs_review",
-      "query": "aident-ai",
-      "impressions": 20,
-      "clicks": 0,
-      "position": 14.1,
-      "recommendation": "Agent \"aident-ai\" has 20 impressions — write a detailed review blog post to capture this traffic",
-      "priority": 40
     },
     {
       "type": "striking_distance",

@@ -5438,5 +5438,109 @@ At $6/month with a free tier to test, there's almost no reason not to try it if 
         categories: ["Reviews"],
         featuredImage: "/images/blog/aident-ai-review-natural-language-automation-builder.png",
         tags: ["aident ai","ai automation","no-code automation","workflow automation","ai agents","n8n alternative"],
+    },
+    {
+        id: "49",
+        title: "Sourcery Review: Is This AI Code Review Tool Worth $15/Month?",
+        slug: "sourcery-automated-pr-reviews-worth-it",
+        excerpt: "Sourcery promises instant AI code reviews on every pull request. After testing it against CodeRabbit and GitHub Copilot, here's whether it's actually worth the money for your team.",
+        content: `If you're shipping code in 2026, you've probably noticed that AI-generated PRs are piling up faster than your team can review them. That's the exact problem Sourcery claims to solve — instant AI code reviews on every pull request, security scans across your repos, and real-time feedback in your IDE.
+
+But with CodeRabbit at $24/month and GitHub Copilot bundling code review into its existing plans, is Sourcery actually worth paying for? I dug in.
+
+## What Sourcery Actually Does
+
+Sourcery is an AI code review tool that integrates with GitHub, GitLab, and your IDE to automatically review pull requests the moment they're opened. It catches bugs, enforces coding standards, flags security issues, and generates PR summaries.
+
+The key selling point: it reviews code the way a senior developer would — looking at logic errors, potential security vulnerabilities, dependency risks, and deviations from your team's coding patterns. It doesn't just lint. It understands context.
+
+Here's how the workflow actually looks:
+
+1. **On PRs:** You open a pull request, Sourcery immediately posts a review with a summary, flagged issues, and suggested fixes. No waiting for a human reviewer to get around to it.
+2. **Across repos:** Continuous security scanning across all your repositories. It finds vulnerabilities and explains them in plain English with fix suggestions.
+3. **In your IDE:** Real-time code review as you write. Get feedback before you even commit. One-click fixes for common issues.
+4. **With AI agents:** If you're using Cursor, Copilot, or another coding agent, Sourcery can review the agent's output and catch the mistakes AI tends to make.
+
+That last point is increasingly important. AI coding agents are fast but sloppy. Having an AI reviewer catch the AI coder's mistakes is becoming a real workflow pattern.
+
+## Pricing Breakdown
+
+Sourcery has three tiers, and the structure is pretty straightforward:
+
+- **Free:** Public repos only. Full code reviews, limited security scans (3 repos, 10 issues per repo, 2x/week scans). Great for open source maintainers.
+- **Pro ($15/month per developer):** Private repo support, IDE reviews, 10 repos for security scans. This is where most individual developers land.
+- **Team ($30/month per developer):** Everything in Pro plus unlimited security issues, daily security scans across 200+ repos, and repo analytics.
+
+All plans get a 20% discount on annual billing, bringing Pro down to $12/month and Team to $24/month.
+
+They also have a separate "Production Issues" product for runtime debugging, but that's a different beast.
+
+## What's Actually Good
+
+**Speed of review.** Sourcery reviews PRs almost instantly. In a team where PRs used to sit for hours waiting for human review, that alone saves meaningful time. Developers get feedback while the code is still fresh in their heads.
+
+**Security scanning is underrated.** Most AI code review tools focus on code quality. Sourcery's continuous security scanning across repos is genuinely useful — it finds dependency vulnerabilities, hardcoded secrets, and injection risks that static analysis tools miss because it understands code context.
+
+**IDE integration is smooth.** The VS Code and JetBrains extensions work well. Getting a code review before you push means fewer embarrassing PR comments. It's like having a pair programmer who's always paying attention.
+
+**SOC 2 certified with zero-retention options.** For enterprise teams worried about code privacy, Sourcery doesn't train on your code, offers zero-retention data processing, and lets you bring your own LLM endpoints. That's a real differentiator for companies in regulated industries.
+
+**300,000+ developers use it.** That's not a vanity metric — it means the tool has been battle-tested on real codebases at scale. The review quality reflects that maturity.
+
+## What's Not Great
+
+**$15/month per developer adds up fast.** For a 10-person team, you're looking at $150/month on Pro or $300/month on Team. That's a real line item. If your team is already paying for GitHub Copilot, adding another per-seat AI tool feels heavy.
+
+**Free tier is basically a demo.** Public repos only means solo developers working on private projects get nothing without paying. CodeRabbit's free tier is more generous here.
+
+**No Bitbucket support.** If your team is on Bitbucket, you're out of luck. GitHub and GitLab only. In 2026, that's a real limitation for enterprise shops.
+
+**Security scan limits on lower tiers.** 10 issues per repo on Pro is surprisingly restrictive. If you have a repo with 50 security issues (which isn't unusual for a large codebase), you're only seeing 10 of them unless you upgrade to Team.
+
+**Can be noisy on large PRs.** Like most AI review tools, Sourcery sometimes flags things that aren't actually problems. Large PRs with 500+ lines of changes tend to generate a wall of comments. You'll need to tune it.
+
+## Sourcery vs CodeRabbit vs GitHub Copilot Code Review
+
+This is the comparison everyone's making:
+
+**Sourcery ($15/mo)** is the balanced option. Good code review, good security scanning, works in IDE and on PRs. Jack of all trades, but doesn't blow you away in any single area.
+
+**CodeRabbit ($24/mo)** goes deeper on code review quality. Better at understanding cross-file changes, more detailed explanations, stronger at catching logic errors. But no IDE integration and limited security features.
+
+**GitHub Copilot** bundles code review into existing Copilot subscriptions. If you're already paying for Copilot, the marginal cost is zero. But the review quality is noticeably weaker than both Sourcery and CodeRabbit — it's a nice add-on, not a dedicated tool.
+
+My take: if security scanning matters to your team, Sourcery wins. If you want the deepest code review quality, CodeRabbit edges it out. If you're budget-conscious and already on Copilot, just use what you've got.
+
+## Who Should Use Sourcery
+
+**Yes, if:**
+- Your team is drowning in PR review backlog
+- You need continuous security scanning across multiple repos
+- You want IDE-level feedback before pushing code
+- You're in a regulated industry and need SOC 2 compliance and zero-retention guarantees
+- You're using AI coding agents and need a safety net for their output
+
+**No, if:**
+- You're a solo developer on private projects (the free tier won't help)
+- Your team is on Bitbucket
+- You're already happy with CodeRabbit's deeper review quality
+- Budget is tight and you can't justify another per-seat tool
+
+## The Bottom Line
+
+Sourcery is a solid AI code review tool that does three things well: instant PR reviews, continuous security scanning, and IDE integration. It's not the cheapest option and it's not the most powerful at any single thing, but it's the most complete package.
+
+At $15/month per developer (or $12 annually), it's priced right in the middle of the market. For teams that want code review plus security in one tool without managing multiple subscriptions, it's a strong choice.
+
+But if you're choosing between Sourcery and CodeRabbit purely on code review quality, CodeRabbit still has the edge. Sourcery's advantage is breadth — it covers more of the development workflow in a single tool.
+
+The real question isn't whether Sourcery is good (it is). It's whether your team needs a dedicated AI code review tool at all, or whether the one built into your existing editor is good enough. For most teams shipping serious software, the answer is yes — and Sourcery belongs on your shortlist.`,
+        author: "Hugh McInnis",
+        publishDate: "2026-03-03",
+        publishedAt: "2026-03-03T07:11:56.000-08:00",
+        readTime: "5 min read",
+        categories: ["Reviews","Developer Tools"],
+        featuredImage: "/images/blog/sourcery-automated-pr-reviews-worth-it.png",
+        tags: ["sourcery","ai code review","code review tools","developer tools","coderabbit alternative","github copilot"],
     }
 ]; 
