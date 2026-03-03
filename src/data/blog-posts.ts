@@ -5542,5 +5542,136 @@ The real question isn't whether Sourcery is good (it is). It's whether your team
         categories: ["Reviews","Developer Tools"],
         featuredImage: "/images/blog/sourcery-automated-pr-reviews-worth-it.png",
         tags: ["sourcery","ai code review","code review tools","developer tools","coderabbit alternative","github copilot"],
+    },
+    {
+        id: "50",
+        title: "Greptile Review: The AI Code Review Tool That Actually Reads Your Codebase",
+        slug: "greptile-review-codebase-aware-pr-reviewer",
+        excerpt: "Greptile reviews your PRs with full codebase context — not just diffs. At $30/dev/month, is it worth it over CodeRabbit, Sourcery, or GitHub Copilot? Here's our honest take.",
+        content: `If you've tried AI code review tools before, you know the drill: they look at the diff, spit out generic comments about variable naming, and occasionally flag something useful buried under twenty noise comments. Most of them are glorified linters with a chatbot strapped on.
+
+Greptile is trying to be different. Instead of just reading your pull request diff, it indexes your entire codebase and uses that context to review code. That sounds like marketing fluff until you see it catch a bug that requires understanding three files you didn't even touch in the PR.
+
+But at $30 per developer per month, it's one of the pricier options in a market that includes free tiers from GitHub Copilot and $15/month tools like Sourcery. So is the full-codebase approach actually worth the premium?
+
+## What Greptile Actually Does
+
+Greptile is an AI code review bot for GitHub and GitLab. You install it, connect your repos, and it automatically reviews every pull request. So far, standard stuff.
+
+The difference is the indexing step. When you connect a repository, Greptile crawls the entire codebase and builds a semantic understanding of your code. It knows your data models, your API patterns, your utility functions, your naming conventions. When it reviews a PR, it's not just looking at the lines that changed — it understands what those changes mean in the context of everything else.
+
+This means Greptile can catch things like:
+
+- A function call that passes the wrong type because the called function was updated in a different PR last week
+- A new endpoint that doesn't follow the auth pattern every other endpoint uses
+- A database query that's going to be slow because it doesn't use the index you set up on that table
+- Style violations that aren't in any linter rule but are consistent across your team's code
+
+These are the kinds of things a senior engineer catches in review. Most AI tools miss them entirely because they only see the diff.
+
+## The Learning Feature
+
+Greptile's newest feature is what they call "Learning." It watches your team's PR comments — what engineers write, what gets thumbs-up reactions, what gets ignored — and adapts its review style over time.
+
+In practice, this means:
+
+- If your team always comments on error handling patterns, Greptile starts flagging those proactively
+- If reviewers consistently thumbs-down generic style comments, Greptile stops making them
+- It picks up on team-specific conventions that aren't documented anywhere
+
+This is genuinely useful. The biggest complaint about AI code review tools is noise — comments that are technically correct but not useful for your team. Learning is Greptile's answer to that, and from what I've seen, it actually works. After a few weeks of thumbs-up/thumbs-down feedback, the comment quality noticeably improves.
+
+## Pricing: $30/Dev/Month
+
+Let's talk about the elephant in the room. Greptile costs $30 per active developer per month on the Cloud plan. That's:
+
+- **2x more than Sourcery** ($15/dev/month)
+- **2x more than CodeRabbit** (starts at $15/month)
+- **Significantly more than GitHub Copilot** (which includes basic code review in its $19/month package)
+
+What you get for that premium:
+
+- Unlimited repositories
+- Unlimited code reviews
+- Unlimited users (you only pay for active devs)
+- Custom rules
+- External app connections
+
+Enterprise pricing is custom and includes self-hosting, SOC 2 compliance, SSO/SAML, and GitHub Enterprise support.
+
+The "active developer" billing is nice — you're not paying for every seat, just people who actually push code. For a team of 20 where only 12 are actively committing, that's $360/month instead of $600.
+
+Still, $30/dev/month adds up fast. A 10-person engineering team is spending $300/month, or $3,600/year. You need to be confident the time savings justify that.
+
+## Greptile vs CodeRabbit
+
+CodeRabbit is the most direct competitor. Both focus on automated PR review, both integrate with GitHub/GitLab, both use AI to understand context.
+
+The key difference: CodeRabbit is faster but shallower. It generates reviews quickly and does a good job catching common issues, but it doesn't index your entire codebase the way Greptile does. CodeRabbit has gotten better at understanding cross-file context, but Greptile still has the edge on deep, codebase-aware reviews.
+
+CodeRabbit wins on price ($15/month vs $30/month) and speed. Greptile wins on review depth and the Learning feature.
+
+**Pick CodeRabbit if:** You want fast, good-enough reviews at half the price.
+**Pick Greptile if:** You want reviews that understand your entire codebase and are willing to pay for it.
+
+## Greptile vs Sourcery
+
+Sourcery bundles code review with security scanning and IDE integration for $15/dev/month. It's a broader tool — Greptile is more focused.
+
+Sourcery's reviews are solid but not as deep as Greptile's. Where Sourcery shines is the security scanning angle and the fact that you get IDE integration included. If you need both code review and security in one tool, Sourcery is the better value.
+
+**Pick Sourcery if:** You want code review + security scanning in one package.
+**Pick Greptile if:** Code review quality is your top priority and you have separate security tooling.
+
+## Greptile vs GitHub Copilot Code Review
+
+GitHub Copilot now includes code review capabilities, and if you're already paying $19/month for Copilot, the review feature is essentially free. The quality isn't in the same league as Greptile — Copilot's reviews are more surface-level and don't have full codebase context — but for many teams, "good enough and free" beats "great but $30/dev/month."
+
+**Pick Copilot if:** You already use Copilot and want basic review without another subscription.
+**Pick Greptile if:** You need enterprise-grade review quality beyond what Copilot offers.
+
+## Who Should Use Greptile
+
+Greptile makes the most sense for:
+
+- **Mid-size to large engineering teams** (10+ devs) where review bottlenecks slow down shipping
+- **Teams with complex codebases** where cross-file context matters
+- **Companies that care about code consistency** and want reviews that enforce patterns, not just catch bugs
+- **Teams where senior engineers spend too much time reviewing** and want to offload the mechanical parts
+
+It's probably overkill for:
+
+- Solo developers or tiny teams (2-3 people)
+- Simple CRUD apps where reviews are straightforward
+- Teams on tight budgets who can't justify $30/dev/month
+
+## The Performance Claims
+
+Greptile claims teams merge PRs 4x faster and catch 3x more bugs. Those are big numbers, and I'd take them with the usual grain of salt — they're comparing against teams with no AI review tooling, not against other AI tools.
+
+That said, the testimonials from CTOs at Brex, WorkOS, Mintlify, and Browserbase are legit companies with serious engineering teams. When the CTO of Brex says "the only AI reviewer that doesn't annoy the shit out of me," that's saying something about signal-to-noise ratio.
+
+The median time-to-merge stat (from 20 hours without Greptile to 1.8 hours with it) is impressive but likely reflects a combination of faster AI review plus cultural changes from adopting the tool, not purely the AI's impact.
+
+## Security and Self-Hosting
+
+Greptile is SOC 2 compliant, encrypts data at rest and in transit, and offers self-hosted deployment for enterprise customers. The self-hosting option is important for companies that can't send code to third-party servers — it's a real option, not just a marketing checkbox.
+
+For teams in regulated industries or with strict security policies, the ability to run Greptile in your own air-gapped environment is a significant advantage over tools that are cloud-only.
+
+## The Bottom Line
+
+Greptile is the best AI code review tool I've seen for teams that need deep, codebase-aware reviews. The full repository indexing approach genuinely produces better reviews than tools that only look at diffs, and the Learning feature means it gets smarter over time.
+
+The price is the sticking point. At $30/dev/month, it's the premium option in a market where decent alternatives exist at half the cost. If your team ships fast and review bottlenecks cost you real money, Greptile pays for itself. If you're a small team where the founder reviews every PR in 10 minutes, save your money.
+
+For mid-size engineering teams (10-50 devs) dealing with growing codebases and slower review cycles, Greptile is the tool to beat. It's not cheap, but it's the closest thing to having a senior engineer review every PR — one that never gets tired and actually reads the whole codebase.`,
+        author: "Hugh McInnis",
+        publishDate: "2026-03-03",
+        publishedAt: "2026-03-03T11:01:58.000-08:00",
+        readTime: "6 min read",
+        categories: ["Reviews","Developer Tools"],
+        featuredImage: "/images/blog/greptile-review-codebase-aware-pr-reviewer.png",
+        tags: ["greptile","ai code review","code review tools","developer tools","coderabbit alternative","pull request automation","ai code review tools"],
     }
 ]; 
