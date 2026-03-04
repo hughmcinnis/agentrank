@@ -6015,5 +6015,85 @@ The honest take: Amazon Q Developer is a solid B-tier AI coding assistant that b
         categories: ["Reviews"],
         featuredImage: "/images/blog/amazon-q-developer-review-free-ai-coding-assistant.png",
         tags: ["amazon q developer","ai coding assistant","github copilot alternative","aws","code completion","free ai tools"],
+    },
+    {
+        id: "55",
+        title: "Bolt.new Hosting Review: Free Deployment Sounds Great Until You Read the Fine Print",
+        slug: "bolt-new-hosting-review-free-deployment-fine-print",
+        excerpt: "Bolt.new includes free hosting with every project. But what do you actually get? Here's what the .bolt.host domain, custom domains, and deployment experience really look like in practice.",
+        content: `Free hosting baked into an AI app builder sounds like the kind of thing that's either brilliant or a trap. With **Bolt.new**, it's honestly a bit of both.
+
+Bolt made a big move in mid-2025 when they switched from Netlify-based deployments to their own hosting infrastructure. Every project — free or paid — gets a .bolt.host subdomain and one-click publishing. No server config, no DNS headaches, no separate hosting account. You build something, hit publish, and it's live.
+
+But "live" and "production-ready" are very different things.
+
+## What you actually get for free
+
+Every Bolt.new user can publish projects to a .bolt.host domain at no extra cost. That includes free tier users. You get HTTPS out of the box, and the deploy process takes about 10 seconds — genuinely fast. There's no build step to configure, no deploy hooks to set up, no YAML files to write. It just works.
+
+The catch? Free tier projects show Bolt branding. Your URL looks like \`my-app.bolt.host\`, which is fine for demos but embarrassing for anything client-facing. And there are upload limits on the free plan that'll bite you if your app has any real media assets.
+
+For most people prototyping ideas, this is totally fine. For anything beyond that, you're looking at Pro.
+
+## Pro gets you custom domains — kind of
+
+Pro plans ($20/month with the yearly option, $30 month-to-month) unlock custom domains. You can point your own domain at your Bolt project and ditch the .bolt.host branding. The setup process is straightforward — add a CNAME record, wait a few minutes, done.
+
+Here's where it gets murky though. Bolt's hosting is built for static sites and simple full-stack apps. If your project needs server-side rendering beyond what their infrastructure supports, you might hit walls. A few Reddit users have reported issues with larger apps — slow cold starts, occasional downtime, and limited control over caching behavior.
+
+Compare that to deploying on Vercel or Netlify directly, where you get edge functions, granular cache headers, split testing, and detailed analytics. Bolt's hosting gives you none of that. It's a "publish and forget" system, which is either a feature or a limitation depending on what you need.
+
+## The Netlify migration mess
+
+This part doesn't get talked about enough. Before August 2025, every Bolt project deployed to Netlify automatically. Then Bolt built their own hosting and made it the default. If you had projects on Netlify, you had to manually migrate them or keep managing two systems.
+
+Bolt documented the migration path — there are guides for switching from Netlify to Bolt hosting and vice versa. But several users got caught off guard by the switch. Projects that were humming along on Netlify suddenly needed attention. Some people just left their old projects on Netlify and only used Bolt hosting for new ones, which works but feels messy.
+
+The whole thing highlights a risk with platform-hosted deployment: you're at the mercy of whatever infrastructure decisions the platform makes next. At least with Netlify or Vercel, hosting is their whole business. For Bolt, it's a feature bolted on (no pun intended) to an AI code generation tool.
+
+## Performance and reliability
+
+I've seen mixed reports. Simple static sites load fast on .bolt.host — we're talking sub-second page loads for basic landing pages and portfolios. That's solid.
+
+Once you add dynamic functionality — API routes, database calls through Supabase, authentication flows — things get less predictable. Cold starts can add noticeable delay, especially for apps that haven't been hit in a while. There's no CDN configuration to tweak, no way to set up custom caching rules, and no performance dashboard to monitor what's happening.
+
+For comparison, Vercel gives you detailed Web Vitals tracking and edge caching for free. Netlify's analytics (paid add-on at $9/month) at least show you bandwidth and request counts. Bolt gives you... a green checkmark that says your site is published.
+
+Bolt did add an Analytics feature for hosted projects, but it's pretty basic — page views and visitor counts, not the kind of performance monitoring you'd want for a real production app.
+
+## SEO features are a nice surprise
+
+One thing Bolt got right: they added an SEO Boost feature for hosted projects. It handles meta tags, Open Graph data, and basic search engine optimization without you needing to dig into the code. For people building landing pages or marketing sites with Bolt, this actually matters.
+
+Most AI app builders treat SEO as an afterthought — or ignore it entirely. The fact that Bolt surfaces these controls in their hosting dashboard is genuinely useful. It's not going to replace a proper SEO strategy, but it covers the basics that a lot of developers forget about.
+
+## Token costs are the hidden hosting fee
+
+Here's the thing nobody talks about when they say Bolt hosting is "free." The hosting might not cost extra, but every time your app breaks and you need to debug it through Bolt's AI chat, that eats tokens. And tokens are the real currency in Bolt's ecosystem.
+
+Users on Reddit have reported spending $100+ in tokens just debugging deployment issues on complex projects. The token-based pricing model means your "free hosting" can get expensive fast if your app needs ongoing maintenance. You're not paying for servers — you're paying for the AI time to fix what goes wrong on those servers.
+
+Replit's approach ($7-30/month flat subscription) starts looking pretty attractive when you factor this in. You know exactly what you're paying, and debugging doesn't drain a separate token bucket.
+
+## When Bolt hosting makes sense
+
+Prototypes and MVPs. Full stop.
+
+If you're building a quick demo for a client, a proof of concept for your startup idea, or a portfolio piece, Bolt's hosting is genuinely excellent. One click, live URL, done. The speed from idea to deployed app is unmatched — and I mean that. v0 makes you deploy through Vercel separately. Lovable requires more steps. Bolt just... publishes.
+
+For anything that needs to handle real traffic, complex routing, or production-level reliability, you should plan to export your code and deploy it somewhere else. Bolt makes this easy enough — you can download your project or push it to GitHub — but it means their hosting is really just a staging environment with a nice URL.
+
+## The honest take
+
+Bolt.new's built-in hosting is a smart product decision that removes friction for beginners. It's the right move for an AI builder that wants to get people from prompt to live URL as fast as possible. And for that use case — quick demos, prototypes, personal projects — it's hard to beat.
+
+But don't kid yourself into thinking it replaces real hosting. The lack of performance controls, limited analytics, and dependency on Bolt's infrastructure decisions make it a risky choice for anything you actually care about keeping online. Use it to ship fast, then move to Vercel or Netlify when the project gets serious. That's not a knock on Bolt — it's just being realistic about what "free hosting included" actually means.`,
+        author: "Hugh McInnis",
+        publishDate: "2026-03-04",
+        publishedAt: "2026-03-04T15:02:29.000-08:00",
+        readTime: "5 min read",
+        categories: ["Reviews","AI App Builders"],
+        featuredImage: "/images/blog/bolt-new-hosting-review-free-deployment-fine-print.png",
+        tags: ["bolt.new","hosting","deployment","web hosting","ai app builder","netlify","vercel"],
     }
 ]; 
