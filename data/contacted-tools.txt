@@ -29,3 +29,6 @@ docanalyzer
 ideogram
 kling-ai
 n8n
+ifixit-fixbot
+hume-ai
+murf-ai

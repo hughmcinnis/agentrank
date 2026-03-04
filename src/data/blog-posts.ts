@@ -5857,5 +5857,97 @@ The AI code editor market is going to consolidate hard over the next year. The W
         categories: ["Development","AI Tools"],
         featuredImage: "/images/blog/best-ai-code-editors-2026.png",
         tags: ["ai code editor","cursor","windsurf","trae","zed","github copilot","ide","coding tools","developer tools"],
+    },
+    {
+        id: "53",
+        title: "Sourcery vs CodeRabbit: I Tried Both AI Code Reviewers — Here's What Actually Happened",
+        slug: "sourcery-vs-coderabbit-ai-code-review-comparison",
+        excerpt: "Two of the most popular AI code review tools go head-to-head. One's quieter, the other's louder. Which approach actually catches more bugs?",
+        content: `Every PR you merge without a proper review is a tiny time bomb. Maybe it's fine. Maybe it introduces a subtle bug that costs you a weekend six months from now. AI code review tools promise to catch what tired human eyes miss — but the two biggest names in the space take wildly different approaches to the job.
+
+**Sourcery** is the quiet one. It filters aggressively, learns from your dismissals, and tries to only say something when it really matters. **CodeRabbit** is the overachiever — it'll summarize your PR, generate diagrams, leave line-by-line comments, and sometimes write more text than your actual code change. Both cost money, both integrate with GitHub and GitLab, and both claim they'll make your team faster.
+
+I've spent time with both. Here's what I actually found.
+
+## The price tag (let's get this out of the way)
+
+Sourcery charges $15 per user per month on their Team plan. CodeRabbit comes in at $24 per seat per month for Pro. Both are free for open source — which is genuinely nice and not just a marketing gimmick. Both charge only for developers who actively use the tool, not your entire org.
+
+That $9/month difference adds up fast. A team of 10 developers pays $150/month for Sourcery vs $240/month for CodeRabbit. Over a year, that's a $1,080 gap. The question is whether CodeRabbit's extra features justify the premium.
+
+Spoiler: it depends on how noisy you like your reviews.
+
+## How they actually review code
+
+Here's where the philosophy split gets interesting.
+
+CodeRabbit goes all-in on every PR. You get a summary (usually pretty good), a walkthrough of changes, sequence diagrams if the changes involve multiple components, and line-by-line comments. The first time you see it, it feels thorough. By the twentieth PR, it can feel like that coworker who comments on every single line of your code during review — technically helpful, practically exhausting.
+
+I've seen CodeRabbit leave 15+ comments on a 30-line PR. Some of them are useful. Some are nitpicks about variable naming conventions that nobody on the team cares about. The signal-to-noise ratio is... not great out of the box.
+
+Sourcery takes the opposite approach. It runs its analysis but then actively filters out comments it thinks are low-value. The result is fewer comments per PR — sometimes just two or three — but they tend to be more actionable. When Sourcery flags something, it usually matters.
+
+The killer feature here is Sourcery's learning loop. Dismiss a comment as unhelpful, and it remembers. Over a few weeks, the tool genuinely gets quieter and more relevant. CodeRabbit has customization options too (you can write rules in \`.coderabbit.yaml\`), but it takes more manual effort to tune.
+
+## IDE support — Sourcery wins this one clearly
+
+Sourcery works in VS Code, Cursor, Windsurf, and the entire JetBrains suite. You can get code reviews before you even push your branch. That's a meaningful workflow improvement — catching issues in your editor is always faster than catching them in a PR comment.
+
+CodeRabbit recently launched a VS Code extension, but it doesn't support JetBrains IDEs. If your team is split across editors (and most teams are), Sourcery covers more ground. Getting feedback while you're still writing code — not after you've context-switched to the PR page — is a real productivity difference that's hard to quantify but easy to feel.
+
+## Security scanning
+
+Both tools do security reviews on PRs, but Sourcery adds something CodeRabbit doesn't: daily full-repo security scans. Not just checking your new code, but re-scanning your entire codebase on a schedule. Vulnerabilities in dependencies change daily, and a PR-only approach misses that.
+
+CodeRabbit's security checks are solid during review — it'll flag hardcoded secrets, SQL injection risks, that kind of thing. But it only looks at what's in the PR. If a CVE drops for a library you're already using, CodeRabbit won't tell you about it until someone happens to touch that code.
+
+This is a genuine differentiator for Sourcery, especially if your team doesn't already run something like Snyk or Dependabot.
+
+## Language support
+
+One thing that bugged me about earlier versions of Sourcery: it was basically Python-only for its static analysis rules. That's changed — they now support JavaScript, TypeScript, Go, Ruby, and more for AI reviews. But the custom rules engine still leans heavily toward Python. If you're a Python shop, Sourcery's rule system is excellent. If you're writing Rust or Kotlin, the AI reviews work fine but you won't get the same depth from static analysis.
+
+CodeRabbit doesn't have this limitation. It treats every language roughly the same since it's LLM-powered end to end. Whether that's a strength (consistent experience) or weakness (no deep language-specific analysis) depends on your perspective.
+
+## The noise problem
+
+Let me be blunt about this because it's the single biggest factor in choosing between these two.
+
+CodeRabbit is noisy. Really noisy. Out of the box, it will flood your PRs with comments, summaries, and suggestions. Some teams love this — they want maximum coverage and don't mind triaging the output. Other teams (most teams, in my experience) start ignoring the bot entirely within two weeks because there's just too much to process.
+
+I've talked to developers who turned off CodeRabbit notifications because the volume was overwhelming. That's the worst possible outcome — you're paying $24/seat for a tool nobody reads.
+
+Sourcery's approach of starting quiet and only flagging high-confidence issues means developers actually read the comments. A review tool that leaves 3 comments people act on is infinitely more valuable than one that leaves 20 comments people scroll past.
+
+You can tune CodeRabbit down, and to be fair, the configuration is quite flexible. But it takes effort, and most teams never bother. Sourcery's defaults are just better out of the box.
+
+## Where CodeRabbit actually wins
+
+I'm not going to pretend Sourcery is better at everything. CodeRabbit has some genuine advantages.
+
+The PR summaries are fantastic. If you're a team lead reviewing 10+ PRs a day, CodeRabbit's auto-generated summaries save real time. You can glance at the summary and know whether a PR needs your attention or is a safe rubber-stamp. Sourcery does summaries too, but CodeRabbit's are more detailed and include those visual diagrams that are surprisingly useful for complex changes.
+
+CodeRabbit's chat feature is also more polished. You can reply to its comments directly in the PR and have a conversation — ask it to explain a suggestion, generate a fix, or look at the issue differently. Sourcery supports this too, but CodeRabbit's conversational flow feels more natural.
+
+And if you're running an open source project, CodeRabbit's free tier is genuinely generous. Unlimited repos, unlimited reviews, no credit card. It's a great way to get AI code review on a project without spending a dime.
+
+## What about Greptile?
+
+Worth mentioning since it's the other big name in this space. **Greptile** takes a fundamentally different approach — it indexes your entire codebase and understands cross-file dependencies before reviewing. It's more expensive and more complex to set up, but it catches architectural issues that both Sourcery and CodeRabbit miss entirely. If you're comparing all three, check out our [Greptile review](/blog/greptile-review-ai-code-review-tool) for the full breakdown.
+
+## The honest verdict
+
+For most teams, Sourcery is the better choice. It's cheaper ($15 vs $24/seat), quieter by default, works in more IDEs, does daily security scans, and gets smarter over time without you having to configure anything. The learning loop alone is worth the switch if you're tired of noisy AI reviews.
+
+CodeRabbit makes sense in two scenarios: you're running an open source project (free tier is unbeatable) or you're a team lead who specifically wants those detailed PR summaries and doesn't mind the verbosity. If you can invest the time to tune CodeRabbit's configuration properly, it's a powerful tool. Most teams just won't.
+
+The $9/month difference per seat isn't huge, but the difference in daily developer experience is. A review tool only works if people actually read the comments — and Sourcery gets that in a way CodeRabbit still hasn't figured out.`,
+        author: "Hugh McInnis",
+        publishDate: "2026-03-04",
+        publishedAt: "2026-03-04T10:02:26.000-08:00",
+        readTime: "6 min read",
+        categories: ["AI Code Review","Developer Tools","Comparisons"],
+        featuredImage: "/images/blog/sourcery-vs-coderabbit-ai-code-review-comparison.png",
+        tags: ["sourcery","coderabbit","code review","ai tools","developer productivity","github","gitlab"],
     }
 ]; 
