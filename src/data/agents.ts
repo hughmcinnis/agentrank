@@ -1623,5 +1623,62 @@ export const agents: Agent[] = [
         features: ["500+ native app integrations", "Visual workflow editor", "Custom JavaScript and Python nodes", "AI agent and LLM workflow nodes", "RAG and vector store support", "Self-hosted or cloud deployment", "Git-based version control", "SSO SAML and LDAP authentication", "Webhook and cron triggers", "White-label embedding (n8n Embed)"],
         useCases: ["Automating repetitive business processes across tools", "Building AI agent pipelines with tool use and RAG", "Syncing data between CRM, email, and project management tools", "Creating webhook-triggered workflows for real-time automation", "Self-hosting automation infrastructure for data privacy compliance"],
         addedDate: "2026-03-02"
+    },
+    {
+        id: "79",
+        name: "iFixit FixBot",
+        slug: "ifixit-fixbot",
+        tagline: "AI-powered repair assistant backed by 20+ years of iFixit repair knowledge",
+        description: "iFixit FixBot is an AI repair assistant that helps you diagnose problems, research solutions, and repair with confidence. Powered by iFixit's massive library of 72,000+ supported products and over 100 million successful repairs, FixBot provides hands-free expert guidance using voice and visual diagnostics. Speak or type your problem, and FixBot draws from professional repair guides, schematics, and troubleshooting tips to walk you through the fix. Available on web, iOS, and Android, with an Enthusiast tier coming soon that adds OEM service manuals, advanced diagnostics, and step-by-step voice-guided repairs. Built by the team that created the world's largest repair community.",
+        categories: ["home-improvement"],
+        website: "https://www.ifixit.com/go/fixbot",
+        pricing: "Free tier available, Enthusiast plan coming soon",
+        paymentOptions: {
+            isPaid: false,
+            hasFreeTrialPeriod: false,
+            hasFreeStarterPlan: true
+        },
+        logo: "/images/logos/ifixit-fixbot-logo.png",
+        features: ["Voice diagnostics for hands-free repair guidance", "Visual diagnostics via photo upload", "72,000+ supported products", "Professional repair guides and schematics", "Consumer electronics, smartphones, laptops, home appliances, game consoles", "Available on web, iOS, and Android", "OEM service manual access (Enthusiast tier)", "Upload your own manuals (Enthusiast tier)"],
+        useCases: ["Diagnosing broken electronics and home appliances", "Getting step-by-step repair instructions for smartphones and laptops", "Hands-free troubleshooting while working on a repair", "Identifying which parts need replacement before ordering", "Learning DIY repair skills with expert-backed guidance"],
+        addedDate: "2026-03-04"
+    },
+    {
+        id: "80",
+        name: "Hume AI",
+        slug: "hume-ai",
+        tagline: "The AI toolkit for emotionally intelligent voice and speech generation",
+        description: "Hume AI builds AI that understands and responds to human emotions. Their flagship products include Octave, a frontier text-to-speech model that lets you design voices with natural language descriptions or clone any voice from seconds of audio, and EVI (Empathic Voice Interface), a speech-to-speech conversational AI that perceives and responds to emotional cues in real time. Octave supports 100+ languages with native-level pronunciation, acting instructions for directing vocal performance, and 250ms speech LLM latency. Ranked #1 in naturalness and expressivity, with 600+ emotion and voice characteristic tags detected. Built on decades of scientific research in human expression, with a strong ethical framework prioritizing beneficence and emotional well-being.",
+        categories: ["voice-audio"],
+        website: "https://www.hume.ai",
+        pricing: "Free tier, Starter $3/mo, Creator $14/mo, Pro $70/mo, Scale $200/mo, Business $500/mo, Enterprise custom",
+        paymentOptions: {
+            isPaid: true,
+            hasFreeTrialPeriod: false,
+            hasFreeStarterPlan: true
+        },
+        logo: "/images/logos/hume-ai-logo.png",
+        features: ["Text-to-speech with natural language voice design", "Instant voice cloning from seconds of audio", "100+ language support with native pronunciation", "Acting instructions for directing vocal delivery", "Empathic Voice Interface (EVI) for conversational AI", "600+ emotion and voice characteristic detection tags", "250ms speech LLM latency", "Voice conversion and cross-lingual synthesis", "Developer API with TypeScript, Python, React, Swift SDKs", "Expression measurement for video, audio, images, and text"],
+        useCases: ["Building emotionally intelligent voice agents and chatbots", "Creating natural-sounding voiceovers and audio content", "Cloning voices for consistent brand narration across languages", "Measuring emotional response in user research and content testing", "Adding expressive speech to gaming, entertainment, and creative projects"],
+        addedDate: "2026-03-04"
+    },
+    {
+        id: "81",
+        name: "Murf AI",
+        slug: "murf-ai",
+        tagline: "Ultra-realistic AI voice generator for voiceovers, dubbing, and voice agents",
+        description: "Murf AI is a production-grade AI voice platform powering 10 million+ developers and creators worldwide, trusted by 300+ Forbes 2000 companies including Nestle, Air France, and Omnicom. Offers the fastest text-to-speech API for voice agents, a highly customizable Studio for voiceovers, and instant AI dubbing in 40+ languages. Features 120+ AI voices across 20+ languages and accents with emotional range and conversational styles. Integrates with Canva, Google Slides, and via HTML embed code. Rated 4.7/5 on G2 with 1000+ reviews. Used for e-learning, narration, advertising, and podcast production with voices so realistic that listeners can't distinguish them from human speakers.",
+        categories: ["voice-audio"],
+        website: "https://murf.ai",
+        pricing: "Free tier available, paid plans with usage-based pricing",
+        paymentOptions: {
+            isPaid: true,
+            hasFreeTrialPeriod: false,
+            hasFreeStarterPlan: true
+        },
+        logo: "/images/logos/murf-ai-logo.png",
+        features: ["120+ AI voices in 20+ languages and accents", "Fastest text-to-speech API for voice agents", "AI dubbing in 40+ languages", "Customizable voice studio for voiceovers", "Emotional and conversational voice styles", "Voice cloning capabilities", "Canva and Google Slides integrations", "HTML embed code for websites", "Startup incubator with 50M free API characters", "Enterprise-grade with SOC 2 compliance"],
+        useCases: ["Creating e-learning course narrations with natural AI voices", "Producing podcast episodes and advertising voiceovers", "Dubbing video content into 40+ languages for global audiences", "Building voice agent applications via the text-to-speech API", "Adding audio narration to presentations and website content"],
+        addedDate: "2026-03-04"
     }
 ]; 
