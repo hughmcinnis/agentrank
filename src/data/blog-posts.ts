@@ -5949,5 +5949,71 @@ The $9/month difference per seat isn't huge, but the difference in daily develop
         categories: ["AI Code Review","Developer Tools","Comparisons"],
         featuredImage: "/images/blog/sourcery-vs-coderabbit-ai-code-review-comparison.png",
         tags: ["sourcery","coderabbit","code review","ai tools","developer productivity","github","gitlab"],
+    },
+    {
+        id: "54",
+        title: "Amazon Q Developer Review: AWS's Free AI Coding Assistant Has a Catch",
+        slug: "amazon-q-developer-review-free-ai-coding-assistant",
+        excerpt: "Amazon Q Developer is free and surprisingly capable — but 50 agentic requests per month? Here's what that actually means for your workflow.",
+        content: `Free AI coding assistants sound great until you hit the invisible walls. **Amazon Q Developer** — AWS's answer to GitHub Copilot — launched with a genuinely free tier and some impressive AWS-specific tricks. But after watching teams actually try to use it day-to-day, the picture gets complicated fast.
+
+Let's talk about the elephant in the room first: pricing. The free tier gives you 50 agentic requests per month. Fifty. That's roughly two per workday. If you're using it for quick questions and occasional code generation, that might be fine. If you're trying to actually lean on it the way you'd use Copilot or Cursor — forget it. You'll burn through your allocation by Wednesday.
+
+The Pro tier runs $19/month per user, which puts it right in line with GitHub Copilot's $19/month individual plan. So the "free" angle is really more of a trial than a real offering. At least be honest about it, Amazon.
+
+## Where It Actually Shines
+
+Here's the thing — if you're deep in the AWS ecosystem, Q Developer does stuff that Copilot literally can't. Writing CloudFormation templates? It's shockingly good at that. Debugging Lambda functions, generating IAM policies, figuring out why your S3 bucket permissions are wrong at 2 AM? This is where Q Developer earns its keep.
+
+I've seen it generate correct IAM policies on the first try that would've taken me 20 minutes of clicking through AWS docs. That's not nothing.
+
+It also handles Java and .NET application transformations — upgrading legacy Java versions, migrating .NET Framework to .NET Core. The free tier gives you 1,000 lines of code per month for this. The Pro tier bumps it to 4,000 lines per user, with overflow priced at $0.003 per line. For teams sitting on massive legacy Java codebases, this alone could justify the subscription.
+
+## The Head-to-Head Nobody Talks About
+
+Faros AI published results from a real enterprise bakeoff — 430 engineers at a data protection company testing Copilot vs Q Developer side by side. The numbers weren't close. Copilot had 2x higher adoption rates, 2x better acceptance rates on code suggestions, and developers saved an extra 3 hours per week compared to Q Developer.
+
+That's... rough. A 42% gap in time savings is the kind of difference that makes procurement decisions easy.
+
+But here's the nuance those numbers miss: that company wasn't primarily an AWS shop. Q Developer's biggest advantage — deep AWS integration — probably didn't get a fair shake. Running the same test at a company that lives and breathes Lambda, DynamoDB, and ECS would likely tell a different story.
+
+## The IDE Situation
+
+Q Developer plugs into VS Code and JetBrains IDEs, plus it works in the CLI. The VS Code extension is decent — code completions show up inline like you'd expect, the chat panel works, and the agentic coding features let it make multi-file changes.
+
+Compared to Cursor's experience though? It feels a generation behind. Cursor rebuilt the entire IDE around AI interactions. Q Developer bolted AI onto an existing extension. You can feel the difference in how natural the workflow is (or isn't).
+
+The CLI tool is actually underrated. If you're SSHing into EC2 instances or working in cloud shells, having Q Developer available in the terminal is genuinely useful. Copilot's CLI offering still feels like an afterthought by comparison.
+
+## What Bugs Me
+
+The 50 request limit on the free tier feels deliberately stingy. It's enough to get you hooked but not enough to be useful. Google's Gemini Code Assist gives you way more on its free tier. GitHub Copilot has a free plan with 2,000 completions per month. Fifty agentic requests is just... come on.
+
+The suggestion quality for non-AWS code is mediocre. Writing a React component? You'll get suggestions, but they're noticeably worse than what Copilot or Cursor produce. It's like the model was so heavily fine-tuned on AWS patterns that general-purpose coding took a hit.
+
+Also — and this is petty but it matters — the branding is confusing. There's Amazon Q Developer, Amazon Q Business, Amazon Q in the console, Amazon Q in various AWS services. Amazon has a naming problem and Q Developer suffers from it. Half the developers I've talked to didn't even know it existed because they confused it with one of the other Q products.
+
+## The Security Story
+
+One area where Q Developer genuinely stands out: security scanning. It can scan your code for vulnerabilities and suggest fixes, with support for Python, Java, JavaScript, TypeScript, and a bunch of infrastructure-as-code formats. The Pro tier automatically opts you out of data collection for model training, and you get IP indemnity — meaning Amazon will cover you if their suggestions accidentally include someone else's copyrighted code.
+
+GitHub Copilot offers similar protections, but only on the Business and Enterprise tiers ($19 and $39/month respectively). Getting IP indemnity at the $19 Pro level is a legitimate advantage for Q Developer.
+
+## Who Should Actually Use This
+
+If your stack is heavily AWS — like 70%+ of your infrastructure runs on AWS services — Q Developer Pro at $19/month is worth trying. The AWS-specific features are genuinely better than anything Copilot can do in that space.
+
+If you're a general-purpose developer working across different clouds or building frontend apps, skip it. Copilot or Cursor will serve you better. The free tier isn't generous enough to be worth the context-switching.
+
+And if you're an enterprise running Java 8 or 11 and need to upgrade? The transformation feature might pay for itself in a single sprint. Run the numbers on how long manual migration would take versus letting Q Developer handle the boilerplate.
+
+The honest take: Amazon Q Developer is a solid B-tier AI coding assistant that becomes A-tier if you live in AWS. For everyone else, it's the third-best option in a market where being third means you're basically invisible. The free tier is more of a demo than a real offering, and Amazon should stop pretending otherwise.`,
+        author: "Hugh McInnis",
+        publishDate: "2026-03-04",
+        publishedAt: "2026-03-04T11:02:32.000-08:00",
+        readTime: "4 min read",
+        categories: ["Reviews"],
+        featuredImage: "/images/blog/amazon-q-developer-review-free-ai-coding-assistant.png",
+        tags: ["amazon q developer","ai coding assistant","github copilot alternative","aws","code completion","free ai tools"],
     }
 ]; 
