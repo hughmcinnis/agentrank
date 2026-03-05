@@ -1,17 +1,10 @@
 {
-  "generatedAt": "2026-03-04T01:00:04.512Z",
-  "totalAgents": 76,
+  "generatedAt": "2026-03-05T01:00:03.976Z",
+  "totalAgents": 79,
   "totalCategories": 20,
   "minTarget": 5,
   "categoriesBelow": 12,
   "priorities": [
-    {
-      "category": "home-improvement",
-      "currentCount": 1,
-      "deficit": 4,
-      "priorityScore": 120,
-      "status": "LOW"
-    },
     {
       "category": "document-analysis",
       "currentCount": 2,
@@ -20,7 +13,7 @@
       "status": "LOW"
     },
     {
-      "category": "voice-audio",
+      "category": "home-improvement",
       "currentCount": 2,
       "deficit": 3,
       "priorityScore": 90,
@@ -90,6 +83,13 @@
       "status": "BELOW_TARGET"
     },
     {
+      "category": "voice-audio",
+      "currentCount": 4,
+      "deficit": 1,
+      "priorityScore": 30,
+      "status": "BELOW_TARGET"
+    },
+    {
       "category": "marketing",
       "currentCount": 5,
       "deficit": 0,
@@ -147,11 +147,11 @@
     }
   ],
   "topPriority": [
-    "home-improvement",
     "document-analysis",
-    "voice-audio",
+    "home-improvement",
     "data-analysis",
-    "transcription"
+    "transcription",
+    "seo"
   ],
   "distribution": {
     "productivity": 32,
@@ -164,6 +164,7 @@
     "scheduling": 5,
     "research": 4,
     "image-generation": 4,
+    "voice-audio": 4,
     "data-analysis": 3,
     "transcription": 3,
     "seo": 3,
@@ -172,7 +173,6 @@
     "video-generation": 3,
     "automation": 3,
     "document-analysis": 2,
-    "voice-audio": 2,
-    "home-improvement": 1
+    "home-improvement": 2
   }
 }

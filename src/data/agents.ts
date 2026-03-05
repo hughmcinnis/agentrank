@@ -1680,5 +1680,62 @@ export const agents: Agent[] = [
         features: ["120+ AI voices in 20+ languages and accents", "Fastest text-to-speech API for voice agents", "AI dubbing in 40+ languages", "Customizable voice studio for voiceovers", "Emotional and conversational voice styles", "Voice cloning capabilities", "Canva and Google Slides integrations", "HTML embed code for websites", "Startup incubator with 50M free API characters", "Enterprise-grade with SOC 2 compliance"],
         useCases: ["Creating e-learning course narrations with natural AI voices", "Producing podcast episodes and advertising voiceovers", "Dubbing video content into 40+ languages for global audiences", "Building voice agent applications via the text-to-speech API", "Adding audio narration to presentations and website content"],
         addedDate: "2026-03-04"
+    },
+    {
+        id: "82",
+        name: "Reducto",
+        slug: "reducto",
+        tagline: "AI document parsing and extraction that reads documents like a human",
+        description: "Reducto is a YC-backed document intelligence platform built by a team from MIT that turns complex documents into structured, LLM-ready data. Their multi-pass system combines traditional computer vision with vision-language models for unmatched accuracy — first breaking down layout, tables, and figures, then using agentic OCR to detect and correct mistakes in real-time. Supports 30+ file types including PDFs, images, spreadsheets, slides, and scanned documents with OCR for handwritten content. Features multilingual parsing across 100+ languages, intelligent document chunking, and bounding box preservation. Trusted by leading AI teams in finance, healthcare, and legal where accuracy on sensitive documents is critical. Raised $75M Series B in October 2025. SOC 2 certified with 99.9%+ uptime and enterprise SLAs.",
+        categories: ["document-analysis"],
+        website: "https://reducto.ai",
+        pricing: "Free tier (15K credits), then $0.015/credit. Custom enterprise pricing available.",
+        paymentOptions: {
+            isPaid: true,
+            hasFreeTrialPeriod: false,
+            hasFreeStarterPlan: true
+        },
+        logo: "/images/logos/reducto-logo.svg",
+        features: ["Agentic OCR with real-time error correction", "30+ supported file types (PDF, images, spreadsheets, slides)", "Layout-aware parsing preserving tables, figures, and structure", "Multilingual support across 100+ languages", "Intelligent document chunking for LLM optimization", "Extract API for structured data extraction", "Bounding box preservation for precise referencing", "OCR for scanned pages, faxes, and handwritten content", "SOC 2 certified with 99.9%+ uptime", "EU/AU data residency endpoints available"],
+        useCases: ["Parsing financial statements and medical records for AI pipelines", "Extracting structured data from complex tables and forms", "Building RAG systems with accurate document ingestion", "Processing legal contracts and compliance documents at scale", "Converting scanned and handwritten documents into machine-readable data"],
+        addedDate: "2026-03-05"
+    },
+    {
+        id: "83",
+        name: "ThoughtSpot",
+        slug: "thoughtspot",
+        tagline: "Agentic analytics platform that turns data questions into instant AI-powered answers",
+        description: "ThoughtSpot is an agentic analytics platform that lets anyone in an organization ask questions in natural language and get instant, governed answers on live data. Rated 4.5+ on G2 with 312+ reviews, it replaces static dashboards and request backlogs with AI-driven insights that flow directly into workflows. Features include Spotter, a conversational AI chatbot for data exploration; SpotterViz for auto-generating complete dashboards from data; SpotterModel for turning raw data into governed semantic models in minutes; and SpotterCode for AI-assisted embedded analytics development. Connects live to Snowflake, Databricks, Redshift, and more with row-level security and data encryption. Supports automated KPI monitoring, anomaly detection, alerts, and drilldowns with no pre-defined drillpath. Used by enterprise teams from sales to the C-suite to eliminate analytics bottlenecks.",
+        categories: ["data-analysis"],
+        website: "https://www.thoughtspot.com",
+        pricing: "Custom pricing (user-based and usage-based plans available)",
+        paymentOptions: {
+            isPaid: true,
+            hasFreeTrialPeriod: true,
+            hasFreeStarterPlan: false
+        },
+        logo: "/images/logos/thoughtspot-logo.png",
+        features: ["Natural language search across live data", "Spotter AI chatbot for conversational analytics", "SpotterViz auto-generates complete dashboards", "SpotterModel automated semantic modeling", "Automated KPI monitoring and anomaly detection", "Live connections to Snowflake, Databricks, Redshift", "Row-level security and data encryption", "Mobile apps for iOS and Android", "Embeddable analytics with developer SDK", "Model Context Protocol (MCP) server support"],
+        useCases: ["Empowering business teams to self-serve analytics without SQL knowledge", "Replacing static dashboards with AI-driven real-time insights", "Monitoring KPIs and detecting anomalies automatically across departments", "Embedding interactive analytics into customer-facing products", "Accelerating data prep and semantic modeling for analytics teams"],
+        addedDate: "2026-03-05"
+    },
+    {
+        id: "84",
+        name: "Handy AI",
+        slug: "handy-ai",
+        tagline: "Snap a photo, get a personalized DIY repair guide in seconds",
+        description: "Handy AI is a mobile DIY repair assistant that uses photo-based AI diagnostics to help anyone fix things around the house. Snap a photo of a broken appliance, leaky pipe, or malfunctioning device, describe the issue, and get a custom step-by-step repair guide tailored to your situation. Each guide includes estimated time, difficulty level, safety notes, cost breakdown, tool requirements, and replacement part recommendations. Covers electronics, appliances, plumbing, furniture assembly, and everyday household maintenance. Features include appliance tracking, repair history, and saved reference photos for an organized maintenance toolkit. Designed for complete beginners with clear, jargon-free instructions. Built by EXPNT Ltd, available free on iOS and Android with in-app purchases for premium features.",
+        categories: ["home-improvement"],
+        website: "https://www.handyai.app",
+        pricing: "Free with in-app purchases",
+        paymentOptions: {
+            isPaid: false,
+            hasFreeTrialPeriod: false,
+            hasFreeStarterPlan: true
+        },
+        logo: "/images/logos/handy-ai-logo.png",
+        features: ["Photo-based AI diagnostics for instant repair analysis", "Personalized step-by-step repair guides", "Tool and replacement part recommendations", "Difficulty level and time estimates for each repair", "Safety notes and cost breakdowns", "Appliance tracking and repair history", "Coverage for electronics, plumbing, furniture, and appliances", "Beginner-friendly jargon-free instructions", "Available on iOS and Android", "Save reference photos and organize maintenance records"],
+        useCases: ["Diagnosing and fixing leaky faucets or plumbing issues at home", "Getting step-by-step guidance for assembling furniture", "Troubleshooting malfunctioning appliances like washers and dryers", "Learning what tools and parts are needed before starting a repair", "Building a maintenance log for home appliances and systems"],
+        addedDate: "2026-03-05"
     }
 ]; 
