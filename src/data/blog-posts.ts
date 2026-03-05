@@ -6429,5 +6429,90 @@ For everyone else — freelancers, small teams, people who just want their meeti
         categories: ["Reviews","Productivity"],
         featuredImage: "/images/blog/fathom-ai-review-free-meeting-notetaker.png",
         tags: ["fathom","meeting notetaker","ai meetings","transcription","otter alternative","fireflies alternative","productivity"],
+    },
+    {
+        id: "60",
+        title: "GitHub Copilot Code Review: 561K PRs Reviewed, But Is It Actually Good?",
+        slug: "github-copilot-code-review-pr-reviewer-honest-take",
+        excerpt: "GitHub Copilot reviewed 561K pull requests in a single quarter. But devs on Reddit say it gives worse feedback than ChatGPT. Here's what's actually going on.",
+        content: `There's a stat floating around that should make every other AI code review tool nervous: GitHub Copilot reviewed 561,000 pull requests in a single quarter while only *authoring* 75,000. That's not a typo. Copilot is doing nearly 8x more reviewing than writing.
+
+But here's the awkward part — a lot of developers think those reviews are kind of terrible.
+
+## The Promise vs. What You Actually Get
+
+**GitHub Copilot's** code review feature launched as part of the broader Copilot ecosystem, and it sounds great on paper. You open a PR, request a review from Copilot, and it leaves inline comments with suggestions. It can even propose direct code changes you merge with one click.
+
+In practice? It's a mixed bag that leans heavily toward "surface-level observations."
+
+I've seen it flag missing null checks (fine), suggest renaming variables for clarity (sure), and occasionally catch a genuine logic issue. But more often than not, it reads like a junior developer who skimmed your code and wants to prove they looked at it. "Consider adding error handling here" on a function that already has a try-catch two lines up. That kind of thing.
+
+One Reddit thread from r/ExperiencedDevs put it bluntly: developers were getting better code review feedback by pasting their diffs into ChatGPT or Claude than from Copilot's dedicated PR review feature. That's... not a great look for a purpose-built tool.
+
+## Why It Falls Short
+
+The core problem is context. Or rather, the lack of it.
+
+Copilot's code review doesn't deeply understand your codebase the way tools like **Greptile** or **CodeRabbit** do. It's mostly looking at the diff in isolation — the changed lines, maybe a bit of surrounding context. It doesn't know your architecture, your conventions, or why that weird pattern exists in your service layer (there's always a reason, and it's usually legacy debt).
+
+This matters more than people realize. A good human reviewer catches issues because they know the system. They'll say "this breaks the caching layer" or "we tried this approach last quarter and it caused race conditions." Copilot can't do any of that. It's pattern-matching on the diff, and diffs without context are basically meaningless.
+
+Compare that to CodeRabbit at $24/month, which does incremental reviews on each commit, builds context across the full PR conversation, and lets you ask follow-up questions. Or Greptile, which literally indexes your entire codebase before reviewing anything. The gap is real.
+
+## The Pricing Situation
+
+Here's where it gets interesting — and a little confusing.
+
+Copilot's code review burns through what GitHub calls "premium requests." On the free tier, you get 50 of those per month. On Pro ($10/month), you get 300. Pro+ ($39/month) bumps that to 1,500.
+
+But premium requests aren't just for code review. They're also consumed by Copilot Chat, agent mode, and advanced model selection. So if you're using Copilot for coding assistance *and* code review, those 300 requests on Pro disappear fast. A busy week of PRs could eat through half your monthly allocation.
+
+For comparison:
+- **CodeRabbit:** $24/month per user, unlimited reviews
+- **Sourcery:** $15/month per user, unlimited reviews
+- **Greptile:** ~$30/month, codebase-aware reviews
+
+The dedicated tools don't meter their core feature. Copilot does. And $39/month for Pro+ — to get enough premium requests for serious use — puts it in the same ballpark as tools that do nothing *but* code review, and do it better.
+
+## What It's Actually Good At
+
+I don't want to be entirely unfair here. Copilot code review has a few things going for it.
+
+First, it's *right there*. No GitHub App to install, no third-party service to authorize, no new dashboard to check. If your team already pays for Copilot, code review is just... available. You add \`@copilot\` as a reviewer and that's it. The friction is essentially zero.
+
+Second, the one-click code suggestions are genuinely nice. When Copilot proposes a change, you can merge it directly from the review comment. No copying, no switching to your IDE, no manual edits. For small fixes — typos, formatting, simple refactors — this workflow is faster than anything competitors offer.
+
+Third, it catches the boring stuff reliably. Missing error handling, unused imports, inconsistent naming, obvious null pointer risks. It's not going to find architectural problems, but it handles the checklist-level stuff that human reviewers often skip because they're focused on bigger things.
+
+Think of it as a spell checker for code. You wouldn't skip editing because you have spell check, but you'd be annoyed if your spell checker didn't exist.
+
+## The Real Competition
+
+The AI code review space has gotten crowded fast, and Copilot's biggest advantage — GitHub integration — isn't as unique as it used to be.
+
+CodeRabbit and Sourcery both install as GitHub Apps and comment directly on PRs, just like Copilot. Greptile does the same. The integration gap has basically closed.
+
+What hasn't closed is the quality gap. Tools that focus exclusively on code review tend to produce more thoughtful, context-aware feedback. **Qodo** (formerly CodiumAI) is particularly interesting here — it's known for low-noise reviews that focus on genuinely risky changes instead of spamming every PR with observations.
+
+And then there are the free options. **LlamaPReview** is open source, installs in one click, and uses chain-of-thought reasoning to build a mental model of your codebase before reviewing. It's rough around the edges, but the depth of analysis sometimes beats Copilot's paid offering. That's embarrassing.
+
+Graphite — recently acquired by Cursor — is another one to watch. Their code review features are tightly integrated with their stacking workflow, and the reviews actually understand PR dependencies.
+
+## Who Should Use It (And Who Shouldn't)
+
+If your team already pays for Copilot Business ($19/user/month) and nobody wants to evaluate a separate code review tool, Copilot's reviews are better than nothing. They'll catch surface-level issues and save a few minutes per PR. Fine.
+
+But if code review quality actually matters to your team — if you've had production incidents that better reviews would've caught, if you're a smaller team without senior engineers to do thorough reviews — you should be looking at CodeRabbit or Greptile instead. The $24-30/month for a dedicated tool will pay for itself the first time it catches something Copilot would've missed.
+
+Solo devs on the free tier? Honestly, just paste your diff into Claude or ChatGPT. You'll get a more thoughtful review than Copilot's free allocation allows, and you can ask follow-up questions without burning premium requests.
+
+The bottom line: Copilot reviewing 561K PRs is impressive as a stat. But volume isn't quality, and right now, GitHub's biggest advantage is convenience — not depth. If they want to compete seriously in the code review space, they need to give Copilot actual codebase awareness. Until then, it's a decent spell checker for your PRs, and not much more.`,
+        author: "Hugh McInnis",
+        publishDate: "2026-03-05",
+        publishedAt: "2026-03-05T15:02:01.000-08:00",
+        readTime: "5 min read",
+        categories: ["AI Code Review","Developer Tools"],
+        featuredImage: "/images/blog/github-copilot-code-review-pr-reviewer-honest-take.png",
+        tags: ["github copilot","code review","ai code review","pull request","copilot pr review","github copilot review 2026"],
     }
 ]; 
