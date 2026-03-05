@@ -6335,5 +6335,99 @@ Honestly? Download both free tiers and spend a day with each on your actual code
         categories: ["AI Code Editors","Developer Tools"],
         featuredImage: "/images/blog/cursor-vs-windsurf-comparison-which-ai-ide-wins.png",
         tags: ["cursor","windsurf","ai ide","code editor","developer tools","cursor vs windsurf","ai coding"],
+    },
+    {
+        id: "59",
+        title: "Fathom AI Review: The Free Meeting Notetaker That's Quietly Beating Otter and Fireflies",
+        slug: "fathom-ai-review-free-meeting-notetaker",
+        excerpt: "Fathom gives you unlimited recordings and transcriptions for free — no catch. But how does it stack up against Otter, Fireflies, and the growing pile of AI meeting assistants fighting for your calendar?",
+        content: `Nobody asked for seventeen different AI meeting notetakers. Yet here we are, drowning in options that all promise to "never miss an action item again" while a robot joins your Zoom call and makes everyone slightly uncomfortable.
+
+**Fathom** stands out from this pile for one reason that shouldn't be remarkable but somehow is: the free tier is actually good. Not "free for 300 minutes then we hold your transcripts hostage" good. Actually good.
+
+## Free Means Free (No, Really)
+
+Unlimited recordings. Unlimited transcriptions. AI call summaries. Search across all your calls. Clips and playlists. All free. Forever, apparently.
+
+If you've used Otter.ai recently, you know the pain. They gutted their free plan a while back — 300 minutes per month, and the AI features got locked behind a $16.99/month paywall. Fireflies.ai gives you 800 minutes of storage on free, which sounds generous until you realize a single hour-long meeting eats a big chunk of that.
+
+Fathom just... doesn't do that. I keep waiting for the other shoe to drop, and so far it hasn't. They make money on the Premium ($20/month) and Team ($19/month per user) plans, which add things like advanced summaries, AI action items, and CRM integrations. But the core recording and transcription? Free.
+
+This is either a brilliant growth strategy or a VC-funded time bomb. Probably both.
+
+## How It Actually Works in Practice
+
+Fathom joins your meeting as a bot — "Fathom Notetaker" shows up in the participant list. This is the same approach as Fireflies, Otter, and basically everyone else. Some people find it weird. Some meetings have a strict "no bots" policy. That's a real limitation.
+
+Once it's recording, Fathom transcribes in real time and generates a summary within a couple minutes of the call ending. The summaries are structured — key topics, decisions made, action items pulled out — and from what users report, they're noticeably more accurate than Otter's summaries.
+
+One thing I appreciate: Fathom lets you highlight moments *during* the call. Hear something important? Click a button and it bookmarks that timestamp. After the meeting, your highlights become a playlist you can share with your team. It's a small feature that makes a big difference when you're trying to find that one thing your client said about the deadline.
+
+## The Transcription Quality Question
+
+Transcription accuracy is where these tools live or die, and honestly? They're all pretty close now. Fathom, Otter, Fireflies — they all handle clear English audio well. Where things get messy is accents, crosstalk, and bad microphones.
+
+Fathom handles multiple speakers reasonably well but it's not perfect. If three people talk over each other (every standup meeting ever), you'll get garbled sections. The speaker identification is solid when people take turns, less so during heated debates.
+
+One Reddit user in the MSP community put it well — they switched from Otter to Fathom after Otter raised prices and cut minutes, and found Fathom's accuracy comparable or better. The consensus seems to be that Fathom's AI summaries specifically are a step above most competitors, even if the raw transcription is roughly on par.
+
+## Where Fathom Falls Short
+
+No mobile app for joining calls. This is the most common complaint I've seen. If you're taking a meeting from your phone, Fathom can't join. For a tool built around capturing every meeting, that's a pretty big blind spot. Supposedly they're working on it, but it's been a frequent request for a while.
+
+The bot joining your call can be awkward in certain contexts. Client calls, interviews, sensitive conversations — some people just don't want a recording bot sitting there. Fathom doesn't have a "listen through your microphone" mode like some competitors (Jamie, for instance, records locally without joining the call). If stealth matters to you, Fathom isn't it.
+
+CRM integration is locked behind the Business plan at $25-34/month. If you're a sales team that needs call notes pushed into Salesforce or HubSpot automatically, the free tier won't cut it. And at $25/month per user, you're in Gong territory — a tool that's way more mature for sales-specific use cases.
+
+Custom vocabulary is a Team plan feature. If your industry has specific jargon — medical terms, legal terminology, startup acronyms nobody outside your company knows — you'll need to pay to teach Fathom those words. This matters more than you'd think.
+
+## Fathom vs The Competition
+
+Let's be honest about the landscape here (okay, the market — I refuse to say landscape).
+
+**Otter.ai** ($16.99/month for Pro) was the original AI notetaker and still has the best brand recognition. But their free tier is stingy now, and the product has gotten bloated. They added a chat feature, a workspace thing, meeting scheduling — it's trying to be too many things.
+
+**Fireflies.ai** ($10/month for Pro) has better integrations than Fathom and a more powerful search. If you need to search across hundreds of past meetings for specific topics, Fireflies is probably better. But it's not free for serious use.
+
+**tl;dv** (free tier available, $20/month for Pro) is the closest competitor to Fathom's value proposition — generous free tier, good summaries. European company, so if GDPR compliance matters to you, worth a look. The UI isn't as polished as Fathom's though.
+
+**Grain** ($19/month) focuses heavily on the "share clips" angle. Good for teams that do a lot of customer research and want to share specific moments. Less good as a general notetaker.
+
+**Gong** ($100+/month per user) is the enterprise gorilla. If you're a sales org with budget, Gong does everything Fathom does and way more — coaching, deal intelligence, pipeline analytics. But it costs 5-10x more and takes weeks to set up.
+
+For an individual or small team that just wants meetings recorded and summarized without paying for it? Fathom wins. It's not even close on value.
+
+## The Premium Upgrade — Worth It?
+
+Fathom Premium runs $20/month (or $16/month annually). You get advanced summaries, AI-generated action items, a conversational meeting assistant (ask questions about your meetings), and a custom bot name so it doesn't say "Fathom Notetaker" in the participant list.
+
+The action items feature is genuinely useful if you're in a lot of meetings. Instead of scrubbing through notes to figure out what you committed to, Fathom pulls out every "I'll do X by Y" automatically. Not perfect, but catches maybe 80% of them.
+
+The conversational assistant — ask it "What did Sarah say about the Q2 timeline?" — is neat but feels early. It works best for recent meetings and struggles with vague questions. Give it a year.
+
+Honestly, most individuals can stick with the free tier. The premium features are nice-to-have, not need-to-have. Where the paid plans really matter is teams — shared search, folders, collaboration, CRM sync. That's where the money justification clicks.
+
+## The Elephant in the Room
+
+Every AI meeting tool is recording your conversations and processing them on their servers. Fathom included. They say they don't sell your data and they delete recordings when you ask. Their privacy policy is pretty standard.
+
+But if you're discussing genuinely sensitive information — legal strategy, M&A talks, medical consultations — maybe don't pipe that through any third-party AI tool. Some things should stay between the humans in the room. Just saying.
+
+Fathom is SOC 2 Type II compliant, which puts it above average for this category. But compliance certifications don't mean your data can't be breached. They mean someone audited that reasonable security practices exist.
+
+## The Bottom Line
+
+Fathom is doing something smart by being radically generous with the free tier. It builds trust, gets people hooked on having every meeting recorded, and then the team features sell themselves when your company grows. As a strategy, it's working — they've grown fast without the aggressive upselling that makes Otter feel desperate.
+
+If you're currently paying for a meeting notetaker and don't use CRM integrations or team features, switch to Fathom's free plan today. You're literally throwing money away. If you're on a sales team, evaluate whether you need Fathom Business or should just go straight to Gong. The middle ground is awkward.
+
+For everyone else — freelancers, small teams, people who just want their meetings documented without thinking about it — Fathom is the easy pick right now. Just don't forget to tell people they're being recorded. That's still a thing you need to do.`,
+        author: "Hugh McInnis",
+        publishDate: "2026-03-05",
+        publishedAt: "2026-03-05T11:04:09.000-08:00",
+        readTime: "6 min read",
+        categories: ["Reviews","Productivity"],
+        featuredImage: "/images/blog/fathom-ai-review-free-meeting-notetaker.png",
+        tags: ["fathom","meeting notetaker","ai meetings","transcription","otter alternative","fireflies alternative","productivity"],
     }
 ]; 
