@@ -1737,5 +1737,62 @@ export const agents: Agent[] = [
         features: ["Photo-based AI diagnostics for instant repair analysis", "Personalized step-by-step repair guides", "Tool and replacement part recommendations", "Difficulty level and time estimates for each repair", "Safety notes and cost breakdowns", "Appliance tracking and repair history", "Coverage for electronics, plumbing, furniture, and appliances", "Beginner-friendly jargon-free instructions", "Available on iOS and Android", "Save reference photos and organize maintenance records"],
         useCases: ["Diagnosing and fixing leaky faucets or plumbing issues at home", "Getting step-by-step guidance for assembling furniture", "Troubleshooting malfunctioning appliances like washers and dryers", "Learning what tools and parts are needed before starting a repair", "Building a maintenance log for home appliances and systems"],
         addedDate: "2026-03-05"
+    },
+    {
+        id: "85",
+        name: "Voxtral",
+        slug: "voxtral",
+        tagline: "Open-source speech understanding models with state-of-the-art transcription and audio intelligence",
+        description: "Voxtral is Mistral AI's open-source speech understanding platform that goes far beyond simple transcription. Available in two sizes — a 24B production model and a 3B edge model — both released under Apache 2.0. Voxtral outperforms OpenAI Whisper large-v3 across all benchmarks while costing less than half the price of comparable APIs. Handles audio up to 30 minutes for transcription and 40 minutes for understanding with a 32K token context window. Features built-in Q&A and summarization directly on audio content, automatic language detection across dozens of languages, speaker diarization, and function-calling straight from voice — enabling spoken commands to trigger backend workflows without intermediate parsing. The API routes to Voxtral Mini Transcribe, optimized for cost and latency. Ideal for meeting intelligence, call center analytics, podcast processing, and voice-driven applications.",
+        categories: ["transcription", "voice-audio"],
+        website: "https://mistral.ai/news/voxtral",
+        pricing: "API pricing: Voxtral Mini Transcribe from $0.012/min. Self-hosted free under Apache 2.0.",
+        paymentOptions: {
+            isPaid: true,
+            hasFreeTrialPeriod: false,
+            hasFreeStarterPlan: true
+        },
+        logo: "/images/logos/voxtral-logo.png",
+        features: ["State-of-the-art transcription accuracy beating Whisper large-v3", "Two model sizes: 24B (production) and 3B (edge/local)", "32K token context — up to 30min transcription, 40min understanding", "Built-in audio Q&A and summarization without chaining models", "Automatic language detection and multilingual support", "Speaker diarization for multi-speaker audio", "Function-calling from voice for workflow automation", "Real-time streaming with sub-200ms latency", "Apache 2.0 open-source license", "Less than half the cost of comparable closed APIs"],
+        useCases: ["Transcribing meetings with speaker identification and action item extraction", "Building voice-driven assistants that trigger backend workflows", "Processing podcast episodes with automated summaries and Q&A", "Call center analytics with multilingual transcription at scale", "Edge deployment of speech understanding on devices with the 3B model"],
+        addedDate: "2026-03-05"
+    },
+    {
+        id: "86",
+        name: "Docsumo",
+        slug: "docsumo",
+        tagline: "AI document workflows that turn unstructured data into fast, accurate business decisions",
+        description: "Docsumo is an intelligent document processing platform trusted by 10,000+ businesses that automates the indexing, classification, extraction, validation, and analysis of unstructured documents. Achieves ~99% data extraction accuracy compared to 60-70% with manual entry, processing documents in under 5 minutes versus 2+ hours manually. Supports unlimited pre-trained document AI models covering invoices, bank statements, tax forms, insurance claims, and more. Features AI-powered auto-classification and splitting, cross-document validation for fraud detection (64% lower fraud rates), master data lookup, and custom document pipelines. Integrates via webhooks, APIs, and pre-built connectors to CRM, ERP, and LOS systems. SOC 2 Type 2, GDPR, and HIPAA compliant with bank-grade encryption. Founded in 2019, launched on Product Hunt, backed by Techstars, and has processed over 20 million documents saving $100M+ in processing costs.",
+        categories: ["document-analysis", "automation"],
+        website: "https://www.docsumo.com",
+        pricing: "Free tier (1,000 pages, 10 users). Business and Enterprise plans with custom pricing.",
+        paymentOptions: {
+            isPaid: true,
+            hasFreeTrialPeriod: true,
+            hasFreeStarterPlan: true
+        },
+        logo: "/images/logos/docsumo-logo.png",
+        features: ["~99% data extraction accuracy with AI models", "Auto-classification and intelligent document splitting", "Cross-document validation and fraud detection", "30+ pre-trained document AI models", "Custom document pipelines and workflows", "AI-transform for validations, classification, categorization", "Master data lookup and database mapping", "Real-time document analytics dashboard", "SOC 2 Type 2, GDPR, and HIPAA compliant", "Pre-built integrations with CRM, ERP, and LOS systems"],
+        useCases: ["Automating invoice processing and accounts payable workflows", "Extracting data from bank statements and financial documents for lending", "Processing insurance claims with cross-document fraud validation", "Digitizing logistics dispatch tickets and shipping documents", "Building touchless document workflows for enterprise compliance"],
+        addedDate: "2026-03-05"
+    },
+    {
+        id: "87",
+        name: "AthenaHQ",
+        slug: "athenahq",
+        tagline: "Track and optimize your brand's visibility across AI search engines like ChatGPT, Perplexity, and Gemini",
+        description: "AthenaHQ is a Generative Engine Optimization (GEO) and AI Engine Optimization (AEO) platform built by former Google Search and DeepMind engineers. It helps brands monitor, analyze, and improve their visibility across 8+ major AI platforms including ChatGPT, Perplexity, Google AI Overviews, Gemini, Claude, Copilot, and Grok. Features include real-time brand mention tracking, competitor share-of-voice analysis, AI content gap detection, citation source analysis, and automated content optimization recommendations. Teams report 2.5x increases in AI-driven organic traffic, 50% faster response to brand mentions, and 5x increases in AI content citations. The platform includes prompt volume estimation, brand sentiment intelligence, dynamic AI crawler management (robots.txt and llms.txt), and executive-level ROI reporting. Trusted by brands across CPG, SaaS, finance, and education verticals.",
+        categories: ["seo", "marketing"],
+        website: "https://athenahq.ai",
+        pricing: "Self-Serve from $295/month (3,600 credits). Enterprise custom pricing.",
+        paymentOptions: {
+            isPaid: true,
+            hasFreeTrialPeriod: false,
+            hasFreeStarterPlan: false
+        },
+        logo: "/images/logos/athenahq-logo.png",
+        features: ["Track brand visibility across 8+ AI platforms (ChatGPT, Perplexity, Gemini, Claude, etc.)", "Competitor share-of-voice monitoring and benchmarking", "AI content gap analysis and optimization recommendations", "Citation source analysis and link building insights", "Prompt volume estimation and trend analysis", "Brand sentiment intelligence across AI platforms", "Dynamic robots.txt and llms.txt management for AI crawlers", "GA4 and Google Search Console integration", "Executive ROI dashboards with BI tool support", "Multi-language and multi-region tracking"],
+        useCases: ["Monitoring and improving brand mentions in ChatGPT and Perplexity responses", "Tracking competitor visibility across AI search platforms", "Optimizing content to become a primary citation source for AI answers", "Measuring ROI of AI search optimization efforts for executive reporting", "Detecting and responding to brand misinformation in AI-generated content"],
+        addedDate: "2026-03-05"
     }
 ]; 

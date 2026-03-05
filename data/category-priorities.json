@@ -1,33 +1,19 @@
 {
-  "generatedAt": "2026-03-05T01:00:03.976Z",
-  "totalAgents": 79,
+  "generatedAt": "2026-03-05T14:00:04.472Z",
+  "totalAgents": 82,
   "totalCategories": 20,
   "minTarget": 5,
   "categoriesBelow": 12,
   "priorities": [
     {
-      "category": "document-analysis",
-      "currentCount": 2,
-      "deficit": 3,
-      "priorityScore": 90,
-      "status": "LOW"
-    },
-    {
-      "category": "home-improvement",
-      "currentCount": 2,
-      "deficit": 3,
-      "priorityScore": 90,
-      "status": "LOW"
-    },
-    {
-      "category": "data-analysis",
+      "category": "transcription",
       "currentCount": 3,
       "deficit": 2,
       "priorityScore": 60,
       "status": "BELOW_TARGET"
     },
     {
-      "category": "transcription",
+      "category": "document-analysis",
       "currentCount": 3,
       "deficit": 2,
       "priorityScore": 60,
@@ -55,6 +41,13 @@
       "status": "BELOW_TARGET"
     },
     {
+      "category": "home-improvement",
+      "currentCount": 3,
+      "deficit": 2,
+      "priorityScore": 60,
+      "status": "BELOW_TARGET"
+    },
+    {
       "category": "video-generation",
       "currentCount": 3,
       "deficit": 2,
@@ -66,6 +59,13 @@
       "currentCount": 3,
       "deficit": 2,
       "priorityScore": 60,
+      "status": "BELOW_TARGET"
+    },
+    {
+      "category": "data-analysis",
+      "currentCount": 4,
+      "deficit": 1,
+      "priorityScore": 30,
       "status": "BELOW_TARGET"
     },
     {
@@ -147,11 +147,11 @@
     }
   ],
   "topPriority": [
-    "document-analysis",
-    "home-improvement",
-    "data-analysis",
     "transcription",
-    "seo"
+    "document-analysis",
+    "seo",
+    "social-media",
+    "accounting"
   ],
   "distribution": {
     "productivity": 32,
@@ -162,17 +162,17 @@
     "marketing": 5,
     "email": 5,
     "scheduling": 5,
+    "data-analysis": 4,
     "research": 4,
     "image-generation": 4,
     "voice-audio": 4,
-    "data-analysis": 3,
     "transcription": 3,
+    "document-analysis": 3,
     "seo": 3,
     "social-media": 3,
     "accounting": 3,
+    "home-improvement": 3,
     "video-generation": 3,
-    "automation": 3,
-    "document-analysis": 2,
-    "home-improvement": 2
+    "automation": 3
   }
 }

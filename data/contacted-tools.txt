@@ -32,3 +32,6 @@ n8n
 ifixit-fixbot
 hume-ai
 murf-ai
+reducto
+thoughtspot
+handy-ai
