@@ -6165,5 +6165,79 @@ Look, the honest answer is that Claude at $20/month handles 90% of writing tasks
         categories: ["writing","marketing","productivity"],
         featuredImage: "/images/blog/best-ai-writing-tools-2026.png",
         tags: ["ai writing","content creation","jasper","copy.ai","writesonic","notion ai","claude","comparison"],
+    },
+    {
+        id: "57",
+        title: "How Big Is Brave Search's Index, Really? (And Why It Matters More Than You Think)",
+        slug: "brave-search-independent-index-size",
+        excerpt: "Brave Search now indexes 40 billion pages — up from 10 billion in 2022. Here's how that stacks up against Google and Bing, why it matters for AI apps, and where the gaps still show.",
+        content: `Building a search index from scratch is insane. Like, genuinely one of the hardest problems in tech. Google's had a 25-year head start crawling the web, and most "alternative" search engines just rent results from Google or Bing behind the scenes. So when someone actually builds their own index — from zero — it's worth paying attention to.
+
+**Brave Search** hit 40 billion indexed pages as of early 2026. That number has been climbing fast: 10 billion in May 2022, somewhere around 18 billion by mid-2023, 30 billion by late 2024, and now 40 billion. They're adding over 100 million new and refreshed pages per day.
+
+But what does 40 billion actually mean? And is it enough?
+
+## The numbers in context
+
+Google doesn't publish its exact index size anymore — they stopped doing that years ago when it became a meaningless flex. Best estimates put it somewhere north of 400 billion pages, possibly much more. Bing is probably in the 100-200 billion range, though Microsoft is similarly cagey about specifics.
+
+So Brave's 40 billion is roughly 10% of Google's index. That sounds bad on paper. In practice? It's more complicated than that.
+
+Here's the thing most people don't realize: the vast majority of Google's index is junk. Duplicate pages, spam farms, auto-generated content, pages that haven't been updated since 2008. When you search for something, Google isn't actually querying all 400 billion pages — it's using a much smaller working set of pages it considers relevant and high-quality.
+
+Brave's 40 billion pages, built partly through their Web Discovery Project (where real Brave browser users anonymously contribute browsing data), tends to skew toward pages people actually visit. That's a fundamentally different approach than blindly crawling every link on the internet.
+
+## How Brave builds its index differently
+
+Most search engines work the same way: send out crawlers, follow every link, index everything. Brave does that too — they have BraveBot crawling the web like everyone else. But the Web Discovery Project adds a human signal that other crawlers don't have.
+
+When Brave browser users opt in to WDP, their browser anonymously reports which pages they visit and how they interact with search results. This helps Brave understand which pages are genuinely useful versus which ones just happen to have good SEO. It's crowdsourced quality control, basically.
+
+The tradeoff is obvious: you need a lot of Brave browser users for this to work well. Brave claims over 70 million monthly active users as of late 2025, which is decent — but it's a fraction of Chrome's billions. So WDP data is useful but not as rich as what Google gets from Chrome usage patterns.
+
+## Where you'll notice the gaps
+
+I've been using Brave Search as my default for a while now, and the gaps are real but specific.
+
+Local searches are still rough. Search for a restaurant in a mid-sized city and you might get outdated info or just fewer results than Google Maps would show. Brave acknowledges this — it's on their roadmap, but it's a hard problem when you don't have the local business data that Google has spent decades collecting.
+
+Obscure queries hit the ceiling too. If you're searching for a random person's name, a niche academic paper, or something very recent that happened in the last few hours — Google's bigger index wins. Brave fills some of these gaps by pulling supplemental results from Bing's index, but they're transparent about when they do this (check the "Independence" meter at the bottom of your results).
+
+For mainstream searches though? Product comparisons, how-to queries, tech topics, news — Brave's results are genuinely competitive. Sometimes better, actually, because they're not drowning in the same SEO-optimized listicles that dominate Google's first page.
+
+## The API angle — and why AI companies care
+
+Here's where the index size story gets really interesting. In August 2025, Microsoft shut down Bing's public search API. A few months later, Google sued SerpApi for scraping its results. That left AI companies — the ones building chatbots, agents, and search-augmented apps — in a tough spot.
+
+Brave is now the only major independent search index with a commercially available API. They claim most of the top-10 LLMs use Brave's Search API for real-time web data. Pricing starts at $5 per thousand queries, which is reasonable compared to what companies were paying for Bing API access.
+
+This is honestly Brave's strongest position right now. The consumer search product is good but not yet a full Google replacement. The API product, though? It's increasingly the only game in town if you want legal, reliable, independent search data at scale.
+
+## The competition (what competition?)
+
+The list of truly independent search indexes is embarrassingly short.
+
+**Mojeek** has been building its own index since 2006 — longer than Brave — but it's much smaller. Their index has grown to somewhere around 8 billion pages. The results are... fine for simple queries, but you'll hit walls fast. Mojeek is more of an ideological statement than a daily driver.
+
+**Kagi** takes a different approach entirely. They blend results from their own small index with Brave, Google, and other sources, then apply aggressive personalization and filtering. It's $10/month and genuinely good — but it's not independent in the same way. If Brave or Google cut them off, Kagi's quality would drop significantly.
+
+**Yandex** has a massive independent index, but it's Russia-focused and not really an option for Western users or AI companies right now.
+
+That's basically it. Everyone else — DuckDuckGo, Ecosia, Startpage, Qwant — is reskinning Bing or Google results with a privacy wrapper. Nothing wrong with that, but it means they live or die based on someone else's index.
+
+## Is 40 billion enough?
+
+For 90% of what people search for? Yeah, probably. Brave's index covers the high-traffic web pretty thoroughly, and it's growing at a rate that should help close the remaining gaps over the next year or two.
+
+The real question isn't whether 40 billion is enough — it's whether Brave can keep growing fast enough while Google and Microsoft actively try to wall off their data. The Bing API shutdown and the SerpApi lawsuit aren't just legal moves. They're signals that Big Tech sees independent search as a threat worth squashing.
+
+Brave's index is the most credible alternative to Google and Bing that's ever existed. That's not hyperbole — there literally isn't another option at this scale. Whether you care about privacy, AI development, or just not having one company control how you find information online, that 40 billion number matters a lot more than it might seem.`,
+        author: "Hugh McInnis",
+        publishDate: "2026-03-05",
+        publishedAt: "2026-03-05T07:11:41.000-08:00",
+        readTime: "5 min read",
+        categories: ["Search Engines","AI Tools"],
+        featuredImage: "/images/blog/brave-search-independent-index-size.png",
+        tags: ["brave search","search index","independent search","google alternative","web search api","brave index size"],
     }
 ]; 
