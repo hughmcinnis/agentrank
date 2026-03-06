@@ -6514,5 +6514,77 @@ The bottom line: Copilot reviewing 561K PRs is impressive as a stat. But volume 
         categories: ["AI Code Review","Developer Tools"],
         featuredImage: "/images/blog/github-copilot-code-review-pr-reviewer-honest-take.png",
         tags: ["github copilot","code review","ai code review","pull request","copilot pr review","github copilot review 2026"],
+    },
+    {
+        id: "61",
+        title: "The Only AI Meeting Notetakers Worth Using in 2026",
+        slug: "best-ai-meeting-notetakers-2026",
+        excerpt: "I tested six AI meeting notetakers so you don't have to. Here's which ones actually work, which ones nickel-and-dime you, and which one is quietly free.",
+        content: `Your meeting just ended and you're staring at a blank doc trying to remember what anyone said. That's the pitch every AI notetaker makes — "never take notes again!" — but half of them are glorified voice recorders with a GPT wrapper slapped on top.
+
+I've been testing these tools on and off for months. Some are genuinely good. A couple are borderline scams at their price points. Here's my honest ranking.
+
+## 1. Fathom — The One I Actually Use
+
+[Fathom](https://www.agentrank.tech/agents/fathom) is free. Completely, actually free for individual users — not "free for 7 days" or "free but we cap you at 300 minutes." Unlimited transcription, unlimited summaries, no credit card required.
+
+That alone puts it ahead of most competitors, but the transcription quality is genuinely excellent too. It picks up speaker names accurately after a meeting or two, and the AI summaries are surprisingly tight. Action items get pulled out automatically, and you can copy the whole thing into Notion or wherever in one click.
+
+The catch? Fathom's team features cost $32/user/month ("Team" plan) or $39/user/month ("Team Pro"). That's where they make money. And you have to actually be in the meeting — there's no "send a bot to record while I skip" option. For solo users, though, it's kind of a no-brainer. I don't understand why more people don't know about this one.
+
+## 2. Otter.ai — The Name Everyone Knows
+
+**Otter** is the default answer when someone asks "what's a good transcription tool?" — and it earned that reputation a few years ago. The transcription accuracy is still solid, especially for English, and the mobile app is genuinely useful for recording in-person conversations.
+
+But here's where it gets frustrating. The free plan caps you at 300 minutes per month with a 30-minute session limit. Thirty minutes. Most meetings run longer than that. The Pro plan is $17/month, Business is $30/month, and neither gives you unlimited transcription. You're always watching a meter.
+
+Otter also added an "AI Chat" feature where you can ask questions about your transcripts, which sounds cool until you realize the answers are just... rephrased sections of the transcript. Not exactly revolutionary. If you're already paying $17/month, [Fathom](https://www.agentrank.tech/agents/fathom) gives you more for literally nothing.
+
+## 3. Notta — The Multilingual Dark Horse
+
+[Notta](https://www.agentrank.tech/agents/notta) doesn't get talked about enough. It supports 58 languages with real-time transcription, which makes it the best option if your meetings aren't exclusively in English. The transcription quality for Japanese, Mandarin, and Spanish is noticeably better than competitors I've tested.
+
+Pricing starts at $14.99/month (Pro) with 1,800 minutes of transcription. That's actually reasonable — way more generous than Otter's limits. The AI summary feature works across languages too, which is a detail most tools fumble.
+
+The downsides: the UI feels a bit clunky compared to Fathom or Otter, and the integrations are thinner. Slack and Notion support exists but it's basic. If you're an English-only team, there's not a strong reason to pick Notta over Fathom. But for multilingual teams? It's the clear winner.
+
+## 4. Fireflies.ai — Feature-Rich but Confusing
+
+Fireflies tries to do everything. Transcription, AI summaries, conversation intelligence, CRM integration, sentiment analysis, topic tracking — the feature list goes on. And honestly? Most of it works decently.
+
+The problem is the pricing structure. There's a free tier (limited to 800 minutes of storage), then Pro at $18/month, Business at $29/month, and Enterprise at... call us. But then there's also an "AI Credits" system layered on top that gates some features separately. I spent twenty minutes trying to figure out exactly what I'd get on the Pro plan and I'm still not 100% sure.
+
+Fireflies supports 100+ languages, which is impressive. The "Soundbite" feature — where you can clip and share specific moments from a call — is genuinely useful for sales teams. But for basic meeting notes? It's overkill. You're paying for a Swiss Army knife when you need a pen.
+
+## 5. Sonix — The Transcription Purist
+
+[Sonix](https://www.agentrank.tech/agents/sonix) takes a different approach. It's not really a "meeting bot" — it's a transcription engine that happens to work great for meetings. You upload audio or video, it transcribes, you edit in their browser-based editor.
+
+The editor is actually Sonix's killer feature. You can click on any word and hear the audio from that exact moment. Makes correcting errors fast, which matters if you're producing transcripts for legal, medical, or media work. Accuracy hovers around 95-99% for clear English audio.
+
+Pricing is pay-as-you-go at $10/hour of audio, or $22/month for the Standard plan (5 hours included). That's fair for what you get, but it means Sonix only makes sense if you're doing serious transcription work — not just capturing weekly standups. No live meeting bot either, so you're recording separately and uploading after.
+
+## 6. Deepgram — For the Developers
+
+[Deepgram](https://www.agentrank.tech/agents/deepgram) isn't a meeting notetaker — it's an API. I'm including it because if you're technical and want to build your own transcription pipeline, Deepgram's speech-to-text is arguably the best in the business.
+
+The accuracy is excellent (they claim under 9% word error rate, and in my testing that checks out for clean audio). Real-time streaming transcription works, the latency is low, and the pricing starts at $0.0043 per minute. That's roughly $0.26/hour — dramatically cheaper than any of the consumer tools above.
+
+But you need to be comfortable with APIs, webhooks, and building your own interface. There's no "join my Zoom call" button. This is for teams that want to own their transcription infrastructure, not people who just want meeting notes. If you're building a product that needs speech-to-text, though, Deepgram is probably where you should start.
+
+## So Which One Should You Actually Use?
+
+For most people: **Fathom**. It's free, the quality is great, and you can be up and running in three minutes. I genuinely don't understand the business model — giving away unlimited transcription feels unsustainable — but hey, enjoy it while it lasts.
+
+If your team speaks multiple languages, go with **Notta**. If you need polished transcripts for professional use (legal, journalism, podcasts), **Sonix** is worth the per-hour cost. And if you're a developer who wants to roll your own solution, **Deepgram** will save you a fortune compared to the consumer tools.
+
+Otter had its moment. It's not bad, but charging $17/month for limited transcription when Fathom exists for free is a tough sell. Fireflies packs in tons of features but the pricing is genuinely confusing — and confusion in pricing is never an accident.`,
+        author: "Hugh McInnis",
+        publishDate: "2026-03-05",
+        publishedAt: "2026-03-05T16:02:10.000-08:00",
+        readTime: "5 min read",
+        categories: ["Productivity","AI Tools"],
+        featuredImage: "/images/blog/best-ai-meeting-notetakers-2026.png",
+        tags: ["meeting notes","transcription","AI notetaker","Otter","Fathom","Notta","Fireflies","productivity tools"],
     }
 ]; 
