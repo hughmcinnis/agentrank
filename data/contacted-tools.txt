@@ -38,3 +38,6 @@ handy-ai
 voxtral
 docsumo
 athenahq
+ocoya
+docyt
+hailuo-ai

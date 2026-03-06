@@ -1851,5 +1851,62 @@ export const agents: Agent[] = [
         features: ["Hailuo 2.3 model with state-of-the-art video quality", "Text-to-video and image-to-video generation", "Start and end frame control for precise video composition", "Style transfer and cinematic video modes", "Specialized creative tools: AdsFree, PetPal, BabyForm, PlayFun, SnapMorph", "AI image generation included", "ASMR audio generation", "Free tier with no login, no watermarks", "Fast and Relax generation modes", "Multi-character scenes with natural physics and motion"],
         useCases: ["Creating short-form video content for social media from text descriptions", "Generating product advertisement videos with the AdsFree tool", "Transforming static images into animated video clips", "Creating cinematic trailers and mood videos from prompts", "Producing meme and entertainment content with AI-generated video effects"],
         addedDate: "2026-03-06"
+    },
+    {
+        id: "91",
+        name: "Prophecy",
+        slug: "prophecy",
+        tagline: "AI-native data prep and analysis platform that turns weeks of work into minutes",
+        description: "Prophecy is an AI-native data preparation and analysis platform built on Databricks that brings autonomous data engineering to business teams. Powered by specialized AI agents (including Claude Code integration in v4), Prophecy lets analysts build data pipelines, run complex queries, and generate insights without writing code or waiting on engineering teams. The visual interface combines drag-and-drop pipeline building with natural language queries — ask questions about marketing attribution, product usage, talent acquisition, or financial data and get answers in seconds. Prophecy replaces tools like Alteryx with a modern, AI-first approach that maintains enterprise governance while giving business users autonomy. Supports Spark, SQL, and Python workloads with built-in CI/CD, data quality monitoring, and team collaboration. Used by data teams at enterprises to cut data prep time from weeks to minutes while maintaining full lineage and audit trails.",
+        categories: ["data-analysis", "automation"],
+        website: "https://www.prophecy.ai",
+        pricing: "Free tier for personal use. Professional and Enterprise plans available (contact for pricing).",
+        paymentOptions: {
+            isPaid: true,
+            hasFreeTrialPeriod: false,
+            hasFreeStarterPlan: true
+        },
+        logo: "/images/logos/prophecy-logo.png",
+        features: ["AI agents powered by Claude Code for autonomous data analysis", "Visual drag-and-drop data pipeline builder", "Natural language querying across enterprise data sources", "Built on Databricks with Spark, SQL, and Python support", "Automated data quality monitoring and validation", "CI/CD integration for pipeline deployment", "Marketing attribution and product analytics templates", "Enterprise governance with full data lineage", "Alteryx replacement with modern AI-first workflow", "Team collaboration with role-based access controls"],
+        useCases: ["Marketing ops teams analyzing Salesforce attribution without data engineering help", "FP&A analysts building financial models and reports autonomously", "Product teams analyzing usage patterns and retention metrics without SQL", "Data teams replacing Alteryx with a modern AI-native platform", "Enterprise organizations scaling data prep across business units with governance"],
+        addedDate: "2026-03-06"
+    },
+    {
+        id: "92",
+        name: "Consensus",
+        slug: "consensus",
+        tagline: "AI-powered academic search engine that finds and synthesizes peer-reviewed research",
+        description: "Consensus is an AI academic search engine purpose-built for finding and understanding peer-reviewed scientific literature. Unlike general search engines, Consensus searches across over 200 million scientific papers and uses AI to extract key findings, synthesize results across multiple studies, and present clear answers grounded in real research. The Consensus Meter shows at a glance whether studies generally support or oppose a given claim, making it easy to gauge scientific consensus on any topic. Deep Search mode provides comprehensive literature reviews with synthesized findings across dozens of papers. Every answer includes direct citations to the source papers, eliminating the hallucination problem common with general AI tools. Features include study snapshots with methodology and sample size details, advanced filters by study design and journal, and a ChatGPT plugin (ConsensusGPT) for conversational research. Used by researchers, students, clinicians, and science writers who need evidence-based answers fast.",
+        categories: ["research", "document-analysis"],
+        website: "https://consensus.app",
+        pricing: "Free tier with limited searches. Premium at $10/month with unlimited searches, Deep Search, and advanced features.",
+        paymentOptions: {
+            isPaid: true,
+            hasFreeTrialPeriod: false,
+            hasFreeStarterPlan: true
+        },
+        logo: "/images/logos/consensus-logo.png",
+        features: ["Search across 200M+ peer-reviewed scientific papers", "AI-synthesized answers with direct paper citations", "Consensus Meter showing scientific agreement on claims", "Deep Search for comprehensive multi-paper literature reviews", "Study snapshots with methodology, sample size, and key findings", "Advanced filters by study design, journal, and date range", "ConsensusGPT plugin for ChatGPT integration", "Research lists for organizing and saving papers", "No AI hallucinations — every claim backed by real papers", "API access for developers and research platforms"],
+        useCases: ["Researchers conducting rapid literature reviews across hundreds of papers", "Medical professionals finding evidence-based answers for clinical decisions", "Students writing thesis papers with properly cited scientific evidence", "Science journalists fact-checking claims against peer-reviewed research", "Policy analysts gauging scientific consensus on contested topics"],
+        addedDate: "2026-03-06"
+    },
+    {
+        id: "93",
+        name: "TurboScribe",
+        slug: "turboscribe",
+        tagline: "Unlimited AI transcription powered by Whisper with 98.6% accuracy across 98 languages",
+        description: "TurboScribe is an AI-powered transcription service that converts audio and video files to text with exceptional accuracy. Powered by OpenAI's Whisper model along with proprietary enhancements, TurboScribe achieves 98.6% accuracy and supports 98 languages with automatic language detection. What sets it apart is the unlimited transcription model — pay a flat monthly fee and transcribe as much as you need without per-minute charges or usage caps. The free tier offers 3 transcriptions per day (up to 30 minutes each), making it accessible for light users. Features include speaker identification, automatic paragraph formatting, SRT/VTT subtitle generation, and export to multiple formats. The platform handles files up to 10 hours long and processes them quickly even on the free tier. Particularly popular with journalists, podcasters, researchers, and content creators who need reliable, high-volume transcription without unpredictable costs.",
+        categories: ["transcription", "voice-audio"],
+        website: "https://turboscribe.ai",
+        pricing: "Free tier with 3 transcriptions/day (30 min each). Unlimited plan at $10/month. Business plans available.",
+        paymentOptions: {
+            isPaid: true,
+            hasFreeTrialPeriod: false,
+            hasFreeStarterPlan: true
+        },
+        logo: "/images/logos/turboscribe-logo.ico",
+        features: ["98.6% transcription accuracy powered by Whisper AI", "Unlimited transcription on paid plans — no per-minute fees", "98 language support with automatic language detection", "Speaker identification and diarization", "SRT and VTT subtitle file generation", "Files up to 10 hours long supported", "Automatic paragraph formatting and punctuation", "Multiple export formats (TXT, DOCX, SRT, VTT, JSON)", "Free tier with 3 daily transcriptions up to 30 minutes", "Fast processing with batch upload support"],
+        useCases: ["Journalists transcribing hours of interview recordings without usage limits", "Podcasters generating show notes and searchable transcripts for every episode", "Researchers converting qualitative interview data to analyzable text", "Content creators adding accurate subtitles to videos in multiple languages", "Legal and medical professionals transcribing depositions and consultations"],
+        addedDate: "2026-03-06"
     }
 ]; 
