@@ -41,3 +41,6 @@ athenahq
 ocoya
 docyt
 hailuo-ai
+prophecy
+consensus
+turboscribe

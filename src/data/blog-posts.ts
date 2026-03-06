@@ -6586,5 +6586,71 @@ Otter had its moment. It's not bad, but charging $17/month for limited transcrip
         categories: ["Productivity","AI Tools"],
         featuredImage: "/images/blog/best-ai-meeting-notetakers-2026.png",
         tags: ["meeting notes","transcription","AI notetaker","Otter","Fathom","Notta","Fireflies","productivity tools"],
+    },
+    {
+        id: "62",
+        title: "BrowserBook Review: Is a Playwright IDE Better Than Browser Agents?",
+        slug: "browserbook-review-playwright-ide-vs-browser-agents",
+        excerpt: "BrowserBook takes a contrarian bet — instead of AI agents browsing for you, it helps you write Playwright scripts faster. Here's whether that actually works.",
+        content: `Browser agents are everywhere right now. OpenAI's Operator, Anthropic's computer use, Browser Use, Browserbase — everyone's racing to build AI that can click buttons and fill forms on your behalf. And honestly? They're still pretty unreliable.
+
+That's the bet **BrowserBook** is making. Instead of building another browser agent that stumbles through websites with a language model, they built a Jupyter-style IDE specifically for writing Playwright automations. The AI helps you *write* the scripts — it doesn't try to run the browser itself.
+
+It's a contrarian approach in a market obsessed with autonomous agents. And after spending time with it, I think they might be onto something.
+
+## The Pitch: Deterministic Over Autonomous
+
+Here's the core tension in browser automation right now. Agents are flexible but break constantly. Scripts are reliable but painful to write and maintain. BrowserBook tries to split the difference — you get AI assistance for the tedious parts (finding selectors, generating boilerplate, debugging) while the actual automation runs as deterministic code.
+
+The IDE itself is pretty slick. You get an inline browser right next to your code cells, so you can see exactly what your automation is doing as you build it. It's basically Jupyter notebooks but for Playwright, with an AI coding assistant that has access to the page DOM. Tell it "click the features tab" and it generates the right selector and Playwright code.
+
+That DOM awareness is the killer feature. Most AI coding assistants are just autocomplete with extra steps — they don't know what's actually on the page. BrowserBook's assistant can see the rendered page, find the right elements, and write targeted code. It's the difference between guessing and looking.
+
+## What Actually Works
+
+The cell-based execution model is genuinely useful. If step 7 of your 12-step automation breaks, you don't have to rerun the whole thing from scratch. Just fix the broken cell and run it in isolation. Anyone who's ever debugged a long Playwright script by staring at a headless browser for 45 seconds waiting to reach the failure point — this alone might sell you.
+
+The inline browser is interactive too. You can click around, navigate to the right page state, then have the AI write code from that state. It removes the worst part of browser automation: the setup tedium. Getting logged in, navigating to the right page, dismissing cookie banners — you can do all that manually, then start scripting from there.
+
+Data extraction gets a built-in shortcut. If you need to pull a table or list of elements, you don't have to write the parsing logic yourself. It's a small thing, but small things compound when you're building 20 automations.
+
+## The Honest Problems
+
+BrowserBook is still pretty early. They launched on Product Hunt in December 2025 and the feature set — while focused — is limited compared to what you'd get cobbling together Playwright + VS Code + some extensions.
+
+The AI coding budget is tight. Free plan gets $3/month in AI credits. Developer plan ($29/month) gives you $10. That sounds okay until you realize a complex automation might eat through credits fast if you're iterating a lot. The $29/month Developer plan also only gives you 10 notebooks — if you're managing automations for multiple clients or projects, you'll hit that ceiling quickly.
+
+No self-healing automations yet on the lower tiers. That's a "coming soon" feature reserved for Team ($99/month) and Enterprise plans. Self-healing — where the tool auto-fixes broken selectors when a site changes — is arguably the most important feature for production automations. Locking it behind the $99 tier feels aggressive.
+
+And then there's the elephant in the room: you still need to know Playwright. BrowserBook makes it faster, sure, but it's not a no-code tool. If you can't read TypeScript and don't understand how browser automation works at a conceptual level, the AI assistant won't save you. It's a productivity multiplier, not a replacement for understanding.
+
+## How It Stacks Up
+
+The comparison depends on what you're doing.
+
+Against full browser agents (Operator, Browser Use, Browserbase's Stagehand): BrowserBook wins on reliability and cost. A deterministic Playwright script will do the same thing every time. An agent might decide to click the wrong button on Tuesday because the page loaded 200ms slower. BrowserBook claims 10x cheaper than browser agents, which tracks — agents burn tokens on every single page interaction.
+
+Against just using Playwright directly: BrowserBook saves time on the authoring side but adds a monthly cost and a dependency. If you're already comfortable writing Playwright scripts in VS Code, the inline browser and DOM-aware AI are nice but not necessarily worth $29/month. The cell-based execution is the strongest argument — it genuinely changes the debugging workflow.
+
+Against no-code tools like Bardeen or Make: different universes. BrowserBook is for developers who want code-level control but don't want to spend all day writing selectors. No-code tools are for people who don't want to see code at all.
+
+## The HIPAA Angle
+
+BrowserBook is HIPAA compliant and SOC 2 Type II certified. That's not something you see often in browser automation tools, and it explains their origin story — they started automating workflows for healthcare practices. If you're in healthcare, finance, or any regulated industry and need browser automation, the compliance story alone might justify the price. Most competitors either aren't compliant or make you jump through hoops with self-hosted setups.
+
+## Who Should Care
+
+If you're building browser automations professionally — for clients, for your company, for data pipelines — BrowserBook is worth a look. The free tier lets you test the workflow with 3 notebooks before committing. The sweet spot is probably the Developer plan at $29/month if you're managing a handful of automations and want the AI assistance without going full enterprise.
+
+If you're a solo developer who writes one Playwright script every few months, this probably isn't for you. VS Code with GitHub Copilot will get you 80% of the way there for tools you're already paying for.
+
+The real question is whether BrowserBook can stay relevant as browser agents get more reliable. Right now, agents are flaky enough that deterministic scripts make sense. But if Operator or Browser Use crack the reliability problem in the next year, the "write scripts instead" pitch gets harder to make. BrowserBook's betting that agents won't get reliable fast enough — and based on the current state of things, that's not a bad bet.`,
+        author: "Hugh McInnis",
+        publishDate: "2026-03-06",
+        publishedAt: "2026-03-06T07:12:18.000-08:00",
+        readTime: "5 min read",
+        categories: ["reviews","automation"],
+        featuredImage: "/images/blog/browserbook-review-playwright-ide-vs-browser-agents.png",
+        tags: ["browserbook","playwright","browser automation","web scraping","browser agents","IDE"],
     }
 ]; 
