@@ -1794,5 +1794,62 @@ export const agents: Agent[] = [
         features: ["Track brand visibility across 8+ AI platforms (ChatGPT, Perplexity, Gemini, Claude, etc.)", "Competitor share-of-voice monitoring and benchmarking", "AI content gap analysis and optimization recommendations", "Citation source analysis and link building insights", "Prompt volume estimation and trend analysis", "Brand sentiment intelligence across AI platforms", "Dynamic robots.txt and llms.txt management for AI crawlers", "GA4 and Google Search Console integration", "Executive ROI dashboards with BI tool support", "Multi-language and multi-region tracking"],
         useCases: ["Monitoring and improving brand mentions in ChatGPT and Perplexity responses", "Tracking competitor visibility across AI search platforms", "Optimizing content to become a primary citation source for AI answers", "Measuring ROI of AI search optimization efforts for executive reporting", "Detecting and responding to brand misinformation in AI-generated content"],
         addedDate: "2026-03-05"
+    },
+    {
+        id: "88",
+        name: "Ocoya",
+        slug: "ocoya",
+        tagline: "AI-powered social media management with scheduling, content creation, and automation",
+        description: "Ocoya is an AI-powered social media management platform that combines content creation, scheduling, and automation in a single hub. It uses AI to generate captions, hashtags, and full social media posts tailored to your brand voice, then lets you schedule them across all major platforms including Instagram, TikTok, Facebook, LinkedIn, Twitter/X, and Pinterest. Ocoya stands out with its built-in AI copywriter that can produce posts in 26+ languages, a Canva-like graphic editor for creating visuals without leaving the platform, and automated posting workflows that can be triggered by RSS feeds, Shopify events, or custom rules. The platform also includes link shortening with tracking, team collaboration features, and analytics dashboards. Particularly strong for e-commerce brands thanks to deep Shopify and WooCommerce integrations that can auto-generate product posts from new listings.",
+        categories: ["social-media", "marketing", "automation"],
+        website: "https://www.ocoya.com",
+        pricing: "Bronze $15/mo (1 workspace, 5 profiles), Silver $39/mo (5 workspaces, 20 profiles), Gold $79/mo (20 workspaces, 50 profiles), Diamond $159/mo (unlimited workspaces, 150 profiles). 7-day free trial. Enterprise custom pricing.",
+        paymentOptions: {
+            isPaid: true,
+            hasFreeTrialPeriod: true,
+            hasFreeStarterPlan: false
+        },
+        logo: "/images/logos/ocoya-logo.png",
+        features: ["AI copywriter generating posts in 26+ languages", "Built-in graphic editor similar to Canva", "Multi-platform scheduling (Instagram, TikTok, Facebook, LinkedIn, Twitter/X, Pinterest)", "Automated posting workflows triggered by RSS, Shopify, or custom rules", "E-commerce integrations with Shopify and WooCommerce", "Link shortening with click tracking and analytics", "Team collaboration with workspaces and role management", "AI hashtag generator and caption optimization", "Content calendar with drag-and-drop scheduling", "Performance analytics and reporting dashboards"],
+        useCases: ["Managing social media presence across multiple platforms from one dashboard", "E-commerce brands auto-generating product posts from new Shopify listings", "Marketing agencies managing multiple client accounts with team workspaces", "Creating multilingual social content for global brand campaigns", "Automating content workflows with RSS-to-social and event triggers"],
+        addedDate: "2026-03-06"
+    },
+    {
+        id: "89",
+        name: "Docyt",
+        slug: "docyt",
+        tagline: "AI-powered full-stack bookkeeping and accounting automation for multi-entity businesses",
+        description: "Docyt is an AI-driven accounting automation platform that provides end-to-end bookkeeping for multi-entity businesses, accounting firms, and hotels. Its AI agents handle transaction categorization with high precision, automated data extraction from receipts and invoices, revenue reconciliation, bill pay, expense management, and month-end closing — dramatically reducing manual bookkeeping work. Docyt features BooksGPT, a chat-based AI copilot that answers financial questions, assigns tasks, and handles exceptions in natural language. The platform consolidates all financial workflows into a single system with real-time reporting, department-level P&L, and industry-specific KPIs. Particularly strong in hospitality with specialized hotel accounting features including daily flash revenue reports, labor reporting, and multi-property consolidated financials. Trusted by accounting firms managing 100+ clients and rated 4.9/5 on G2.",
+        categories: ["accounting", "automation", "document-analysis"],
+        website: "https://docyt.com",
+        pricing: "Plans start at $299/month. Custom pricing based on transaction volume and reporting needs. Contact sales for quotes.",
+        paymentOptions: {
+            isPaid: true,
+            hasFreeTrialPeriod: false,
+            hasFreeStarterPlan: false
+        },
+        logo: "/images/logos/docyt-logo.svg",
+        features: ["AI-powered transaction categorization with 95%+ accuracy", "Automated receipt and invoice data extraction", "BooksGPT chat copilot for financial Q&A and task management", "Revenue reconciliation with daily flash reports", "Bill pay, expense reimbursement, and vendor 1099 management", "Real-time P&L, balance sheet, and cash flow reporting", "Multi-entity consolidated financials and reporting", "Department-level access controls and P&L breakdown", "Industry-specific KPI dashboards for hospitality", "Automated month-end close workflows"],
+        useCases: ["Accounting firms automating bookkeeping for 100+ client entities", "Hotel chains managing multi-property revenue reconciliation and reporting", "CFOs getting real-time financial visibility across multiple business units", "Reducing month-end close time from weeks to days without adding headcount", "Franchise operators consolidating financials across locations with industry-specific metrics"],
+        addedDate: "2026-03-06"
+    },
+    {
+        id: "90",
+        name: "Hailuo AI",
+        slug: "hailuo-ai",
+        tagline: "High-quality AI video and image generation from text and image prompts by MiniMax",
+        description: "Hailuo AI is MiniMax's flagship AI video generation platform that turns text prompts and images into high-quality video clips. Powered by the Hailuo 2.3 model, it produces videos with remarkably fluid character motion, natural physics, and cinematic quality. The platform offers a rich ecosystem of creative tools including text-to-video, image-to-video, style transfer, ASMR generation, ad creation, and specialized modes for pet videos, baby stories, meme generation, and photo transformation. Hailuo stands out for offering a generous free tier with no login required and no watermarks, making it one of the most accessible AI video generators available. The platform also includes an AI image generator and supports both Fast and Relax generation modes. With recent updates to Hailuo 2.3, the model handles complex body movements, multi-character scenes, and precise prompt following at a level that competes directly with Runway, Sora, and Kling.",
+        categories: ["video-generation", "image-generation"],
+        website: "https://hailuoai.video",
+        pricing: "Free plan with 200 credits. Paid plans up to Max at $199.99/mo with 20,000 credits and unlimited Relax Mode generation.",
+        paymentOptions: {
+            isPaid: true,
+            hasFreeTrialPeriod: false,
+            hasFreeStarterPlan: true
+        },
+        logo: "/images/logos/hailuo-ai-logo.png",
+        features: ["Hailuo 2.3 model with state-of-the-art video quality", "Text-to-video and image-to-video generation", "Start and end frame control for precise video composition", "Style transfer and cinematic video modes", "Specialized creative tools: AdsFree, PetPal, BabyForm, PlayFun, SnapMorph", "AI image generation included", "ASMR audio generation", "Free tier with no login, no watermarks", "Fast and Relax generation modes", "Multi-character scenes with natural physics and motion"],
+        useCases: ["Creating short-form video content for social media from text descriptions", "Generating product advertisement videos with the AdsFree tool", "Transforming static images into animated video clips", "Creating cinematic trailers and mood videos from prompts", "Producing meme and entertainment content with AI-generated video effects"],
+        addedDate: "2026-03-06"
     }
 ]; 

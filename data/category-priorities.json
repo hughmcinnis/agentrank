@@ -1,31 +1,10 @@
 {
-  "generatedAt": "2026-03-05T14:00:04.472Z",
-  "totalAgents": 82,
+  "generatedAt": "2026-03-06T01:00:04.136Z",
+  "totalAgents": 85,
   "totalCategories": 20,
   "minTarget": 5,
-  "categoriesBelow": 12,
+  "categoriesBelow": 11,
   "priorities": [
-    {
-      "category": "transcription",
-      "currentCount": 3,
-      "deficit": 2,
-      "priorityScore": 60,
-      "status": "BELOW_TARGET"
-    },
-    {
-      "category": "document-analysis",
-      "currentCount": 3,
-      "deficit": 2,
-      "priorityScore": 60,
-      "status": "BELOW_TARGET"
-    },
-    {
-      "category": "seo",
-      "currentCount": 3,
-      "deficit": 2,
-      "priorityScore": 60,
-      "status": "BELOW_TARGET"
-    },
     {
       "category": "social-media",
       "currentCount": 3,
@@ -55,13 +34,6 @@
       "status": "BELOW_TARGET"
     },
     {
-      "category": "automation",
-      "currentCount": 3,
-      "deficit": 2,
-      "priorityScore": 60,
-      "status": "BELOW_TARGET"
-    },
-    {
       "category": "data-analysis",
       "currentCount": 4,
       "deficit": 1,
@@ -76,6 +48,27 @@
       "status": "BELOW_TARGET"
     },
     {
+      "category": "transcription",
+      "currentCount": 4,
+      "deficit": 1,
+      "priorityScore": 30,
+      "status": "BELOW_TARGET"
+    },
+    {
+      "category": "document-analysis",
+      "currentCount": 4,
+      "deficit": 1,
+      "priorityScore": 30,
+      "status": "BELOW_TARGET"
+    },
+    {
+      "category": "seo",
+      "currentCount": 4,
+      "deficit": 1,
+      "priorityScore": 30,
+      "status": "BELOW_TARGET"
+    },
+    {
       "category": "image-generation",
       "currentCount": 4,
       "deficit": 1,
@@ -83,18 +76,11 @@
       "status": "BELOW_TARGET"
     },
     {
-      "category": "voice-audio",
+      "category": "automation",
       "currentCount": 4,
       "deficit": 1,
       "priorityScore": 30,
       "status": "BELOW_TARGET"
-    },
-    {
-      "category": "marketing",
-      "currentCount": 5,
-      "deficit": 0,
-      "priorityScore": 5,
-      "status": "OK"
     },
     {
       "category": "email",
@@ -111,7 +97,21 @@
       "status": "OK"
     },
     {
+      "category": "voice-audio",
+      "currentCount": 5,
+      "deficit": 0,
+      "priorityScore": 5,
+      "status": "OK"
+    },
+    {
       "category": "writing",
+      "currentCount": 6,
+      "deficit": 0,
+      "priorityScore": 4,
+      "status": "OK"
+    },
+    {
+      "category": "marketing",
       "currentCount": 6,
       "deficit": 0,
       "priorityScore": 4,
@@ -147,11 +147,11 @@
     }
   ],
   "topPriority": [
-    "transcription",
-    "document-analysis",
-    "seo",
     "social-media",
-    "accounting"
+    "accounting",
+    "home-improvement",
+    "video-generation",
+    "data-analysis"
   ],
   "distribution": {
     "productivity": 32,
@@ -159,20 +159,20 @@
     "sales": 12,
     "customer-support": 7,
     "writing": 6,
-    "marketing": 5,
+    "marketing": 6,
     "email": 5,
     "scheduling": 5,
+    "voice-audio": 5,
     "data-analysis": 4,
     "research": 4,
+    "transcription": 4,
+    "document-analysis": 4,
+    "seo": 4,
     "image-generation": 4,
-    "voice-audio": 4,
-    "transcription": 3,
-    "document-analysis": 3,
-    "seo": 3,
+    "automation": 4,
     "social-media": 3,
     "accounting": 3,
     "home-improvement": 3,
-    "video-generation": 3,
-    "automation": 3
+    "video-generation": 3
   }
 }
