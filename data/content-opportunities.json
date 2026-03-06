@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-03-06T15:10:05.755Z",
+  "generatedAt": "2026-03-06T18:00:05.291Z",
   "dataRange": "3 months",
   "summary": {
-    "totalOpportunities": 18,
+    "totalOpportunities": 17,
     "strikingDistance": 2,
     "lowCtr": 6,
-    "agentNeedsReview": 3,
+    "agentNeedsReview": 2,
     "winnerExpand": 6,
     "contentGaps": 1
   },
@@ -134,15 +134,6 @@
       "priority": 41
     },
     {
-      "type": "agent_needs_review",
-      "query": "browserbook",
-      "impressions": 16,
-      "clicks": 0,
-      "position": 7.0625,
-      "recommendation": "Agent \"browserbook\" has 16 impressions — write a detailed review blog post to capture this traffic",
-      "priority": 32
-    },
-    {
       "type": "striking_distance",
       "query": "aident ai",
       "impressions": 16,
@@ -152,6 +143,17 @@
       "recentTrend": "active",
       "recommendation": "Optimize or create focused content for \"aident ai\" — currently at position 10.8, could reach page 1",
       "priority": 31
+    },
+    {
+      "type": "striking_distance",
+      "query": "anthropic claude computer use vs openai operator 2026",
+      "impressions": 10,
+      "clicks": 0,
+      "position": 9.3,
+      "ctr": 0,
+      "recentTrend": "active",
+      "recommendation": "Optimize or create focused content for \"anthropic claude computer use vs openai operator 2026\" — currently at position 9.3, could reach page 1",
+      "priority": 21
     }
   ],
   "allOpportunities": [
@@ -277,15 +279,6 @@
       "position": 5.037037037037037,
       "recommendation": "No dedicated content for \"\"superhuman\" \"500 emails\"\" (27 impressions) — create a targeted article",
       "priority": 41
-    },
-    {
-      "type": "agent_needs_review",
-      "query": "browserbook",
-      "impressions": 16,
-      "clicks": 0,
-      "position": 7.0625,
-      "recommendation": "Agent \"browserbook\" has 16 impressions — write a detailed review blog post to capture this traffic",
-      "priority": 32
     },
     {
       "type": "striking_distance",
