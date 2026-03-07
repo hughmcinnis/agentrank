@@ -1908,5 +1908,43 @@ export const agents: Agent[] = [
         features: ["98.6% transcription accuracy powered by Whisper AI", "Unlimited transcription on paid plans — no per-minute fees", "98 language support with automatic language detection", "Speaker identification and diarization", "SRT and VTT subtitle file generation", "Files up to 10 hours long supported", "Automatic paragraph formatting and punctuation", "Multiple export formats (TXT, DOCX, SRT, VTT, JSON)", "Free tier with 3 daily transcriptions up to 30 minutes", "Fast processing with batch upload support"],
         useCases: ["Journalists transcribing hours of interview recordings without usage limits", "Podcasters generating show notes and searchable transcripts for every episode", "Researchers converting qualitative interview data to analyzable text", "Content creators adding accurate subtitles to videos in multiple languages", "Legal and medical professionals transcribing depositions and consultations"],
         addedDate: "2026-03-06"
+    },
+    {
+        id: "94",
+        name: "Booke AI",
+        slug: "booke-ai",
+        tagline: "AI bookkeeper that works inside QuickBooks and Xero like a real team member",
+        description: "Booke AI is an AI-powered bookkeeping assistant that operates directly inside QuickBooks Online and Xero — not as a separate dashboard, but as an actual user in your accounting software. You invite Booke as a team member, and every morning it opens your bank feed, categorizes transactions based on learned patterns, matches them to invoices and bills, requests missing documents, and reconciles — all automatically. Unlike API-based AI tools that can only suggest actions, Booke actually clicks buttons and does the work inside your existing platform. It uses your existing bank connections (no Plaid or extra integrations needed), follows your custom rules and thresholds (e.g., 'all transactions over $50 need receipts'), and maintains a full audit trail. Built for both individual businesses and accounting firms managing multiple clients, Booke handles the repetitive daily bookkeeping so accountants can focus on advisory work. Features include OCR for bills, invoices, and receipts, smart document matching, exception-based review workflows, and a Chrome extension for quick actions.",
+        categories: ["accounting", "automation"],
+        website: "https://booke.ai",
+        pricing: "AI Bookkeeper for Business at $129/month per business. Accounting firm plans available with volume pricing. Annual billing discounts available.",
+        paymentOptions: {
+            isPaid: true,
+            hasFreeTrialPeriod: false,
+            hasFreeStarterPlan: false
+        },
+        logo: "/images/logos/booke-ai-logo.png",
+        features: ["Works directly inside QuickBooks Online and Xero as a user", "Daily automatic bank feed categorization using learned patterns", "Smart document matching to invoices and bills", "Automatic missing document requests to clients", "Custom rules and thresholds for transaction handling", "Full audit trail and exception-based review workflow", "OCR for bills, invoices, and receipts", "Uses existing bank connections — no extra integrations", "Chrome extension for quick bookkeeping actions", "Bank-level encryption and annual security audits"],
+        useCases: ["Accounting firms automating daily bookkeeping across multiple clients", "Small businesses replacing manual bank feed categorization in QuickBooks", "Bookkeepers reducing time spent on transaction matching and reconciliation", "Firms enforcing receipt policies with automatic document request workflows", "Solo accountants scaling their practice without hiring additional staff"],
+        addedDate: "2026-03-07"
+    },
+    {
+        id: "95",
+        name: "Prism Videos",
+        slug: "prism-videos",
+        tagline: "All-in-one AI video platform with access to every major generation model in one workspace",
+        description: "Prism Videos is a unified AI video generation platform that brings together all the leading video and image models — including Google Veo, Sora, Kling, Hailuo, Wan, SeedDream, Flux, and more — into a single workspace. Instead of juggling multiple tools and downloading files between them, creators can generate images, create videos, add lip sync, upscale, and edit with AI all in one place. The platform lets you switch between models per shot, so you can pick the best model for each scene in your project. Prism uses a simple credit system (1 credit = $0.01 of compute) with different models costing different amounts, making pricing transparent and predictable. It supports exporting in multiple resolutions up to 4K with aspect ratios optimized for YouTube, TikTok, Instagram, and other platforms. Story mode enables multi-scene narrative projects, and the platform includes early access to new models as they launch. Popular for short-form content creation, cinematic scenes, product launches, music videos, and social media content.",
+        categories: ["video-generation", "image-generation"],
+        website: "https://www.prismvideos.com",
+        pricing: "Free tier with 100 credits/month and basic models. Pro plan with 1,000 credits/month. Scale plan with 5,000 credits/month. Enterprise with 12,000 credits/month. All paid plans include unlimited Sora 2 and GPT Image 1.5.",
+        paymentOptions: {
+            isPaid: true,
+            hasFreeTrialPeriod: false,
+            hasFreeStarterPlan: true
+        },
+        logo: "/images/logos/prism-videos-logo.png",
+        features: ["Access to all major AI video models (Veo, Sora, Kling, Hailuo, Wan, and more)", "Unified workspace — generate, edit, upscale, and lip sync in one place", "Switch between models per shot for best results", "Story mode for multi-scene narrative video projects", "Export up to 4K resolution with platform-optimized aspect ratios", "Transparent credit-based pricing (1 credit = $0.01)", "AI image generation with SeedDream, Flux, and GPT Image 1.5", "Unlimited Sora 2 Pro access on paid plans", "Early access to new models as they launch", "Commercial usage rights on all generated content"],
+        useCases: ["Content creators producing viral short-form videos for TikTok, Reels, and Shorts", "Marketers generating product launch and advertisement videos with AI", "Filmmakers creating cinematic scenes and music video concepts", "Social media managers producing platform-optimized video content at scale", "Creative professionals comparing outputs across multiple AI video models"],
+        addedDate: "2026-03-07"
     }
 ]; 

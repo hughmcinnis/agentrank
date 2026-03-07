@@ -1,36 +1,15 @@
 {
-  "generatedAt": "2026-03-06T14:00:07.230Z",
-  "totalAgents": 88,
+  "generatedAt": "2026-03-07T01:00:08.329Z",
+  "totalAgents": 91,
   "totalCategories": 20,
   "minTarget": 5,
-  "categoriesBelow": 8,
+  "categoriesBelow": 5,
   "priorities": [
     {
       "category": "home-improvement",
       "currentCount": 3,
       "deficit": 2,
       "priorityScore": 60,
-      "status": "BELOW_TARGET"
-    },
-    {
-      "category": "data-analysis",
-      "currentCount": 4,
-      "deficit": 1,
-      "priorityScore": 30,
-      "status": "BELOW_TARGET"
-    },
-    {
-      "category": "research",
-      "currentCount": 4,
-      "deficit": 1,
-      "priorityScore": 30,
-      "status": "BELOW_TARGET"
-    },
-    {
-      "category": "transcription",
-      "currentCount": 4,
-      "deficit": 1,
-      "priorityScore": 30,
       "status": "BELOW_TARGET"
     },
     {
@@ -62,6 +41,20 @@
       "status": "BELOW_TARGET"
     },
     {
+      "category": "data-analysis",
+      "currentCount": 5,
+      "deficit": 0,
+      "priorityScore": 5,
+      "status": "OK"
+    },
+    {
+      "category": "research",
+      "currentCount": 5,
+      "deficit": 0,
+      "priorityScore": 5,
+      "status": "OK"
+    },
+    {
       "category": "email",
       "currentCount": 5,
       "deficit": 0,
@@ -69,7 +62,7 @@
       "status": "OK"
     },
     {
-      "category": "document-analysis",
+      "category": "transcription",
       "currentCount": 5,
       "deficit": 0,
       "priorityScore": 5,
@@ -90,13 +83,6 @@
       "status": "OK"
     },
     {
-      "category": "voice-audio",
-      "currentCount": 5,
-      "deficit": 0,
-      "priorityScore": 5,
-      "status": "OK"
-    },
-    {
       "category": "writing",
       "currentCount": 6,
       "deficit": 0,
@@ -104,7 +90,14 @@
       "status": "OK"
     },
     {
-      "category": "automation",
+      "category": "document-analysis",
+      "currentCount": 6,
+      "deficit": 0,
+      "priorityScore": 4,
+      "status": "OK"
+    },
+    {
+      "category": "voice-audio",
       "currentCount": 6,
       "deficit": 0,
       "priorityScore": 4,
@@ -119,6 +112,13 @@
     },
     {
       "category": "marketing",
+      "currentCount": 7,
+      "deficit": 0,
+      "priorityScore": 3,
+      "status": "OK"
+    },
+    {
+      "category": "automation",
       "currentCount": 7,
       "deficit": 0,
       "priorityScore": 3,
@@ -148,10 +148,10 @@
   ],
   "topPriority": [
     "home-improvement",
-    "data-analysis",
-    "research",
-    "transcription",
-    "seo"
+    "seo",
+    "social-media",
+    "accounting",
+    "video-generation"
   ],
   "distribution": {
     "productivity": 32,
@@ -159,16 +159,16 @@
     "sales": 12,
     "customer-support": 7,
     "marketing": 7,
+    "automation": 7,
     "writing": 6,
-    "automation": 6,
+    "document-analysis": 6,
+    "voice-audio": 6,
+    "data-analysis": 5,
+    "research": 5,
     "email": 5,
-    "document-analysis": 5,
+    "transcription": 5,
     "scheduling": 5,
     "image-generation": 5,
-    "voice-audio": 5,
-    "data-analysis": 4,
-    "research": 4,
-    "transcription": 4,
     "seo": 4,
     "social-media": 4,
     "accounting": 4,
