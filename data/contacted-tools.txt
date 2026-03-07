@@ -46,3 +46,6 @@ consensus
 turboscribe
 booke-ai
 prism-videos
+homezada
+aiclicks
+publer
