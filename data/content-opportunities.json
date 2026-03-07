@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-07T15:10:06.199Z",
+  "generatedAt": "2026-03-07T18:00:07.801Z",
   "dataRange": "3 months",
   "summary": {
-    "totalOpportunities": 16,
+    "totalOpportunities": 18,
     "strikingDistance": 2,
     "lowCtr": 6,
-    "agentNeedsReview": 1,
-    "winnerExpand": 6,
+    "agentNeedsReview": 2,
+    "winnerExpand": 7,
     "contentGaps": 1
   },
   "topRecommendations": [
@@ -22,6 +22,16 @@
     },
     {
       "type": "low_ctr",
+      "query": "aident ai",
+      "impressions": 20,
+      "clicks": 0,
+      "position": 12.4,
+      "ctr": 0,
+      "recommendation": "\"aident ai\" gets 20 impressions but 0.0% CTR — improve title/meta description or write a more targeted article",
+      "priority": 200
+    },
+    {
+      "type": "low_ctr",
       "query": "bolt hosting review",
       "impressions": 19,
       "clicks": 0,
@@ -32,20 +42,20 @@
     },
     {
       "type": "low_ctr",
-      "query": "aident ai",
-      "impressions": 16,
+      "query": "bolt diagramming tool review",
+      "impressions": 15,
       "clicks": 0,
-      "position": 10.75,
+      "position": 6.2,
       "ctr": 0,
-      "recommendation": "\"aident ai\" gets 16 impressions but 0.0% CTR — improve title/meta description or write a more targeted article",
-      "priority": 160
+      "recommendation": "\"bolt diagramming tool review\" gets 15 impressions but 0.0% CTR — improve title/meta description or write a more targeted article",
+      "priority": 150
     },
     {
       "type": "winner_expand",
       "query": "5-ai-code-review-tools-that-actually-work",
-      "impressions": 1067,
+      "impressions": 1065,
       "clicks": 2,
-      "position": 48.13683223992502,
+      "position": 47.04131455399061,
       "recommendation": "\"5-ai-code-review-tools-that-actually-work\" is getting clicks — write related/follow-up content to build topical authority",
       "priority": 147
     },
@@ -61,68 +71,58 @@
     },
     {
       "type": "low_ctr",
-      "query": "bolt diagramming tool review",
-      "impressions": 12,
+      "query": "anthropic claude computer use vs openai operator 2026",
+      "impressions": 13,
       "clicks": 0,
-      "position": 6.25,
+      "position": 8.76923076923077,
       "ctr": 0,
-      "recommendation": "\"bolt diagramming tool review\" gets 12 impressions but 0.0% CTR — improve title/meta description or write a more targeted article",
-      "priority": 120
+      "recommendation": "\"anthropic claude computer use vs openai operator 2026\" gets 13 impressions but 0.0% CTR — improve title/meta description or write a more targeted article",
+      "priority": 130
     },
     {
       "type": "winner_expand",
       "query": "v0-review-vercel-ai-app-builder",
-      "impressions": 962,
+      "impressions": 997,
       "clicks": 1,
-      "position": 15.43970893970894,
+      "position": 15.830491474423269,
       "recommendation": "\"v0-review-vercel-ai-app-builder\" is getting clicks — write related/follow-up content to build topical authority",
-      "priority": 116
+      "priority": 120
     },
     {
-      "type": "low_ctr",
-      "query": "anthropic claude computer use vs openai operator 2026",
-      "impressions": 10,
-      "clicks": 0,
-      "position": 9.3,
-      "ctr": 0,
-      "recommendation": "\"anthropic claude computer use vs openai operator 2026\" gets 10 impressions but 0.0% CTR — improve title/meta description or write a more targeted article",
-      "priority": 100
+      "type": "winner_expand",
+      "query": "devin-review-ai-software-engineer-worth-it",
+      "impressions": 702,
+      "clicks": 2,
+      "position": 8.26923076923077,
+      "recommendation": "\"devin-review-ai-software-engineer-worth-it\" is getting clicks — write related/follow-up content to build topical authority",
+      "priority": 110
     },
     {
       "type": "winner_expand",
       "query": "brave-web-discovery-project-breaking-google-monopoly",
-      "impressions": 782,
+      "impressions": 783,
       "clicks": 1,
-      "position": 9.836317135549873,
+      "position": 9.826309067688378,
       "recommendation": "\"brave-web-discovery-project-breaking-google-monopoly\" is getting clicks — write related/follow-up content to build topical authority",
       "priority": 98
     },
     {
       "type": "winner_expand",
       "query": "crewai-review-multi-agent-framework-2026",
-      "impressions": 674,
+      "impressions": 737,
       "clicks": 1,
-      "position": 5.117210682492582,
+      "position": 5.221166892808684,
       "recommendation": "\"crewai-review-multi-agent-framework-2026\" is getting clicks — write related/follow-up content to build topical authority",
-      "priority": 87
-    },
-    {
-      "type": "winner_expand",
-      "query": "devin-review-ai-software-engineer-worth-it",
-      "impressions": 644,
-      "clicks": 1,
-      "position": 8.037267080745341,
-      "recommendation": "\"devin-review-ai-software-engineer-worth-it\" is getting clicks — write related/follow-up content to build topical authority",
-      "priority": 84
+      "priority": 94
     },
     {
       "type": "winner_expand",
       "query": "windsurf-review-ai-ide-2026",
-      "impressions": 307,
+      "impressions": 426,
       "clicks": 1,
-      "position": 6.390879478827362,
+      "position": 6.610328638497653,
       "recommendation": "\"windsurf-review-ai-ide-2026\" is getting clicks — write related/follow-up content to build topical authority",
-      "priority": 51
+      "priority": 63
     },
     {
       "type": "content_gap",
@@ -136,24 +136,24 @@
     {
       "type": "striking_distance",
       "query": "aident ai",
-      "impressions": 16,
+      "impressions": 20,
       "clicks": 0,
-      "position": 10.75,
+      "position": 12.4,
       "ctr": 0,
       "recentTrend": "active",
-      "recommendation": "Optimize or create focused content for \"aident ai\" — currently at position 10.8, could reach page 1",
-      "priority": 31
+      "recommendation": "Optimize or create focused content for \"aident ai\" — currently at position 12.4, could reach page 1",
+      "priority": 35
     },
     {
       "type": "striking_distance",
       "query": "anthropic claude computer use vs openai operator 2026",
-      "impressions": 10,
+      "impressions": 13,
       "clicks": 0,
-      "position": 9.3,
+      "position": 8.76923076923077,
       "ctr": 0,
       "recentTrend": "active",
-      "recommendation": "Optimize or create focused content for \"anthropic claude computer use vs openai operator 2026\" — currently at position 9.3, could reach page 1",
-      "priority": 21
+      "recommendation": "Optimize or create focused content for \"anthropic claude computer use vs openai operator 2026\" — currently at position 8.8, could reach page 1",
+      "priority": 28
     }
   ],
   "allOpportunities": [
@@ -169,6 +169,16 @@
     },
     {
       "type": "low_ctr",
+      "query": "aident ai",
+      "impressions": 20,
+      "clicks": 0,
+      "position": 12.4,
+      "ctr": 0,
+      "recommendation": "\"aident ai\" gets 20 impressions but 0.0% CTR — improve title/meta description or write a more targeted article",
+      "priority": 200
+    },
+    {
+      "type": "low_ctr",
       "query": "bolt hosting review",
       "impressions": 19,
       "clicks": 0,
@@ -179,20 +189,20 @@
     },
     {
       "type": "low_ctr",
-      "query": "aident ai",
-      "impressions": 16,
+      "query": "bolt diagramming tool review",
+      "impressions": 15,
       "clicks": 0,
-      "position": 10.75,
+      "position": 6.2,
       "ctr": 0,
-      "recommendation": "\"aident ai\" gets 16 impressions but 0.0% CTR — improve title/meta description or write a more targeted article",
-      "priority": 160
+      "recommendation": "\"bolt diagramming tool review\" gets 15 impressions but 0.0% CTR — improve title/meta description or write a more targeted article",
+      "priority": 150
     },
     {
       "type": "winner_expand",
       "query": "5-ai-code-review-tools-that-actually-work",
-      "impressions": 1067,
+      "impressions": 1065,
       "clicks": 2,
-      "position": 48.13683223992502,
+      "position": 47.04131455399061,
       "recommendation": "\"5-ai-code-review-tools-that-actually-work\" is getting clicks — write related/follow-up content to build topical authority",
       "priority": 147
     },
@@ -208,68 +218,58 @@
     },
     {
       "type": "low_ctr",
-      "query": "bolt diagramming tool review",
-      "impressions": 12,
+      "query": "anthropic claude computer use vs openai operator 2026",
+      "impressions": 13,
       "clicks": 0,
-      "position": 6.25,
+      "position": 8.76923076923077,
       "ctr": 0,
-      "recommendation": "\"bolt diagramming tool review\" gets 12 impressions but 0.0% CTR — improve title/meta description or write a more targeted article",
-      "priority": 120
+      "recommendation": "\"anthropic claude computer use vs openai operator 2026\" gets 13 impressions but 0.0% CTR — improve title/meta description or write a more targeted article",
+      "priority": 130
     },
     {
       "type": "winner_expand",
       "query": "v0-review-vercel-ai-app-builder",
-      "impressions": 962,
+      "impressions": 997,
       "clicks": 1,
-      "position": 15.43970893970894,
+      "position": 15.830491474423269,
       "recommendation": "\"v0-review-vercel-ai-app-builder\" is getting clicks — write related/follow-up content to build topical authority",
-      "priority": 116
+      "priority": 120
     },
     {
-      "type": "low_ctr",
-      "query": "anthropic claude computer use vs openai operator 2026",
-      "impressions": 10,
-      "clicks": 0,
-      "position": 9.3,
-      "ctr": 0,
-      "recommendation": "\"anthropic claude computer use vs openai operator 2026\" gets 10 impressions but 0.0% CTR — improve title/meta description or write a more targeted article",
-      "priority": 100
+      "type": "winner_expand",
+      "query": "devin-review-ai-software-engineer-worth-it",
+      "impressions": 702,
+      "clicks": 2,
+      "position": 8.26923076923077,
+      "recommendation": "\"devin-review-ai-software-engineer-worth-it\" is getting clicks — write related/follow-up content to build topical authority",
+      "priority": 110
     },
     {
       "type": "winner_expand",
       "query": "brave-web-discovery-project-breaking-google-monopoly",
-      "impressions": 782,
+      "impressions": 783,
       "clicks": 1,
-      "position": 9.836317135549873,
+      "position": 9.826309067688378,
       "recommendation": "\"brave-web-discovery-project-breaking-google-monopoly\" is getting clicks — write related/follow-up content to build topical authority",
       "priority": 98
     },
     {
       "type": "winner_expand",
       "query": "crewai-review-multi-agent-framework-2026",
-      "impressions": 674,
+      "impressions": 737,
       "clicks": 1,
-      "position": 5.117210682492582,
+      "position": 5.221166892808684,
       "recommendation": "\"crewai-review-multi-agent-framework-2026\" is getting clicks — write related/follow-up content to build topical authority",
-      "priority": 87
-    },
-    {
-      "type": "winner_expand",
-      "query": "devin-review-ai-software-engineer-worth-it",
-      "impressions": 644,
-      "clicks": 1,
-      "position": 8.037267080745341,
-      "recommendation": "\"devin-review-ai-software-engineer-worth-it\" is getting clicks — write related/follow-up content to build topical authority",
-      "priority": 84
+      "priority": 94
     },
     {
       "type": "winner_expand",
       "query": "windsurf-review-ai-ide-2026",
-      "impressions": 307,
+      "impressions": 426,
       "clicks": 1,
-      "position": 6.390879478827362,
+      "position": 6.610328638497653,
       "recommendation": "\"windsurf-review-ai-ide-2026\" is getting clicks — write related/follow-up content to build topical authority",
-      "priority": 51
+      "priority": 63
     },
     {
       "type": "content_gap",
@@ -283,24 +283,42 @@
     {
       "type": "striking_distance",
       "query": "aident ai",
-      "impressions": 16,
+      "impressions": 20,
       "clicks": 0,
-      "position": 10.75,
+      "position": 12.4,
       "ctr": 0,
       "recentTrend": "active",
-      "recommendation": "Optimize or create focused content for \"aident ai\" — currently at position 10.8, could reach page 1",
-      "priority": 31
+      "recommendation": "Optimize or create focused content for \"aident ai\" — currently at position 12.4, could reach page 1",
+      "priority": 35
     },
     {
       "type": "striking_distance",
       "query": "anthropic claude computer use vs openai operator 2026",
-      "impressions": 10,
+      "impressions": 13,
       "clicks": 0,
-      "position": 9.3,
+      "position": 8.76923076923077,
       "ctr": 0,
       "recentTrend": "active",
-      "recommendation": "Optimize or create focused content for \"anthropic claude computer use vs openai operator 2026\" — currently at position 9.3, could reach page 1",
-      "priority": 21
+      "recommendation": "Optimize or create focused content for \"anthropic claude computer use vs openai operator 2026\" — currently at position 8.8, could reach page 1",
+      "priority": 28
+    },
+    {
+      "type": "agent_needs_review",
+      "query": "dvina",
+      "impressions": 14,
+      "clicks": 0,
+      "position": 7.428571428571429,
+      "recommendation": "Agent \"dvina\" has 14 impressions — write a detailed review blog post to capture this traffic",
+      "priority": 28
+    },
+    {
+      "type": "winner_expand",
+      "query": "motion-review-ai-scheduling-tool",
+      "impressions": 69,
+      "clicks": 1,
+      "position": 13.217391304347826,
+      "recommendation": "\"motion-review-ai-scheduling-tool\" is getting clicks — write related/follow-up content to build topical authority",
+      "priority": 27
     },
     {
       "type": "agent_needs_review",
