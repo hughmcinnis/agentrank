@@ -44,3 +44,5 @@ hailuo-ai
 prophecy
 consensus
 turboscribe
+booke-ai
+prism-videos

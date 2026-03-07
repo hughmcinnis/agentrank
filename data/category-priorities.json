@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-03-07T01:00:08.329Z",
-  "totalAgents": 91,
+  "generatedAt": "2026-03-07T14:00:03.867Z",
+  "totalAgents": 93,
   "totalCategories": 20,
   "minTarget": 5,
-  "categoriesBelow": 5,
+  "categoriesBelow": 3,
   "priorities": [
     {
       "category": "home-improvement",
@@ -21,20 +21,6 @@
     },
     {
       "category": "social-media",
-      "currentCount": 4,
-      "deficit": 1,
-      "priorityScore": 30,
-      "status": "BELOW_TARGET"
-    },
-    {
-      "category": "accounting",
-      "currentCount": 4,
-      "deficit": 1,
-      "priorityScore": 30,
-      "status": "BELOW_TARGET"
-    },
-    {
-      "category": "video-generation",
       "currentCount": 4,
       "deficit": 1,
       "priorityScore": 30,
@@ -76,7 +62,14 @@
       "status": "OK"
     },
     {
-      "category": "image-generation",
+      "category": "accounting",
+      "currentCount": 5,
+      "deficit": 0,
+      "priorityScore": 5,
+      "status": "OK"
+    },
+    {
+      "category": "video-generation",
       "currentCount": 5,
       "deficit": 0,
       "priorityScore": 5,
@@ -91,6 +84,13 @@
     },
     {
       "category": "document-analysis",
+      "currentCount": 6,
+      "deficit": 0,
+      "priorityScore": 4,
+      "status": "OK"
+    },
+    {
+      "category": "image-generation",
       "currentCount": 6,
       "deficit": 0,
       "priorityScore": 4,
@@ -119,9 +119,9 @@
     },
     {
       "category": "automation",
-      "currentCount": 7,
+      "currentCount": 8,
       "deficit": 0,
-      "priorityScore": 3,
+      "priorityScore": 2,
       "status": "OK"
     },
     {
@@ -150,29 +150,29 @@
     "home-improvement",
     "seo",
     "social-media",
-    "accounting",
-    "video-generation"
+    "data-analysis",
+    "research"
   ],
   "distribution": {
     "productivity": 32,
     "coding": 14,
     "sales": 12,
+    "automation": 8,
     "customer-support": 7,
     "marketing": 7,
-    "automation": 7,
     "writing": 6,
     "document-analysis": 6,
+    "image-generation": 6,
     "voice-audio": 6,
     "data-analysis": 5,
     "research": 5,
     "email": 5,
     "transcription": 5,
     "scheduling": 5,
-    "image-generation": 5,
+    "accounting": 5,
+    "video-generation": 5,
     "seo": 4,
     "social-media": 4,
-    "accounting": 4,
-    "video-generation": 4,
     "home-improvement": 3
   }
 }

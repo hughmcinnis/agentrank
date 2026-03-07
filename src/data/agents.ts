@@ -1946,5 +1946,62 @@ export const agents: Agent[] = [
         features: ["Access to all major AI video models (Veo, Sora, Kling, Hailuo, Wan, and more)", "Unified workspace — generate, edit, upscale, and lip sync in one place", "Switch between models per shot for best results", "Story mode for multi-scene narrative video projects", "Export up to 4K resolution with platform-optimized aspect ratios", "Transparent credit-based pricing (1 credit = $0.01)", "AI image generation with SeedDream, Flux, and GPT Image 1.5", "Unlimited Sora 2 Pro access on paid plans", "Early access to new models as they launch", "Commercial usage rights on all generated content"],
         useCases: ["Content creators producing viral short-form videos for TikTok, Reels, and Shorts", "Marketers generating product launch and advertisement videos with AI", "Filmmakers creating cinematic scenes and music video concepts", "Social media managers producing platform-optimized video content at scale", "Creative professionals comparing outputs across multiple AI video models"],
         addedDate: "2026-03-07"
+    },
+    {
+        id: "96",
+        name: "HomeZada",
+        slug: "homezada",
+        tagline: "AI-powered digital home management platform for inventory, maintenance, and project tracking",
+        description: "HomeZada is a comprehensive digital home management platform that uses AI to help homeowners organize and manage everything about their home in one place. The platform covers four key areas: home inventory with photo documentation and value tracking for insurance claims, maintenance scheduling with automated reminders to prevent costly repairs, improvement project planning with budgets and expense tracking, and home finance management including mortgage and equity tracking. AI features include smart maintenance recommendations based on your home's age, location, and systems, predictive alerts for upcoming service needs, and intelligent categorization of home assets. HomeZada generates insurance-ready inventory reports, tracks home value over time, and provides documentation for resale. Available as both a consumer product for individual homeowners and a professional platform for real estate agents, home builders, and property managers who want to provide ongoing value to clients. Based in El Dorado Hills, California.",
+        categories: ["home-improvement", "productivity"],
+        website: "https://www.homezada.com",
+        pricing: "Free basic plan available. Premium plans with advanced features and unlimited inventory items. Professional plans for real estate and property management businesses.",
+        paymentOptions: {
+            isPaid: true,
+            hasFreeTrialPeriod: false,
+            hasFreeStarterPlan: true
+        },
+        logo: "/images/logos/homezada-logo.ico",
+        features: ["Complete home inventory with photos, details, and value tracking", "Automated maintenance scheduling with smart reminders", "Home improvement project planning with budgets and expense tracking", "Insurance-ready inventory reports for claims documentation", "Home value and equity tracking over time", "AI-powered maintenance recommendations based on home profile", "Professional platform for real estate agents and builders", "Document storage for warranties, manuals, and receipts", "Multiple property support for landlords and investors", "Mobile app for on-the-go home management"],
+        useCases: ["Homeowners creating detailed inventories for insurance documentation and claims", "Families scheduling and tracking routine home maintenance to prevent costly repairs", "Homeowners planning renovation projects with budgets and contractor coordination", "Real estate agents providing ongoing digital home management to past clients", "Property managers tracking maintenance and improvements across multiple properties"],
+        addedDate: "2026-03-07"
+    },
+    {
+        id: "97",
+        name: "AIclicks",
+        slug: "aiclicks",
+        tagline: "AI search visibility tracking and optimization platform for ranking in ChatGPT, Perplexity, and Gemini",
+        description: "AIclicks is an AI search visibility platform that helps brands track and improve how they appear in AI-powered search engines like ChatGPT, Perplexity, and Gemini. As traditional search gives way to AI-generated answers, AIclicks fills a critical gap: understanding where your brand shows up (or doesn't) when people ask AI tools for recommendations. The platform discovers real prompts your target audience asks AI tools, audits your current visibility across AI search engines, identifies keyword gaps and missed mentions compared to competitors, and generates done-for-you action plans to improve AI visibility. AIclicks combines GEO (Generative Engine Optimization) with traditional SEO optimization and Reddit growth strategies to build the kind of web presence that AI models learn from. The platform provides a full visibility map showing which AI engines mention your brand, competitor benchmarking, and ongoing monitoring of AI search mentions. Services include AI SEO optimization, Reddit growth campaigns, and content strategy specifically designed to influence how AI models perceive and recommend brands. Founded by Rokas, an SEO specialist focused on the emerging AI search landscape.",
+        categories: ["seo", "marketing"],
+        website: "https://aiclicks.io",
+        pricing: "Custom pricing based on business needs. Services include AI SEO optimization, Reddit growth, and full-service GEO campaigns.",
+        paymentOptions: {
+            isPaid: true,
+            hasFreeTrialPeriod: false,
+            hasFreeStarterPlan: false
+        },
+        logo: "/images/logos/aiclicks-logo.png",
+        features: ["AI search visibility tracking across ChatGPT, Perplexity, and Gemini", "Real prompt discovery — see what your audience asks AI tools", "AI visibility audit with competitor benchmarking", "Keyword gap analysis for AI search mentions", "Done-for-you content and optimization action plans", "GEO (Generative Engine Optimization) strategy and execution", "Reddit growth campaigns to build AI-visible web presence", "Ongoing AI mention monitoring and reporting", "Traditional SEO optimization alongside AI search strategy", "Case studies and ROI tracking for AI visibility campaigns"],
+        useCases: ["Brands tracking whether AI search engines recommend them over competitors", "Marketing teams optimizing content strategy for AI-generated answer inclusion", "SaaS companies ensuring ChatGPT and Perplexity recommend their product", "Agencies offering AI search optimization as a new service to clients", "E-commerce brands building visibility in AI shopping recommendations"],
+        addedDate: "2026-03-07"
+    },
+    {
+        id: "98",
+        name: "Publer",
+        slug: "publer",
+        tagline: "AI-powered social media scheduling and management platform for effortless multi-platform publishing",
+        description: "Publer is a social media management platform that combines AI content generation with powerful scheduling and automation tools to help creators, businesses, and agencies manage their online presence across all major platforms. It supports Facebook, Instagram, TikTok, YouTube, LinkedIn, X (Twitter), Pinterest, Google Business, Telegram, Mastodon, Bluesky, Threads, and WordPress — making it one of the most platform-inclusive schedulers available. The AI assistant generates both text and images at no additional cost on paid plans, helping users overcome content creation bottlenecks. Key features include bulk scheduling via CSV upload for planning months of content at once, auto-scheduling that finds optimal posting times, post recycling for evergreen content, and first comment scheduling for engagement strategies. The visual calendar with drag-and-drop makes content planning intuitive, while the Link in Bio feature for Instagram drives traffic to products and services. Collaboration features include approval workflows, team roles, and workspace organization for managing multiple brands. Founded in Albania in 2012, Publer has grown from a side project into a tool used by thousands of businesses worldwide.",
+        categories: ["social-media", "marketing"],
+        website: "https://publer.com",
+        pricing: "Free plan with 3 social accounts and 10 scheduled posts per account. Professional plan starting at $4/month (billed yearly) per social account. Business plans with team features available.",
+        paymentOptions: {
+            isPaid: true,
+            hasFreeTrialPeriod: false,
+            hasFreeStarterPlan: true
+        },
+        logo: "/images/logos/publer-logo.png",
+        features: ["Support for 13+ social platforms including TikTok, Bluesky, and Threads", "AI content generation for text and images at no extra cost", "Bulk scheduling via CSV upload for months of content at once", "Auto-scheduling that finds optimal posting times per platform", "Post recycling for evergreen content automation", "Visual drag-and-drop calendar for content planning", "First comment scheduling for engagement strategies", "Link in Bio for Instagram traffic conversion", "Collaboration workflows with approval and team roles", "Hashtag suggestions and holiday content reminders"],
+        useCases: ["Small businesses scheduling consistent posts across multiple social platforms", "Social media managers bulk-uploading monthly content calendars via CSV", "Agencies managing multiple client brands with approval workflows", "Content creators recycling evergreen posts to maintain consistent presence", "Real estate agents and local businesses managing multi-platform social presence"],
+        addedDate: "2026-03-07"
     }
 ]; 
