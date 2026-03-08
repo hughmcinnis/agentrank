@@ -51,3 +51,6 @@ aiclicks
 publer
 magicplan
 alkemi
+saner-ai
+radiant
+search-atlas

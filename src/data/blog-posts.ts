@@ -7476,5 +7476,102 @@ Here's my honest take: if you can write Python, use Browser Use. Full stop. It's
         categories: ["automation","productivity"],
         featuredImage: "/images/blog/top-7-ai-browser-agents-worth-using-2026.png",
         tags: ["browser agents","computer use","AI automation","OpenAI Operator","Claude","Nova Act","web automation","2026"],
+    },
+    {
+        id: "72",
+        title: "Claude Code Review: The Terminal-Based Coding Agent That's Quietly Eating Cursor's Lunch",
+        slug: "claude-code-terminal-coding-agent",
+        excerpt: "Anthropic's Claude Code runs entirely in your terminal, reads your whole codebase, and costs $20/month on Pro. After weeks of heavy use, here's what it actually gets right — and where it still falls short compared to Cursor and Copilot.",
+        content: `There's a weird thing happening in AI coding tools right now. Everyone's obsessed with fancy IDEs — Cursor, Windsurf, Trae — while Anthropic quietly shipped a coding agent that runs in your terminal and doesn't even have a GUI.
+
+And honestly? It might be the best one.
+
+## What Claude Code Actually Is
+
+**Claude Code** is a command-line tool from Anthropic. You install it with \`npm\`, point it at your project, and it reads your entire codebase before doing anything. No VS Code extension. No fancy editor chrome. Just your terminal and a really smart AI that understands your project structure, your dependencies, your patterns.
+
+The first time you run it on a large codebase, there's this moment where you realize — oh, it actually read everything. Not just the file you're looking at. Everything. Your utils folder, your config files, your tests, that weird legacy module nobody wants to touch. It knows where things are.
+
+That changes the conversation completely.
+
+## The $20 Question
+
+Let's talk money upfront because the pricing situation is genuinely confusing. You've got three ways to use Claude Code:
+
+- **Pro plan at $20/month** — gives you Sonnet 4.6, which is honestly good enough for 80% of coding tasks. You'll hit usage limits during heavy sessions though.
+- **Max at $100/month** — unlocks Opus 4.6, 5x the Pro limits, priority access. This is where it gets serious.
+- **Max at $200/month** — 20x Pro limits, full Opus access. For people who live in Claude Code all day.
+- **API billing** — pay per token, no limits. Costs vary wildly but heavy users report $50-150/month.
+
+For comparison, Cursor Pro is $20/month with 500 premium requests. Copilot is $10/month (or $19 for Pro). Windsurf is $15/month. So Claude Code on the Pro plan is price-competitive, but the Max plans? That's a different conversation.
+
+Here's my honest take: the $20 Pro plan is a steal if you're using it for focused tasks — refactors, debugging, writing tests. The usage limits are real though. I've been cut off mid-session more times than I'd like. If you're doing this professionally, the $100 Max plan is probably the sweet spot.
+
+## Where It Genuinely Shines
+
+The codebase-wide understanding isn't a gimmick. I threw a gnarly refactor at it — renaming a core type that was referenced across 40+ files, updating imports, fixing downstream type errors — and it just... did it. Correctly. In one pass. Cursor would've needed me to manually open each file and approve changes one by one.
+
+Multi-file edits are where Claude Code embarrasses the competition. Because it runs in your terminal with full filesystem access, it can create files, delete files, run your test suite, check the output, and iterate. No "apply" button. No diff review popup. It just does the work and shows you what changed.
+
+The git integration is underrated too. It reads your git history, understands your branching patterns, and can write commit messages that actually make sense. Small thing, but it adds up.
+
+And debugging — god, the debugging. You paste an error, it doesn't just look at the stack trace. It goes and reads the actual files involved, traces the data flow, and tells you not just what's wrong but why. I've had it catch bugs that were three function calls deep in a chain I never would've thought to check.
+
+## Where It Falls Short
+
+No real-time collaboration. This is the big one. With Cursor, the AI is right there in your editor as you type. You write a function signature, it suggests the body. You start a comment, it finishes your thought. Claude Code doesn't do that. It's async — you ask, it answers. There's no ambient intelligence while you're typing.
+
+For day-to-day "I'm writing code and want help" work, that matters. A lot. Cursor's inline completions save me probably 30 minutes a day in small ways that add up. Claude Code can't match that because it's fundamentally not an editor.
+
+The terminal UI is... functional. That's the nicest way to put it. There's no syntax highlighting in the responses (beyond basic markdown), no visual diff viewer, no file tree. You're reading code output in your terminal. If you're a terminal person, fine. If you're used to modern IDE polish, it feels like going back to 2005.
+
+And the usage limits on Pro are frustrating. You'll be deep in a complex refactor, Claude Code is on a roll, and suddenly — rate limited. Come back later. The $100 Max plan mostly fixes this, but doubling down on an AI coding tool that costs 5x what Cursor charges is a tough sell for a lot of developers.
+
+One more thing that bugs me: no extension ecosystem. Cursor has MCP servers, plugins, custom instructions that persist. Claude Code has CLAUDE.md files (project-level instructions) which are surprisingly useful, but the customization story is thin compared to what Cursor and Copilot offer.
+
+## Claude Code vs Cursor vs Copilot — The Real Breakdown
+
+Stop thinking of these as competitors. They're different tools for different workflows:
+
+- **Cursor** is for when you're actively writing code and want AI riding shotgun. It's an editor first, AI second. Best for: daily development, quick edits, inline completions.
+- **Claude Code** is for when you want to hand off a task entirely. "Refactor this module." "Write tests for this service." "Find and fix the bug causing this error." Best for: complex multi-file work, refactors, autonomous tasks.
+- **Copilot** is for people who want AI assistance without switching editors. It lives in VS Code (or JetBrains, or Neovim) and does a solid job without trying to reinvent your workflow. Best for: staying in your current setup with minimal disruption.
+
+Plenty of developers use Claude Code AND Cursor. Cursor for the active coding, Claude Code for the heavy lifting. That's $40/month total, which is honestly reasonable if you're shipping code professionally.
+
+## The Sonnet 4.6 vs Opus 4.6 Thing
+
+Pro gets you Sonnet 4.6. Max gets you Opus 4.6. Is the difference worth $80/month?
+
+For most coding tasks? No. Sonnet 4.6 handles code generation, debugging, and refactoring really well. The gap between Sonnet and Opus has narrowed significantly — Sonnet scores around 80% on coding benchmarks where Opus hits maybe 85-88%.
+
+Where Opus earns its keep: massive codebases, extremely complex architectural decisions, and tasks requiring deep reasoning across many files simultaneously. If you're working on a monorepo with hundreds of thousands of lines of code, Opus noticeably makes fewer mistakes on complex cross-cutting changes.
+
+But for a typical project? Sonnet on Pro is fine. Save your money.
+
+## The CLAUDE.md Trick Nobody Talks About
+
+Drop a \`CLAUDE.md\` file in your project root with your coding conventions, architecture decisions, and preferences. Claude Code reads it automatically every session. Things like "we use Zod for validation, not Joi" or "all API routes return {data, error} format" or "never use default exports."
+
+This single file turns Claude Code from a generic AI into something that actually knows your project's conventions. It's the closest thing to having a team member who read your style guide. Cursor has similar features (\`.cursorrules\`), but Claude Code's approach feels more natural since CLAUDE.md is just a markdown file — no special syntax, no config format.
+
+## Who Should Actually Use This
+
+If you spend most of your day writing new code line by line, Cursor is still the better daily driver. The inline experience matters too much.
+
+If you regularly deal with large refactors, complex debugging sessions, test generation, or codebase migrations — Claude Code is worth the $20. It handles that kind of work better than anything else I've used.
+
+If you're on a team and need consistent code review, look at CodeRabbit or Greptile instead. Claude Code is a developer tool, not a review tool — despite the name-adjacent confusion.
+
+The $100 Max plan only makes sense if you're using Claude Code as your primary coding tool for 4+ hours a day. For everyone else, Pro at $20 plus Cursor at $20 is the better split.
+
+Honestly, the fact that the best AI coding agent in 2026 runs in a terminal with zero GUI feels like some kind of cosmic joke. But here we are — and it works.`,
+        author: "Hugh McInnis",
+        publishDate: "2026-03-08",
+        publishedAt: "2026-03-08T08:13:22.000-08:00",
+        readTime: "6 min read",
+        categories: ["Reviews","Developer Tools"],
+        featuredImage: "/images/blog/claude-code-terminal-coding-agent.png",
+        tags: ["claude-code","anthropic","ai-coding","developer-tools","cursor","terminal","code-review"],
     }
 ]; 
