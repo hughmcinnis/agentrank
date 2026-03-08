@@ -49,3 +49,5 @@ prism-videos
 homezada
 aiclicks
 publer
+magicplan
+alkemi

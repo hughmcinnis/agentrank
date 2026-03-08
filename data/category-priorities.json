@@ -1,24 +1,10 @@
 {
-  "generatedAt": "2026-03-08T01:00:04.165Z",
-  "totalAgents": 96,
+  "generatedAt": "2026-03-08T14:02:52.796Z",
+  "totalAgents": 98,
   "totalCategories": 20,
   "minTarget": 5,
-  "categoriesBelow": 1,
+  "categoriesBelow": 0,
   "priorities": [
-    {
-      "category": "home-improvement",
-      "currentCount": 4,
-      "deficit": 1,
-      "priorityScore": 30,
-      "status": "BELOW_TARGET"
-    },
-    {
-      "category": "data-analysis",
-      "currentCount": 5,
-      "deficit": 0,
-      "priorityScore": 5,
-      "status": "OK"
-    },
     {
       "category": "research",
       "currentCount": 5,
@@ -69,6 +55,13 @@
       "status": "OK"
     },
     {
+      "category": "home-improvement",
+      "currentCount": 5,
+      "deficit": 0,
+      "priorityScore": 5,
+      "status": "OK"
+    },
+    {
       "category": "video-generation",
       "currentCount": 5,
       "deficit": 0,
@@ -77,6 +70,13 @@
     },
     {
       "category": "writing",
+      "currentCount": 6,
+      "deficit": 0,
+      "priorityScore": 4,
+      "status": "OK"
+    },
+    {
+      "category": "data-analysis",
       "currentCount": 6,
       "deficit": 0,
       "priorityScore": 4,
@@ -140,31 +140,31 @@
     },
     {
       "category": "productivity",
-      "currentCount": 33,
+      "currentCount": 35,
       "deficit": 0,
       "priorityScore": 0,
       "status": "OK"
     }
   ],
   "topPriority": [
-    "home-improvement",
-    "data-analysis",
     "research",
     "email",
-    "transcription"
+    "transcription",
+    "scheduling",
+    "seo"
   ],
   "distribution": {
-    "productivity": 33,
+    "productivity": 35,
     "coding": 14,
     "sales": 12,
     "marketing": 9,
     "automation": 8,
     "customer-support": 7,
     "writing": 6,
+    "data-analysis": 6,
     "document-analysis": 6,
     "image-generation": 6,
     "voice-audio": 6,
-    "data-analysis": 5,
     "research": 5,
     "email": 5,
     "transcription": 5,
@@ -172,7 +172,7 @@
     "seo": 5,
     "social-media": 5,
     "accounting": 5,
-    "video-generation": 5,
-    "home-improvement": 4
+    "home-improvement": 5,
+    "video-generation": 5
   }
 }

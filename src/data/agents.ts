@@ -2041,5 +2041,62 @@ export const agents: Agent[] = [
         features: ["Ask data questions in plain English — no SQL needed", "Slack agent for instant data answers in your workspace", "Connects to CSV, Snowflake, Databricks, BigQuery, and more", "Automated charts, visualizations, and trend analysis", "Recurring report automation with secure agent integrations", "IP protection — users query insights without accessing raw data", "Ecommerce analytics for pricing and margin optimization", "Marketing ROI measurement and growth driver identification", "Web-based DataLab with free tier and no setup required", "AI recommendations alongside data answers"],
         useCases: ["Business teams getting instant data answers without waiting on analysts", "Ecommerce managers spotting pricing opportunities and margin leaks in real time", "Marketing teams measuring campaign ROI directly in Slack conversations", "Customer success teams pulling accurate metrics during client calls", "Data teams reducing ad-hoc query requests with self-serve analytics"],
         addedDate: "2026-03-08"
+    },
+    {
+        id: "101",
+        name: "Saner.AI",
+        slug: "saner-ai",
+        tagline: "ADHD-friendly AI personal assistant for notes, email, and calendar",
+        description: "Saner.AI is the first AI personal assistant designed specifically for people with ADHD. It combines note-taking, email management, and calendar scheduling into a single conversational interface — just chat to search notes, manage emails, and schedule tasks. The app proactively plans your day, sends check-in reminders, and auto-organizes your notes with AI-powered tagging and semantic search. Instead of forcing you to switch between apps and lose focus, Saner.AI keeps everything in one place with a minimalist, distraction-free design. It features a side panel for quick capture without context switching, a personal AI that learns your patterns and gives relevant suggestions, and integration with multiple AI models alongside the note editor for summarizing, expanding, and writing faster. Available as a web app, mobile app, and Chrome extension.",
+        categories: ["scheduling", "email", "productivity"],
+        website: "https://www.saner.ai",
+        pricing: "Free plan available, Starter $8/month, Standard $20/month",
+        paymentOptions: {
+            isPaid: true,
+            hasFreeTrialPeriod: false,
+            hasFreeStarterPlan: true
+        },
+        logo: "/images/logos/saner-ai-logo.ico",
+        features: ["ADHD-optimized conversational interface for notes, email, and calendar", "AI-powered auto-organization with smart tagging and semantic search", "Side panel quick capture without context switching", "Proactive daily planning and check-in reminders", "Personal AI that learns your patterns and gives relevant suggestions", "Multiple AI models integrated alongside the note editor", "Minimalist, distraction-free note-taking design", "Email management and triage from within the app", "Calendar scheduling via natural language chat", "Available as web app, mobile app, and Chrome extension"],
+        useCases: ["ADHD users managing daily tasks without losing focus across multiple apps", "Knowledge workers capturing and organizing notes with AI-powered search", "Professionals triaging email and scheduling meetings from a single interface", "Students taking notes and studying with AI summarization and expansion", "Anyone who struggles with task management and needs proactive reminders"],
+        addedDate: "2026-03-08"
+    },
+    {
+        id: "102",
+        name: "Radiant",
+        slug: "radiant",
+        tagline: "Bot-free AI meeting notetaker with on-device capture for Mac",
+        description: "Radiant is a completely free, bot-free AI meeting assistant that captures meeting audio directly on your device — no awkward AI bot joining your Zoom, Google Meet, Microsoft Teams, or Slack Huddles calls. Unlike traditional meeting notetakers that add a visible bot participant, Radiant runs silently in the background on your Mac, recording and transcribing without anyone knowing. After each meeting, it automatically generates summaries, action items, and follow-up drafts. Radiant pushes tasks directly to tools like Linear and Notion, turning every meeting into a completed to-do list. The on-device approach means better privacy since audio never leaves your machine during capture. Currently in free open beta for Mac users.",
+        categories: ["transcription", "productivity"],
+        website: "https://radiantapp.com",
+        pricing: "Free (open beta)",
+        paymentOptions: {
+            isPaid: false,
+            hasFreeTrialPeriod: false,
+            hasFreeStarterPlan: true
+        },
+        logo: "/images/logos/radiant-logo.png",
+        features: ["Bot-free meeting capture — no AI participant visible to attendees", "On-device audio recording for enhanced privacy", "Works with Zoom, Google Meet, Microsoft Teams, and Slack Huddles", "Automatic meeting transcription and summarization", "AI-generated action items and follow-up email drafts", "Direct task push to Linear, Notion, and other productivity tools", "Silent background operation on Mac", "Completely free during open beta", "Instant post-meeting to-do list generation", "Privacy-first architecture with local audio processing"],
+        useCases: ["Professionals who want meeting notes without the awkwardness of a bot joining the call", "Sales teams capturing call insights without alerting prospects to AI recording", "Managers turning meeting action items into Linear or Notion tasks automatically", "Remote teams needing reliable transcription across multiple meeting platforms", "Privacy-conscious users who prefer on-device audio processing over cloud recording"],
+        addedDate: "2026-03-08"
+    },
+    {
+        id: "103",
+        name: "Search Atlas",
+        slug: "search-atlas",
+        tagline: "All-in-one AI SEO automation platform with conversational agent",
+        description: "Search Atlas is a comprehensive AI-powered SEO platform that replaces an entire stack of SEO tools with one integrated solution. Its flagship feature, Atlas Brain, is the world's first conversational SEO agent — you can launch your full SEO and AI search strategy in a single conversation. Atlas Brain runs thousands of tasks across 60+ built-in tools to execute faster than manual workflows. The platform includes OTTO SEO for one-click automated optimization, Content Genius for AI content creation, topical maps, site auditing, link building, press release distribution, backlink analysis, Google Business Profile management, and white-labeled dashboards for agencies. Search Atlas also offers LLM Visibility tracking to measure and maximize brand reach in AI search results. Built by the team behind LinkGraph and Signal Genesys, it serves agencies, brands, and enterprises with plans starting at $99/month.",
+        categories: ["seo", "marketing"],
+        website: "https://searchatlas.com",
+        pricing: "Starting at $99/month",
+        paymentOptions: {
+            isPaid: true,
+            hasFreeTrialPeriod: true,
+            hasFreeStarterPlan: false
+        },
+        logo: "/images/logos/search-atlas-logo.ico",
+        features: ["Atlas Brain — conversational AI SEO agent across 60+ tools", "OTTO SEO for one-click automated site optimization", "Content Genius V3 for AI-powered content creation", "Topical map generation for content strategy", "Site Explorer and Site Auditor for technical SEO", "Link building and press release distribution tools", "Google Business Profile management and GBP Galactic", "LLM Visibility tracking for AI search brand monitoring", "White-labeled dashboards and reporting for agencies", "Backlink analyzer and on-page audit tools"],
+        useCases: ["SEO agencies replacing multiple tool subscriptions with one platform", "Brands automating technical SEO fixes with OTTO one-click optimization", "Content teams generating SEO-optimized articles with AI assistance", "Enterprises tracking brand visibility across AI search engines and LLMs", "Local businesses managing Google Business Profiles at scale"],
+        addedDate: "2026-03-08"
     }
 ]; 
