@@ -1,26 +1,12 @@
 {
-  "generatedAt": "2026-03-07T14:00:03.867Z",
-  "totalAgents": 93,
+  "generatedAt": "2026-03-08T01:00:04.165Z",
+  "totalAgents": 96,
   "totalCategories": 20,
   "minTarget": 5,
-  "categoriesBelow": 3,
+  "categoriesBelow": 1,
   "priorities": [
     {
       "category": "home-improvement",
-      "currentCount": 3,
-      "deficit": 2,
-      "priorityScore": 60,
-      "status": "BELOW_TARGET"
-    },
-    {
-      "category": "seo",
-      "currentCount": 4,
-      "deficit": 1,
-      "priorityScore": 30,
-      "status": "BELOW_TARGET"
-    },
-    {
-      "category": "social-media",
       "currentCount": 4,
       "deficit": 1,
       "priorityScore": 30,
@@ -56,6 +42,20 @@
     },
     {
       "category": "scheduling",
+      "currentCount": 5,
+      "deficit": 0,
+      "priorityScore": 5,
+      "status": "OK"
+    },
+    {
+      "category": "seo",
+      "currentCount": 5,
+      "deficit": 0,
+      "priorityScore": 5,
+      "status": "OK"
+    },
+    {
+      "category": "social-media",
       "currentCount": 5,
       "deficit": 0,
       "priorityScore": 5,
@@ -111,17 +111,17 @@
       "status": "OK"
     },
     {
-      "category": "marketing",
-      "currentCount": 7,
-      "deficit": 0,
-      "priorityScore": 3,
-      "status": "OK"
-    },
-    {
       "category": "automation",
       "currentCount": 8,
       "deficit": 0,
       "priorityScore": 2,
+      "status": "OK"
+    },
+    {
+      "category": "marketing",
+      "currentCount": 9,
+      "deficit": 0,
+      "priorityScore": 1,
       "status": "OK"
     },
     {
@@ -140,7 +140,7 @@
     },
     {
       "category": "productivity",
-      "currentCount": 32,
+      "currentCount": 33,
       "deficit": 0,
       "priorityScore": 0,
       "status": "OK"
@@ -148,18 +148,18 @@
   ],
   "topPriority": [
     "home-improvement",
-    "seo",
-    "social-media",
     "data-analysis",
-    "research"
+    "research",
+    "email",
+    "transcription"
   ],
   "distribution": {
-    "productivity": 32,
+    "productivity": 33,
     "coding": 14,
     "sales": 12,
+    "marketing": 9,
     "automation": 8,
     "customer-support": 7,
-    "marketing": 7,
     "writing": 6,
     "document-analysis": 6,
     "image-generation": 6,
@@ -169,10 +169,10 @@
     "email": 5,
     "transcription": 5,
     "scheduling": 5,
+    "seo": 5,
+    "social-media": 5,
     "accounting": 5,
     "video-generation": 5,
-    "seo": 4,
-    "social-media": 4,
-    "home-improvement": 3
+    "home-improvement": 4
   }
 }

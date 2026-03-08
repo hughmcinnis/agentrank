@@ -2003,5 +2003,43 @@ export const agents: Agent[] = [
         features: ["Support for 13+ social platforms including TikTok, Bluesky, and Threads", "AI content generation for text and images at no extra cost", "Bulk scheduling via CSV upload for months of content at once", "Auto-scheduling that finds optimal posting times per platform", "Post recycling for evergreen content automation", "Visual drag-and-drop calendar for content planning", "First comment scheduling for engagement strategies", "Link in Bio for Instagram traffic conversion", "Collaboration workflows with approval and team roles", "Hashtag suggestions and holiday content reminders"],
         useCases: ["Small businesses scheduling consistent posts across multiple social platforms", "Social media managers bulk-uploading monthly content calendars via CSV", "Agencies managing multiple client brands with approval workflows", "Content creators recycling evergreen posts to maintain consistent presence", "Real estate agents and local businesses managing multi-platform social presence"],
         addedDate: "2026-03-07"
+    },
+    {
+        id: "99",
+        name: "magicplan",
+        slug: "magicplan",
+        tagline: "AI-powered floor plans and project documentation for contractors",
+        description: "magicplan is an AI-powered field documentation and floor plan creation tool designed for restoration, renovation, and home improvement professionals. Using your smartphone camera (including LiDAR on newer iOS devices), magicplan lets you scan rooms and generate accurate floor plans with measurements in real time. The platform goes beyond floor plans — it includes built-in estimating with automatic quantity calculations, professional PDF report generation, unlimited photo and video documentation with annotations, and real-time team collaboration between field and office. Everything captured on-site stays organized and synced: sketches, photos, 360° images, notes, tags, and issues are all attached to rooms or items. Teams can track progress, generate shareable project links for adjusters and clients, and maintain full job history from start to finish. Used by companies like Belfor, PROKIL, and KBAC Flooring, magicplan has 290K+ ratings at 4.7 stars. Available on iOS and Android with a cloud dashboard for office teams.",
+        categories: ["home-improvement", "productivity"],
+        website: "https://magicplan.app",
+        pricing: "Per-project pricing, all features included, unlimited users",
+        paymentOptions: {
+            isPaid: true,
+            hasFreeTrialPeriod: true,
+            hasFreeStarterPlan: false
+        },
+        logo: "/images/logos/magicplan-logo.png",
+        features: ["Real-time AI floor plan creation from smartphone camera or LiDAR", "Automatic measurements and quantity calculations for estimates", "Unlimited photo, video, and 360° image documentation", "Built-in estimating with personalized price lists", "Professional PDF reports and shareable project links", "Real-time sync between field crews and office teams", "Room-level annotations, tags, issues, and notes", "Full job history documented from start to finish", "Team access management with admin and member roles", "Works on iOS, Android, and cloud dashboard"],
+        useCases: ["Restoration contractors documenting damage for insurance adjusters", "Renovation pros creating floor plans and estimates on-site", "Flooring companies measuring and quoting without revisiting sites", "Home improvement teams syncing field documentation with the office", "Property assessors generating professional reports with photos and plans"],
+        addedDate: "2026-03-08"
+    },
+    {
+        id: "100",
+        name: "Alkemi",
+        slug: "alkemi",
+        tagline: "AI data teammate that brings instant insights to Slack and the web",
+        description: "Alkemi is an AI-powered data analysis platform that lets business teams ask questions about their data in plain English and get instant answers, charts, and recommendations — no SQL or analyst tickets required. The core insight behind Alkemi is that decisions happen in Slack and meetings, but data lives in warehouses and dashboards that most people never touch. Alkemi bridges that gap with a Slack agent and web-based DataLab. Connect your data sources (CSV uploads, Snowflake, Databricks, BigQuery, and more) in seconds, then start querying conversationally. Alkemi generates clear visualizations, identifies trends, and can automate recurring reports. For ecommerce teams, it spots pricing opportunities and margin leaks. For marketing, it measures ROI on the fly. For customer success, it delivers faster, more accurate answers. The platform also protects IP — users query insights without ever accessing or copying raw data. DataLab is free to start with no setup required. Launched on Product Hunt in 2026.",
+        categories: ["data-analysis", "productivity"],
+        website: "https://www.alkemi.ai",
+        pricing: "Free tier available, paid plans for advanced features",
+        paymentOptions: {
+            isPaid: true,
+            hasFreeTrialPeriod: false,
+            hasFreeStarterPlan: true
+        },
+        logo: "/images/logos/alkemi-logo.png",
+        features: ["Ask data questions in plain English — no SQL needed", "Slack agent for instant data answers in your workspace", "Connects to CSV, Snowflake, Databricks, BigQuery, and more", "Automated charts, visualizations, and trend analysis", "Recurring report automation with secure agent integrations", "IP protection — users query insights without accessing raw data", "Ecommerce analytics for pricing and margin optimization", "Marketing ROI measurement and growth driver identification", "Web-based DataLab with free tier and no setup required", "AI recommendations alongside data answers"],
+        useCases: ["Business teams getting instant data answers without waiting on analysts", "Ecommerce managers spotting pricing opportunities and margin leaks in real time", "Marketing teams measuring campaign ROI directly in Slack conversations", "Customer success teams pulling accurate metrics during client calls", "Data teams reducing ad-hoc query requests with self-serve analytics"],
+        addedDate: "2026-03-08"
     }
 ]; 
