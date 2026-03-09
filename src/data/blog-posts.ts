@@ -8207,5 +8207,83 @@ My honest take: v0 is still the best AI frontend generator for React developers,
         categories: ["Reviews","AI App Builders"],
         featuredImage: "/images/blog/v0-pricing-credits-system-what-it-actually-costs.png",
         tags: ["v0","vercel","pricing","ai app builder","vibe coding","lovable","bolt"],
+    },
+    {
+        id: "80",
+        title: "Dvina Review: Private AI That Connects Everything — But Is Anyone Actually Using It?",
+        slug: "dvina-review-private-ai-platform-120-apps",
+        excerpt: "Dvina promises private AI with 120+ app connections and a new coding agent. I dug into what it actually does, how it compares to ChatGPT and Notion AI, and whether the privacy angle is enough to matter.",
+        content: `Privacy-focused AI tools have a branding problem. They all say the same thing — "your data stays yours" — and then you find out they're just wrapping OpenAI's API with a pinky promise. So when I came across **Dvina**, a platform claiming to be the "world's most connected private AI," I went in skeptical.
+
+Turns out there's more going on here than the usual privacy theater.
+
+## Two Products, One Brand
+
+Dvina is actually doing two distinct things, which is either ambitious or unfocused depending on your perspective.
+
+First, there's the core platform: a private AI chat that connects to 120+ apps. Think Salesforce, Jira, Linear, Notion, SAP, Google Analytics, QuickBooks, Airtable — the list goes on. The pitch is that instead of switching between fifteen browser tabs to get a sales report, you ask Dvina and it pulls data from your actual live systems. No CSV exports, no stale dashboards.
+
+Second, they launched Dvina Code in February 2026 — an AI coding agent that gives you access to Claude Opus 4.6, Sonnet 4.5, and GPT-5.3 Codex in one desktop app. Free to start, no credit card.
+
+The connection between these two products isn't immediately obvious, and I think that's a problem. Are they an enterprise data platform? A coding tool? A ChatGPT replacement? The answer seems to be "yes to all three," which usually means you're great at none of them.
+
+## The App Connection Thing
+
+Okay, but the 120+ app integration is genuinely interesting. Most AI assistants are basically fancy text boxes — you paste stuff in, they respond. Dvina's whole deal is that it can reach into your actual systems.
+
+Want to know which Salesforce opportunities closed this week? Ask it. Need the latest ServiceNow incidents assigned to your team? It pulls them. QuickBooks invoices from the last 48 hours? Done.
+
+This is the kind of thing that sounds amazing in a demo and then falls apart in practice. The real question is: how well does it actually handle the messy, inconsistent data that lives in enterprise systems? A Salesforce instance that's been used by 50 different sales reps over three years is not a clean dataset. It's a warzone.
+
+I couldn't find many real user reviews talking about this in detail, which is telling. The Product Hunt launch got some attention, but the feedback was mostly "looks cool" rather than "I've been using this for three months and here's what happened."
+
+## Dvina Code — Late to a Crowded Party
+
+The coding agent is where things get more competitive — and more questionable.
+
+Dvina Code lets you use multiple frontier models (Opus 4.6, Sonnet 4.5, GPT-5.3 Codex) with what they call "generous usage limits." You can run parallel sessions, switch models mid-conversation, and build custom agents for specific workflows like code review or bug triage.
+
+Sounds great on paper. But here's who they're competing with: Cursor ($20/month, massive community), Windsurf (free tier, solid experience), Claude Code (direct terminal access), GitHub Copilot (deeply integrated into VS Code), and Devin ($20-500/month for autonomous coding). That's a brutal field.
+
+What Dvina Code doesn't have — at least not yet — is the ecosystem. No marketplace of extensions. No community-built prompts or workflows. No Stack Overflow threads where someone solved your exact problem using Dvina Code. When you pick a coding tool, you're picking a community as much as a product.
+
+The "build your own agents" feature is cool in theory. You define instructions, assign a model, connect tools, scope it to a repo. But Cursor has rules files, Windsurf has similar customization, and honestly most developers just want the thing to work out of the box without configuring agents.
+
+## The Privacy Angle
+
+Here's where Dvina has a legitimate edge — if you care about it.
+
+They emphasize that chats are never used for model training. Data stays local. No account required for some features. For individuals, this is a nice-to-have. For enterprises dealing with HIPAA, SOC 2, or GDPR compliance? It could be a dealbreaker in the other direction — meaning they'd pick Dvina specifically because of this.
+
+The problem is that "private AI" as a selling point works better for enterprise buyers than for individual developers. And enterprise sales cycles are long, expensive, and require a sales team that can handle procurement processes. For a relatively young startup based in San Francisco, that's a big mountain to climb.
+
+Compare this to something like Notion AI, which isn't particularly private but is already embedded in millions of workflows. Or Claude's team plans, where Anthropic has explicit data retention policies that most companies find acceptable. Privacy matters, but convenience usually wins.
+
+## What's Missing
+
+A few things bothered me:
+
+- **Pricing transparency is basically zero.** The pricing page on dvina.ai doesn't actually show prices — it just lists industries and personas. That's a red flag. If you have to "contact sales" for everything, you're probably expensive, and you're definitely not targeting individual users despite the consumer-friendly marketing.
+
+- **No public usage numbers.** How many people are actually using this? How many messages processed? How many app connections active? The silence is deafening.
+
+- **The product spread is concerning.** Doing enterprise data integration AND a consumer coding agent AND a private chat alternative is a lot for what appears to be a small team. Focus usually beats breadth at this stage.
+
+## Who Should Actually Look at This?
+
+If you're a mid-size company (50-500 people) that already uses a bunch of SaaS tools and needs to query across them without building custom integrations — Dvina's core platform could save you real time. The privacy angle is a genuine differentiator for regulated industries.
+
+For the coding agent? I'd wait. The market is too competitive and too mature. Cursor and Windsurf have years of polish, massive user bases, and communities that help when things break. Dvina Code would need to be dramatically better — not just "also good" — to justify switching.
+
+And if you're an individual looking for a private ChatGPT alternative, there are simpler options. Venice.ai does privacy-focused chat without trying to also be an enterprise platform and a coding tool.
+
+Dvina is trying to be three things at once, and right now it's hard to tell which one they'll be great at. The 120+ app integration is their strongest card — if they lean into that hard and prove it works at scale with messy real-world data, they've got something. The rest feels like it's diluting the message.`,
+        author: "Hugh McInnis",
+        publishDate: "2026-03-09",
+        publishedAt: "2026-03-09T16:02:14.000-08:00",
+        readTime: "5 min read",
+        categories: ["Reviews"],
+        featuredImage: "/images/blog/dvina-review-private-ai-platform-120-apps.png",
+        tags: ["dvina","private ai","ai platform","ai coding agent","chatgpt alternative","enterprise ai"],
     }
 ]; 
