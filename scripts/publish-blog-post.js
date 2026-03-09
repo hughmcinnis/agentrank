@@ -50,7 +50,7 @@ function checkForDuplicates(newPost) {
     
     // If more than 50% of significant words match, it's likely a duplicate
     if (commonWords.length >= Math.min(slugWords.length, existingWords.length) * 0.5) {
-      throw new Error(`Potential duplicate detected: New post slug "${newPost.slug}" is very similar to existing post "${existingSlug}". Please choose a different topic.`);
+      throw new Error(`Potential : New post slug "${newPost.slug}" is very similar to existing post "${existingSlug}". Please choose a different topic.`);
     }
   }
   
