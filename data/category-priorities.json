@@ -1,17 +1,10 @@
 {
-  "generatedAt": "2026-03-09T01:00:04.545Z",
-  "totalAgents": 101,
+  "generatedAt": "2026-03-09T14:02:42.733Z",
+  "totalAgents": 104,
   "totalCategories": 20,
   "minTarget": 5,
   "categoriesBelow": 0,
   "priorities": [
-    {
-      "category": "research",
-      "currentCount": 5,
-      "deficit": 0,
-      "priorityScore": 5,
-      "status": "OK"
-    },
     {
       "category": "social-media",
       "currentCount": 5,
@@ -34,13 +27,6 @@
       "status": "OK"
     },
     {
-      "category": "video-generation",
-      "currentCount": 5,
-      "deficit": 0,
-      "priorityScore": 5,
-      "status": "OK"
-    },
-    {
       "category": "writing",
       "currentCount": 6,
       "deficit": 0,
@@ -48,7 +34,7 @@
       "status": "OK"
     },
     {
-      "category": "data-analysis",
+      "category": "research",
       "currentCount": 6,
       "deficit": 0,
       "priorityScore": 4,
@@ -90,24 +76,38 @@
       "status": "OK"
     },
     {
-      "category": "image-generation",
-      "currentCount": 6,
-      "deficit": 0,
-      "priorityScore": 4,
-      "status": "OK"
-    },
-    {
-      "category": "voice-audio",
-      "currentCount": 6,
-      "deficit": 0,
-      "priorityScore": 4,
-      "status": "OK"
-    },
-    {
       "category": "customer-support",
       "currentCount": 7,
       "deficit": 0,
       "priorityScore": 3,
+      "status": "OK"
+    },
+    {
+      "category": "data-analysis",
+      "currentCount": 7,
+      "deficit": 0,
+      "priorityScore": 3,
+      "status": "OK"
+    },
+    {
+      "category": "video-generation",
+      "currentCount": 7,
+      "deficit": 0,
+      "priorityScore": 3,
+      "status": "OK"
+    },
+    {
+      "category": "voice-audio",
+      "currentCount": 7,
+      "deficit": 0,
+      "priorityScore": 3,
+      "status": "OK"
+    },
+    {
+      "category": "image-generation",
+      "currentCount": 8,
+      "deficit": 0,
+      "priorityScore": 2,
       "status": "OK"
     },
     {
@@ -147,32 +147,32 @@
     }
   ],
   "topPriority": [
-    "research",
     "social-media",
     "accounting",
     "home-improvement",
-    "video-generation"
+    "writing",
+    "research"
   ],
   "distribution": {
     "productivity": 37,
     "coding": 14,
     "sales": 12,
     "marketing": 10,
+    "image-generation": 8,
     "automation": 8,
     "customer-support": 7,
+    "data-analysis": 7,
+    "video-generation": 7,
+    "voice-audio": 7,
     "writing": 6,
-    "data-analysis": 6,
+    "research": 6,
     "email": 6,
     "transcription": 6,
     "document-analysis": 6,
     "scheduling": 6,
     "seo": 6,
-    "image-generation": 6,
-    "voice-audio": 6,
-    "research": 5,
     "social-media": 5,
     "accounting": 5,
-    "home-improvement": 5,
-    "video-generation": 5
+    "home-improvement": 5
   }
 }

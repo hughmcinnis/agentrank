@@ -54,3 +54,6 @@ alkemi
 saner-ai
 radiant
 search-atlas
+elicit
+magic-hour
+luma

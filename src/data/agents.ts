@@ -2155,5 +2155,62 @@ export const agents: Agent[] = [
         features: ["AI agents that coordinate creative work across text, image, video, and audio", "Ray3 — state-of-the-art reasoning video model with HDR support", "Nano Banana and Nano Banana Pro image generation models", "Integration with top third-party models (Sora 2, Veo 3, Kling, ElevenLabs)", "Team collaboration with projects and organization features", "Commercial use included on all plans", "Guest collaborator access with edit permissions", "Usage analytics and user spend limits for teams", "Enterprise options with custom fine-tuning and SSO", "API access for programmatic creative workflows"],
         useCases: ["Creative teams producing multi-modal content across video, image, and audio", "Filmmakers and video producers generating concept videos and storyboards", "Marketing agencies orchestrating end-to-end campaign creative with AI", "Individual creators accessing multiple best-in-class AI models through one platform", "Enterprises needing custom fine-tuned creative AI with team management"],
         addedDate: "2026-03-09"
+    },
+    {
+        id: "107",
+        name: "SocialBee",
+        slug: "socialbee",
+        tagline: "AI-powered social media management for creators and teams",
+        description: "SocialBee is an AI-powered social media management platform that streamlines content creation, scheduling, publishing, and analytics. It uses AI to generate captions, images, and hashtags, and provides personalized recommendations on when and where to post. With a unified inbox for mentions, comments, and messages, plus team collaboration features, SocialBee helps solopreneurs, agencies, and brands manage their entire social presence from one dashboard.",
+        categories: ["social-media", "marketing"],
+        website: "https://socialbee.com",
+        pricing: "From $29/month (Bootstrap plan), 14-day free trial",
+        paymentOptions: {
+            isPaid: true,
+            hasFreeTrialPeriod: true,
+            hasFreeStarterPlan: false
+        },
+        logo: "/images/logos/socialbee-logo.png",
+        features: ["AI-generated captions, images, and hashtags", "Cross-platform scheduling and publishing", "Smart posting time recommendations based on performance data", "Unified social inbox for mentions, comments, and DMs", "Visual content calendar with drag-and-drop", "Canva, Unsplash, and GIPHY integrations", "Team collaboration with post approvals", "PDF report generation for analytics", "Content category organization and recycling", "LinkedIn carousel scheduling (PDF, DOCX, PPT)"],
+        useCases: ["Small business owners managing social media without a dedicated team", "Marketing agencies handling multiple client accounts", "Content creators scheduling posts across platforms in advance", "Brands tracking social media performance and engagement metrics", "Teams collaborating on social media content with approval workflows"],
+        addedDate: "2026-03-09"
+    },
+    {
+        id: "108",
+        name: "FeedHive",
+        slug: "feedhive",
+        tagline: "Create social media content at scale with AI and automation",
+        description: "FeedHive is a social media management platform built around AI and automation. Its fine-tuned AI Writing Assistant (powered by GPT-5) helps generate ideas and craft engaging posts, while smart scheduling, post conditions, and automation runs handle publishing and follow-ups. FeedHive supports cross-posting to all major platforms with per-platform adjustments, hashtag generation, post recycling, and Instagram grid preview — making it ideal for high-volume content creators and agencies.",
+        categories: ["social-media", "automation"],
+        website: "https://www.feedhive.com",
+        pricing: "From $19/month (Creator), 7-day free trial",
+        paymentOptions: {
+            isPaid: true,
+            hasFreeTrialPeriod: true,
+            hasFreeStarterPlan: false
+        },
+        logo: "/images/logos/feedhive-logo.ico",
+        features: ["AI Writing Assistant fine-tuned for social media (GPT-5 based)", "Vibe Marketing — turns rough ideas into polished posts", "Smart scheduling with optimal timing", "Post conditions for automated follow-up comments", "AI-powered hashtag generation", "Cross-platform posting with per-channel adjustments", "Post recycling and evergreen content management", "Instagram grid preview for visual planning", "Workspaces for team and client management", "Automation runs for conditional post actions"],
+        useCases: ["Individual creators scaling their social media output", "Startups and brands automating social media publishing", "Agencies managing hundreds of social accounts for clients", "Marketers using AI to overcome writer's block and generate ideas", "Businesses automating follow-up engagement on top-performing posts"],
+        addedDate: "2026-03-09"
+    },
+    {
+        id: "109",
+        name: "Finaloop",
+        slug: "finaloop",
+        tagline: "AI-powered ecommerce accounting and bookkeeping",
+        description: "Finaloop provides full-service, real-time bookkeeping and accounting for ecommerce brands selling on Shopify, Amazon, Walmart, Etsy, and more. It combines AI automation with a dedicated team of expert accountants to deliver 100% accurate P&L, balance sheets, and cash flow statements in real time. Finaloop handles inventory tracking, COGS calculations based on landed costs, multichannel order reconciliation, and year-end tax-optimized financial packages — replacing traditional bookkeepers, accounting software, and integrations.",
+        categories: ["accounting", "automation"],
+        website: "https://www.finaloop.com",
+        pricing: "From $155/month (Core, based on revenue), 14-day free trial",
+        paymentOptions: {
+            isPaid: true,
+            hasFreeTrialPeriod: true,
+            hasFreeStarterPlan: false
+        },
+        logo: "/images/logos/finaloop-logo.jpg",
+        features: ["Real-time P&L, balance sheet, and cash flow statements", "AI-powered transaction categorization and reconciliation", "Automated inventory and COGS tracking based on landed costs", "Multichannel order tracking (Shopify, Amazon, Walmart, Etsy)", "Dedicated expert accounting team available 7 days a week", "Year-end tax-optimized financial packages", "KPI and benchmark dashboard", "Seamless integration replacing traditional bookkeeping software", "Revenue-based pricing that scales with your business", "Unlimited support from certified accountants"],
+        useCases: ["Shopify and Amazon sellers needing automated real-time bookkeeping", "DTC brands replacing manual bookkeepers with AI-driven accounting", "Multichannel ecommerce businesses reconciling orders across platforms", "Ecommerce founders wanting accurate financials without accounting expertise", "Growing brands needing tax-optimized year-end financial packages"],
+        addedDate: "2026-03-09"
     }
 ]; 
