@@ -57,3 +57,6 @@ search-atlas
 elicit
 magic-hour
 luma
+socialbee
+feedhive
+finaloop
