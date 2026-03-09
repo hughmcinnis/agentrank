@@ -2098,5 +2098,62 @@ export const agents: Agent[] = [
         features: ["Atlas Brain — conversational AI SEO agent across 60+ tools", "OTTO SEO for one-click automated site optimization", "Content Genius V3 for AI-powered content creation", "Topical map generation for content strategy", "Site Explorer and Site Auditor for technical SEO", "Link building and press release distribution tools", "Google Business Profile management and GBP Galactic", "LLM Visibility tracking for AI search brand monitoring", "White-labeled dashboards and reporting for agencies", "Backlink analyzer and on-page audit tools"],
         useCases: ["SEO agencies replacing multiple tool subscriptions with one platform", "Brands automating technical SEO fixes with OTTO one-click optimization", "Content teams generating SEO-optimized articles with AI assistance", "Enterprises tracking brand visibility across AI search engines and LLMs", "Local businesses managing Google Business Profiles at scale"],
         addedDate: "2026-03-08"
+    },
+    {
+        id: "104",
+        name: "Elicit",
+        slug: "elicit",
+        tagline: "AI research assistant for scientific literature review",
+        description: "Elicit is an AI-powered research assistant that helps researchers analyze scientific papers at scale. Built for systematic reviews and evidence synthesis, Elicit searches across more than 138 million academic papers and uses language models to extract key findings, summarize results, and organize data into structured tables. Researchers can chat with papers, run automated reports that pull from hundreds of data sources, set up personalized research alerts, and import libraries from Zotero. The platform supports custom extractions from uploaded papers, figure interpretation, and real-time team collaboration. With an estimated $18M+ in annual recurring revenue, Elicit has become a go-to tool for academics, biotech firms, and policy organizations who need to process large volumes of literature without sacrificing rigor.",
+        categories: ["research", "data-analysis"],
+        website: "https://elicit.com",
+        pricing: "Free plan available, Pro from $49/month",
+        paymentOptions: {
+            isPaid: true,
+            hasFreeTrialPeriod: false,
+            hasFreeStarterPlan: true
+        },
+        logo: "/images/logos/elicit-logo.png",
+        features: ["Search across 138+ million academic papers", "AI-powered systematic review workflow screening up to 5,000 papers", "Automated reports extracting from up to 200 data sources", "Chat with papers using full-text access", "Custom data extraction from uploaded papers with column-based tables", "Figure interpretation from research papers", "Real-time collaboration and team editing", "Personalized research alerts and subscriptions", "Zotero library import", "API access for programmatic integration"],
+        useCases: ["Researchers conducting systematic literature reviews across thousands of papers", "Biotech teams synthesizing clinical trial data and evidence", "Policy analysts extracting findings from large bodies of research", "Graduate students accelerating thesis literature reviews", "R&D teams monitoring new publications with automated alerts"],
+        addedDate: "2026-03-09"
+    },
+    {
+        id: "105",
+        name: "Magic Hour",
+        slug: "magic-hour",
+        tagline: "All-in-one AI video and image creation suite for creators",
+        description: "Magic Hour is a comprehensive AI-powered creative platform that combines over 100 video and image generation tools in one interface. Trusted by over 3 million creators, it offers text-to-video, image-to-video, face swap, lip sync, talking photos, video-to-video style transfer, AI animation, subtitle generation, video extension, audio-to-video, UGC ad generation, and upscaling — all accessible from a browser with no software installation. The platform also includes a full suite of AI image tools including face swap photos, AI image editing, headshot generation, clothes changing, background removal, and GIF creation. Magic Hour provides API access for developers who want to integrate its capabilities programmatically. Plans range from a free tier with basic credits to a Business plan supporting 4K exports and 10+ hours of video generation per year.",
+        categories: ["video-generation", "image-generation"],
+        website: "https://magichour.ai",
+        pricing: "Free plan available, Creator from $10/month",
+        paymentOptions: {
+            isPaid: true,
+            hasFreeTrialPeriod: false,
+            hasFreeStarterPlan: true
+        },
+        logo: "/images/logos/magic-hour-logo.png",
+        features: ["100+ AI video and image tools in one platform", "Text-to-video and image-to-video generation", "Face swap for video and photos", "AI lip sync and talking photo creation", "Video-to-video style transfer and animation", "AI subtitle generation and video extension", "UGC ad generator for marketing content", "AI image editing, headshot generation, and background removal", "Up to 4K export quality on higher plans", "API access for developer integration"],
+        useCases: ["Content creators producing AI-generated videos without technical expertise", "Marketers generating UGC-style ads and promotional video content", "Social media managers creating face swap and animation content at scale", "Small business owners producing professional video content on a budget", "Developers integrating AI video generation into apps via API"],
+        addedDate: "2026-03-09"
+    },
+    {
+        id: "106",
+        name: "Luma",
+        slug: "luma",
+        tagline: "AI agents for creative work across video, image, and audio",
+        description: "Luma is an AI creative platform built by Luma Labs that provides intelligent agents to direct creative work from concept to delivery. Powered by their Unified Intelligence models including Ray3 (a state-of-the-art reasoning video model) and Nano Banana (image generation), Luma Agents coordinate and orchestrate multiple AI systems to generate end-to-end creative work spanning text, images, video, and audio. The platform integrates best-in-class models from across the industry — including Sora 2, Veo 3, Kling, ElevenLabs, and GPT Image — giving creators access to category-defining tools through a single interface. Luma offers individual plans with free trial credits, team plans with collaboration features, and enterprise options with custom fine-tuning and SSO. Their mission is to build unified general intelligence that can generate, understand, and operate in the physical world.",
+        categories: ["video-generation", "image-generation", "voice-audio"],
+        website: "https://lumalabs.ai",
+        pricing: "Free trial credits, paid plans available",
+        paymentOptions: {
+            isPaid: true,
+            hasFreeTrialPeriod: true,
+            hasFreeStarterPlan: false
+        },
+        logo: "/images/logos/luma-logo.ico",
+        features: ["AI agents that coordinate creative work across text, image, video, and audio", "Ray3 — state-of-the-art reasoning video model with HDR support", "Nano Banana and Nano Banana Pro image generation models", "Integration with top third-party models (Sora 2, Veo 3, Kling, ElevenLabs)", "Team collaboration with projects and organization features", "Commercial use included on all plans", "Guest collaborator access with edit permissions", "Usage analytics and user spend limits for teams", "Enterprise options with custom fine-tuning and SSO", "API access for programmatic creative workflows"],
+        useCases: ["Creative teams producing multi-modal content across video, image, and audio", "Filmmakers and video producers generating concept videos and storyboards", "Marketing agencies orchestrating end-to-end campaign creative with AI", "Individual creators accessing multiple best-in-class AI models through one platform", "Enterprises needing custom fine-tuned creative AI with team management"],
+        addedDate: "2026-03-09"
     }
 ]; 

@@ -1,40 +1,12 @@
 {
-  "generatedAt": "2026-03-08T14:02:52.796Z",
-  "totalAgents": 98,
+  "generatedAt": "2026-03-09T01:00:04.545Z",
+  "totalAgents": 101,
   "totalCategories": 20,
   "minTarget": 5,
   "categoriesBelow": 0,
   "priorities": [
     {
       "category": "research",
-      "currentCount": 5,
-      "deficit": 0,
-      "priorityScore": 5,
-      "status": "OK"
-    },
-    {
-      "category": "email",
-      "currentCount": 5,
-      "deficit": 0,
-      "priorityScore": 5,
-      "status": "OK"
-    },
-    {
-      "category": "transcription",
-      "currentCount": 5,
-      "deficit": 0,
-      "priorityScore": 5,
-      "status": "OK"
-    },
-    {
-      "category": "scheduling",
-      "currentCount": 5,
-      "deficit": 0,
-      "priorityScore": 5,
-      "status": "OK"
-    },
-    {
-      "category": "seo",
       "currentCount": 5,
       "deficit": 0,
       "priorityScore": 5,
@@ -83,7 +55,35 @@
       "status": "OK"
     },
     {
+      "category": "email",
+      "currentCount": 6,
+      "deficit": 0,
+      "priorityScore": 4,
+      "status": "OK"
+    },
+    {
+      "category": "transcription",
+      "currentCount": 6,
+      "deficit": 0,
+      "priorityScore": 4,
+      "status": "OK"
+    },
+    {
       "category": "document-analysis",
+      "currentCount": 6,
+      "deficit": 0,
+      "priorityScore": 4,
+      "status": "OK"
+    },
+    {
+      "category": "scheduling",
+      "currentCount": 6,
+      "deficit": 0,
+      "priorityScore": 4,
+      "status": "OK"
+    },
+    {
+      "category": "seo",
       "currentCount": 6,
       "deficit": 0,
       "priorityScore": 4,
@@ -118,13 +118,6 @@
       "status": "OK"
     },
     {
-      "category": "marketing",
-      "currentCount": 9,
-      "deficit": 0,
-      "priorityScore": 1,
-      "status": "OK"
-    },
-    {
       "category": "coding",
       "currentCount": 14,
       "deficit": 0,
@@ -139,8 +132,15 @@
       "status": "OK"
     },
     {
+      "category": "marketing",
+      "currentCount": 10,
+      "deficit": 0,
+      "priorityScore": 0,
+      "status": "OK"
+    },
+    {
       "category": "productivity",
-      "currentCount": 35,
+      "currentCount": 37,
       "deficit": 0,
       "priorityScore": 0,
       "status": "OK"
@@ -148,28 +148,28 @@
   ],
   "topPriority": [
     "research",
-    "email",
-    "transcription",
-    "scheduling",
-    "seo"
+    "social-media",
+    "accounting",
+    "home-improvement",
+    "video-generation"
   ],
   "distribution": {
-    "productivity": 35,
+    "productivity": 37,
     "coding": 14,
     "sales": 12,
-    "marketing": 9,
+    "marketing": 10,
     "automation": 8,
     "customer-support": 7,
     "writing": 6,
     "data-analysis": 6,
+    "email": 6,
+    "transcription": 6,
     "document-analysis": 6,
+    "scheduling": 6,
+    "seo": 6,
     "image-generation": 6,
     "voice-audio": 6,
     "research": 5,
-    "email": 5,
-    "transcription": 5,
-    "scheduling": 5,
-    "seo": 5,
     "social-media": 5,
     "accounting": 5,
     "home-improvement": 5,
