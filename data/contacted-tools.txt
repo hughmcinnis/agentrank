@@ -63,3 +63,6 @@ finaloop
 novelcrafter
 editgpt
 macwhisper
+vela
+mindee
+storm

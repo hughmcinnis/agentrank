@@ -8369,5 +8369,88 @@ If I had to pick just one, it's Claude Cowork. The local file access, the planni
         categories: ["AI Agents","Productivity"],
         featuredImage: "/images/blog/best-ai-computer-use-agents-2026.png",
         tags: ["computer use","desktop automation","Claude Cowork","OpenAI Operator","browser agents","CUA"],
+    },
+    {
+        id: "82",
+        title: "Ellipsis Review: The AI Code Reviewer That Won't Go Rogue on Your Codebase",
+        slug: "ellipsis-review-ai-code-reviewer-yc-2026",
+        excerpt: "Ellipsis from YC W24 reviews every commit on every PR — and at $20/dev/month, it's cheaper than most competitors. But does it actually catch real bugs?",
+        content: `Your team's PR backlog is growing faster than anyone wants to admit. Developers open pull requests, they sit for hours — sometimes days — waiting for someone to actually look at them. And when reviews finally happen, they're rushed. You skim the diff, leave a "looks good to me," and merge. We've all done it.
+
+**Ellipsis** thinks it can fix that, and honestly? It's one of the more interesting attempts I've seen.
+
+## What it actually does
+
+Ellipsis installs into your GitHub repos (67,000+ repos and counting, apparently) and reviews every single commit on every pull request. Not just a surface-level lint pass — it tries to understand the logic of what you're changing and flag actual bugs, antipatterns, and style violations.
+
+The YC W24 company also does more than just reviews. It can answer questions about your codebase, generate release notes, and — here's where it gets spicy — actually fix bugs by opening side PRs with proposed changes. It won't commit directly to your branch without permission, which is a design choice I genuinely appreciate. Nobody wants an AI tool force-pushing fixes at 3 AM.
+
+## The $20 question
+
+Pricing is straightforward: $20 per developer per month, unlimited usage. No per-commit charges, no credit systems, no "you've used 80% of your monthly reviews" emails.
+
+For context, here's how that stacks up:
+
+- **CodeRabbit**: Free tier available, Pro at $15/month per seat
+- **Sourcery**: Free for open source, $30/month per dev for teams
+- **Greptile**: Usage-based, roughly $30/month for active repos
+- **GitHub Copilot code review**: Included if you're already paying $19/month for Copilot
+
+So Ellipsis sits right in the middle. Not the cheapest, not the most expensive. Free for public repos too, which is a nice touch if you do open source work.
+
+One founder on Twitter claimed they "replaced an engineering position I would have paid $60-90K per year for with AI." That's... a bold claim. I'd take it with a massive grain of salt. But if Ellipsis saves each developer even 2-3 hours a week on review overhead, the $20/month pays for itself before lunch on Monday.
+
+## What people actually say about it
+
+Here's where it gets interesting. The Reddit sentiment is mixed — but in a way that tells you something useful.
+
+On r/ClaudeAI, one developer ran a head-to-head test. Ellipsis caught 2 minor but valid issues on a PR. GPT-4o caught 4, but one was unhelpful noise. The true-positive rate matters more than the raw count, and Ellipsis seems to lean toward precision over recall. It'd rather say nothing than say something wrong.
+
+That tracks with their stated philosophy — "a wrong, confident answer is worse than a non-answer." It's a refreshingly humble position for an AI tool. Most competitors blast you with 15 comments per PR, half of which are nitpicky garbage about import ordering.
+
+But some developers on r/softwaredevelopment have had "nothing but horrible experiences with AI code review" in general. The whole category still has a trust problem. People have been burned by tools that generate walls of useless suggestions, and Ellipsis has to fight that baggage even if it's better than the average.
+
+## The SOC 2 thing matters more than you think
+
+Ellipsis is SOC 2 Type 1 certified, and they claim zero data retention — your source code never persists on their servers. It lives in a private AWS VPC only while processing.
+
+This matters because it's the single biggest blocker for enterprise adoption of AI code review tools. I've talked to engineering managers at mid-size companies who want to use these tools but can't get past their security team's objections. "You want to send our proprietary code to an AI?" is a conversation-ender at a lot of orgs.
+
+CodeRabbit also has SOC 2 compliance. Greptile and Sourcery? Less clear. If you're at a company where compliance isn't optional, your shortlist just got shorter.
+
+## Where it falls short
+
+Let's be real about the limitations.
+
+First — it's GitHub only. If your team uses GitLab or Bitbucket, you're out of luck. CodeRabbit supports all three. That's a significant gap for a tool trying to be your primary review assistant.
+
+Second, the "learns your team's preferences" feature sounds great in marketing copy, but the feedback loop is slow. You're going to spend a few weeks dismissing irrelevant comments before it starts calibrating to your style. Some teams won't have the patience.
+
+Third — and this is true of every AI code review tool — it struggles with complex architectural decisions. It can catch a null pointer dereference or an off-by-one error. It can't tell you that your entire approach to caching is wrong and you should be using Redis instead of in-memory maps. That's still a human's job.
+
+The 13% reduction in time-to-merge they advertise is probably real for teams with significant review bottlenecks. But if your team already reviews PRs quickly, the improvement is going to be marginal.
+
+## How it compares to Copilot's built-in reviews
+
+This is the elephant in the room. GitHub Copilot now includes code review capabilities, and most developers already have Copilot. Why pay for a separate tool?
+
+The honest answer: Copilot's reviews are decent for surface-level stuff but don't go as deep. Copilot doesn't try to understand your entire codebase the way Greptile does, or learn your team's preferences like Ellipsis claims to. It's more of a "free extra" than a dedicated review tool.
+
+If you're already paying for Copilot and your review needs are basic, you probably don't need Ellipsis. If PRs are a genuine bottleneck — like, developers are blocked for hours waiting for reviews — then a dedicated tool is worth the extra spend.
+
+## Who should actually use this
+
+Small to mid-size teams (5-30 developers) where PR reviews are a real bottleneck. Teams that care about security compliance and need the SOC 2 checkbox. Open source maintainers drowning in community PRs — the free tier is genuinely useful there.
+
+If you're a solo developer, skip it. You don't need automated reviews on your own code. If you're at an enterprise with 500+ devs, you probably want CodeRabbit or Greptile, which have more mature enterprise features.
+
+At $20/dev/month, Ellipsis isn't a risky bet. It's less than a single Uber Eats order. The real question is whether your team will actually trust and act on AI-generated review comments — and that's a culture problem, not a tooling one.`,
+        author: "Hugh McInnis",
+        publishDate: "2026-03-10",
+        publishedAt: "2026-03-10T08:12:16.000-08:00",
+        readTime: "5 min read",
+        categories: ["Reviews"],
+        featuredImage: "/images/blog/ellipsis-review-ai-code-reviewer-yc-2026.png",
+        tags: ["code review","developer tools","AI coding","pull requests","GitHub"],
     }
 ]; 
