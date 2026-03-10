@@ -60,3 +60,6 @@ luma
 socialbee
 feedhive
 finaloop
+novelcrafter
+editgpt
+macwhisper

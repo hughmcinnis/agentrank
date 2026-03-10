@@ -2269,5 +2269,62 @@ export const agents: Agent[] = [
         features: ["Local on-device transcription using Whisper and Parakeet models", "Drag-and-drop audio/video file transcription", "Automatic meeting recording for Zoom, Teams, Webex, Discord", "System-wide dictation replacing Apple's built-in speech recognition", "Speaker diarization and identification", "Full-text and speaker search across all transcripts", "Subtitle generation in SRT and VTT formats", "Batch processing for multiple files", "Support for 100+ languages", "iPhone and iPad companion apps"],
         useCases: ["Journalists transcribing interviews locally without cloud privacy concerns", "Professionals automatically recording and transcribing Zoom meetings", "Podcasters generating transcripts and subtitles for episodes", "Students transcribing lectures for study notes", "Anyone replacing Apple dictation with more accurate Whisper-powered speech-to-text"],
         addedDate: "2026-03-10"
+    },
+    {
+        id: "113",
+        name: "Vela",
+        slug: "vela",
+        tagline: "AI scheduling assistant that works like a great executive assistant",
+        description: "Vela is a Y Combinator-backed AI scheduling agent that handles the entire back-and-forth of booking meetings across email, SMS, WhatsApp, and phone. Instead of sharing rigid booking links, you CC Vela into a conversation and it takes over — negotiating times, following up when people ghost, and booking the meeting. Vela understands context and nuance: it knows to prioritize an investor meeting over an internal sync, interprets phrases like 'early next week' naturally, and writes with taste rather than sounding robotic. Built for professional services firms, recruiters, and busy executives, Vela replaces the need for a $100K+ scheduling coordinator by handling multi-stakeholder, cross-timezone scheduling at scale.",
+        categories: ["scheduling", "productivity"],
+        website: "https://tryvela.ai",
+        pricing: "Contact for pricing",
+        paymentOptions: {
+            isPaid: true,
+            hasFreeTrialPeriod: false,
+            hasFreeStarterPlan: false
+        },
+        logo: "/images/logos/vela-logo.png",
+        features: ["Works across email, SMS, WhatsApp, and phone", "Context-aware scheduling that prioritizes important meetings", "Natural language understanding for vague time references", "Automatic follow-ups when participants ghost", "Multi-stakeholder cross-timezone coordination", "Human-like communication style with taste", "Calendar integration and conflict detection", "CC-to-activate workflow — no booking links needed", "Handles rescheduling and cancellation automatically", "Built for scale — handles hundreds of scheduling requests"],
+        useCases: ["Recruiters coordinating interview panels across multiple time zones", "Professional services firms scheduling client meetings without admin staff", "Executives replacing expensive scheduling coordinators with AI", "Sales teams booking prospect meetings through natural email conversations", "Staffing agencies managing high-volume candidate scheduling"],
+        addedDate: "2026-03-10"
+    },
+    {
+        id: "114",
+        name: "Mindee",
+        slug: "mindee",
+        tagline: "AI-powered document data extraction API for 100% automation",
+        description: "Mindee is an AI-powered document processing platform that extracts structured data from any document format with high accuracy. Their OCR API handles invoices, receipts, IDs, passports, bank statements, contracts, and custom document types — supporting over 45 languages and processing 15M+ documents monthly. What sets Mindee apart is their path to full automation: out-of-the-box models deliver 95%+ accuracy, RAG-enhanced continuous learning improves with your specific documents, and actionable confidence scores let you safely automate without human-in-the-loop. The platform includes pre-processing tools for auto-cropping, splitting multi-page uploads, and classifying document types. Available through RESTful APIs with SDKs for all major languages, Mindee serves industries from banking and insurance to accounting, legal, and healthcare.",
+        categories: ["document-analysis", "automation"],
+        website: "https://www.mindee.com",
+        pricing: "Starter from €44/month (500 pages), Pro €179/month, Business €584/month, Enterprise custom",
+        paymentOptions: {
+            isPaid: true,
+            hasFreeTrialPeriod: true,
+            hasFreeStarterPlan: false
+        },
+        logo: "/images/logos/mindee-logo.png",
+        features: ["AI-powered OCR with 95%+ accuracy out of the box", "RAG-enhanced continuous learning from your documents", "Actionable confidence scores for safe automation", "Auto-crop, auto-split, and auto-classify pre-processing", "Support for 45+ languages and 100+ document types", "Pre-built models for invoices, receipts, IDs, passports", "Custom document model training", "Table extraction and handwritten text recognition", "RESTful API with SDKs for Python, Node.js, and more", "On-premise and cloud deployment options"],
+        useCases: ["Accounting firms automating invoice and receipt processing at scale", "Banks and insurers extracting data from loan applications and claims", "HR departments digitizing resumes and employee documents", "Logistics companies processing shipping documents and customs forms", "Developers building document automation into SaaS products via API"],
+        addedDate: "2026-03-10"
+    },
+    {
+        id: "115",
+        name: "STORM",
+        slug: "storm",
+        tagline: "Stanford's AI research system that writes full-length reports with citations",
+        description: "STORM (Synthesis of Topic Outlines through Retrieval and Multi-perspective Question Asking) is an open-source AI research system developed by Stanford's OVAL lab that generates comprehensive, Wikipedia-quality articles on any topic. Unlike simple AI summarizers, STORM conducts multi-perspective research by simulating conversations between different expert viewpoints, then synthesizes findings into a structured, well-cited report. It searches the web for sources, generates an outline through iterative question-asking, and produces a full-length article complete with inline citations and references. Independent comparisons have shown STORM outperforming Perplexity and Google Deep Research for in-depth topic coverage. The tool is free and open-source on GitHub, with a hosted web interface at storm.genie.stanford.edu.",
+        categories: ["research", "writing"],
+        website: "https://storm.genie.stanford.edu",
+        pricing: "Free and open-source",
+        paymentOptions: {
+            isPaid: false,
+            hasFreeTrialPeriod: false,
+            hasFreeStarterPlan: true
+        },
+        logo: "/images/logos/storm-logo.ico",
+        features: ["Multi-perspective research simulating expert conversations", "Automatic web search and source gathering", "Structured outline generation through iterative questioning", "Full-length article generation with inline citations", "Wikipedia-quality output with references section", "Open-source codebase on GitHub", "Supports custom LLM backends (OpenAI, Anthropic, etc.)", "Topic decomposition into sub-questions for thorough coverage", "Collaborative knowledge curation workflow", "Free hosted web interface — no setup required"],
+        useCases: ["Researchers generating comprehensive literature reviews on new topics", "Students creating well-sourced reports and essays", "Journalists building background research documents with citations", "Analysts producing in-depth market or technology reports", "Anyone needing a thorough, cited overview of an unfamiliar subject"],
+        addedDate: "2026-03-10"
     }
 ]; 

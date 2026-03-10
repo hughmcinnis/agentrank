@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-03-10T01:00:05.846Z",
-  "totalAgents": 107,
+  "generatedAt": "2026-03-10T14:02:41.918Z",
+  "totalAgents": 110,
   "totalCategories": 20,
   "minTarget": 5,
   "categoriesBelow": 0,
@@ -13,13 +13,6 @@
       "status": "OK"
     },
     {
-      "category": "writing",
-      "currentCount": 6,
-      "deficit": 0,
-      "priorityScore": 4,
-      "status": "OK"
-    },
-    {
       "category": "research",
       "currentCount": 6,
       "deficit": 0,
@@ -28,13 +21,6 @@
     },
     {
       "category": "email",
-      "currentCount": 6,
-      "deficit": 0,
-      "priorityScore": 4,
-      "status": "OK"
-    },
-    {
-      "category": "transcription",
       "currentCount": 6,
       "deficit": 0,
       "priorityScore": 4,
@@ -83,6 +69,13 @@
       "status": "OK"
     },
     {
+      "category": "transcription",
+      "currentCount": 7,
+      "deficit": 0,
+      "priorityScore": 3,
+      "status": "OK"
+    },
+    {
       "category": "social-media",
       "currentCount": 7,
       "deficit": 0,
@@ -97,14 +90,21 @@
       "status": "OK"
     },
     {
-      "category": "voice-audio",
-      "currentCount": 7,
+      "category": "writing",
+      "currentCount": 8,
       "deficit": 0,
-      "priorityScore": 3,
+      "priorityScore": 2,
       "status": "OK"
     },
     {
       "category": "image-generation",
+      "currentCount": 8,
+      "deficit": 0,
+      "priorityScore": 2,
+      "status": "OK"
+    },
+    {
+      "category": "voice-audio",
       "currentCount": 8,
       "deficit": 0,
       "priorityScore": 2,
@@ -133,7 +133,7 @@
     },
     {
       "category": "productivity",
-      "currentCount": 37,
+      "currentCount": 39,
       "deficit": 0,
       "priorityScore": 0,
       "status": "OK"
@@ -148,27 +148,27 @@
   ],
   "topPriority": [
     "home-improvement",
-    "writing",
     "research",
     "email",
-    "transcription"
+    "document-analysis",
+    "scheduling"
   ],
   "distribution": {
-    "productivity": 37,
+    "productivity": 39,
     "coding": 14,
     "sales": 12,
     "marketing": 11,
     "automation": 10,
+    "writing": 8,
     "image-generation": 8,
+    "voice-audio": 8,
     "customer-support": 7,
     "data-analysis": 7,
+    "transcription": 7,
     "social-media": 7,
     "video-generation": 7,
-    "voice-audio": 7,
-    "writing": 6,
     "research": 6,
     "email": 6,
-    "transcription": 6,
     "document-analysis": 6,
     "scheduling": 6,
     "seo": 6,
