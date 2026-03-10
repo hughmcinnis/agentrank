@@ -8559,5 +8559,103 @@ The only people I'd steer toward Otter are teams that need heavy file transcript
         categories: ["Comparisons","Productivity"],
         featuredImage: "/images/blog/fathom-vs-otter-ai-comparison-2026.png",
         tags: ["fathom","otter.ai","meeting notes","transcription","ai meetings","productivity"],
+    },
+    {
+        id: "84",
+        title: "I Tested 6 Multi-Agent Frameworks So You Don't Have To — Here's My Ranking",
+        slug: "6-agent-orchestration-frameworks-ranked-after-production-use",
+        excerpt: "CrewAI, LangGraph, AutoGen, PydanticAI, OpenAI Agents SDK, and Agno — which multi-agent framework actually works in production? A blunt ranking after months of building with all of them.",
+        content: `Picking a multi-agent framework right now feels like choosing a JavaScript framework in 2016. There are too many options, they all claim to be the best, and half of them will look completely different in six months.
+
+I've been building with these things for real projects — not toy demos, not "hello world with three agents." Actual production systems where stuff breaks at 2 AM and you need to figure out why Agent B decided to hallucinate a database schema. Here's where I've landed.
+
+## 1. LangGraph — The One That Actually Scales
+
+LangGraph wins the top spot, and I almost hate admitting it because LangChain's ecosystem has burned me before. But LangGraph is genuinely different from the rest of LangChain.
+
+It treats agent workflows as state machines with explicit graphs. You define nodes, edges, conditional routing — the whole thing is visual and traceable. When something goes wrong (and it will), you can point to the exact node where the agent made a bad decision.
+
+The learning curve is steep. Like, genuinely steep. I spent three days just understanding checkpointing and state persistence. But once it clicks, you can build things that none of the other frameworks handle well: workflows that pause for human approval, branch based on intermediate results, and recover from failures without restarting the whole chain.
+
+Pricing is free and open source, but if you want the managed platform (LangSmith for tracing, LangGraph Cloud for deployment), you're looking at $39/month per seat for the Plus tier. The free tier gives you limited traces.
+
+The catch? It's overkill for simple agent setups. If you just need two agents passing messages back and forth, LangGraph's graph abstraction adds complexity you don't need. And the documentation — while better than it used to be — still assumes you already understand state machines and directed acyclic graphs.
+
+## 2. CrewAI — Fastest to Something That Works
+
+CrewAI's mental model is brilliant: you define agents with roles, give them tasks, and let them collaborate like a team. A researcher agent feeds findings to a writer agent who passes drafts to an editor agent. It maps to how humans actually think about delegation.
+
+Setup takes maybe 20 minutes to get a working multi-agent pipeline. Compare that to LangGraph's multi-day onboarding, and you see why CrewAI has exploded in popularity.
+
+The framework is free and open source. CrewAI Enterprise (their managed platform) starts at $200/month, which gets you monitoring, deployment, and a visual builder. That's actually reasonable for teams — you'd spend more than that in engineering time building your own observability.
+
+But here's where I have to be honest: CrewAI starts to crack under pressure. Complex workflows with conditional branching, error recovery, or dynamic agent spawning push against the framework's limits. The role-based abstraction that makes it easy to start becomes a constraint when you need fine-grained control over agent interactions.
+
+I've also hit issues with agent loops — two agents passing the same information back and forth endlessly. You can set guardrails, but the defaults aren't great. Budget your tokens carefully or you'll wake up to a surprise bill.
+
+## 3. PydanticAI — The Dark Horse Nobody's Talking About
+
+This one surprised me. Built by the Pydantic team (the people behind basically every Python validation library), PydanticAI takes a fundamentally different approach: type-safe agents with structured outputs guaranteed by Pydantic models.
+
+No "I hope the LLM returns valid JSON" anxiety. You define the output schema, and PydanticAI enforces it. Every. Single. Time. For anyone who's debugged a production agent that randomly returned markdown instead of JSON at 3 AM, this is kind of a big deal.
+
+It's free, open source, and model-agnostic — works with OpenAI, Anthropic, Gemini, Groq, Mistral, you name it. The dependency injection system for tools is clean and testable. I could actually write unit tests for my agents, which sounds boring but is genuinely rare in this space.
+
+The downside? Multi-agent orchestration isn't PydanticAI's strength. It's really good at single-agent workflows with structured I/O. For multi-agent systems, you're basically wiring things together yourself. The framework gives you excellent building blocks but doesn't opine on how agents should coordinate.
+
+If you're building agents that need to reliably produce structured data — API responses, database entries, report generation — PydanticAI is probably your best bet. If you need a team of agents collaborating on a creative task, look elsewhere.
+
+## 4. OpenAI Agents SDK — Best If You're Already All-In on OpenAI
+
+OpenAI released their Agents SDK in early 2025, and it's... fine. That sounds like a backhanded compliment, but hear me out.
+
+The SDK gives you agents, handoffs between agents, guardrails, and tracing out of the box. It works with OpenAI models by default and — as of recently — supports other providers too. The built-in tracing is actually good, better than what most frameworks offer without third-party integrations.
+
+Prototyping speed is excellent. You can go from idea to working multi-agent system faster than anything except CrewAI. The managed runtime handles tool invocation and memory, so there's less plumbing to write.
+
+But the lock-in risk is real. Yes, they added support for other model providers, but the SDK is designed around OpenAI's patterns. The moment you want to do something OpenAI didn't anticipate — custom memory systems, non-standard tool patterns, weird routing logic — you're fighting the framework instead of using it.
+
+Pricing is usage-based through OpenAI's API. No framework cost, but your model costs add up fast. A multi-agent workflow hitting GPT-4o multiple times per request gets expensive at scale. I've seen projects where the agent orchestration cost more than the actual business logic.
+
+## 5. Agno — Lightweight and Surprisingly Capable
+
+Agno (formerly PHIdata) rebranded and refocused, and the result is a lightweight framework that does multi-agent coordination without the bloat. Think of it as the Flask to LangGraph's Django.
+
+It supports "agent teams" where you group agents under a coordinator, and the coordinator routes tasks to the right specialist. Simple concept, works well for straightforward use cases. Memory, knowledge bases, and tool use are all built in.
+
+The framework is open source and free. Their cloud platform (Agno Cloud) handles deployment and monitoring.
+
+What I like: it's fast. Agent startup time is noticeably quicker than CrewAI or LangGraph. The abstractions are thin enough that you can see what's happening underneath without digging through layers of middleware.
+
+What I don't like: the community is smaller, which means fewer examples, fewer Stack Overflow answers, and more time reading source code when something breaks. Their wrappers around vector databases and embedders add a layer of abstraction that can bite you when you need to optimize. And multi-model strategies (using Claude for reasoning and GPT-4o for tool calling, for instance) aren't as smooth as they should be.
+
+## 6. AutoGen / AG2 — The Microsoft Mess
+
+I genuinely wanted to rank AutoGen higher. Microsoft Research's original paper was compelling, and the idea of agents as conversational participants is elegant.
+
+But the execution has been rough.
+
+AutoGen forked into AG2 (a community fork) after Microsoft pivoted to their new "AutoGen 0.4" rewrite, which is basically a different framework wearing the same name. So now you have two projects, both called AutoGen-ish, with different APIs, different maintainers, and maximum confusion for anyone trying to evaluate them.
+
+The original AutoGen (now AG2) is stable but essentially in maintenance mode. The new AutoGen 0.4 is ambitious — event-driven architecture, better state management — but it's still maturing. Production readiness is questionable.
+
+If you started a project on AutoGen a year ago, you're probably fine sticking with AG2. If you're starting fresh? I'd pick almost anything else. The fragmentation alone makes it a risky bet.
+
+## The Framework Doesn't Matter as Much as You Think
+
+Here's the uncomfortable truth that nobody in this space wants to admit: your choice of framework matters way less than your evaluation and observability setup.
+
+I've seen teams spend weeks debating CrewAI vs. LangGraph, then deploy without any tracing, monitoring, or cost tracking. Their agents drift — quality degrades gradually, costs creep up, and nobody notices until something breaks visibly.
+
+Pick the framework that matches your team's experience level and your project's complexity. If you're prototyping, start with CrewAI or PydanticAI. If you're building something that needs to handle edge cases gracefully in production, invest the time in LangGraph. If you're an OpenAI shop and want the path of least resistance, use their SDK.
+
+Then spend twice as much time on monitoring as you did on framework selection. That's the actual differentiator between agent systems that work and agent systems that technically run but quietly produce garbage.`,
+        author: "Hugh McInnis",
+        publishDate: "2026-03-10",
+        publishedAt: "2026-03-10T12:02:43.000-08:00",
+        readTime: "6 min read",
+        categories: ["AI Tools","Developer Tools"],
+        featuredImage: "/images/blog/6-agent-orchestration-frameworks-ranked-after-production-use.png",
+        tags: ["multi-agent","crewai","langgraph","autogen","pydanticai","openai agents","agno","ai frameworks","agent frameworks 2026"],
     }
 ]; 
