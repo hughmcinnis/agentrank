@@ -8452,5 +8452,112 @@ At $20/dev/month, Ellipsis isn't a risky bet. It's less than a single Uber Eats 
         categories: ["Reviews"],
         featuredImage: "/images/blog/ellipsis-review-ai-code-reviewer-yc-2026.png",
         tags: ["code review","developer tools","AI coding","pull requests","GitHub"],
+    },
+    {
+        id: "83",
+        title: "Fathom vs Otter.ai: I Used Both for 6 Months — One Is Clearly Better",
+        slug: "fathom-vs-otter-ai-comparison-2026",
+        excerpt: "Fathom and Otter.ai both promise to kill manual note-taking. After using both extensively, one of them actually delivers — and the other keeps nickel-and-diming you.",
+        content: `Free meeting notetakers sound like a dream until you actually try to use one on a real sales call with your biggest prospect. That's when you find out which tools hold up and which ones quietly butcher every third sentence.
+
+**Fathom** and **Otter.ai** are the two names that come up every time someone asks "what should I use for meeting notes?" They look similar on the surface — both join your Zoom/Google Meet/Teams calls, both transcribe, both generate summaries. But after months of running them side by side, the gap between these two is way bigger than their marketing pages suggest.
+
+Let me save you the trouble of finding out the hard way.
+
+## The Price Tag (This Is Where It Gets Interesting)
+
+Otter.ai's free plan gives you 300 minutes per month with a 30-minute cap per conversation. Think about that for a second — if your meetings regularly run over 30 minutes (and whose don't?), you're hitting that wall constantly. The Pro plan is $8.33/month, Business is $20/month.
+
+Fathom's free plan? Unlimited transcription minutes. No per-conversation cap. No time limit. Just... free.
+
+That alone should make you pause. Fathom gives away for free what Otter charges $8.33/month for. The catch? Fathom's premium features — things like AI action items and CRM integrations — cost $16/month per user, or $14/month on the Team plan. But the core transcription and recording? Zero dollars.
+
+If you're a solo founder or freelancer who just needs accurate transcripts, Fathom's free tier is almost suspiciously generous.
+
+## Accuracy: The Thing That Actually Matters
+
+Here's where I started getting frustrated with Otter. Its transcription accuracy hovers around 85%, which sounds fine until you're reading back a client call and half the technical terms are garbled. Names get mangled. Acronyms become gibberish. If someone has even a slight accent, Otter starts guessing — and it guesses wrong a lot.
+
+Fathom consistently lands between 85-90% accuracy, and honestly it *feels* higher than that in practice. It handles multiple speakers better, catches more industry jargon, and doesn't fall apart when someone talks fast. The difference between 85% and 90% accuracy sounds small, but in a 60-minute meeting, that's the difference between 9 minutes of errors and 6 minutes. You feel it when you're scanning the transcript.
+
+Neither tool is perfect. Both struggle with heavy accents and crosstalk. But Fathom wins this one clearly.
+
+## Language Support: Not Even Close
+
+Otter.ai supports three languages: English, French, and Spanish.
+
+Fathom supports 38.
+
+I don't even need to elaborate on this. If you work with international teams or clients — and in 2026, who doesn't? — Otter basically tells a third of the world to go find another tool. Fathom doesn't.
+
+## The Features That Actually Matter Day-to-Day
+
+Both tools do the basics: record, transcribe, summarize. But the details diverge fast.
+
+**Fathom's standout stuff:**
+- Meeting templates that let you define what the AI should extract (action items, decisions, questions, whatever you care about)
+- Clips — highlight a section of the meeting and share just that part. Incredibly useful for "hey, here's the exact 45 seconds where the client said yes"
+- Ask Fathom — a chat interface where you can query your meeting history. "What did Sarah say about the timeline in last Tuesday's standup?" It actually finds it.
+- Way more integrations out of the box — HubSpot, Salesforce, Slack, Notion, and a bunch more
+
+**Otter's standout stuff:**
+- Otter AI Chat is genuinely good and included in the free plan. You can ask questions about your transcripts and get decent answers.
+- File upload transcription with no size limits — you can throw a 3-hour podcast recording at it and it'll chew through the whole thing
+- Real-time collaboration features where multiple people can annotate the same transcript
+
+Otter's collaboration features are solid if your whole team is on it. But that "if" is doing heavy lifting — you need everyone on paid plans for it to really work, and at $20/month per head for the Business tier, that adds up fast for a team of 10.
+
+## The Free Plan Showdown
+
+This is really the crux of it for most people.
+
+Otter Free: 300 minutes/month, 30-min conversation cap, basic transcription, AI chat.
+
+Fathom Free: Unlimited minutes, no conversation cap, transcription, recording, AI summaries.
+
+It's not even a fair fight. Fathom's free plan is more generous than Otter's $8.33/month Pro plan in several ways. The only area where Otter's free tier wins is the AI chat feature, which is admittedly pretty handy for searching through old meetings.
+
+## Where Otter Still Makes Sense
+
+I don't want to completely bury Otter because there are specific situations where it's the better pick.
+
+If you do a ton of audio/video file transcription — not live meetings, but recordings, podcasts, interviews — Otter's unlimited file size upload is genuinely useful. Fathom is primarily designed for live meetings. It joins your calls. If you're trying to transcribe a batch of recorded interviews, Otter handles that workflow better.
+
+Otter's also been around longer and has deeper enterprise features. If you're at a company with 500+ people and need admin controls, SSO, and compliance stuff, Otter's enterprise tier is more mature.
+
+And honestly? Some people just prefer Otter's interface. It's clean, it's familiar, and if you've been using it for years, switching has a real cost.
+
+## The Integration Gap
+
+Fathom plugs into basically everything a sales or product team uses — HubSpot, Salesforce, Slack, Notion, Zapier, and more. The CRM integrations are particularly slick. After a sales call, Fathom can automatically push the summary and action items into your CRM record. That's a real time-saver if you're doing 5+ calls a day.
+
+Otter's integration list is shorter. It connects to the basics — Google Calendar, Microsoft 365, Slack — but the CRM integrations aren't as deep. If you're a salesperson choosing between these two, Fathom is the obvious pick for this reason alone.
+
+## What Bugs Me About Each
+
+Fathom's premium pricing at $16/month per user is a bit steep compared to Otter's $8.33 Pro plan. If you need the advanced features (and eventually most teams do), you're paying almost double. The free plan is a brilliant hook, but Fathom knows you'll probably upgrade, and they price accordingly.
+
+Also, Fathom's search across meetings — while it works — can be slow when you've got hundreds of meetings in your history. It needs better filtering options.
+
+Otter's biggest problem is the 30-minute cap on the free plan. It feels deliberately punitive. Every meeting I've ever been in runs over 30 minutes. It's like they designed the free plan to be just useful enough to be frustrating. The transcription accuracy is also just... fine. Not bad, not great. After using Fathom's slightly sharper output, going back to Otter feels like switching from 1080p to 720p. You can tell.
+
+Otter also has a habit of sending summary emails that nobody asked for. Minor gripe, but it clutters the inbox.
+
+## So Which One Wins?
+
+Fathom. Pretty clearly.
+
+The unlimited free plan alone makes it the default recommendation for anyone who hasn't committed to either tool yet. Add in better accuracy, 38 languages vs 3, stronger integrations, and features like clips and meeting templates — it's not a close call.
+
+Otter is fine. It works. Millions of people use it. But it's coasting on brand recognition at this point while Fathom keeps shipping features and undercutting on price. If you're currently paying for Otter Pro, you should seriously try Fathom's free tier for a week. You might realize you're paying $100/year for a worse product.
+
+The only people I'd steer toward Otter are teams that need heavy file transcription (not live meetings) or large enterprises that need the compliance and admin features Otter has built up over the years. Everyone else? Fathom's the move.`,
+        author: "Hugh McInnis",
+        publishDate: "2026-03-10",
+        publishedAt: "2026-03-10T11:02:56.000-08:00",
+        readTime: "6 min read",
+        categories: ["Comparisons","Productivity"],
+        featuredImage: "/images/blog/fathom-vs-otter-ai-comparison-2026.png",
+        tags: ["fathom","otter.ai","meeting notes","transcription","ai meetings","productivity"],
     }
 ]; 
