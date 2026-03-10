@@ -2212,5 +2212,62 @@ export const agents: Agent[] = [
         features: ["Real-time P&L, balance sheet, and cash flow statements", "AI-powered transaction categorization and reconciliation", "Automated inventory and COGS tracking based on landed costs", "Multichannel order tracking (Shopify, Amazon, Walmart, Etsy)", "Dedicated expert accounting team available 7 days a week", "Year-end tax-optimized financial packages", "KPI and benchmark dashboard", "Seamless integration replacing traditional bookkeeping software", "Revenue-based pricing that scales with your business", "Unlimited support from certified accountants"],
         useCases: ["Shopify and Amazon sellers needing automated real-time bookkeeping", "DTC brands replacing manual bookkeepers with AI-driven accounting", "Multichannel ecommerce businesses reconciling orders across platforms", "Ecommerce founders wanting accurate financials without accounting expertise", "Growing brands needing tax-optimized year-end financial packages"],
         addedDate: "2026-03-09"
+    },
+    {
+        id: "110",
+        name: "Novelcrafter",
+        slug: "novelcrafter",
+        tagline: "AI-powered novel writing software for authors of all genres",
+        description: "Novelcrafter is a dedicated writing platform built for fiction authors that combines intelligent organization tools with optional AI assistance. Its standout feature is the Codex — a wiki-style system that automatically tracks and links characters, places, lore, and other story elements across your entire series. The platform offers multiple planning modes to help spot plot holes and inconsistencies early, series and universe management to share world-building across books, and collaboration features for writing partners and editorial teams. AI integration is opt-in and uses a bring-your-own-key model, letting writers use AI for brainstorming, scene generation from beats, and manuscript review without vendor lock-in. Novelcrafter supports customizable prompting workflows, AI chat for story discussions, and advanced review tools — all while keeping the writer in full creative control.",
+        categories: ["writing", "productivity"],
+        website: "https://www.novelcrafter.com",
+        pricing: "From $4/month (Scribe), 21-day free trial, no credit card required",
+        paymentOptions: {
+            isPaid: true,
+            hasFreeTrialPeriod: true,
+            hasFreeStarterPlan: false
+        },
+        logo: "/images/logos/novelcrafter-logo.png",
+        features: ["Codex wiki system that auto-tracks characters, places, and lore", "Multiple planning modes for catching plot holes and inconsistencies", "Series and universe sharing across books", "AI integration with bring-your-own-key (BYOK) model", "AI scene generation from story beats", "Workshop chat for AI-assisted brainstorming", "Customizable prompting and shortcut system", "Collaborative writing with team support", "Cross-platform web-based interface", "Advanced review tools for manuscript editing"],
+        useCases: ["Fiction authors organizing complex multi-book series with interconnected lore", "Writers using AI to brainstorm and generate scenes while maintaining creative control", "Writing groups and author pairs collaborating on shared manuscripts", "Indie authors managing characters, timelines, and world-building in one place", "Published authors transitioning from scattered tools to a unified writing platform"],
+        addedDate: "2026-03-10"
+    },
+    {
+        id: "111",
+        name: "editGPT",
+        slug: "editgpt",
+        tagline: "AI proofreader that shows tracked changes like a real editor",
+        description: "editGPT is an AI-powered proofreading and editing tool that uses ChatGPT to review your writing and show changes with Microsoft Word-style tracked changes. Unlike generic AI writing tools that rewrite your content wholesale, editGPT preserves your voice by showing exactly what it would change — additions, deletions, and modifications — so you can accept or reject each edit individually. It works as a Chrome extension and web app, supporting grammar correction, style improvement, tone adjustment, and clarity enhancement. editGPT is designed for writers, students, professionals, and anyone who wants intelligent editing without losing their original voice.",
+        categories: ["writing", "productivity"],
+        website: "https://editgpt.app",
+        pricing: "Free plan available, Pro and Elite paid tiers",
+        paymentOptions: {
+            isPaid: true,
+            hasFreeTrialPeriod: false,
+            hasFreeStarterPlan: true
+        },
+        logo: "/images/logos/editgpt-logo.png",
+        features: ["Tracked changes display — see exactly what AI would edit", "Accept or reject individual changes like Microsoft Word", "Grammar, spelling, and punctuation correction", "Style and tone adjustment with voice preservation", "Chrome extension for editing anywhere on the web", "Works directly with ChatGPT interface", "Multiple editing modes (proofread, simplify, improve)", "Supports academic, professional, and creative writing", "No content rewriting — preserves original voice", "Export edited documents with change history"],
+        useCases: ["Students proofreading essays and academic papers before submission", "Professionals polishing emails, reports, and proposals", "Writers getting AI editing feedback while keeping their unique voice", "Non-native English speakers improving grammar and clarity", "Content creators reviewing blog posts and articles with tracked changes"],
+        addedDate: "2026-03-10"
+    },
+    {
+        id: "112",
+        name: "MacWhisper",
+        slug: "macwhisper",
+        tagline: "Local AI transcription for Mac using OpenAI Whisper",
+        description: "MacWhisper is a Mac-native transcription app that uses OpenAI's Whisper and Nvidia Parakeet models to transcribe audio and video files locally on your device — no cloud upload required. Simply drag and drop audio files or record directly to get high-quality transcriptions with speaker identification. MacWhisper can automatically record meetings from Zoom, Teams, Webex, Skype, and Discord, and offers system-wide dictation to replace Apple's built-in speech recognition with Whisper's superior accuracy. It supports batch processing, subtitle generation (SRT/VTT), full-text search across all transcripts, and over 100 languages. Built by indie developer Jordi Bruin, MacWhisper prioritizes privacy by keeping all processing on-device. Also available on iPhone and iPad.",
+        categories: ["transcription", "voice-audio"],
+        website: "https://goodsnooze.gumroad.com/l/macwhisper",
+        pricing: "Free version available, Pro from €29 one-time purchase",
+        paymentOptions: {
+            isPaid: true,
+            hasFreeTrialPeriod: false,
+            hasFreeStarterPlan: true
+        },
+        logo: "/images/logos/macwhisper-logo.png",
+        features: ["Local on-device transcription using Whisper and Parakeet models", "Drag-and-drop audio/video file transcription", "Automatic meeting recording for Zoom, Teams, Webex, Discord", "System-wide dictation replacing Apple's built-in speech recognition", "Speaker diarization and identification", "Full-text and speaker search across all transcripts", "Subtitle generation in SRT and VTT formats", "Batch processing for multiple files", "Support for 100+ languages", "iPhone and iPad companion apps"],
+        useCases: ["Journalists transcribing interviews locally without cloud privacy concerns", "Professionals automatically recording and transcribing Zoom meetings", "Podcasters generating transcripts and subtitles for episodes", "Students transcribing lectures for study notes", "Anyone replacing Apple dictation with more accurate Whisper-powered speech-to-text"],
+        addedDate: "2026-03-10"
     }
 ]; 

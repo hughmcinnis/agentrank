@@ -1,24 +1,10 @@
 {
-  "generatedAt": "2026-03-09T14:02:42.733Z",
-  "totalAgents": 104,
+  "generatedAt": "2026-03-10T01:00:05.846Z",
+  "totalAgents": 107,
   "totalCategories": 20,
   "minTarget": 5,
   "categoriesBelow": 0,
   "priorities": [
-    {
-      "category": "social-media",
-      "currentCount": 5,
-      "deficit": 0,
-      "priorityScore": 5,
-      "status": "OK"
-    },
-    {
-      "category": "accounting",
-      "currentCount": 5,
-      "deficit": 0,
-      "priorityScore": 5,
-      "status": "OK"
-    },
     {
       "category": "home-improvement",
       "currentCount": 5,
@@ -76,6 +62,13 @@
       "status": "OK"
     },
     {
+      "category": "accounting",
+      "currentCount": 6,
+      "deficit": 0,
+      "priorityScore": 4,
+      "status": "OK"
+    },
+    {
       "category": "customer-support",
       "currentCount": 7,
       "deficit": 0,
@@ -84,6 +77,13 @@
     },
     {
       "category": "data-analysis",
+      "currentCount": 7,
+      "deficit": 0,
+      "priorityScore": 3,
+      "status": "OK"
+    },
+    {
+      "category": "social-media",
       "currentCount": 7,
       "deficit": 0,
       "priorityScore": 3,
@@ -111,13 +111,6 @@
       "status": "OK"
     },
     {
-      "category": "automation",
-      "currentCount": 8,
-      "deficit": 0,
-      "priorityScore": 2,
-      "status": "OK"
-    },
-    {
       "category": "coding",
       "currentCount": 14,
       "deficit": 0,
@@ -133,7 +126,7 @@
     },
     {
       "category": "marketing",
-      "currentCount": 10,
+      "currentCount": 11,
       "deficit": 0,
       "priorityScore": 0,
       "status": "OK"
@@ -144,24 +137,32 @@
       "deficit": 0,
       "priorityScore": 0,
       "status": "OK"
+    },
+    {
+      "category": "automation",
+      "currentCount": 10,
+      "deficit": 0,
+      "priorityScore": 0,
+      "status": "OK"
     }
   ],
   "topPriority": [
-    "social-media",
-    "accounting",
     "home-improvement",
     "writing",
-    "research"
+    "research",
+    "email",
+    "transcription"
   ],
   "distribution": {
     "productivity": 37,
     "coding": 14,
     "sales": 12,
-    "marketing": 10,
+    "marketing": 11,
+    "automation": 10,
     "image-generation": 8,
-    "automation": 8,
     "customer-support": 7,
     "data-analysis": 7,
+    "social-media": 7,
     "video-generation": 7,
     "voice-audio": 7,
     "writing": 6,
@@ -171,8 +172,7 @@
     "document-analysis": 6,
     "scheduling": 6,
     "seo": 6,
-    "social-media": 5,
-    "accounting": 5,
+    "accounting": 6,
     "home-improvement": 5
   }
 }
