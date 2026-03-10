@@ -1,0 +1,37 @@
+[
+  {
+    "target": "RadiusTheme",
+    "email": "support@radiustheme.com",
+    "dateSent": "2026-03-10T19:43:38.099874Z",
+    "status": "sent",
+    "notes": ""
+  },
+  {
+    "target": "Insidr.ai",
+    "email": "info@insidr.ai",
+    "dateSent": "2026-03-10T19:43:38.919071Z",
+    "status": "sent",
+    "notes": ""
+  },
+  {
+    "target": "Daria / AI blew my mind",
+    "email": null,
+    "dateSent": "2026-03-10T19:43:38.944855Z",
+    "status": "pending",
+    "notes": "No public email found. Need to DM via Substack (aiblewmymind.substack.com) or use 'Work with me' page."
+  },
+  {
+    "target": "SaaS Adviser",
+    "email": null,
+    "dateSent": "2026-03-10T19:43:38.944879Z",
+    "status": "pending",
+    "notes": "Contact form only at saasadviser.co/contact-us (Cloudflare protected). Need manual form submission."
+  },
+  {
+    "target": "Project Aeon",
+    "email": null,
+    "dateSent": "2026-03-10T19:43:38.944885Z",
+    "status": "pending",
+    "notes": "No public contact email found on project-aeon.com. Need manual form submission or try hello@project-aeon.com (common pattern)."
+  }
+]
