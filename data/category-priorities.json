@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-03-11T01:00:04.953Z",
-  "totalAgents": 113,
+  "generatedAt": "2026-03-11T14:03:27.197Z",
+  "totalAgents": 116,
   "totalCategories": 20,
   "minTarget": 5,
   "categoriesBelow": 0,
@@ -10,27 +10,6 @@
       "currentCount": 5,
       "deficit": 0,
       "priorityScore": 5,
-      "status": "OK"
-    },
-    {
-      "category": "email",
-      "currentCount": 6,
-      "deficit": 0,
-      "priorityScore": 4,
-      "status": "OK"
-    },
-    {
-      "category": "seo",
-      "currentCount": 6,
-      "deficit": 0,
-      "priorityScore": 4,
-      "status": "OK"
-    },
-    {
-      "category": "accounting",
-      "currentCount": 6,
-      "deficit": 0,
-      "priorityScore": 4,
       "status": "OK"
     },
     {
@@ -49,6 +28,13 @@
     },
     {
       "category": "research",
+      "currentCount": 7,
+      "deficit": 0,
+      "priorityScore": 3,
+      "status": "OK"
+    },
+    {
+      "category": "email",
       "currentCount": 7,
       "deficit": 0,
       "priorityScore": 3,
@@ -76,7 +62,21 @@
       "status": "OK"
     },
     {
+      "category": "seo",
+      "currentCount": 7,
+      "deficit": 0,
+      "priorityScore": 3,
+      "status": "OK"
+    },
+    {
       "category": "social-media",
+      "currentCount": 7,
+      "deficit": 0,
+      "priorityScore": 3,
+      "status": "OK"
+    },
+    {
+      "category": "accounting",
       "currentCount": 7,
       "deficit": 0,
       "priorityScore": 3,
@@ -126,7 +126,7 @@
     },
     {
       "category": "marketing",
-      "currentCount": 11,
+      "currentCount": 12,
       "deficit": 0,
       "priorityScore": 0,
       "status": "OK"
@@ -140,7 +140,7 @@
     },
     {
       "category": "automation",
-      "currentCount": 11,
+      "currentCount": 13,
       "deficit": 0,
       "priorityScore": 0,
       "status": "OK"
@@ -148,31 +148,31 @@
   ],
   "topPriority": [
     "home-improvement",
-    "email",
-    "seo",
-    "accounting",
-    "customer-support"
+    "customer-support",
+    "data-analysis",
+    "research",
+    "email"
   ],
   "distribution": {
     "productivity": 40,
     "coding": 14,
+    "automation": 13,
     "sales": 12,
-    "marketing": 11,
-    "automation": 11,
+    "marketing": 12,
     "writing": 9,
     "image-generation": 8,
     "voice-audio": 8,
     "customer-support": 7,
     "data-analysis": 7,
     "research": 7,
+    "email": 7,
     "transcription": 7,
     "document-analysis": 7,
     "scheduling": 7,
+    "seo": 7,
     "social-media": 7,
+    "accounting": 7,
     "video-generation": 7,
-    "email": 6,
-    "seo": 6,
-    "accounting": 6,
     "home-improvement": 5
   }
 }

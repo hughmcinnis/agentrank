@@ -2383,5 +2383,62 @@ export const agents: Agent[] = [
         features: ["Purpose-built AI agents for CAS, tax, audit, and advisory", "Automated month-end close process acceleration", "Tax preparation and compliance automation", "Full audit trail and decision logging", "Multi-entity and multi-jurisdiction support", "Understanding of accounting standards (GAAP, IFRS)", "Firm-wide deployment across practice areas", "Workflow automation with human-in-the-loop controls", "Client onboarding and engagement management", "Integration with existing accounting software stack"],
         useCases: ["Top 100 accounting firms automating CAS workflows to reduce close times", "Tax practices accelerating preparation while maintaining compliance", "Audit teams streamlining procedures with AI-assisted evidence gathering", "Advisory teams freeing up capacity by automating routine accounting work", "Growing firms scaling capacity without proportional headcount increases"],
         addedDate: "2026-03-11"
+    },
+    {
+        id: "119",
+        name: "DocsBot AI",
+        slug: "docsbot-ai",
+        tagline: "Custom AI chatbots trained on your documentation for instant customer support",
+        description: "DocsBot AI lets businesses create custom GPT-powered chatbots trained on their own documentation, knowledge bases, and support content. Upload websites, PDFs, Word docs, help center articles, or import from Zendesk, Intercom, Freshdesk, and other platforms — DocsBot indexes everything and creates a chatbot that delivers instant, accurate answers to customer and employee questions 24/7. The platform uses an agentic RAG pipeline to retrieve, rerank, and contextualize the most relevant content for each query. Beyond customer support, DocsBot handles pre-sales chat (capturing leads by engaging visitors instantly), internal knowledge access (eliminating hours spent searching through documents), and research assistance with deep research agents that combine your knowledge base with live web search. Features include embeddable chat widgets with customizable styling, API access for integration into any workflow, advanced analytics with topic and sentiment tracking, SOC 2 Type II audited security, and support for 100+ languages. GPT-4o and GPT-5 mini models are included in all plans.",
+        categories: ["customer-support", "automation"],
+        website: "https://docsbot.ai",
+        pricing: "Free tier (100 messages/month), Hobby $19/month, Power $49/month, Business $99/month, Enterprise custom",
+        paymentOptions: {
+            isPaid: true,
+            hasFreeTrialPeriod: false,
+            hasFreeStarterPlan: true
+        },
+        logo: "/images/logos/docsbot-ai-logo.png",
+        features: ["Custom chatbots trained on your documentation and knowledge base", "Agentic RAG pipeline for accurate, contextual answers", "29+ content source types including websites, PDFs, and help desks", "Embeddable chat widget with customizable appearance", "API access for integration into any application", "Deep Research agent with live web search and code interpreter", "SOC 2 Type II audited security and encryption", "Advanced analytics with topic, sentiment, and resolution tracking", "Import from Zendesk, Intercom, Freshdesk, Help Scout", "Support for 100+ languages with multilingual responses"],
+        useCases: ["Businesses automating customer support with AI chatbots trained on their docs", "SaaS companies deflecting repetitive support tickets with instant AI answers", "Sales teams capturing leads by engaging website visitors 24/7 with pre-sales chat", "Internal teams accessing company knowledge instantly without searching multiple tools", "Researchers using deep research agents to analyze documentation and generate cited reports"],
+        addedDate: "2026-03-11"
+    },
+    {
+        id: "120",
+        name: "Moveo AI",
+        slug: "moveo-ai",
+        tagline: "Enterprise AI agents for financial services — automate the toughest customer conversations",
+        description: "Moveo AI is an enterprise conversational AI platform purpose-built for financial services, powering the toughest customer interactions including debt and billing collections, customer service scaling, and product adoption. Trusted by 100+ enterprises worldwide, Moveo's AI agents achieve up to 90% automation rates by combining deep LLM integration with real-time customer data from CRMs and third-party sources. The platform stands out with goal-driven engagement — agents proactively reach out based on signals like promise-to-pay status or inactivity, personalizing each interaction to the customer's financial state including payment history and risk status. Adaptive empathy tracking adjusts tone and conversation flow based on real-time sentiment analysis, navigating objections naturally while staying aligned with business objectives. Features include human-in-the-loop validation for high-stakes interactions, automated re-engagement follow-ups that detect intent and behavior shifts, omnichannel deployment across web, SMS, email, WhatsApp, Viber, Facebook, Google Chat, Intercom, and Zendesk, and enterprise-ready security with private LLM options. Based in Athens, Greece.",
+        categories: ["customer-support", "sales"],
+        website: "https://moveo.ai",
+        pricing: "Contact for pricing (enterprise)",
+        paymentOptions: {
+            isPaid: true,
+            hasFreeTrialPeriod: false,
+            hasFreeStarterPlan: false
+        },
+        logo: "/images/logos/moveo-ai-logo.svg",
+        features: ["Goal-driven AI agents that engage based on business signals", "Real-time CRM and third-party data personalization", "Adaptive empathy — sentiment tracking adjusts tone and flow", "Deep LLM integration into conversation workflows", "Human-in-the-loop validation for high-stakes interactions", "Automated re-engagement and follow-up sequences", "Omnichannel: web, SMS, email, WhatsApp, Viber, Facebook, Zendesk", "Enterprise-grade security with private LLM options", "90% automation rate across customer conversations", "Purpose-built for financial services complexity"],
+        useCases: ["Financial institutions automating debt collection conversations at scale", "Banks and fintechs scaling customer service without proportional headcount", "Insurance companies handling claims and billing inquiries with AI agents", "Enterprise teams needing sentiment-aware AI that adapts tone in real-time", "Organizations requiring omnichannel customer engagement with human handoff"],
+        addedDate: "2026-03-11"
+    },
+    {
+        id: "121",
+        name: "Paperguide",
+        slug: "paperguide",
+        tagline: "All-in-one AI research assistant — find papers, review literature, and write with citations",
+        description: "Paperguide is a comprehensive AI research assistant that streamlines the entire academic research workflow from literature discovery to writing. The platform searches and analyzes over 220 million papers, delivering research-backed answers with proper citations instead of simple keyword matches. Key capabilities include AI-powered literature review with automated data extraction across hundreds of papers (including graphical and tabular data), deep research reports that transform weeks of manual review into minutes, and an AI writer that generates academic content backed by your references while maintaining integrity through automatic citations. The reference manager supports import from Zotero, BibTeX, RIS, DOI, and URLs with AI-generated summaries of methodology and findings, plus real-time collaboration with shared libraries. Paperguide also includes a plagiarism checker, text humanizer for natural academic tone, and support for 1000+ citation styles. Used by researchers and academics at top institutions worldwide, with ratings from 1000+ researchers and universities.",
+        categories: ["research", "writing"],
+        website: "https://paperguide.ai",
+        pricing: "Free (1,000 AI credits/month), Plus $12/month, Pro $24/month (billed annually)",
+        paymentOptions: {
+            isPaid: true,
+            hasFreeTrialPeriod: false,
+            hasFreeStarterPlan: true
+        },
+        logo: "/images/logos/paperguide-logo.ico",
+        features: ["AI search across 220+ million academic papers with cited answers", "Automated literature review with structured data extraction", "Deep research reports generated from comprehensive paper analysis", "AI writer with automatic citations and reference-backed content", "Reference manager with Zotero, BibTeX, RIS, DOI import", "Chat with PDF for interactive paper analysis", "Data extraction tables comparing multiple papers", "Plagiarism checker and text humanizer", "Real-time collaboration with shared reference libraries", "1000+ citation styles supported"],
+        useCases: ["PhD researchers conducting systematic literature reviews across hundreds of papers", "Academic writers generating citation-backed drafts and polishing manuscripts", "Scientists extracting and comparing data from multiple research papers", "Students managing references and writing research papers with proper citations", "Research teams collaborating on shared libraries with AI-generated paper summaries"],
+        addedDate: "2026-03-11"
     }
 ]; 
