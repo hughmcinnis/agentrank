@@ -2326,5 +2326,62 @@ export const agents: Agent[] = [
         features: ["Multi-perspective research simulating expert conversations", "Automatic web search and source gathering", "Structured outline generation through iterative questioning", "Full-length article generation with inline citations", "Wikipedia-quality output with references section", "Open-source codebase on GitHub", "Supports custom LLM backends (OpenAI, Anthropic, etc.)", "Topic decomposition into sub-questions for thorough coverage", "Collaborative knowledge curation workflow", "Free hosted web interface — no setup required"],
         useCases: ["Researchers generating comprehensive literature reviews on new topics", "Students creating well-sourced reports and essays", "Journalists building background research documents with citations", "Analysts producing in-depth market or technology reports", "Anyone needing a thorough, cited overview of an unfamiliar subject"],
         addedDate: "2026-03-10"
+    },
+    {
+        id: "116",
+        name: "AgentMail",
+        slug: "agentmail",
+        tagline: "Email inboxes built for AI agents, not humans",
+        description: "AgentMail is an API-first email platform purpose-built for AI agents. While traditional email services are designed for humans clicking through inboxes, AgentMail gives AI agents their own email addresses with full two-way conversation capabilities. Backed by Y Combinator and freshly funded with $6M from General Catalyst, AgentMail lets developers create, manage, and operate email inboxes entirely via API — supporting threading, parsing, labeling, searching, and replying. Whether you're building a customer service agent, a browser automation workflow, or an AI sales rep, AgentMail enables your agent to communicate over email just like a human would. The platform is SOC 2 compliant and trusted by AI companies building production-grade agent systems.",
+        categories: ["email", "automation"],
+        website: "https://www.agentmail.to",
+        pricing: "Free tier available, paid plans for higher volume",
+        paymentOptions: {
+            isPaid: true,
+            hasFreeTrialPeriod: false,
+            hasFreeStarterPlan: true
+        },
+        logo: "/images/logos/agentmail-logo.ico",
+        features: ["API-first email inboxes for AI agents", "Full two-way email conversation support", "Threading, parsing, labeling, and search", "Custom domains and username creation", "SOC 2 compliant security", "Python and JavaScript SDKs", "Webhook-based real-time email notifications", "Built-in email rendering and attachment handling", "Enterprise-grade deliverability", "Discord community and open-source SDK on GitHub"],
+        useCases: ["AI customer service agents handling support tickets via email", "Browser automation agents that need to receive verification emails", "AI sales reps conducting outbound email campaigns autonomously", "Multi-agent systems where each agent needs its own email identity", "Developers building email-integrated AI workflows without managing SMTP infrastructure"],
+        addedDate: "2026-03-11"
+    },
+    {
+        id: "117",
+        name: "Atyla",
+        slug: "atyla",
+        tagline: "Be the brand every AI recommends — GEO platform for AI search visibility",
+        description: "Atyla is a Generative Engine Optimization (GEO) platform that helps marketing teams measure and improve their visibility on AI search engines like ChatGPT, Perplexity, Gemini, Claude, Grok, and Mistral. As consumers increasingly ask AI for product recommendations instead of searching Google, brands need to know if they're being mentioned — and Atyla provides that visibility. The platform tracks brand mentions across AI models in real-time, benchmarks against competitors with Share of Voice metrics, identifies which sources AI models cite, and provides automated GEO audits with actionable optimization recommendations. Powered by Senthor.io technology that detects behavioral patterns across 11 AI models, Atyla bridges the gap between traditional SEO and the new AI-first search landscape.",
+        categories: ["seo", "marketing"],
+        website: "https://www.atyla.io",
+        pricing: "Essential €19/month (15 prompts), Starter €69/month (25 prompts), Growth €149/month (100 prompts), Enterprise custom",
+        paymentOptions: {
+            isPaid: true,
+            hasFreeTrialPeriod: true,
+            hasFreeStarterPlan: false
+        },
+        logo: "/images/logos/atyla-logo.png",
+        features: ["Real-time AI visibility tracking across ChatGPT, Perplexity, Gemini, Claude, Grok, Mistral", "Competitive benchmarking with Share of Voice metrics", "Source citation analysis — see what AI models reference", "Automated GEO audit with actionable recommendations", "AI-suggested prompts with search volume data", "Track up to 5 competitors per brand", "Daily and weekly scan frequencies", "Professional PDF report exports", "Slack and email integrations", "Content strategy recommendations to improve AI citations"],
+        useCases: ["Marketing teams monitoring brand visibility in AI search results", "SEO professionals adapting strategy for generative engine optimization", "B2B companies ensuring they're recommended when prospects ask AI for solutions", "Agencies managing AI search presence for multiple client brands", "Product teams tracking how AI models describe their product vs competitors"],
+        addedDate: "2026-03-11"
+    },
+    {
+        id: "118",
+        name: "Basis",
+        slug: "basis",
+        tagline: "AI agents built specifically for accountants — the next era of accounting",
+        description: "Basis is a $1.15B-valued AI accounting platform that provides purpose-built agents for accounting firms across CAS, tax, audit, and advisory practice areas. Backed by $100M+ in funding, Basis is transforming how Top 100 accounting firms operate by automating complex workflows that previously required senior accountants. The platform handles everything from month-end close processes to tax preparation and audit procedures, with agents that understand accounting standards, can navigate multi-entity structures, and maintain full audit trails. Major firms like Wiss, UHY, Clark Nuber, and BPB are already using Basis in production, reporting significantly reduced close times and the ability to focus on higher-value advisory work. Unlike generic AI tools adapted for accounting, Basis was built from the ground up for the profession.",
+        categories: ["accounting", "automation"],
+        website: "https://www.getbasis.ai",
+        pricing: "Contact for pricing (enterprise)",
+        paymentOptions: {
+            isPaid: true,
+            hasFreeTrialPeriod: false,
+            hasFreeStarterPlan: false
+        },
+        logo: "/images/logos/basis-logo.png",
+        features: ["Purpose-built AI agents for CAS, tax, audit, and advisory", "Automated month-end close process acceleration", "Tax preparation and compliance automation", "Full audit trail and decision logging", "Multi-entity and multi-jurisdiction support", "Understanding of accounting standards (GAAP, IFRS)", "Firm-wide deployment across practice areas", "Workflow automation with human-in-the-loop controls", "Client onboarding and engagement management", "Integration with existing accounting software stack"],
+        useCases: ["Top 100 accounting firms automating CAS workflows to reduce close times", "Tax practices accelerating preparation while maintaining compliance", "Audit teams streamlining procedures with AI-assisted evidence gathering", "Advisory teams freeing up capacity by automating routine accounting work", "Growing firms scaling capacity without proportional headcount increases"],
+        addedDate: "2026-03-11"
     }
 ]; 

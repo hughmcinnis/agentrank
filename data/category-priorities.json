@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-03-10T14:02:41.918Z",
-  "totalAgents": 110,
+  "generatedAt": "2026-03-11T01:00:04.953Z",
+  "totalAgents": 113,
   "totalCategories": 20,
   "minTarget": 5,
   "categoriesBelow": 0,
@@ -13,28 +13,7 @@
       "status": "OK"
     },
     {
-      "category": "research",
-      "currentCount": 6,
-      "deficit": 0,
-      "priorityScore": 4,
-      "status": "OK"
-    },
-    {
       "category": "email",
-      "currentCount": 6,
-      "deficit": 0,
-      "priorityScore": 4,
-      "status": "OK"
-    },
-    {
-      "category": "document-analysis",
-      "currentCount": 6,
-      "deficit": 0,
-      "priorityScore": 4,
-      "status": "OK"
-    },
-    {
-      "category": "scheduling",
       "currentCount": 6,
       "deficit": 0,
       "priorityScore": 4,
@@ -69,7 +48,28 @@
       "status": "OK"
     },
     {
+      "category": "research",
+      "currentCount": 7,
+      "deficit": 0,
+      "priorityScore": 3,
+      "status": "OK"
+    },
+    {
       "category": "transcription",
+      "currentCount": 7,
+      "deficit": 0,
+      "priorityScore": 3,
+      "status": "OK"
+    },
+    {
+      "category": "document-analysis",
+      "currentCount": 7,
+      "deficit": 0,
+      "priorityScore": 3,
+      "status": "OK"
+    },
+    {
+      "category": "scheduling",
       "currentCount": 7,
       "deficit": 0,
       "priorityScore": 3,
@@ -90,13 +90,6 @@
       "status": "OK"
     },
     {
-      "category": "writing",
-      "currentCount": 8,
-      "deficit": 0,
-      "priorityScore": 2,
-      "status": "OK"
-    },
-    {
       "category": "image-generation",
       "currentCount": 8,
       "deficit": 0,
@@ -108,6 +101,13 @@
       "currentCount": 8,
       "deficit": 0,
       "priorityScore": 2,
+      "status": "OK"
+    },
+    {
+      "category": "writing",
+      "currentCount": 9,
+      "deficit": 0,
+      "priorityScore": 1,
       "status": "OK"
     },
     {
@@ -133,14 +133,14 @@
     },
     {
       "category": "productivity",
-      "currentCount": 39,
+      "currentCount": 40,
       "deficit": 0,
       "priorityScore": 0,
       "status": "OK"
     },
     {
       "category": "automation",
-      "currentCount": 10,
+      "currentCount": 11,
       "deficit": 0,
       "priorityScore": 0,
       "status": "OK"
@@ -148,29 +148,29 @@
   ],
   "topPriority": [
     "home-improvement",
-    "research",
     "email",
-    "document-analysis",
-    "scheduling"
+    "seo",
+    "accounting",
+    "customer-support"
   ],
   "distribution": {
-    "productivity": 39,
+    "productivity": 40,
     "coding": 14,
     "sales": 12,
     "marketing": 11,
-    "automation": 10,
-    "writing": 8,
+    "automation": 11,
+    "writing": 9,
     "image-generation": 8,
     "voice-audio": 8,
     "customer-support": 7,
     "data-analysis": 7,
+    "research": 7,
     "transcription": 7,
+    "document-analysis": 7,
+    "scheduling": 7,
     "social-media": 7,
     "video-generation": 7,
-    "research": 6,
     "email": 6,
-    "document-analysis": 6,
-    "scheduling": 6,
     "seo": 6,
     "accounting": 6,
     "home-improvement": 5
