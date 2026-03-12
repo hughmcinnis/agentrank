@@ -2440,5 +2440,43 @@ export const agents: Agent[] = [
         features: ["AI search across 220+ million academic papers with cited answers", "Automated literature review with structured data extraction", "Deep research reports generated from comprehensive paper analysis", "AI writer with automatic citations and reference-backed content", "Reference manager with Zotero, BibTeX, RIS, DOI import", "Chat with PDF for interactive paper analysis", "Data extraction tables comparing multiple papers", "Plagiarism checker and text humanizer", "Real-time collaboration with shared reference libraries", "1000+ citation styles supported"],
         useCases: ["PhD researchers conducting systematic literature reviews across hundreds of papers", "Academic writers generating citation-backed drafts and polishing manuscripts", "Scientists extracting and comparing data from multiple research papers", "Students managing references and writing research papers with proper citations", "Research teams collaborating on shared libraries with AI-generated paper summaries"],
         addedDate: "2026-03-11"
+    },
+    {
+        id: "122",
+        name: "Renoworks",
+        slug: "renoworks",
+        tagline: "AI-powered home exterior visualization for contractors and manufacturers",
+        description: "Renoworks is an AI-powered home design visualization platform that helps contractors, manufacturers, and homeowners see exactly what renovation projects will look like before any work begins. Upload a photo of any home and Renoworks AI automatically detects roofs, walls, siding, masonry, windows, and doors, then lets you apply real products from over 350 manufacturer libraries to create photorealistic before-and-after visualizations. The Image Enhance feature uses AI to transform basic renderings into realistic photos with proper lighting and shadows. Lead Pod gives contractors a real-time dashboard showing every visualizer lead with final designs, selected products, and project details. For manufacturers, Renoworks provides a digital product catalog that lets customers visualize their actual materials on real homes. The platform speeds up approvals, increases upsell rates, and helps homeowners make confident design decisions. Based in Calgary, Canada, Renoworks serves the North American home improvement industry.",
+        categories: ["home-improvement", "image-generation"],
+        website: "https://www.renoworks.com",
+        pricing: "Contact for pricing (enterprise/contractor plans)",
+        paymentOptions: {
+            isPaid: true,
+            hasFreeTrialPeriod: false,
+            hasFreeStarterPlan: false
+        },
+        logo: "/images/logos/renoworks-logo.png",
+        features: ["AI auto-detection of roofs, walls, windows, doors, and siding from photos", "Photorealistic Image Enhance with AI lighting and shadow rendering", "350+ manufacturer product libraries with real materials", "Lead Pod dashboard for tracking visualizer leads and designs", "Before-and-after visualization for home exteriors", "Obstruction detection for trees and foliage in photos", "Custom product catalog display for manufacturers", "Mobile-friendly visualizer for homeowner self-service"],
+        useCases: ["Contractors showing homeowners realistic renovation previews to close deals faster", "Roofing and siding manufacturers letting customers visualize products on their own homes", "Home improvement sales teams upselling premium materials with visual comparisons", "Homeowners exploring design options before committing to exterior renovation projects", "Marketing teams embedding product visualizers on manufacturer websites for lead generation"],
+        addedDate: "2026-03-12"
+    },
+    {
+        id: "123",
+        name: "ScreenApp",
+        slug: "screenapp",
+        tagline: "AI notetaker, transcription, and meeting summarizer for recordings",
+        description: "ScreenApp is an AI-powered meeting assistant that transforms recordings into structured notes, summaries, and searchable knowledge. With over 2 million users, the platform records screen, audio, and video from any source — Zoom, Google Meet, Teams, or direct browser recording — and instantly generates transcriptions, AI summaries, and actionable insights. The AI assistant lets you ask questions about any recording and get instant answers, eliminating the need to rewatch hours of content. Features include automatic speaker identification, chapter generation, clip creation for sharing key moments, subtitle generation, voice translation across 15+ languages, and text-to-speech conversion. ScreenApp also offers dictation, a video editor, and a video compressor. SOC 2 Type II certified for enterprise security. Available as a web app, Chrome extension, desktop app (Mac), and mobile app (iOS and Android). Based in Sydney, Australia with a global team across Australia, Sri Lanka, Philippines, India, USA, and Colombia.",
+        categories: ["transcription", "productivity"],
+        website: "https://screenapp.io",
+        pricing: "Free (45 min AI/month), Starter $19/month, Business $39/month, Enterprise custom",
+        paymentOptions: {
+            isPaid: true,
+            hasFreeTrialPeriod: false,
+            hasFreeStarterPlan: true
+        },
+        logo: "/images/logos/screenapp-logo.png",
+        features: ["AI-powered transcription with speaker identification", "Automatic meeting summaries and structured notes", "Conversational AI assistant for querying recording content", "Screen, audio, and video recording from browser", "Auto-generated chapters and clip creation", "Subtitle generation and voice translation (15+ languages)", "Chrome extension and desktop/mobile apps", "SOC 2 Type II certified security", "Dictation and text-to-speech capabilities", "Integration with Zoom, Google Meet, and Teams"],
+        useCases: ["Remote teams capturing and searching meeting notes without manual note-taking", "Project managers reviewing client call highlights without rewatching full recordings", "Content creators generating transcripts and subtitles for video content", "Sales teams analyzing discovery calls and extracting key customer insights", "Educators recording lectures and creating searchable study materials"],
+        addedDate: "2026-03-12"
     }
 ]; 

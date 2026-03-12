@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-03-11T14:03:27.197Z",
-  "totalAgents": 116,
+  "generatedAt": "2026-03-12T01:00:04.321Z",
+  "totalAgents": 119,
   "totalCategories": 20,
   "minTarget": 5,
   "categoriesBelow": 0,
@@ -13,21 +13,7 @@
       "status": "OK"
     },
     {
-      "category": "customer-support",
-      "currentCount": 7,
-      "deficit": 0,
-      "priorityScore": 3,
-      "status": "OK"
-    },
-    {
       "category": "data-analysis",
-      "currentCount": 7,
-      "deficit": 0,
-      "priorityScore": 3,
-      "status": "OK"
-    },
-    {
-      "category": "research",
       "currentCount": 7,
       "deficit": 0,
       "priorityScore": 3,
@@ -90,6 +76,13 @@
       "status": "OK"
     },
     {
+      "category": "research",
+      "currentCount": 8,
+      "deficit": 0,
+      "priorityScore": 2,
+      "status": "OK"
+    },
+    {
       "category": "image-generation",
       "currentCount": 8,
       "deficit": 0,
@@ -104,10 +97,17 @@
       "status": "OK"
     },
     {
-      "category": "writing",
+      "category": "customer-support",
       "currentCount": 9,
       "deficit": 0,
       "priorityScore": 1,
+      "status": "OK"
+    },
+    {
+      "category": "writing",
+      "currentCount": 10,
+      "deficit": 0,
+      "priorityScore": 0,
       "status": "OK"
     },
     {
@@ -119,7 +119,7 @@
     },
     {
       "category": "sales",
-      "currentCount": 12,
+      "currentCount": 13,
       "deficit": 0,
       "priorityScore": 0,
       "status": "OK"
@@ -140,7 +140,7 @@
     },
     {
       "category": "automation",
-      "currentCount": 13,
+      "currentCount": 14,
       "deficit": 0,
       "priorityScore": 0,
       "status": "OK"
@@ -148,23 +148,23 @@
   ],
   "topPriority": [
     "home-improvement",
-    "customer-support",
     "data-analysis",
-    "research",
-    "email"
+    "email",
+    "transcription",
+    "document-analysis"
   ],
   "distribution": {
     "productivity": 40,
     "coding": 14,
-    "automation": 13,
-    "sales": 12,
+    "automation": 14,
+    "sales": 13,
     "marketing": 12,
-    "writing": 9,
+    "writing": 10,
+    "customer-support": 9,
+    "research": 8,
     "image-generation": 8,
     "voice-audio": 8,
-    "customer-support": 7,
     "data-analysis": 7,
-    "research": 7,
     "email": 7,
     "transcription": 7,
     "document-analysis": 7,
