@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-03-11T23:00:08.140Z",
+  "generatedAt": "2026-03-12T00:00:12.973Z",
   "dataRange": "3 months",
   "summary": {
-    "totalOpportunities": 30,
+    "totalOpportunities": 29,
     "strikingDistance": 5,
     "lowCtr": 8,
-    "agentNeedsReview": 6,
+    "agentNeedsReview": 5,
     "winnerExpand": 10,
     "contentGaps": 1
   },
@@ -366,15 +366,6 @@
       "position": 11.117647058823529,
       "recommendation": "Agent \"fish-audio\" has 17 impressions — write a detailed review blog post to capture this traffic",
       "priority": 34
-    },
-    {
-      "type": "agent_needs_review",
-      "query": "julius-ai",
-      "impressions": 16,
-      "clicks": 0,
-      "position": 41.375,
-      "recommendation": "Agent \"julius-ai\" has 16 impressions — write a detailed review blog post to capture this traffic",
-      "priority": 32
     },
     {
       "type": "winner_expand",
