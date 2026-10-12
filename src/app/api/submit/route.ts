@@ -1,57 +1,61 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { readFileSync, writeFileSync, mkdirSync, existsSync } from 'fs';
+import { sql } from '@vercel/postgres';
 import { randomUUID } from 'crypto';
-import path from 'path';
+import { authenticateAdmin } from '@/lib/community/security';
 
-const SUBMISSIONS_DIR = path.join(process.cwd(), 'data');
-const SUBMISSIONS_FILE = path.join(SUBMISSIONS_DIR, 'submissions.json');
+const MAX_PER_IP_PER_DAY = 5;
 
-// Simple in-memory rate limiting: max 5 per IP per day
-const rateLimitMap = new Map<string, { count: number; resetAt: number }>();
+const LIMITS = {
+    name: 200,
+    url: 2000,
+    description: 500,
+    otherCategory: 100,
+    pricing: 200,
+    email: 320,
+    notes: 5000,
+};
 
-function isRateLimited(ip: string): boolean {
-    const now = Date.now();
-    const entry = rateLimitMap.get(ip);
-
-    if (!entry || now > entry.resetAt) {
-        rateLimitMap.set(ip, { count: 1, resetAt: now + 24 * 60 * 60 * 1000 });
-        return false;
+// Creates the table on first use so no manual migration is required.
+// Same schema as scripts/migrate-add-submissions.sql.
+let tableReady: Promise<void> | null = null;
+function ensureTable(): Promise<void> {
+    if (!tableReady) {
+        tableReady = (async () => {
+            await sql`
+                CREATE TABLE IF NOT EXISTS submissions (
+                    id TEXT PRIMARY KEY,
+                    name TEXT NOT NULL,
+                    url TEXT NOT NULL,
+                    description TEXT NOT NULL,
+                    categories JSONB NOT NULL DEFAULT '[]',
+                    other_category TEXT NOT NULL DEFAULT '',
+                    pricing TEXT NOT NULL DEFAULT '',
+                    email TEXT NOT NULL,
+                    notes TEXT NOT NULL DEFAULT '',
+                    ip TEXT NOT NULL DEFAULT 'unknown',
+                    status TEXT NOT NULL DEFAULT 'pending',
+                    created_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
+                )
+            `;
+            await sql`CREATE INDEX IF NOT EXISTS submissions_ip_created_idx ON submissions (ip, created_at)`;
+        })().catch(err => {
+            tableReady = null; // retry on next request
+            throw err;
+        });
     }
-
-    if (entry.count >= 5) return true;
-
-    entry.count++;
-    return false;
+    return tableReady;
 }
 
-function getSubmissions(): unknown[] {
-    if (!existsSync(SUBMISSIONS_FILE)) return [];
-    try {
-        const raw = readFileSync(SUBMISSIONS_FILE, 'utf-8');
-        return JSON.parse(raw);
-    } catch {
-        return [];
-    }
+function clean(value: unknown, max: number): string {
+    return typeof value === 'string' ? value.trim().slice(0, max) : '';
 }
 
-function saveSubmissions(submissions: unknown[]) {
-    if (!existsSync(SUBMISSIONS_DIR)) {
-        mkdirSync(SUBMISSIONS_DIR, { recursive: true });
-    }
-    writeFileSync(SUBMISSIONS_FILE, JSON.stringify(submissions, null, 2));
+function getIp(request: NextRequest): string {
+    return request.headers.get('x-forwarded-for')?.split(',')[0]?.trim() ||
+        request.headers.get('x-real-ip') || 'unknown';
 }
 
 export async function POST(request: NextRequest) {
-    const ip = request.headers.get('x-forwarded-for')?.split(',')[0]?.trim() ||
-        request.headers.get('x-real-ip') || 'unknown';
-
-    if (isRateLimited(ip)) {
-        return NextResponse.json(
-            { error: 'Too many submissions. Please try again tomorrow.' },
-            { status: 429 }
-        );
-    }
-
     let body: Record<string, unknown>;
     try {
         body = await request.json();
@@ -59,36 +63,73 @@ export async function POST(request: NextRequest) {
         return NextResponse.json({ error: 'Invalid JSON.' }, { status: 400 });
     }
 
-    const { name, url, description, categories, pricing, email, notes } = body as {
-        name?: string; url?: string; description?: string; categories?: string[];
-        pricing?: string; email?: string; notes?: string;
-    };
+    const name = clean(body.name, LIMITS.name);
+    const url = clean(body.url, LIMITS.url);
+    const description = clean(body.description, LIMITS.description);
+    const email = clean(body.email, LIMITS.email);
+    const otherCategory = clean(body.otherCategory, LIMITS.otherCategory);
+    const pricing = clean(body.pricing, LIMITS.pricing);
+    const notes = clean(body.notes, LIMITS.notes);
+    const categories = Array.isArray(body.categories)
+        ? body.categories.filter((c): c is string => typeof c === 'string').slice(0, 20)
+        : [];
 
-    // Validate required fields
-    if (!name?.trim() || !url?.trim() || !description?.trim() || !email?.trim()) {
+    if (!name || !url || !description || !email) {
         return NextResponse.json(
             { error: 'Name, URL, description, and email are required.' },
             { status: 400 }
         );
     }
 
-    const submission = {
-        id: randomUUID(),
-        name: name.trim(),
-        url: url.trim(),
-        description: description.trim(),
-        categories: Array.isArray(categories) ? categories : [],
-        pricing: (pricing as string)?.trim() || '',
-        email: email.trim(),
-        notes: (notes as string)?.trim() || '',
-        ip,
-        timestamp: new Date().toISOString(),
-        status: 'pending',
-    };
+    const ip = getIp(request);
 
-    const submissions = getSubmissions();
-    submissions.push(submission);
-    saveSubmissions(submissions);
+    try {
+        await ensureTable();
 
-    return NextResponse.json({ success: true, id: submission.id });
+        // Rate limit stored in the database, so it holds across serverless instances.
+        const { rows } = await sql`
+            SELECT COUNT(*)::int AS count FROM submissions
+            WHERE ip = ${ip} AND created_at > NOW() - INTERVAL '1 day'
+        `;
+        if (ip !== 'unknown' && rows[0].count >= MAX_PER_IP_PER_DAY) {
+            return NextResponse.json(
+                { error: 'Too many submissions. Please try again tomorrow.' },
+                { status: 429 }
+            );
+        }
+
+        const id = randomUUID();
+        await sql`
+            INSERT INTO submissions
+                (id, name, url, description, categories, other_category, pricing, email, notes, ip)
+            VALUES
+                (${id}, ${name}, ${url}, ${description}, ${JSON.stringify(categories)},
+                 ${otherCategory}, ${pricing}, ${email}, ${notes}, ${ip})
+        `;
+
+        return NextResponse.json({ success: true, id });
+    } catch (err) {
+        console.error('Failed to save submission', err);
+        return NextResponse.json(
+            { error: 'Could not save your submission. Please try again later.' },
+            { status: 500 }
+        );
+    }
+}
+
+// List submissions (newest first). Requires header:
+//   Authorization: Admin <COMMUNITY_ADMIN_SECRET>
+// Optional query: ?status=pending
+export async function GET(request: NextRequest) {
+    if (!authenticateAdmin(request.headers.get('authorization'))) {
+        return NextResponse.json({ error: 'Forbidden' }, { status: 403 });
+    }
+
+    await ensureTable();
+    const status = request.nextUrl.searchParams.get('status');
+    const { rows } = status
+        ? await sql`SELECT * FROM submissions WHERE status = ${status} ORDER BY created_at DESC`
+        : await sql`SELECT * FROM submissions ORDER BY created_at DESC`;
+
+    return NextResponse.json({ count: rows.length, submissions: rows });
 }
