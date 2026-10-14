@@ -9321,5 +9321,74 @@ Look, I don't blame xAI for wanting Cursor's users on Grok — that's obviously 
         categories: ["Coding","Pricing"],
         featuredImage: "/images/blog/cursor-x-subscription-grok-plans-claude-gpt-api-pricing.png",
         tags: ["cursor","grok","xai","pricing","claude","ai-coding"],
+    },
+    {
+        id: "93",
+        title: "Wispr Notetaker vs Granola: Which Bot-Free Meeting Notetaker Is Worth Paying For?",
+        slug: "wispr-vs-granola-botless-notes-compared",
+        excerpt: "Granola and Wispr's new Notetaker both skip the meeting bot. Here's how their pricing, workflows and features actually compare — and who should pick which.",
+        content: `The meeting bot is on its way out. You know the one — "Fathom Notetaker has joined the call," a little gray tile nobody asked for, and that half-second where everyone wonders if they should say something about it. A growing set of tools now skip the bot entirely and record from your own computer's audio instead, and the two most interesting ones right now are **Granola** and Wispr's new **Notetaker**.
+
+Granola basically defined this category. Wispr — best known for its Flow dictation app — announced Notetaker in August and has since brought it to both Mac and Windows. Both promise the same thing on the surface: no bot, good notes, ask questions about your meetings later. Underneath, they're built around pretty different ideas of what a notetaker is for.
+
+## Pricing first, because it's where they split
+
+| | Granola | Wispr Notetaker |
+|---|---|---|
+| Free plan | Yes — unlimited notes, but history limited to 30 days | Yes — included in Flow Free, with a weekly meeting limit (recordings under 5 min don't count) |
+| Main paid plan | Business: $14/user/month | Flow Pro: $15/user/month, or $12 on annual |
+| Top tier | Enterprise: $35/user/month | Growth (unlimited Notetaker) and Enterprise |
+| Platforms | Mac, Windows, iOS, Android, Apple Watch | Mac and Windows (mobile "on the roadmap") |
+| Bot joins the call? | No | No |
+
+The prices are close enough that they shouldn't decide this for you. What you're really paying for is different, though.
+
+With [Granola](/agents/granola), $14 a month buys you your history back (the free plan locks notes older than 30 days), plus pre-meeting briefs, follow-up emails, CRM-style integrations like HubSpot, Attio and Notion, and API access. It's a meetings product, priced as one.
+
+With [Wispr Flow](/agents/wispr-flow), $15 a month is mainly a dictation subscription — unlimited voice typing in any app — and Notetaker comes along with it. Pro gets "longer Notetaker history"; Wispr reserves *unlimited* Notetaker access for its Growth tier. Wispr doesn't publish the exact free-plan weekly limit, which is annoying if you're trying to figure out whether free will cover your week.
+
+## How they actually think about notes
+
+Granola's core trick is that you still take notes. You type rough bullets during the meeting — "pricing pushback," "send deck Friday" — and afterward it uses the transcript to flesh them out into clean, structured notes. Your scribbles become the skeleton, so the output reflects what *you* thought mattered rather than a generic summary of everything said.
+
+Wispr goes the other way. From what I can tell, Notetaker is designed for people who don't want to type at all. It does a live transcript, then a second AI pass over the full recording after the call, using your calendar invite attendees and your Flow personal dictionary to get names and jargon right. It pulls out decisions, dates and action items by topic. There's also a "What did I miss?" button that recaps the last few minutes, which is a clever idea for anyone who zones out on long calls (so, everyone).
+
+Wispr's CEO has framed the bet pretty directly: people rarely read transcripts, they act on the summaries and follow-ups. That's a reasonable read of how most of us actually use these tools.
+
+## The stuff around the notes
+
+Both now do the "AI chat over your meetings" thing. Granola Chat answers questions within a single meeting or across your history; Wispr's Q&A searches past meetings and the web and links answers back to sources. Both also offer an MCP connector, so you can point Claude, ChatGPT or other AI apps at your meeting history. That's quietly become table stakes this year.
+
+Where Granola pulls ahead is everything that happens *outside* the meeting:
+
+- **Before:** briefs on attendees and past discussions for external meetings (on Business).
+- **After:** follow-up emails and pushes into HubSpot, Attio, Affinity, Notion or Zapier.
+- **Away from your desk:** mobile apps for in-person meetings and phone calls, plus an Apple Watch app.
+
+Wispr's advantages are narrower but real. Transcription covers 21 languages. It says it doesn't create voiceprints. It can import your entire history from Granola or Otter, which tells you exactly who Wispr thinks it's competing with. And if you already pay for Flow, Notetaker costs you nothing extra.
+
+One caveat that applies to both: bot-free means the other people on the call may not get an automatic notice they're being recorded. Wispr's own FAQ says it's on you to tell them, and the same goes for Granola (it's piloting an org-wide notice for Enterprise customers, but that's it). Depending on where you and your callers are, that's not just politeness — check your local consent rules.
+
+## What about Fathom and Otter?
+
+[Fathom](/agents/fathom) is still the free-plan champ — unlimited recordings, transcripts and basic summaries for $0 — and it now lists a bot-free capture mode, though it's labeled beta and Mac-only. Otter's free plan caps you at 300 minutes a month and 30 minutes per conversation, which is tight for anyone with hour-long calls. I compared those two in [Fathom vs Otter](/blog/fathom-vs-otter-ai-comparison-2026), and the broader field is in my [meeting notetakers roundup](/blog/best-ai-meeting-notetakers-2026).
+
+And the next wave is already here: Ambi, from a former Plaud executive, just raised $26 million for an assistant that listens across your phone, Mac and Apple Watch all day rather than meeting by meeting. Whether people actually want that is a very open question.
+
+## Which one I'd pick
+
+If meetings are a big part of your job — sales, investing, recruiting, customer calls — Granola is the better product, and the $14 is easy to justify for the briefs, follow-ups and CRM pushes alone. The type-a-few-bullets workflow also produces notes that sound more like you.
+
+If you mostly want a clean summary and action items and you already use (or want) voice dictation, Wispr Flow is the better value, since you're getting two tools for $12–15 a month. Just be ready for the fact that it's Mac and Windows only for now, and that "longer history" on Pro isn't the same as unlimited.
+
+Either way, the bot era is ending. Good riddance.
+`,
+        author: "Hugh McInnis",
+        publishDate: "2026-10-14",
+        publishedAt: "2026-10-14T07:03:35.000-08:00",
+        readTime: "5 min read",
+        categories: ["Productivity","Transcription"],
+        featuredImage: "/images/blog/wispr-vs-granola-botless-notes-compared.png",
+        tags: ["granola","wispr-flow","meeting-notes","ai-notetaker","comparison"],
     }
 ]; 
