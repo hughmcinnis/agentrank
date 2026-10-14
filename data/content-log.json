@@ -1,0 +1,26 @@
+{
+  "note": "Log of daily content runs. Newest last. Keep under ~200 entries.",
+  "entries": [
+    {
+      "date": "2026-10-14",
+      "articlesPublished": [
+        {"slug": "cursor-x-subscription-grok-plans-claude-gpt-api-pricing", "topic": "Cursor folded into xAI's X Subscription (Oct 12, 2026); Claude/GPT now billed at API list price"},
+        {"slug": "wispr-vs-granola-botless-notes-compared", "topic": "Bot-free meeting notetakers: Wispr Notetaker vs Granola (plus Fathom/Otter context)"}
+      ],
+      "postRefreshed": {"slug": "cursor-review-ai-code-editor-worth-it", "changes": "Retitled (removed $20 framing and hands-on claims), new X Subscription pricing table, Copilot $10 Pro credits, internal links"},
+      "listingsAdded": ["granola", "wispr-flow", "scape", "catch", "descript"],
+      "directoryUpdates": ["cursor pricing updated to X Subscription tiers"],
+      "topicsConsideredNotDone": [
+        "OpenAI Dots: always-on agents on GPT-6 Astra (launched ~Oct 12, 2026, Pro/Business Premium)",
+        "Claude Haiku 5.5 (Oct 7, 2026): $0.10/$0.50 per MTok under 100K prompts — cheap subagent model angle",
+        "Ambi ($26M, ex-Plaud) ambient all-day listening assistant — list once publicly available (waitlist as of Oct 14)",
+        "Mistral Large 4 public preview (Oct 6)",
+        "Meta Muse agent / Muse Wonder models",
+        "Cursor alternatives for Claude users after X Subscription change",
+        "Descript pricing breakdown (media hours + AI credits)",
+        "GitHub Copilot new Max plan ($100) vs Claude Max vs Cursor Super"
+      ],
+      "notes": "Push to GitHub blocked (repo not authorized for session). Official sites for new listings blocked by egress proxy, so no logos downloaded."
+    }
+  ]
+}
