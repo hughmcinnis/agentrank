@@ -815,7 +815,7 @@ export const agents: Agent[] = [
         description: "Cursor is an AI-powered code editor built on VS Code that deeply understands your codebase. It offers intelligent completions, multi-file editing, and agentic coding capabilities that make it the go-to IDE for AI-assisted development in 2025-2026.",
         categories: ["coding"],
         website: "https://cursor.com",
-        pricing: "Hobby: Free (50 premium requests/month), Pro: $20/month ($16 annual), Business: $40/user/month, Ultra: Usage-based",
+        pricing: "Sold via The X Subscription (with Grok and X Premium): Free, Plus $8/month (Grok models only), Premium $30/month, Super $100/month, Ultra $200/month; Claude/GPT billed separately at API list price; Teams from $30/seat; Enterprise: Contact for pricing",
         paymentOptions: {
             isPaid: true,
             hasFreeTrialPeriod: true,
