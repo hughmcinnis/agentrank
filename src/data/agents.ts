@@ -2478,5 +2478,95 @@ export const agents: Agent[] = [
         features: ["AI-powered transcription with speaker identification", "Automatic meeting summaries and structured notes", "Conversational AI assistant for querying recording content", "Screen, audio, and video recording from browser", "Auto-generated chapters and clip creation", "Subtitle generation and voice translation (15+ languages)", "Chrome extension and desktop/mobile apps", "SOC 2 Type II certified security", "Dictation and text-to-speech capabilities", "Integration with Zoom, Google Meet, and Teams"],
         useCases: ["Remote teams capturing and searching meeting notes without manual note-taking", "Project managers reviewing client call highlights without rewatching full recordings", "Content creators generating transcripts and subtitles for video content", "Sales teams analyzing discovery calls and extracting key customer insights", "Educators recording lectures and creating searchable study materials"],
         addedDate: "2026-03-12"
+    },
+    {
+        id: "124",
+        name: "Granola",
+        slug: "granola",
+        tagline: "The AI notepad for back-to-back meetings — notes, actions and memory without a meeting bot",
+        description: "Granola is an AI notepad for meetings that captures your computer's audio instead of sending a bot into the call. You jot your own rough notes while you talk, and Granola uses the transcript and meeting context to turn them into clean, structured notes afterward. It syncs with your calendar to prepare a brief before external meetings (attendees, past discussions, current priorities), then drafts action items and follow-up emails when the call ends. Notes are private by default and can be shared to folders or Slack. Granola Chat lets you ask questions within a single meeting or across your whole meeting history, and the Granola MCP connector exposes your notes to other AI apps. It works with Zoom, Google Meet, Microsoft Teams, Slack huddles and in-person meetings, with apps for macOS, Windows, iOS, Android and Apple Watch.",
+        categories: ["transcription", "productivity"],
+        website: "https://www.granola.ai",
+        pricing: "Basic: Free (meeting history limited to 30 days), Business: $14/user/month, Enterprise: $35/user/month",
+        paymentOptions: {
+            isPaid: true,
+            hasFreeTrialPeriod: false,
+            hasFreeStarterPlan: true
+        },
+        features: ["Bot-free capture from device audio", "AI-enhanced notes built from your own rough notes", "Pre-meeting briefs from your calendar", "Action items and follow-up email drafts", "Chat across one meeting or your whole meeting history", "MCP connector for other AI apps", "Integrations with Notion, HubSpot, Attio, Affinity and Zapier (Business)", "Desktop, iOS, Android and Apple Watch apps"],
+        useCases: ["Founders and investors in back-to-back external calls", "Sales and customer teams pushing call notes into a CRM", "People who dislike meeting bots joining their calls", "Capturing in-person meetings and phone calls from a phone"],
+        addedDate: "2026-10-14"
+    },
+    {
+        id: "125",
+        name: "Wispr Flow",
+        slug: "wispr-flow",
+        tagline: "Don't type, just speak — voice dictation that writes polished text in any app, plus a bot-free meeting Notetaker",
+        description: "Wispr Flow is a voice-to-text app that turns speech into clean, formatted writing wherever your cursor is. As you talk it removes filler words, handles self-corrections, adds punctuation and adjusts tone per app, and it learns names and jargon through a personal dictionary. Wispr says dictation runs at about 220 words per minute versus roughly 45 for typing, and it supports 100+ languages. In 2026 Wispr added Notetaker, a meeting assistant built into Flow that records on your computer rather than joining calls as a bot. Notetaker uses calendar attendees and your dictionary to label speakers and spell names correctly, re-processes the full recording after the meeting for summaries, decisions and action items, drafts follow-ups, answers questions across past meetings with linked sources, and connects meeting history to Claude, ChatGPT and other MCP-compatible tools. Flow runs on Mac, Windows, iPhone and Android; Notetaker is Mac and Windows only for now.",
+        categories: ["voice-audio", "transcription", "productivity"],
+        website: "https://wisprflow.ai",
+        pricing: "Free plan (2,000 words/week dictation, limited Notetaker), Pro: $15/user/month ($12 annual), Growth: from $18/user/month annual, Enterprise: Contact for pricing",
+        paymentOptions: {
+            isPaid: true,
+            hasFreeTrialPeriod: false,
+            hasFreeStarterPlan: true
+        },
+        features: ["AI dictation that cleans up filler words and self-corrections", "Works in any app on Mac, Windows, iPhone and Android", "100+ languages with auto-detect", "Personal dictionary, snippets and per-app tone settings", "Notetaker: bot-free meeting transcripts, summaries and follow-ups", "Speaker labels from calendar invites", "Ask questions across meetings with linked sources", "MCP access for Claude, ChatGPT and Gemini"],
+        useCases: ["Writing emails, docs and chat messages by voice", "Developers dictating prompts to AI coding tools", "Taking meeting notes without a bot in the call", "Teams needing HIPAA-ready dictation (Growth and Enterprise)"],
+        addedDate: "2026-10-14"
+    },
+    {
+        id: "126",
+        name: "Scape",
+        slug: "scape",
+        tagline: "The intelligent inbox that works for you",
+        description: "Scape is an AI-native desktop email client that prepares reply drafts before you open a thread. It pulls context from your email history, calendar, meeting transcripts and attachments to write drafts you review and send, and it sorts your inbox with priority labels so messages that need a response come first while lower-priority mail like newsletters stays out of the way. Scape also includes one-click meeting capture with private local recording on Mac (Zoom, Google Meet, Teams, FaceTime and in-person), transcription in 99 languages, and lightweight relationship tracking built on your email. The free plan includes unlimited inboxes and meeting recordings; paid plans add automations and higher AI limits. Scape says it does not train models on your data.",
+        categories: ["email", "productivity"],
+        website: "https://scape.app",
+        pricing: "Free plan available, Plus: $20/month, Max: $100/month",
+        paymentOptions: {
+            isPaid: true,
+            hasFreeTrialPeriod: false,
+            hasFreeStarterPlan: true
+        },
+        features: ["Reply drafts prepared before you open an email", "Context from email, calendar, meeting transcripts and attachments", "Priority labels that surface emails needing attention", "Local meeting recording on Mac with transcription in 99 languages", "Automations and higher AI limits on paid plans", "Unlimited inboxes on the free plan"],
+        useCases: ["Founders and operators drowning in email", "People who want reply drafts informed by their meetings", "Keeping newsletters and low-priority mail out of the main view"],
+        addedDate: "2026-10-14"
+    },
+    {
+        id: "127",
+        name: "Catch",
+        slug: "catch",
+        tagline: "Your admin savior — an AI assistant for scheduling, email, calls and travel",
+        description: "Catch is an AI admin assistant that you reach through the channels you already use: Slack, iMessage, email, WhatsApp, SMS, Microsoft Teams or a phone call. It schedules meetings across multiple calendars, resolves conflicts and protects focus time, triages your inbox and drafts emails in your voice, makes outgoing phone calls, books flights and hotels, fills out forms, and keeps track of follow-ups and reminders, with a morning brief to start the day. It connects to 76+ tools including Gmail, Google Calendar, Outlook, Zoom, Asana, HubSpot and Salesforce, and asks for your approval before completing any financial transaction. There's also a free option: CC Catch's scheduling address on an email and it takes over the back-and-forth, no account needed. Catch lists SOC 2 Type II and CASA Tier-2 security credentials.",
+        categories: ["scheduling", "email", "productivity"],
+        website: "https://catchagent.ai",
+        pricing: "Free CC-to-schedule option, Full assistant: $99/month (10-day free trial)",
+        paymentOptions: {
+            isPaid: true,
+            hasFreeTrialPeriod: true,
+            hasFreeStarterPlan: true
+        },
+        features: ["Scheduling across multiple calendars with conflict resolution", "Inbox triage and email drafting in your voice", "Outgoing phone calls on your behalf", "Flight and hotel booking with approval for payments", "Works over Slack, iMessage, email, WhatsApp, SMS and Teams", "76+ integrations including Gmail, Outlook, HubSpot and Salesforce"],
+        useCases: ["Executives and founders without a human assistant", "Coordinating group meetings across time zones", "Handing off travel booking and follow-up reminders", "CC-based scheduling for occasional users"],
+        addedDate: "2026-10-14"
+    },
+    {
+        id: "128",
+        name: "Descript",
+        slug: "descript",
+        tagline: "AI video and audio editor that makes editing as easy as editing text",
+        description: "Descript is a video and audio editor built around the transcript: you record or upload footage, Descript transcribes it, and you edit the video by editing the text — delete a sentence and that moment disappears from the timeline. Its AI co-editor, Underlord, can turn a raw recording into a tight cut and handle editing tasks you describe in plain language. Other AI tools include Studio Sound for one-click noise removal and voice enhancement, filler-word and retake removal, eye-contact correction, lighting fixes, dynamic captions, and clip generation for YouTube, TikTok and LinkedIn. Descript also handles screen and remote recording, translation, and publishing. The free plan gives one hour of media per month with 720p watermarked exports; paid plans add more media hours, AI credits and higher-resolution exports.",
+        categories: ["video-generation", "voice-audio"],
+        website: "https://www.descript.com",
+        pricing: "Free (1 media hour/month), Hobbyist: from $16/month, Creator: from $24/month, Business: from $50/month (annual billing; monthly costs more), Enterprise: Contact for pricing",
+        paymentOptions: {
+            isPaid: true,
+            hasFreeTrialPeriod: false,
+            hasFreeStarterPlan: true
+        },
+        features: ["Edit video and audio by editing the transcript", "Underlord AI co-editor for rough cuts and described edits", "Studio Sound noise removal and voice enhancement", "Filler word and retake removal", "Eye contact and lighting correction", "Captions, clips and translation"],
+        useCases: ["Podcasters editing interviews", "YouTubers and course creators cutting talking-head video", "Marketing teams turning webinars into short clips", "Teams producing translated video content"],
+        addedDate: "2026-10-14"
     }
 ]; 

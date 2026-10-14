@@ -1,15 +1,15 @@
 {
-  "generatedAt": "2026-03-12T01:00:04.321Z",
-  "totalAgents": 119,
+  "generatedAt": "2026-10-14T14:00:11.340Z",
+  "totalAgents": 126,
   "totalCategories": 20,
   "minTarget": 5,
   "categoriesBelow": 0,
   "priorities": [
     {
       "category": "home-improvement",
-      "currentCount": 5,
+      "currentCount": 6,
       "deficit": 0,
-      "priorityScore": 5,
+      "priorityScore": 4,
       "status": "OK"
     },
     {
@@ -20,28 +20,7 @@
       "status": "OK"
     },
     {
-      "category": "email",
-      "currentCount": 7,
-      "deficit": 0,
-      "priorityScore": 3,
-      "status": "OK"
-    },
-    {
-      "category": "transcription",
-      "currentCount": 7,
-      "deficit": 0,
-      "priorityScore": 3,
-      "status": "OK"
-    },
-    {
       "category": "document-analysis",
-      "currentCount": 7,
-      "deficit": 0,
-      "priorityScore": 3,
-      "status": "OK"
-    },
-    {
-      "category": "scheduling",
       "currentCount": 7,
       "deficit": 0,
       "priorityScore": 3,
@@ -69,13 +48,6 @@
       "status": "OK"
     },
     {
-      "category": "video-generation",
-      "currentCount": 7,
-      "deficit": 0,
-      "priorityScore": 3,
-      "status": "OK"
-    },
-    {
       "category": "research",
       "currentCount": 8,
       "deficit": 0,
@@ -83,14 +55,14 @@
       "status": "OK"
     },
     {
-      "category": "image-generation",
+      "category": "scheduling",
       "currentCount": 8,
       "deficit": 0,
       "priorityScore": 2,
       "status": "OK"
     },
     {
-      "category": "voice-audio",
+      "category": "video-generation",
       "currentCount": 8,
       "deficit": 0,
       "priorityScore": 2,
@@ -98,6 +70,20 @@
     },
     {
       "category": "customer-support",
+      "currentCount": 9,
+      "deficit": 0,
+      "priorityScore": 1,
+      "status": "OK"
+    },
+    {
+      "category": "email",
+      "currentCount": 9,
+      "deficit": 0,
+      "priorityScore": 1,
+      "status": "OK"
+    },
+    {
+      "category": "image-generation",
       "currentCount": 9,
       "deficit": 0,
       "priorityScore": 1,
@@ -133,7 +119,21 @@
     },
     {
       "category": "productivity",
-      "currentCount": 40,
+      "currentCount": 45,
+      "deficit": 0,
+      "priorityScore": 0,
+      "status": "OK"
+    },
+    {
+      "category": "transcription",
+      "currentCount": 10,
+      "deficit": 0,
+      "priorityScore": 0,
+      "status": "OK"
+    },
+    {
+      "category": "voice-audio",
+      "currentCount": 10,
       "deficit": 0,
       "priorityScore": 0,
       "status": "OK"
@@ -149,30 +149,30 @@
   "topPriority": [
     "home-improvement",
     "data-analysis",
-    "email",
-    "transcription",
-    "document-analysis"
+    "document-analysis",
+    "seo",
+    "social-media"
   ],
   "distribution": {
-    "productivity": 40,
+    "productivity": 45,
     "coding": 14,
     "automation": 14,
     "sales": 13,
     "marketing": 12,
     "writing": 10,
+    "transcription": 10,
+    "voice-audio": 10,
     "customer-support": 9,
+    "email": 9,
+    "image-generation": 9,
     "research": 8,
-    "image-generation": 8,
-    "voice-audio": 8,
+    "scheduling": 8,
+    "video-generation": 8,
     "data-analysis": 7,
-    "email": 7,
-    "transcription": 7,
     "document-analysis": 7,
-    "scheduling": 7,
     "seo": 7,
     "social-media": 7,
     "accounting": 7,
-    "video-generation": 7,
-    "home-improvement": 5
+    "home-improvement": 6
   }
 }
