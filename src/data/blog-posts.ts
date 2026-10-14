@@ -9250,5 +9250,76 @@ The brands that win in 2026 won't be the ones who optimized for Google OR AI sea
         categories: ["seo","marketing"],
         featuredImage: "/images/blog/ai-seo-tools-ranked-google-and-chatgpt-2026.png",
         tags: ["AI SEO tools","GEO","generative engine optimization","Clearscope","Search Atlas","AthenaHQ","Alli AI","content optimization","AI search visibility"],
+    },
+    {
+        id: "92",
+        title: "Cursor Just Became Part of The X Subscription — Here's What It Costs If You Code With Claude",
+        slug: "cursor-x-subscription-grok-plans-claude-gpt-api-pricing",
+        excerpt: "Cursor's new –00 plans bundle Grok and X Premium, but Claude and GPT now bill at API list price on top. Here's the math, and who should switch.",
+        content: `If you pay for Cursor and mostly code with Claude, the new plans are a price increase wearing a discount costume. If you're happy coding with Grok, they're a pretty good deal. That's the whole story in two sentences — the rest is the math.
+
+Here's what happened. SpaceX closed its roughly $60 billion all-stock acquisition of Cursor's parent company in August, and on October 12 xAI launched **The X Subscription**, a single plan that bundles Grok, Grok Bot, [Cursor](/agents/cursor) and X Premium. Cursor's pricing page now shows the new tiers instead of the old Pro / Pro+ / Ultra lineup, and new signups land on the new plans by default.
+
+## The new tiers, side by side
+
+| Plan | Price | Usage (relative) | Third-party models (Claude, GPT) in Cursor |
+|---|---|---|---|
+| Free | $0 | Limited | No |
+| Plus | $8/month | 1x | No — Grok models only |
+| Premium | $30/month | 4x Plus | Yes, billed at API list price |
+| Super | $100/month | 15x Plus | Yes, billed at API list price |
+| Ultra | $200/month | 50x Plus | Yes, billed at API list price |
+
+For reference, the old lineup (still listed on third-party trackers as recently as August) was Hobby free, Pro $20, Pro+ $60, Ultra $200 and Teams $40 per seat.
+
+xAI's headline claim is that Premium bundles SuperGrok, Cursor Pro and X Premium+, which it says used to cost $90 a month combined. That's true as far as it goes. But it only matters if you actually wanted all three — and most people paying for Cursor were paying for one thing: a good editor wired up to whichever frontier model codes best for them.
+
+## The line that changes everything
+
+Buried in Cursor's own announcement on its forum is this: on the new plans, third-party model usage "is billed separately at API list prices, through top-ups, and you can set spending caps." xAI's help docs are even blunter — models like Claude or GPT "aren't included in your plan" and are charged from your prepaid credit starting with the first request.
+
+That's a real shift. Under the old setup, the $20 Pro plan came with roughly $20 of model usage at API rates, and you could spend that on Claude, GPT, Gemini or whatever you liked. Now the included usage is a shared pool of *Grok* usage — across Cursor, the Grok apps and the Grok tab on X — and anything else is metered on top.
+
+A few other details from the help docs and the forum announcement worth knowing before you click anything:
+
+- **The pool refreshes weekly**, not monthly. Heavy weeks can't borrow from quiet ones.
+- **Plus ($8) doesn't include Claude or GPT at all.** Premium at $30 is the cheapest way to keep third-party models in Cursor.
+- **Switching is permanent.** The docs say it "can't be undone, and Support can't undo it for you."
+- **You don't have to switch.** Existing Cursor subscribers keep their current plan, price and included third-party usage until they choose to move.
+
+That last one is the most useful sentence in this whole post.
+
+## So what does a Claude-heavy month actually cost?
+
+Let's do the math with Anthropic's current API list prices: [Claude](/agents/claude) Sonnet 5.5 is $2 per million input tokens and $10 per million output tokens, and Opus 5.5 is $4 in / $20 out. Cache reads are much cheaper ($0.10 and $0.20 per million), and agent sessions lean on caching a lot, so real bills depend heavily on how well that works in practice — Cursor hasn't spelled out how caching is billed on the new plans.
+
+Take a hypothetical developer who runs about $40 a month of Sonnet usage at API rates and nothing else.
+
+- **Old Pro ($20):** $20 subscription covers the first ~$20 of usage, then ~$20 of overage. Call it **$40**.
+- **New Premium ($30):** $30 subscription plus the full $40 of Claude at API price. Call it **$70**.
+
+Same work, $30 more a month. The gap is basically the subscription price, because on the new plans none of it goes toward Claude. You do get a big pile of Grok usage, Grok Bot and X Premium+ perks for that $30 — they're just perks this person didn't ask for.
+
+Now flip it. Someone who's already been using Grok models in Cursor, or who's willing to switch, gets a lot more for the money. xAI says every new plan includes "at least twice as much coding usage with our models as the comparable Cursor plan," and the $8 Plus tier is cheaper than any paid Cursor plan has ever been. If Grok's coding quality works for your codebase, that's a legitimately good deal.
+
+## Who should do what
+
+**If you mostly use Claude or GPT in Cursor:** stay on your current plan. There's no deadline to switch, and switching is one-way. Keep an eye on Cursor's forum for any end date on legacy plans — nothing has been announced as of this writing.
+
+**If you're starting fresh and want Claude:** it's worth pricing out the alternatives before signing up for Premium. Anthropic's own Claude Pro is $20 a month ($17 on annual) and includes Claude Code, which I've covered in my [Claude Code review](/blog/claude-code-terminal-coding-agent). [GitHub Copilot](/agents/github-copilot) also bundles several frontier models into one subscription. My older [roundup of AI code editors](/blog/best-ai-code-editors-2026) has the rest of the field.
+
+**If you use Grok already, or want the X perks:** Plus or Premium is probably the cheapest your setup has ever been. Just know the weekly pool is shared with Grok chat and Grok Bot, so a busy week of image generation eats into your coding budget.
+
+**If you run a team:** existing teams keep their arrangement and per-seat pricing, and xAI says teams get 3x more coding usage than the old Teams plans. New team seats are priced the same as individual tiers — $30 for Premium versus the old $40 Teams seat — but the third-party-at-API-price rule still applies. Run your actual model mix through the numbers before you move anyone.
+
+Look, I don't blame xAI for wanting Cursor's users on Grok — that's obviously why you buy an AI coding company. But Cursor's whole appeal was being model-neutral, the editor you used *with* whatever model was best this month. These plans quietly end that. If you liked Cursor because of Claude, the smart move right now is to do nothing, keep your current plan, and see whether the [Cursor vs. Windsurf](/blog/cursor-vs-windsurf-comparison-which-ai-ide-wins) question gets a lot more interesting this winter.
+`,
+        author: "Hugh McInnis",
+        publishDate: "2026-10-14",
+        publishedAt: "2026-10-14T07:02:16.000-08:00",
+        readTime: "5 min read",
+        categories: ["Coding","Pricing"],
+        featuredImage: "/images/blog/cursor-x-subscription-grok-plans-claude-gpt-api-pricing.png",
+        tags: ["cursor","grok","xai","pricing","claude","ai-coding"],
     }
 ]; 
