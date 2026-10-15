@@ -1482,7 +1482,7 @@ export const agents: Agent[] = [
         description: "Ramp Accounting Agent is a specialized AI agent built into Ramp's financial operations platform that automates the manual parts of bookkeeping and month-end close. Trained on millions of transactions and tailored to each business's individual coding behaviors, it auto-codes every transaction and bill across GL, department, class, location, and custom fields the moment they happen. Smart Review checks policy adherence, accuracy, and completeness for 100% of spend in the background, giving every transaction a suggested action. Customers see up to 3.5x more auto-coding than legacy tools with 90%+ accuracy. Finance teams deliver clean books 3x faster on average, saving 40+ hours per month. The agent learns automatically from feedback and corrections, improving over time. Integrates with major ERPs and 200+ apps.",
         categories: ["accounting", "automation"],
         website: "https://ramp.com",
-        pricing: "Free (included with Ramp platform), Ramp Plus and Enterprise tiers available",
+        pricing: "Free plan ($0/user, basic accounting rules and QuickBooks/Xero sync), Plus: $15/user/month + platform fee (AI coding for every field), Enterprise: Contact for pricing",
         paymentOptions: {
             isPaid: false,
             hasFreeTrialPeriod: false,
@@ -2204,7 +2204,7 @@ export const agents: Agent[] = [
         description: "Finaloop provides full-service, real-time bookkeeping and accounting for ecommerce brands selling on Shopify, Amazon, Walmart, Etsy, and more. It combines AI automation with a dedicated team of expert accountants to deliver 100% accurate P&L, balance sheets, and cash flow statements in real time. Finaloop handles inventory tracking, COGS calculations based on landed costs, multichannel order reconciliation, and year-end tax-optimized financial packages — replacing traditional bookkeepers, accounting software, and integrations.",
         categories: ["accounting", "automation"],
         website: "https://www.finaloop.com",
-        pricing: "From $155/month (Core, based on revenue), 14-day free trial",
+        pricing: "Starter: $245/month (up to $1M annual revenue, businesses 4 years old or less), Full-Service and Platform: Contact for pricing, 14-day free trial",
         paymentOptions: {
             isPaid: true,
             hasFreeTrialPeriod: true,

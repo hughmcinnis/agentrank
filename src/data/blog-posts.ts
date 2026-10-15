@@ -9474,5 +9474,68 @@ If I had $100 a month and wanted Claude, I'd pick Claude Max for Claude Code and
         categories: ["Coding","Pricing"],
         featuredImage: "/images/blog/copilot-max-vs-claude-max-vs-cursor-super.png",
         tags: ["github-copilot","claude","cursor","pricing","claude-code","ai-coding"],
+    },
+    {
+        id: "95",
+        title: "AI Bookkeeping Software Pricing: What Digits, Pilot, Zeni and Booke Actually Cost",
+        slug: "ai-bookkeeping-software-pricing-compared",
+        excerpt: "AI bookkeeping tools range from $65 to $800 a month. The difference is mostly how many humans come with the AI. Here's what each one costs and who it's for.",
+        content: `"AI bookkeeping" now covers products that cost $65 a month and products that cost $800 a month, and the marketing pages make them sound almost identical. Books that keep themselves, close on time, ask questions in plain English. The difference — and it's the only one that really matters for your wallet — is how many humans are attached to the AI.
+
+I went through the pricing pages for the main options in the directory to sort out what you actually pay for. Here's what they say as of October 2026.
+
+## The quick version
+
+| Tool | Starting price | Humans included? | Best fit |
+|---|---|---|---|
+| [Digits](/agents/digits) | $65/month (30-day free trial) | No — software only | Startups and small businesses that want a real-time ledger |
+| [Pilot](/agents/pilot-ai-accountant) | $99/month (Essentials) | Not on Essentials; a US-based bookkeeper reviews your books on Core | Small businesses that may want human review later |
+| [Booke AI](/agents/booke-ai) | $129/month per business | No — works inside your QuickBooks or Xero | Businesses already on QuickBooks or Xero |
+| [Finaloop](/agents/finaloop) | $245/month (Starter, 14-day free trial) | Yes, accounting team on higher tiers | Ecommerce brands with inventory |
+| [Zeni](/agents/zeni) | $549/month ($494 annual) | Yes — dedicated finance team on every plan | Venture-backed startups that want hands-off books |
+
+Then there's a second group that doesn't publish prices at all: [Truewind](/agents/truewind) and [Basis](/agents/basis) are quote-based and aimed more at accounting firms, and [Docyt](/agents/docyt) has shifted to pricing per property ("from $299 per property / month"), which tells you it's mostly selling to hotels and multi-location businesses now.
+
+## Software-only: Digits and Booke
+
+These two are the cheapest because you're the human in the loop. Nobody's reviewing the books but you (or your accountant, if you have one).
+
+**Digits** is the more ambitious of the two. It's not a plugin — it *is* the general ledger, so from what I can tell you'd be moving off QuickBooks rather than adding to it. Essentials is $65 a month and Core is $100, with Core adding dimensional accounting and automated schedules. A $250 Pro tier is listed as "coming soon." The pitch is continuous books: transactions get categorized as they come in from the 12,000+ connected institutions, Agentic Close runs the month-end steps, and Ask Digits answers questions like "what's our burn rate?" There's also an MCP server with write access, so you can point Claude or another assistant at your books. That's either exciting or terrifying depending on your temperament (Digits does protect closed periods from edits, at least).
+
+**Booke** takes the opposite approach. It's $129 per business per month and lives inside QuickBooks or Xero, doing daily bank-feed categorization, document matching, chasing missing receipts and keeping an audit trail of exceptions. If your accountant already works in QuickBooks and you don't want to migrate anything, that's the whole appeal. Booke doesn't mention a free trial on its pricing page.
+
+My honest take: if you're starting fresh, Digits at $65 is a really reasonable deal. If you're already deep in QuickBooks with years of history and an outside CPA, Booke is less disruptive, even if it costs twice as much as Digits Essentials.
+
+## The hybrids: Pilot and Finaloop
+
+So here's the thing about **Pilot**. Its $99 Essentials plan (for up to $100,000 in monthly expenses) is basically AI-only — AI categorization, bank and card data, AI answers about your transactions, and support through in-app messaging. The human bookkeeper shows up on Core, which also gets you accrual accounting, bill management for up to 10 vendor bills a month, and reports on the 10th business day. Core's price isn't clearly listed on the pricing page, so you'll need to ask sales. Pilot's tax prep starts at $1,000 a year for single-member LLCs and has to be bought alongside bookkeeping.
+
+I like Pilot's setup for one reason: it gives you an upgrade path. Start on Essentials, and if the AI's categorization isn't good enough or you start raising money and need accrual books, move to Core without switching vendors.
+
+**Finaloop** is narrower. It's built for ecommerce brands, and the Starter plan at $245 a month is only for businesses under $1 million in annual revenue that have been operating for four years or less. Bigger brands get a custom quote after a 30-minute call. What you're paying for is inventory accounting — the thing generic bookkeeping tools are worst at — plus real-time P&L. If you sell physical products online, it's worth the premium over Digits. If you don't, it isn't built for you.
+
+## Full service: Zeni
+
+**Zeni** is the expensive one, and it's upfront about why. Every plan includes a dedicated finance team on top of the AI Accountant and AI CFO agents. Starter is $549 a month ($494 billed annually), Growth is $799 ($719 annually), and pricing depends on "bookkeeping complexity, monthly expenses, and annual revenue." There's no self-serve trial; you book a demo.
+
+That's roughly 8x the cost of Digits Essentials. Is it worth it? For a seed-stage company with investors asking for monthly reports and nobody on staff who knows what an accrual is — probably, yes. Compare it to what a part-time bookkeeper charges in your area before deciding it's expensive. For a solo consultant or a small agency, it's overkill. Zeni also sells fractional CFO services from $1,599 a month plus a $2,000 setup fee, and tax filing from $2,499 a year, so the bill can climb quickly if you buy the whole bundle.
+
+## What about Ramp?
+
+[Ramp's accounting agent](/agents/ramp-accounting-agent) is a different animal: it codes transactions for spending that runs through Ramp's cards and bill pay, then syncs to your accounting system. Ramp's free plan includes basic accounting rules and those integrations, while the "AI coding for every field" feature is listed under Plus at $15 per user per month plus a platform fee. It's great if your spending already flows through Ramp — I wrote about how it handles [month-end close](/blog/ramp-accounting-agent-ai-bookkeeping-automates-month-end-close) back in March — but it isn't a replacement for a general ledger.
+
+## How I'd pick
+
+Think about it this way. Say you run a two-person agency doing $400K a year with a few dozen transactions a week. Digits Essentials at $65 or Pilot Essentials at $99 covers you, and you'd hand the year-end to a CPA. Now say you're a 15-person startup that just raised a seed round. Your investors want clean accrual-basis books every month, and you don't want to think about it — that's when Zeni or Pilot Core starts to make sense, because the human review is what you're paying for.
+
+The one mistake I'd avoid is paying for humans you don't need *or* skipping humans you do. AI categorization is good now, but it's still guessing at intent for weird transactions, and a misclassified $40K payment is the kind of thing an investor notices. If your books matter to someone besides you, pay for the review. If they don't, $65 a month for Digits is hard to argue with.
+`,
+        author: "Hugh McInnis",
+        publishDate: "2026-10-14",
+        publishedAt: "2026-10-14T19:16:57.000-08:00",
+        readTime: "5 min read",
+        categories: ["Accounting","Pricing"],
+        featuredImage: "/images/blog/ai-bookkeeping-software-pricing-compared.png",
+        tags: ["ai-bookkeeping","accounting","digits","pilot","zeni","pricing"],
     }
 ]; 
