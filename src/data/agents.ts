@@ -2570,5 +2570,100 @@ export const agents: Agent[] = [
         features: ["Edit video and audio by editing the transcript", "Underlord AI co-editor for rough cuts and described edits", "Studio Sound noise removal and voice enhancement", "Filler word and retake removal", "Eye contact and lighting correction", "Captions, clips and translation"],
         useCases: ["Podcasters editing interviews", "YouTubers and course creators cutting talking-head video", "Marketing teams turning webinars into short clips", "Teams producing translated video content"],
         addedDate: "2026-10-14"
+    },
+    {
+        id: "129",
+        name: "Digits",
+        slug: "digits",
+        tagline: "AI-native accounting software that keeps your books for you",
+        description: "Digits is an AI-native general ledger for small businesses, startups and accounting firms. It connects to 12,000+ financial institutions plus payroll providers, then categorizes transactions in real time, flags anything that needs review, and reconciles accounts automatically. Agentic Close handles month-end steps like booking and reconciling transactions and running accrual schedules, and Ask Digits lets you ask plain-language questions about your financials. The same system covers invoicing, bill pay and live KPIs like burn, runway and revenue. Digits also offers an MCP server with write access, protected by locked periods, so AI assistants can work with your books. Plans start at $65/month after a 30-day free trial.",
+        categories: ["accounting"],
+        website: "https://digits.com",
+        pricing: "Essentials: $65/month, Core: $100/month, Pro: $250/month (coming soon), 30-day free trial",
+        paymentOptions: {
+            isPaid: true,
+            hasFreeTrialPeriod: true,
+            hasFreeStarterPlan: false
+        },
+        logo: "/images/logos/digits-logo.svg",
+        features: ["Real-time AI transaction categorization", "Automated bank and card reconciliation", "Agentic Close for month-end close and accrual schedules", "Ask Digits AI financial assistant", "Invoicing and bill pay in the same ledger", "MCP server with write access and locked periods"],
+        useCases: ["Startups that want books kept continuously instead of monthly", "Small businesses replacing manual bookkeeping", "Accounting firms automating client bookkeeping", "Founders tracking burn and runway in real time"],
+        addedDate: "2026-10-14"
+    },
+    {
+        id: "130",
+        name: "Zeni",
+        slug: "zeni",
+        tagline: "AI bookkeeping and accounting, backed by a dedicated finance team",
+        description: "Zeni combines AI agents with a human finance team to run bookkeeping for startups. Its AI Accountant agent categorizes transactions, reconciles bank and card accounts, matches receipts and invoices, and runs audit checks before each close, while the AI CFO agent answers questions from your live books, projects runway and cash-out dates, and models scenarios like new hires or spending cuts. Every bookkeeping plan includes AI bill payments, reimbursements and a business checking account, plus a dedicated finance team. Zeni also sells fractional CFO, tax and payroll services separately. Pricing depends on bookkeeping complexity, monthly expenses and annual revenue, and it's sold through a demo rather than a self-serve trial.",
+        categories: ["accounting"],
+        website: "https://www.zeni.ai",
+        pricing: "Starter: $549/month ($494/month annual), Growth: $799/month ($719/month annual), Enterprise: Contact for pricing",
+        paymentOptions: {
+            isPaid: true,
+            hasFreeTrialPeriod: false,
+            hasFreeStarterPlan: false
+        },
+        logo: "/images/logos/zeni-logo.png",
+        features: ["AI Accountant agent for categorization and reconciliation", "AI CFO agent for runway projections and scenario modeling", "Receipt and invoice matching without manual uploads", "Dedicated human finance team on every plan", "AI bill payments and reimbursements", "Optional fractional CFO, tax and payroll services"],
+        useCases: ["Venture-backed startups that want hands-off books", "Founders who need runway and burn answers quickly", "Companies outgrowing DIY bookkeeping", "Startups that want bookkeeping, tax and CFO help from one vendor"],
+        addedDate: "2026-10-14"
+    },
+    {
+        id: "131",
+        name: "Rows",
+        slug: "rows",
+        tagline: "Your new AI data analyst, in a spreadsheet",
+        description: "Rows is a spreadsheet built around an AI Analyst: you import data or pull it from 50+ connected sources, then ask for analysis in plain language instead of writing formulas or SQL. The AI can extract tables from PDFs and images, merge datasets, build calculators and models that behave like a normal spreadsheet, and turn the results into live reports and dashboards that refresh on a schedule. Integrations cover ad platforms, social media, data warehouses and back-office tools, and the RowsX browser extension imports tables from websites. Reports can be shared or embedded, with real-time collaboration. AI usage is counted in AI Tasks: 5 per month on the free plan, 200 on Plus and 1,000 on Pro.",
+        categories: ["data-analysis", "productivity"],
+        website: "https://rows.com",
+        pricing: "Free plan available (5 AI tasks/month), Plus: $8/user/month ($6 annual), Pro: $79/month + $8/user/month ($59 + $6/user annual), Enterprise: Contact for pricing",
+        paymentOptions: {
+            isPaid: true,
+            hasFreeTrialPeriod: false,
+            hasFreeStarterPlan: true
+        },
+        logo: "/images/logos/rows-logo.png",
+        features: ["AI Analyst that answers plain-language questions about your data", "AI Vision import from PDFs and images", "50+ built-in data source integrations", "Scheduled automatic data refresh", "Shareable and embeddable reports and dashboards", "Real-time collaboration"],
+        useCases: ["Marketing teams combining ad and social data into one report", "Operators building live KPI dashboards without BI tools", "Extracting tables from PDFs into a working spreadsheet", "Small teams that want analysis without writing SQL"],
+        addedDate: "2026-10-14"
+    },
+    {
+        id: "132",
+        name: "Hex",
+        slug: "hex",
+        tagline: "The analytics platform for humans and agents",
+        description: "Hex is an AI analytics platform that combines data notebooks, conversational self-serve analytics and interactive data apps in one workspace. Its Notebook Agent helps analysts write SQL and Python and build analyses, Threads lets non-technical teammates ask questions of company data in plain language, and Explore covers self-serve exploration. A Context Studio governs AI answers using semantic models, table descriptions and business rules, and Evals let teams test agent accuracy before changes go live. Hex connects to warehouses like Snowflake, BigQuery and Databricks, integrates with dbt, GitHub, Airflow, Dagster and Slack, and exposes an MCP server so assistants like Claude, ChatGPT and Cursor can query it. Customers listed on its site include Notion, Ramp, Figma and Reddit.",
+        categories: ["data-analysis"],
+        website: "https://hex.tech",
+        pricing: "Community: Free, Professional: $36/editor/month, Team: $75/editor/month (14-day free trial), Enterprise: Contact for pricing",
+        paymentOptions: {
+            isPaid: true,
+            hasFreeTrialPeriod: true,
+            hasFreeStarterPlan: true
+        },
+        logo: "/images/logos/hex-logo.svg",
+        features: ["Notebook Agent for SQL and Python analysis", "Threads for plain-language self-serve analytics", "Context Studio to govern AI answers with semantic models", "Evals for testing agent accuracy", "Interactive data apps built from notebooks", "MCP server for Claude, ChatGPT and Cursor"],
+        useCases: ["Data teams building analyses in SQL and Python notebooks", "Business users asking data questions without filing tickets", "Publishing interactive dashboards and data apps", "Governed self-serve analytics on a cloud warehouse"],
+        addedDate: "2026-10-14"
+    },
+    {
+        id: "133",
+        name: "HomeGPT",
+        slug: "homegpt",
+        tagline: "See a new look for your home and garden",
+        description: "HomeGPT is an AI home design tool that redesigns photos of your house, rooms, yard or garden. You upload a photo, choose what to change, and get two design options along with a list of materials or paint colors, rough quantities and typical local prices. Exterior projects include whole-house restyles, paint, siding, patios, decks, fences and yard or garden planning, and it also handles room, kitchen and bathroom redesigns. The site adds free calculators, cost guides, a 2D/3D property planner and a paint visualizer. It runs in any browser with no account required to start, and there are HomeGPT apps for iOS and Android. The free tier gives 2 designs per day with no watermark; paid plans add more daily designs and remove ads.",
+        categories: ["home-improvement", "image-generation"],
+        website: "https://homegpt.app",
+        pricing: "Free (2 designs/day), Paid plans: Contact for pricing",
+        paymentOptions: {
+            isPaid: true,
+            hasFreeTrialPeriod: false,
+            hasFreeStarterPlan: true
+        },
+        logo: "/images/logos/homegpt-logo.png",
+        features: ["Photo-based redesigns of exteriors, rooms, yards and gardens", "Two design options per request", "Material lists with rough quantities and local prices", "Paint visualizer and 2D/3D property planner", "Free cost guides and calculators", "Web, iOS and Android"],
+        useCases: ["Homeowners previewing exterior paint or siding changes", "Planning a patio, deck or garden before getting quotes", "Rough-budgeting a kitchen or bathroom remodel", "Trying design ideas without hiring a designer"],
+        addedDate: "2026-10-14"
     }
 ]; 
