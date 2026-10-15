@@ -148,7 +148,7 @@ export default async function AgentPage({ params }: AgentPageProps) {
                                 <a
                                     href={agent.website}
                                     target="_blank"
-                                    rel="noopener noreferrer"
+                                    rel={agent.sponsored ? 'sponsored noopener noreferrer' : 'noopener noreferrer'}
                                     className="block w-full bg-gradient-to-r from-cyan-400 to-blue-400 hover:from-cyan-300 hover:to-blue-300 text-gray-900 text-center py-3 px-4 rounded-lg font-semibold transition-all duration-300"
                                 >
                                     Visit Website

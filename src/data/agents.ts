@@ -23,6 +23,8 @@ export interface Agent {
     features: string[];
     useCases: string[];
     addedDate: string;
+    // Paid listing; outbound links must carry rel="sponsored" per Google's link-scheme policy.
+    sponsored?: boolean;
 }
 
 export const agents: Agent[] = [

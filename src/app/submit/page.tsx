@@ -69,8 +69,8 @@ export default function SubmitPage() {
                             Submission Received!
                         </h1>
                         <p className="text-lg text-gray-300 mb-8">
-                            Thanks! We&apos;ll review your submission and add it to the directory if it&apos;s a good fit.
-                            We&apos;ll notify you by email once it&apos;s listed.
+                            Thanks! We&apos;ll review your submission, and if it&apos;s approved we&apos;ll email you a link
+                            to pay the $50 one-time listing fee. Your listing goes live within 48 hours of payment.
                         </p>
                         <button
                             onClick={() => setStatus('idle')}
@@ -91,9 +91,13 @@ export default function SubmitPage() {
                     <h1 className="text-4xl font-bold bg-gradient-to-r from-white via-cyan-200 to-white bg-clip-text text-transparent mb-4">
                         Submit Your Agent
                     </h1>
-                    <p className="text-lg text-gray-400 mb-12">
+                    <p className="text-lg text-gray-400 mb-6">
                         Have an AI agent or tool you&apos;d like listed on Agent Rank? Fill out the form below and we&apos;ll review it for inclusion.
                     </p>
+                    <div className="rounded-xl border border-cyan-400/20 bg-cyan-500/5 p-4 mb-12 text-sm text-gray-300">
+                        <span className="font-semibold text-cyan-300">Listing fee: $50 one-time.</span>{' '}
+                        Submitting is free. If your tool is approved, we&apos;ll email you a payment link, and your listing goes live within 48 hours of payment. Agent Rank only lists AI tools.
+                    </div>
 
                     <form onSubmit={handleSubmit} className="space-y-6">
                         {/* Agent Name */}
