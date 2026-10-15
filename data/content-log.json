@@ -4,12 +4,29 @@
     {
       "date": "2026-10-14",
       "articlesPublished": [
-        {"slug": "cursor-x-subscription-grok-plans-claude-gpt-api-pricing", "topic": "Cursor folded into xAI's X Subscription (Oct 12, 2026); Claude/GPT now billed at API list price"},
-        {"slug": "wispr-vs-granola-botless-notes-compared", "topic": "Bot-free meeting notetakers: Wispr Notetaker vs Granola (plus Fathom/Otter context)"}
+        {
+          "slug": "cursor-x-subscription-grok-plans-claude-gpt-api-pricing",
+          "topic": "Cursor folded into xAI's X Subscription (Oct 12, 2026); Claude/GPT now billed at API list price"
+        },
+        {
+          "slug": "wispr-vs-granola-botless-notes-compared",
+          "topic": "Bot-free meeting notetakers: Wispr Notetaker vs Granola (plus Fathom/Otter context)"
+        }
       ],
-      "postRefreshed": {"slug": "cursor-review-ai-code-editor-worth-it", "changes": "Retitled (removed $20 framing and hands-on claims), new X Subscription pricing table, Copilot $10 Pro credits, internal links"},
-      "listingsAdded": ["granola", "wispr-flow", "scape", "catch", "descript"],
-      "directoryUpdates": ["cursor pricing updated to X Subscription tiers"],
+      "postRefreshed": {
+        "slug": "cursor-review-ai-code-editor-worth-it",
+        "changes": "Retitled (removed $20 framing and hands-on claims), new X Subscription pricing table, Copilot $10 Pro credits, internal links"
+      },
+      "listingsAdded": [
+        "granola",
+        "wispr-flow",
+        "scape",
+        "catch",
+        "descript"
+      ],
+      "directoryUpdates": [
+        "cursor pricing updated to X Subscription tiers"
+      ],
       "topicsConsideredNotDone": [
         "OpenAI Dots: always-on agents on GPT-6 Astra (launched ~Oct 12, 2026, Pro/Business Premium)",
         "Claude Haiku 5.5 (Oct 7, 2026): $0.10/$0.50 per MTok under 100K prompts — cheap subagent model angle",
@@ -21,6 +38,47 @@
         "GitHub Copilot new Max plan ($100) vs Claude Max vs Cursor Super"
       ],
       "notes": "Push to GitHub blocked (repo not authorized for session). Official sites for new listings blocked by egress proxy, so no logos downloaded."
+    },
+    {
+      "date": "2026-10-14",
+      "run": "desktop (second run of the day; earlier cloud run logged above)",
+      "articlesPublished": [
+        {
+          "slug": "copilot-max-vs-claude-max-vs-cursor-super",
+          "topic": "$100/month heavy-use coding plans compared: GitHub Copilot Max (AI credits, $200 incl. flex), Claude Max 5x, Cursor Super (Grok pool, third-party at API price)"
+        },
+        {
+          "slug": "ai-bookkeeping-software-pricing-compared",
+          "topic": "AI bookkeeping pricing roundup: Digits, Pilot, Booke, Finaloop, Zeni, Ramp; software-only vs human-backed"
+        }
+      ],
+      "postRefreshed": {
+        "slug": "github-copilot-code-review-pr-reviewer-honest-take",
+        "changes": "Premium requests -> AI credits pricing table, per-review cost estimates, agentic full-repo context and automatic reviews, current CodeRabbit/Sourcery/Greptile pricing, removed first-person usage claims, internal links"
+      },
+      "listingsAdded": [
+        "digits",
+        "zeni",
+        "rows",
+        "hex",
+        "homegpt"
+      ],
+      "directoryUpdates": [
+        "finaloop pricing (Starter $245/mo)",
+        "ramp-accounting-agent pricing (Free/Plus $15 + platform fee)",
+        "github-copilot pricing (added Max, AI credits)",
+        "coderabbit pricing (Essentials/Team/Advanced)",
+        "fixed mangled excerpt on cursor-x-subscription post"
+      ],
+      "topicsConsideredNotDone": [
+        "Descript pricing breakdown (media hours + AI credits; top-up prices not published)",
+        "Rows vs Hex vs Julius AI: AI data analyst tools compared",
+        "Claude Haiku 5.5 as a cheap subagent model ($0.10/$0.50 under 100K)",
+        "OpenAI Dots always-on agents",
+        "Docyt pivot to hospitality (per-property pricing)",
+        "HomeGPT vs magicplan vs Renoworks for DIY renovation planning"
+      ],
+      "notes": "Logos downloaded from official sites for all 5 new listings. Email drafts: Rows, Zeni, HomeGPT (no public email found for Digits or Hex)."
     }
   ]
 }
