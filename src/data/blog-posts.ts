@@ -9398,5 +9398,81 @@ Either way, the bot era is ending. Good riddance.
         categories: ["Productivity","Transcription"],
         featuredImage: "/images/blog/wispr-vs-granola-botless-notes-compared.png",
         tags: ["granola","wispr-flow","meeting-notes","ai-notetaker","comparison"],
+    },
+    {
+        id: "94",
+        title: "Copilot Max vs Claude Max vs Cursor Super: Which $100 AI Coding Plan Is Actually the Best Deal?",
+        slug: "copilot-max-vs-claude-max-vs-cursor-super",
+        excerpt: "GitHub, Anthropic and Cursor all sell a $100/month plan for heavy AI coders, but they measure usage in completely different ways. Here's what each one actually gets you.",
+        content: `A hundred dollars a month is now the going rate for "I code with AI all day and I'm tired of hitting limits." GitHub, Anthropic and Cursor all sell a plan at exactly that price — Copilot Max, Claude Max and Cursor Super — and they look interchangeable on a pricing page. They aren't. They measure usage in three completely different ways, and which one is the best deal depends almost entirely on one question: which model do you actually want to be using?
+
+Here's how they stack up, using each company's own pricing pages and docs as of mid-October.
+
+## Three plans, three different currencies
+
+| | Copilot Max | Claude Max (5x) | Cursor Super |
+|---|---|---|---|
+| Price | $100/month | $100/month | $100/month |
+| What you get | $100 in base AI credits + $100 "flex" allotment ($200 total) | 5x Pro's usage per 5-hour session, plus weekly limits | 15x the usage of Cursor's $8 Plus tier |
+| Claude models | Included, billed against credits | Included — it's the whole point | Not included; billed on top at API list price |
+| Resets | Monthly | Every 5 hours, plus weekly caps | Weekly |
+| Next tier up | None for individuals | Max 20x at $200 | Ultra at $200 |
+
+That middle row is the whole story. [GitHub Copilot](/agents/github-copilot) gives you a dollar figure. [Claude](/agents/claude) gives you a multiplier on a limit Anthropic doesn't publish in dollars. [Cursor](/agents/cursor) gives you a multiplier on a pool of *Grok* usage. Comparing them directly is a bit like comparing a gift card, an all-you-can-eat buffet with a time limit, and a buffet that only serves one cuisine.
+
+## Copilot Max is the only one you can actually do math on
+
+GitHub moved its individual plans to usage-based billing on June 1. Every paid plan now comes with AI credits worth a penny each, and the credits are spent at per-token rates that depend on the model. Max is $100 a month and comes with 10,000 base credits plus a 10,000-credit flex allotment — $200 of usage in total.
+
+What I like about this: GitHub publishes the rates. Claude Sonnet 5.5 is $2 per million input tokens and $10 per million output in Copilot, and Opus 5.5 is $4 in / $20 out — the same numbers as Anthropic's own API price list. GPT, Gemini and Grok models are all on the same sheet. So you can take your real usage, multiply, and know what you'll spend.
+
+A few things in the fine print matter, though:
+
+- **The flex half isn't guaranteed.** GitHub's docs say base credits "never change" but flex allotments are "designed to adapt as the economics of AI evolve." Today it doubles your usage. It might not always.
+- **Nothing rolls over.** Unused credits disappear at midnight UTC on the first of the month.
+- **Completions are free.** Tab completions and next-edit suggestions don't touch your credits on any paid plan, which is a big deal if most of your AI use is autocomplete.
+- **Third-party agents are a Pro+ and Max perk.** Handing tasks to Claude or OpenAI Codex as agents from inside GitHub isn't available on the $10 Pro plan.
+
+So the honest pitch for Copilot Max is "$200 of API-priced usage for $100, for as long as GitHub keeps the flex allotment where it is." That's a genuinely good deal. The catch is that it's still metered — a long agent session on Opus burns through credits exactly as fast as it would on the API.
+
+## Claude Max is the one that feels unlimited (until it isn't)
+
+Anthropic's Max plan works the opposite way. There's no dollar figure at all. The $100 tier gives you 5x the usage of Pro per five-hour session, the $200 tier gives you 20x, and both have weekly ceilings on top. It includes [Claude Code](/blog/claude-code-terminal-coding-agent), Opus, Sonnet and Haiku, and Anthropic's newest Fable model is available up to 50% of your weekly limits.
+
+From what I can tell, this is the plan most heavy Claude users end up on, and the reason is simple: you're not watching a meter. You work until you hit a limit, wait for the window to reset, and keep going. If your day is mostly Claude Code sessions on Opus, that model fits how agentic coding actually feels.
+
+The downside is the same thing from the other side — you can't predict it. Anthropic doesn't publish what "5x Pro" works out to in tokens, so there's no way to compare it to Copilot's $200 with a calculator. You find your limits by running into them. It's also Claude-only, obviously. If you want to bounce between GPT, Gemini and Claude depending on the task, Max doesn't help with that.
+
+## Cursor Super is a Grok plan now
+
+This is where it gets awkward. Since Cursor became part of xAI's X Subscription on October 12 — I went through the details in [my breakdown of the new Cursor plans](/blog/cursor-x-subscription-grok-plans-claude-gpt-api-pricing) — Super's $100 buys 15x the usage of the $8 Plus tier, and that usage is a shared pool across Cursor and the Grok apps. Cursor's pricing page is explicit that third-party model usage "is not included in the monthly prices shown and must be purchased separately."
+
+Say you're a developer who burns through about $150 a month of Claude Sonnet at API prices:
+
+- **Copilot Max:** $100. Your $150 fits inside the $200 allowance with room to spare (and even if flex disappeared entirely, you'd be at $150).
+- **Claude Max 5x:** $100, as long as your sessions stay under Anthropic's limits — which nobody can promise you in advance.
+- **Cursor Super:** $100 plus $150 for Claude at API price. Call it **$250**, and you'd get a mountain of Grok usage you didn't use.
+
+For that person, Super is the worst option by a wide margin. They'd be better off on Cursor's $30 Premium tier ($180 all in) or just leaving Cursor's subscription alone if they're on a legacy plan, since existing subscribers can keep their old pricing.
+
+Flip it around, though, and Super makes sense. If Grok's coding models work for your codebase, 15x Plus with priority access at peak times is a lot of model for $100, and Cursor's weekly refresh means a quiet week isn't wasted for long.
+
+## So which one?
+
+**You live in Claude Code and mostly use Opus:** Claude Max. You'll get the most work done per dollar, and the predictability problem is one you can live with by upgrading to the $200 tier if you keep hitting walls.
+
+**You switch models a lot, or want a number you can budget against:** Copilot Max. It's the only plan here where Claude, GPT and Gemini all draw from the same pot at published prices — and the free completions are a nice bonus. Honestly, check whether Pro+ covers you first. It's $39 for $70 of usage, and a lot of people paying $100 won't use $200.
+
+**You're happy with Grok, or want the X perks:** Cursor Super. Just don't buy it expecting it to be the old Cursor with a bigger allowance. It isn't.
+
+If I had $100 a month and wanted Claude, I'd pick Claude Max for Claude Code and use Copilot's free tier (2,000 completions a month) for autocomplete in my editor. Copilot Max is the better plan on paper — it's the only one that tells you exactly what you're getting — but "exactly what you're getting" is still metered usage, and the whole reason to spend $100 is to stop thinking about the meter. For more on picking an editor in the first place, my [roundup of AI code editors](/blog/best-ai-code-editors-2026) is a decent starting point.
+`,
+        author: "Hugh McInnis",
+        publishDate: "2026-10-14",
+        publishedAt: "2026-10-14T19:14:24.000-08:00",
+        readTime: "6 min read",
+        categories: ["Coding","Pricing"],
+        featuredImage: "/images/blog/copilot-max-vs-claude-max-vs-cursor-super.png",
+        tags: ["github-copilot","claude","cursor","pricing","claude-code","ai-coding"],
     }
 ]; 
