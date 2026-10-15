@@ -101,10 +101,10 @@ export async function POST(request: NextRequest) {
         const id = randomUUID();
         await sql`
             INSERT INTO submissions
-                (id, name, url, description, categories, other_category, pricing, email, notes, ip)
+                (id, name, url, description, categories, other_category, pricing, email, notes, ip, status)
             VALUES
                 (${id}, ${name}, ${url}, ${description}, ${JSON.stringify(categories)},
-                 ${otherCategory}, ${pricing}, ${email}, ${notes}, ${ip})
+                 ${otherCategory}, ${pricing}, ${email}, ${notes}, ${ip}, 'awaiting_payment')
         `;
 
         return NextResponse.json({ success: true, id });
@@ -119,7 +119,8 @@ export async function POST(request: NextRequest) {
 
 // List submissions (newest first). Requires header:
 //   Authorization: Admin <COMMUNITY_ADMIN_SECRET>
-// Optional query: ?status=pending
+// Optional query: ?status=awaiting_payment
+// Paid submissions are matched in Stripe by the Checkout session's client_reference_id (= submission id).
 export async function GET(request: NextRequest) {
     if (!authenticateAdmin(request.headers.get('authorization'))) {
         return NextResponse.json({ error: 'Forbidden' }, { status: 403 });

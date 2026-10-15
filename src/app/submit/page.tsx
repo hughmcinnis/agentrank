@@ -1,8 +1,10 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { categories } from '@/lib/categories';
 import GradientBackground from '@/components/GradientBackground';
+
+const PAYMENT_LINK = 'https://buy.stripe.com/cNi14o2Nr78Fd3EgssdUY00';
 
 export default function SubmitPage() {
     const [formData, setFormData] = useState({
@@ -18,6 +20,13 @@ export default function SubmitPage() {
     const [showOtherCategory, setShowOtherCategory] = useState(false);
     const [status, setStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle');
     const [errorMessage, setErrorMessage] = useState('');
+
+    // Stripe redirects back here with ?paid=1 after a successful payment.
+    useEffect(() => {
+        if (new URLSearchParams(window.location.search).get('paid') === '1') {
+            setStatus('success');
+        }
+    }, []);
 
     const handleCategoryToggle = (categoryId: string) => {
         setFormData(prev => ({
@@ -48,9 +57,10 @@ export default function SubmitPage() {
                 return;
             }
 
-            setStatus('success');
-            setFormData({ name: '', url: '', description: '', categories: [], otherCategory: '', pricing: '', email: '', notes: '' });
-            setShowOtherCategory(false);
+            const checkout = new URL(PAYMENT_LINK);
+            checkout.searchParams.set('client_reference_id', data.id);
+            checkout.searchParams.set('prefilled_email', formData.email);
+            window.location.href = checkout.toString();
         } catch {
             setErrorMessage('Network error. Please try again.');
             setStatus('error');
@@ -66,14 +76,17 @@ export default function SubmitPage() {
                             <span className="text-3xl">✅</span>
                         </div>
                         <h1 className="text-4xl font-bold bg-gradient-to-r from-white via-cyan-200 to-white bg-clip-text text-transparent mb-4">
-                            Submission Received!
+                            Payment Received!
                         </h1>
                         <p className="text-lg text-gray-300 mb-8">
-                            Thanks! We&apos;ll review your submission, and if it&apos;s approved we&apos;ll email you a link
-                            to pay the $50 one-time listing fee. Your listing goes live within 48 hours of payment.
+                            Thanks! Your tool will be live on Agent Rank within 48 hours, and we&apos;ll email you the link
+                            as soon as it&apos;s published.
                         </p>
                         <button
-                            onClick={() => setStatus('idle')}
+                            onClick={() => {
+                                window.history.replaceState(null, '', '/submit');
+                                setStatus('idle');
+                            }}
                             className="rounded-xl bg-gray-800/50 backdrop-blur-xl border border-white/10 px-8 py-4 text-base font-semibold text-cyan-300 hover:bg-gray-700/50 hover:text-cyan-200 transition-all duration-300"
                         >
                             Submit Another
@@ -92,11 +105,16 @@ export default function SubmitPage() {
                         Submit Your Agent
                     </h1>
                     <p className="text-lg text-gray-400 mb-6">
-                        Have an AI agent or tool you&apos;d like listed on Agent Rank? Fill out the form below and we&apos;ll review it for inclusion.
+                        Have an AI agent or tool you&apos;d like listed on Agent Rank? Fill out the form below and you&apos;ll be taken to checkout.
                     </p>
-                    <div className="rounded-xl border border-cyan-400/20 bg-cyan-500/5 p-4 mb-12 text-sm text-gray-300">
-                        <span className="font-semibold text-cyan-300">Listing fee: $50 one-time.</span>{' '}
-                        Submitting is free. If your tool is approved, we&apos;ll email you a payment link, and your listing goes live within 48 hours of payment. Agent Rank only lists AI tools.
+                    <div className="rounded-xl border border-cyan-400/20 bg-cyan-500/5 p-4 mb-12 text-sm text-gray-300 space-y-2">
+                        <p>
+                            <span className="font-semibold text-cyan-300">$50 one-time listing fee.</span>{' '}
+                            Your tool goes live within 48 hours of payment.
+                        </p>
+                        <p>
+                            We accept every AI tool, as long as it&apos;s family-friendly. If we can&apos;t list your tool, we&apos;ll refund you in full.
+                        </p>
                     </div>
 
                     <form onSubmit={handleSubmit} className="space-y-6">
@@ -250,7 +268,7 @@ export default function SubmitPage() {
                             disabled={status === 'submitting'}
                             className="w-full rounded-xl bg-gradient-to-r from-cyan-500/20 to-fuchsia-500/20 border border-white/10 px-8 py-4 text-base font-semibold text-cyan-300 hover:from-cyan-500/30 hover:to-fuchsia-500/30 hover:text-cyan-200 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
                         >
-                            {status === 'submitting' ? 'Submitting...' : 'Submit for Review'}
+                            {status === 'submitting' ? 'Redirecting to checkout...' : 'Continue to Payment ($50)'}
                         </button>
                     </form>
                 </div>
