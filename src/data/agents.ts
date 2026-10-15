@@ -61,7 +61,7 @@ export const agents: Agent[] = [
         description: "GitHub Copilot transforms the developer experience by providing contextualized assistance throughout the software development lifecycle, from code completions to chat assistance in the IDE.",
         categories: ["coding"],
         website: "https://github.com/features/copilot",
-        pricing: "Copilot Free: $0/month (limited features), Copilot Pro: $10/month, Copilot Pro+: $39/month, Copilot Business: $19/user/month, Copilot Enterprise: $39/user/month",
+        pricing: "Copilot Free: $0/month (limited features), Pro: $10/month, Pro+: $39/month, Max: $100/month, Business: $19/user/month, Enterprise: $39/user/month (usage-based AI credits included with each plan)",
         paymentOptions: {
             isPaid: true,
             hasFreeTrialPeriod: true,
@@ -326,7 +326,7 @@ export const agents: Agent[] = [
         description: "CodeRabbit is an AI-powered code reviewer that delivers context-aware feedback on pull requests within minutes, reducing manual review effort while maintaining enterprise security standards.",
         categories: ["coding"],
         website: "https://coderabbit.ai",
-        pricing: "Free: $0/month (public repos only), Lite: $15/month per developer, Pro: $27/month per developer",
+        pricing: "Free for public repos, Essentials: $24/developer/month annual ($30 monthly), Team: $48/developer/month annual ($60 monthly), Advanced: $72/developer/month, Enterprise: Contact for pricing",
         paymentOptions: {
             isPaid: true,
             hasFreeTrialPeriod: true,
