@@ -9276,7 +9276,7 @@ The brands that win in 2026 won't be the ones who optimized for Google OR AI sea
         id: "92",
         title: "Cursor Just Became Part of The X Subscription — Here's What It Costs If You Code With Claude",
         slug: "cursor-x-subscription-grok-plans-claude-gpt-api-pricing",
-        excerpt: "Cursor's new –00 plans bundle Grok and X Premium, but Claude and GPT now bill at API list price on top. Here's the math, and who should switch.",
+        excerpt: "Cursor's new $8–$200 plans bundle Grok and X Premium, but Claude and GPT now bill at API list price on top. Here's the math, and who should switch.",
         content: `If you pay for Cursor and mostly code with Claude, the new plans are a price increase wearing a discount costume. If you're happy coding with Grok, they're a pretty good deal. That's the whole story in two sentences — the rest is the math.
 
 Here's what happened. SpaceX closed its roughly $60 billion all-stock acquisition of Cursor's parent company in August, and on October 12 xAI launched **The X Subscription**, a single plan that bundles Grok, Grok Bot, [Cursor](/agents/cursor) and X Premium. Cursor's pricing page now shows the new tiers instead of the old Pro / Pro+ / Ultra lineup, and new signups land on the new plans by default.
