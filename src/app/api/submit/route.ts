@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from 'next/server';
 import { sql } from '@vercel/postgres';
 import { randomUUID } from 'crypto';
 import { authenticateAdmin } from '@/lib/community/security';
+import { REQUIRE_PAYMENT } from '@/lib/submissions';
 
 const MAX_PER_IP_PER_DAY = 5;
 
@@ -99,12 +100,13 @@ export async function POST(request: NextRequest) {
         }
 
         const id = randomUUID();
+        const status = REQUIRE_PAYMENT ? 'awaiting_payment' : 'pending';
         await sql`
             INSERT INTO submissions
                 (id, name, url, description, categories, other_category, pricing, email, notes, ip, status)
             VALUES
                 (${id}, ${name}, ${url}, ${description}, ${JSON.stringify(categories)},
-                 ${otherCategory}, ${pricing}, ${email}, ${notes}, ${ip}, 'awaiting_payment')
+                 ${otherCategory}, ${pricing}, ${email}, ${notes}, ${ip}, ${status})
         `;
 
         return NextResponse.json({ success: true, id });
@@ -119,7 +121,7 @@ export async function POST(request: NextRequest) {
 
 // List submissions (newest first). Requires header:
 //   Authorization: Admin <COMMUNITY_ADMIN_SECRET>
-// Optional query: ?status=awaiting_payment
+// Optional query: ?status=pending (or awaiting_payment when REQUIRE_PAYMENT is on)
 // Paid submissions are matched in Stripe by the Checkout session's client_reference_id (= submission id).
 export async function GET(request: NextRequest) {
     if (!authenticateAdmin(request.headers.get('authorization'))) {

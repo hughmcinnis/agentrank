@@ -3,8 +3,7 @@
 import { useEffect, useState } from 'react';
 import { categories } from '@/lib/categories';
 import GradientBackground from '@/components/GradientBackground';
-
-const PAYMENT_LINK = 'https://buy.stripe.com/cNi14o2Nr78Fd3EgssdUY00';
+import { PAYMENT_LINK, REQUIRE_PAYMENT } from '@/lib/submissions';
 
 export default function SubmitPage() {
     const [formData, setFormData] = useState({
@@ -18,13 +17,13 @@ export default function SubmitPage() {
         notes: '',
     });
     const [showOtherCategory, setShowOtherCategory] = useState(false);
-    const [status, setStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle');
+    const [status, setStatus] = useState<'idle' | 'submitting' | 'success' | 'paid' | 'error'>('idle');
     const [errorMessage, setErrorMessage] = useState('');
 
     // Stripe redirects back here with ?paid=1 after a successful payment.
     useEffect(() => {
         if (new URLSearchParams(window.location.search).get('paid') === '1') {
-            setStatus('success');
+            setStatus('paid');
         }
     }, []);
 
@@ -57,17 +56,24 @@ export default function SubmitPage() {
                 return;
             }
 
-            const checkout = new URL(PAYMENT_LINK);
-            checkout.searchParams.set('client_reference_id', data.id);
-            checkout.searchParams.set('prefilled_email', formData.email);
-            window.location.href = checkout.toString();
+            if (REQUIRE_PAYMENT) {
+                const checkout = new URL(PAYMENT_LINK);
+                checkout.searchParams.set('client_reference_id', data.id);
+                checkout.searchParams.set('prefilled_email', formData.email);
+                window.location.href = checkout.toString();
+                return;
+            }
+
+            setStatus('success');
+            setFormData({ name: '', url: '', description: '', categories: [], otherCategory: '', pricing: '', email: '', notes: '' });
+            setShowOtherCategory(false);
         } catch {
             setErrorMessage('Network error. Please try again.');
             setStatus('error');
         }
     };
 
-    if (status === 'success') {
+    if (status === 'success' || status === 'paid') {
         return (
             <GradientBackground>
                 <div className="mx-auto max-w-7xl px-6 lg:px-8 py-24">
@@ -76,11 +82,20 @@ export default function SubmitPage() {
                             <span className="text-3xl">✅</span>
                         </div>
                         <h1 className="text-4xl font-bold bg-gradient-to-r from-white via-cyan-200 to-white bg-clip-text text-transparent mb-4">
-                            Payment Received!
+                            {status === 'paid' ? 'Payment Received!' : 'Submission Received!'}
                         </h1>
                         <p className="text-lg text-gray-300 mb-8">
-                            Thanks! Your tool will be live on Agent Rank within 48 hours, and we&apos;ll email you the link
-                            as soon as it&apos;s published.
+                            {status === 'paid' ? (
+                                <>
+                                    Thanks! Your tool will be live on Agent Rank within 48 hours, and we&apos;ll email you the link
+                                    as soon as it&apos;s published.
+                                </>
+                            ) : (
+                                <>
+                                    Thanks! We&apos;ll review your submission and add it to the directory if it&apos;s a good fit.
+                                    We&apos;ll notify you by email once it&apos;s listed.
+                                </>
+                            )}
                         </p>
                         <button
                             onClick={() => {
@@ -104,18 +119,26 @@ export default function SubmitPage() {
                     <h1 className="text-4xl font-bold bg-gradient-to-r from-white via-cyan-200 to-white bg-clip-text text-transparent mb-4">
                         Submit Your Agent
                     </h1>
-                    <p className="text-lg text-gray-400 mb-6">
-                        Have an AI agent or tool you&apos;d like listed on Agent Rank? Fill out the form below and you&apos;ll be taken to checkout.
-                    </p>
-                    <div className="rounded-xl border border-cyan-400/20 bg-cyan-500/5 p-4 mb-12 text-sm text-gray-300 space-y-2">
-                        <p>
-                            <span className="font-semibold text-cyan-300">$50 one-time listing fee.</span>{' '}
-                            Your tool goes live within 48 hours of payment.
+                    {REQUIRE_PAYMENT ? (
+                        <>
+                            <p className="text-lg text-gray-400 mb-6">
+                                Have an AI agent or tool you&apos;d like listed on Agent Rank? Fill out the form below and you&apos;ll be taken to checkout.
+                            </p>
+                            <div className="rounded-xl border border-cyan-400/20 bg-cyan-500/5 p-4 mb-12 text-sm text-gray-300 space-y-2">
+                                <p>
+                                    <span className="font-semibold text-cyan-300">$50 one-time listing fee.</span>{' '}
+                                    Your tool goes live within 48 hours of payment.
+                                </p>
+                                <p>
+                                    We accept every AI tool, as long as it&apos;s family-friendly. If we can&apos;t list your tool, we&apos;ll refund you in full.
+                                </p>
+                            </div>
+                        </>
+                    ) : (
+                        <p className="text-lg text-gray-400 mb-12">
+                            Have an AI agent or tool you&apos;d like listed on Agent Rank? Fill out the form below and we&apos;ll review it for inclusion.
                         </p>
-                        <p>
-                            We accept every AI tool, as long as it&apos;s family-friendly. If we can&apos;t list your tool, we&apos;ll refund you in full.
-                        </p>
-                    </div>
+                    )}
 
                     <form onSubmit={handleSubmit} className="space-y-6">
                         {/* Agent Name */}
@@ -268,7 +291,9 @@ export default function SubmitPage() {
                             disabled={status === 'submitting'}
                             className="w-full rounded-xl bg-gradient-to-r from-cyan-500/20 to-fuchsia-500/20 border border-white/10 px-8 py-4 text-base font-semibold text-cyan-300 hover:from-cyan-500/30 hover:to-fuchsia-500/30 hover:text-cyan-200 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
                         >
-                            {status === 'submitting' ? 'Redirecting to checkout...' : 'Continue to Payment ($50)'}
+                            {REQUIRE_PAYMENT
+                                ? (status === 'submitting' ? 'Redirecting to checkout...' : 'Continue to Payment ($50)')
+                                : (status === 'submitting' ? 'Submitting...' : 'Submit for Review')}
                         </button>
                     </form>
                 </div>
