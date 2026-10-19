@@ -28,6 +28,22 @@ interface AdminData {
   };
 }
 
+interface SubmissionRow {
+  id: string;
+  name: string;
+  url: string;
+  description: string;
+  categories: string[];
+  other_category: string;
+  pricing: string;
+  email: string;
+  notes: string;
+  status: string;
+  tier: string;
+  verification_url: string;
+  created_at: string;
+}
+
 function fmt(dateStr: string): string {
   if (!dateStr) return '—';
   return new Date(dateStr).toLocaleString(undefined, { dateStyle: 'medium', timeStyle: 'short' });
@@ -36,6 +52,7 @@ function fmt(dateStr: string): string {
 export default function AdminDashboard() {
   const [secret, setSecret] = useState('');
   const [data, setData] = useState<AdminData | null>(null);
+  const [submissions, setSubmissions] = useState<SubmissionRow[]>([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
 
@@ -57,6 +74,14 @@ export default function AdminDashboard() {
       if (!res.ok) throw new Error(`HTTP ${res.status}`);
       setData(await res.json());
       localStorage.setItem('agentrank_admin_secret', s);
+      // Directory submissions live behind the same admin secret on /api/submit.
+      try {
+        const subRes = await fetch('/api/submit', { headers: { Authorization: `Admin ${s}` } });
+        if (subRes.ok) {
+          const subData = await subRes.json();
+          setSubmissions(subData.submissions || []);
+        }
+      } catch { /* submissions table may not exist yet */ }
     } catch {
       setError('Failed to load. Try again.');
       setData(null);
@@ -102,6 +127,70 @@ export default function AdminDashboard() {
                 </div>
               ))}
             </div>
+
+            {/* Directory submissions */}
+            <section>
+              <h2 className="text-xl font-bold text-white mb-1">Directory Submissions ({submissions.length})</h2>
+              <p className="text-sm text-gray-500 mb-4">
+                Everything submitted through the submit form, newest first. Fast-track payments are matched in Stripe by client_reference_id = submission id.
+              </p>
+              {submissions.length === 0 ? (
+                <p className="text-sm text-gray-600">None yet.</p>
+              ) : (
+                <div className="overflow-x-auto rounded-xl border border-white/10">
+                  <table className="w-full text-sm">
+                    <thead>
+                      <tr className="bg-gray-800/60 text-left text-gray-400">
+                        <th className="px-4 py-3 font-medium">Tool</th>
+                        <th className="px-4 py-3 font-medium">Categories</th>
+                        <th className="px-4 py-3 font-medium">Email</th>
+                        <th className="px-4 py-3 font-medium">Tier</th>
+                        <th className="px-4 py-3 font-medium">Status</th>
+                        <th className="px-4 py-3 font-medium">Submitted</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {submissions.map(s => (
+                        <tr key={s.id} className="border-t border-white/5 bg-gray-900/30 align-top">
+                          <td className="px-4 py-3">
+                            <a href={s.url} target="_blank" rel="noopener noreferrer" className="font-semibold text-cyan-400 hover:text-cyan-300">{s.name}</a>
+                            <div className="text-xs text-gray-500 max-w-[280px] truncate" title={s.description}>{s.description}</div>
+                            {s.notes && (
+                              <div className="text-xs text-gray-600 max-w-[280px] truncate" title={s.notes}>Notes: {s.notes}</div>
+                            )}
+                            {s.verification_url && (
+                              <div className="text-xs text-emerald-400/80 max-w-[280px] truncate" title={s.verification_url}>✓ verification endpoint</div>
+                            )}
+                          </td>
+                          <td className="px-4 py-3 text-gray-400 text-xs max-w-[160px]">
+                            {[...(s.categories || []), s.other_category].filter(Boolean).join(', ') || '—'}
+                            {s.pricing && <div className="text-gray-600 mt-1">{s.pricing}</div>}
+                          </td>
+                          <td className="px-4 py-3 text-gray-400 text-xs">{s.email}</td>
+                          <td className="px-4 py-3">
+                            <span className={`px-2 py-0.5 rounded-full text-xs border ${s.tier === 'fast_track'
+                              ? 'bg-amber-500/10 text-amber-300 border-amber-500/30'
+                              : 'bg-gray-700/40 text-gray-400 border-white/10'}`}>
+                              {s.tier === 'fast_track' ? 'fast track' : 'free'}
+                            </span>
+                          </td>
+                          <td className="px-4 py-3">
+                            <span className={`text-xs font-medium ${s.status === 'awaiting_payment' ? 'text-amber-400'
+                              : s.status === 'pending' ? 'text-yellow-300'
+                              : s.status === 'approved' || s.status === 'published' ? 'text-green-400'
+                              : s.status === 'rejected' ? 'text-red-400'
+                              : 'text-gray-400'}`}>
+                              {s.status.replace(/_/g, ' ')}
+                            </span>
+                          </td>
+                          <td className="px-4 py-3 text-gray-400 whitespace-nowrap">{fmt(s.created_at)}</td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              )}
+            </section>
 
             {/* Agents */}
             <section>
