@@ -14,6 +14,7 @@ const LIMITS = {
     pricing: 200,
     email: 320,
     notes: 5000,
+    verificationUrl: 500,
 };
 
 // Creates the table on first use so no manual migration is required.
@@ -40,6 +41,7 @@ function ensureTable(): Promise<void> {
             `;
             await sql`CREATE INDEX IF NOT EXISTS submissions_ip_created_idx ON submissions (ip, created_at)`;
             await sql`ALTER TABLE submissions ADD COLUMN IF NOT EXISTS tier TEXT NOT NULL DEFAULT 'free'`;
+            await sql`ALTER TABLE submissions ADD COLUMN IF NOT EXISTS verification_url TEXT NOT NULL DEFAULT ''`;
         })().catch(err => {
             tableReady = null; // retry on next request
             throw err;
@@ -76,6 +78,7 @@ export async function POST(request: NextRequest) {
         ? body.categories.filter((c): c is string => typeof c === 'string').slice(0, 20)
         : [];
     const tier: SubmissionTier = body.tier === 'fast_track' ? 'fast_track' : 'free';
+    const verificationUrl = clean(body.verificationUrl, LIMITS.verificationUrl);
 
     if (!name || !url || !description || !email) {
         return NextResponse.json(
@@ -105,10 +108,10 @@ export async function POST(request: NextRequest) {
         const status = REQUIRE_PAYMENT || tier === 'fast_track' ? 'awaiting_payment' : 'pending';
         await sql`
             INSERT INTO submissions
-                (id, name, url, description, categories, other_category, pricing, email, notes, ip, status, tier)
+                (id, name, url, description, categories, other_category, pricing, email, notes, ip, status, tier, verification_url)
             VALUES
                 (${id}, ${name}, ${url}, ${description}, ${JSON.stringify(categories)},
-                 ${otherCategory}, ${pricing}, ${email}, ${notes}, ${ip}, ${status}, ${tier})
+                 ${otherCategory}, ${pricing}, ${email}, ${notes}, ${ip}, ${status}, ${tier}, ${verificationUrl})
         `;
 
         return NextResponse.json({ success: true, id });

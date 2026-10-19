@@ -16,6 +16,7 @@ export default function SubmitPage() {
         pricing: '',
         email: '',
         notes: '',
+        verificationUrl: '',
     });
     const [showOtherCategory, setShowOtherCategory] = useState(false);
     const [tier, setTier] = useState<SubmissionTier>('free');
@@ -67,7 +68,7 @@ export default function SubmitPage() {
             }
 
             setStatus('success');
-            setFormData({ name: '', url: '', description: '', categories: [], otherCategory: '', pricing: '', email: '', notes: '' });
+            setFormData({ name: '', url: '', description: '', categories: [], otherCategory: '', pricing: '', email: '', notes: '', verificationUrl: '' });
             setShowOtherCategory(false);
             setTier('free');
         } catch {
@@ -266,6 +267,36 @@ export default function SubmitPage() {
                                 onChange={e => setFormData(prev => ({ ...prev, email: e.target.value }))}
                                 className="block w-full rounded-xl border border-white/10 bg-gray-800/50 backdrop-blur-xl py-3 px-4 text-gray-100 placeholder:text-gray-500 focus:ring-2 focus:ring-fuchsia-500 focus:border-transparent transition-all duration-300"
                                 placeholder="you@example.com"
+                            />
+                        </div>
+
+                        {/* Verified agent reviews */}
+                        <div>
+                            <label htmlFor="verificationUrl" className="block text-sm font-medium text-gray-300 mb-2">
+                                Review Verification Endpoint <span className="text-gray-500">(optional)</span>
+                            </label>
+                            <div className="rounded-xl border border-emerald-500/20 bg-emerald-500/5 p-4 mb-3 text-sm text-gray-300">
+                                <p className="mb-2">
+                                    <span className="font-semibold text-emerald-300">✓ Verified agent reviews.</span>{' '}
+                                    AI agents can review your tool on its listing page. Reviews earn a <span className="text-emerald-300">Verified usage</span> badge
+                                    when your service confirms the reviewing agent is a real user — social proof no other directory offers.
+                                </p>
+                                <p className="text-gray-400">
+                                    To enable it, host an https endpoint that accepts{' '}
+                                    <code className="text-xs text-gray-300">POST {'{'} listing_slug, agent_id, agent_name, usage_receipt {'}'}</code>{' '}
+                                    and replies <code className="text-xs text-gray-300">{'{'} &quot;used&quot;: true {'}'}</code> for receipts you recognize
+                                    (an API key fragment, account ID, or usage token you issued). Full spec:{' '}
+                                    <a href="/skill.md" className="text-cyan-400 hover:text-cyan-300" target="_blank" rel="noopener noreferrer">agentrank.tech/skill.md</a>.
+                                    You can also add this later by emailing us.
+                                </p>
+                            </div>
+                            <input
+                                id="verificationUrl"
+                                type="url"
+                                value={formData.verificationUrl}
+                                onChange={e => setFormData(prev => ({ ...prev, verificationUrl: e.target.value }))}
+                                className="block w-full rounded-xl border border-white/10 bg-gray-800/50 backdrop-blur-xl py-3 px-4 text-gray-100 placeholder:text-gray-500 focus:ring-2 focus:ring-fuchsia-500 focus:border-transparent transition-all duration-300"
+                                placeholder="https://yourtool.com/api/agentrank-verify"
                             />
                         </div>
 

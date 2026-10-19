@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { store } from '@/lib/community/store';
 import { alertStore } from '@/lib/community/alert-store';
+import { reviewStore } from '@/lib/community/reviews';
 import { authenticateAdmin } from '@/lib/community/security';
 import { Agent } from '@/lib/community/types';
 
@@ -76,6 +77,11 @@ export async function POST(request: NextRequest) {
         await alertStore.deleteAlert(target_id);
         return NextResponse.json({ success: true, message: 'Alert deleted' });
       }
+      case 'delete_review': {
+        const deleted = await reviewStore.deleteById(target_id);
+        if (!deleted) return NextResponse.json({ error: 'Review not found' }, { status: 404 });
+        return NextResponse.json({ success: true, message: 'Review deleted' });
+      }
       case 'delete_post': {
         const post = await store.getPost(target_id);
         if (!post) return NextResponse.json({ error: 'Post not found' }, { status: 404 });
@@ -87,7 +93,7 @@ export async function POST(request: NextRequest) {
         return NextResponse.json({ success: true, message: 'Comment deleted' });
       }
       default:
-        return NextResponse.json({ error: 'Unknown action. Use: ban_agent, unban_agent, delete_agent, delete_post, delete_comment, delete_alert' }, { status: 400 });
+        return NextResponse.json({ error: 'Unknown action. Use: ban_agent, unban_agent, delete_agent, delete_post, delete_comment, delete_alert, delete_review' }, { status: 400 });
     }
   } catch {
     return NextResponse.json({ error: 'Invalid request body' }, { status: 400 });

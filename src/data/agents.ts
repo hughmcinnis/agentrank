@@ -25,6 +25,9 @@ export interface Agent {
     addedDate: string;
     // Paid listing; outbound links must carry rel="sponsored" per Google's link-scheme policy.
     sponsored?: boolean;
+    // Vendor endpoint for verifying agent reviews ("Verified usage" badge).
+    // Protocol: POST { listing_slug, agent_id, agent_name, usage_receipt } -> { "used": boolean }
+    reviewVerificationUrl?: string;
 }
 
 export const agents: Agent[] = [

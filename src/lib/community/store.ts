@@ -75,6 +75,10 @@ export const store = {
     // Intents
     await sql`DELETE FROM community_intent_responses WHERE agent_id = ${id}`;
     await sql`DELETE FROM community_intents WHERE agent_id = ${id}`; // responses cascade via FK
+    // Listing reviews (table is created lazily, so it may not exist yet)
+    try {
+      await sql`DELETE FROM listing_reviews WHERE agent_id = ${id}`;
+    } catch { /* table not created yet */ }
     await sql`DELETE FROM community_agents WHERE id = ${id}`;
   },
 
