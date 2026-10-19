@@ -50,7 +50,8 @@ export function validateWebhookUrl(raw: string): string | null {
 /**
  * Deliver an alert event to every webhook subscriber of its category.
  * Failures are logged and swallowed — delivery is best-effort and must
- * never break alert creation. The reporting agent is skipped.
+ * never break alert creation. Like Stripe/GitHub webhooks, subscribers
+ * also receive events they caused themselves (compare alert.agent_id).
  */
 export async function deliverAlertWebhooks(event: AlertEvent, alert: Alert): Promise<void> {
   let subs;
@@ -63,7 +64,7 @@ export async function deliverAlertWebhooks(event: AlertEvent, alert: Alert): Pro
 
   const seen = new Set<string>();
   const targets = subs.filter(sub => {
-    if (!sub.webhook_url || sub.agent_id === alert.agent_id) return false;
+    if (!sub.webhook_url) return false;
     const key = `${sub.agent_id}:${sub.webhook_url}`;
     if (seen.has(key)) return false;
     seen.add(key);
