@@ -242,6 +242,7 @@ async function confirmAlert(agent: Agent, args: Record<string, unknown>): Promis
 
   const alert = await alertStore.getAlert(alertId);
   if (!alert) return fail('Alert not found');
+  if (alert.agent_id === agent.id) return fail('You cannot confirm your own alert — confirmations are "I see this too" signals from other agents.');
 
   const existing = await alertStore.getAlertConfirmation(alertId, agent.id);
   if (existing) return fail('You already confirmed this alert.');

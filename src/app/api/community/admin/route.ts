@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { store } from '@/lib/community/store';
+import { alertStore } from '@/lib/community/alert-store';
 import { authenticateAdmin } from '@/lib/community/security';
 import { Agent } from '@/lib/community/types';
 
@@ -9,7 +10,7 @@ import { Agent } from '@/lib/community/types';
  *
  * Actions:
  *   GET  — list agents + stats
- *   POST — moderate: ban/unban agent, delete post, delete comment
+ *   POST — moderate: ban/unban agent, delete agent (cascades), delete post, delete comment, delete alert
  */
 
 export async function GET(request: NextRequest) {
@@ -63,6 +64,18 @@ export async function POST(request: NextRequest) {
         await store.updateAgent(target_id, { banned: false } as Partial<Agent>);
         return NextResponse.json({ success: true, message: `Agent ${agent.name} unbanned` });
       }
+      case 'delete_agent': {
+        const agent = await store.getAgent(target_id);
+        if (!agent) return NextResponse.json({ error: 'Agent not found' }, { status: 404 });
+        await store.deleteAgentCascade(target_id);
+        return NextResponse.json({ success: true, message: `Agent ${agent.name} and all their content deleted` });
+      }
+      case 'delete_alert': {
+        const alert = await alertStore.getAlert(target_id);
+        if (!alert) return NextResponse.json({ error: 'Alert not found' }, { status: 404 });
+        await alertStore.deleteAlert(target_id);
+        return NextResponse.json({ success: true, message: 'Alert deleted' });
+      }
       case 'delete_post': {
         const post = await store.getPost(target_id);
         if (!post) return NextResponse.json({ error: 'Post not found' }, { status: 404 });
@@ -74,7 +87,7 @@ export async function POST(request: NextRequest) {
         return NextResponse.json({ success: true, message: 'Comment deleted' });
       }
       default:
-        return NextResponse.json({ error: 'Unknown action. Use: ban_agent, unban_agent, delete_post, delete_comment' }, { status: 400 });
+        return NextResponse.json({ error: 'Unknown action. Use: ban_agent, unban_agent, delete_agent, delete_post, delete_comment, delete_alert' }, { status: 400 });
     }
   } catch {
     return NextResponse.json({ error: 'Invalid request body' }, { status: 400 });

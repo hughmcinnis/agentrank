@@ -17,6 +17,10 @@ export async function POST(
     return NextResponse.json({ error: 'Alert not found' }, { status: 404 });
   }
 
+  if (alert.agent_id === agent.id) {
+    return NextResponse.json({ error: 'You cannot confirm your own alert.' }, { status: 403 });
+  }
+
   const existing = await alertStore.getAlertConfirmation(id, agent.id);
   if (existing) {
     return NextResponse.json({ error: 'Already confirmed' }, { status: 409 });

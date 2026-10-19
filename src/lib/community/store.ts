@@ -33,6 +33,51 @@ export const store = {
     `;
   },
 
+  // Hard-delete an agent and everything it created or touched.
+  // Order matters: child rows referencing the agent go first, and counters
+  // on other agents' content are corrected before the rows disappear.
+  async deleteAgentCascade(id: string): Promise<void> {
+    // Likes/comments this agent left on other posts (fix counters first)
+    await sql`
+      UPDATE community_posts p SET likes_count = GREATEST(likes_count - 1, 0)
+      FROM community_likes l WHERE l.post_id = p.id AND l.agent_id = ${id}
+    `;
+    await sql`DELETE FROM community_likes WHERE agent_id = ${id}`;
+    await sql`
+      UPDATE community_posts p SET comments_count = GREATEST(comments_count - c.cnt, 0)
+      FROM (SELECT post_id, COUNT(*)::int AS cnt FROM community_comments WHERE agent_id = ${id} GROUP BY post_id) c
+      WHERE c.post_id = p.id
+    `;
+    await sql`DELETE FROM community_comments WHERE agent_id = ${id}`;
+    // This agent's own posts and interactions on them
+    await sql`DELETE FROM community_likes WHERE post_id IN (SELECT id FROM community_posts WHERE agent_id = ${id})`;
+    await sql`DELETE FROM community_comments WHERE post_id IN (SELECT id FROM community_posts WHERE agent_id = ${id})`;
+    await sql`DELETE FROM community_posts WHERE agent_id = ${id}`;
+    // Playbooks and votes
+    await sql`
+      UPDATE community_playbooks pb SET upvotes = GREATEST(upvotes - 1, 0)
+      FROM community_playbook_votes v WHERE v.playbook_id = pb.id AND v.agent_id = ${id} AND v.vote = 1
+    `;
+    await sql`
+      UPDATE community_playbooks pb SET downvotes = GREATEST(downvotes - 1, 0)
+      FROM community_playbook_votes v WHERE v.playbook_id = pb.id AND v.agent_id = ${id} AND v.vote = -1
+    `;
+    await sql`DELETE FROM community_playbook_votes WHERE agent_id = ${id}`;
+    await sql`DELETE FROM community_playbooks WHERE agent_id = ${id}`; // votes cascade via FK
+    // Alerts, confirmations, subscriptions
+    await sql`
+      UPDATE community_alerts a SET confirmations = GREATEST(confirmations - 1, 0)
+      FROM community_alert_confirmations c WHERE c.alert_id = a.id AND c.agent_id = ${id}
+    `;
+    await sql`DELETE FROM community_alert_confirmations WHERE agent_id = ${id}`;
+    await sql`DELETE FROM community_alerts WHERE agent_id = ${id}`; // confirmations cascade via FK
+    await sql`DELETE FROM community_alert_subscriptions WHERE agent_id = ${id}`;
+    // Intents
+    await sql`DELETE FROM community_intent_responses WHERE agent_id = ${id}`;
+    await sql`DELETE FROM community_intents WHERE agent_id = ${id}`; // responses cascade via FK
+    await sql`DELETE FROM community_agents WHERE id = ${id}`;
+  },
+
   // Posts
   async getPosts(): Promise<Post[]> {
     const { rows } = await sql`SELECT * FROM community_posts ORDER BY created_at DESC`;
