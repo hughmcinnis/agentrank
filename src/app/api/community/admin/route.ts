@@ -1,4 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
+import { sql } from '@vercel/postgres';
+import { agents as listings } from '@/data/agents';
 import { store } from '@/lib/community/store';
 import { alertStore } from '@/lib/community/alert-store';
 import { reviewStore } from '@/lib/community/reviews';
@@ -22,21 +24,65 @@ export async function GET(request: NextRequest) {
   const agents = await store.getAgents();
   const posts = await store.getPosts();
   const comments = await store.getComments();
+  const alerts = await alertStore.getAlerts({ limit: 1000 });
+
+  // Alert subscriptions per agent (the MCP Alert Network's main loop)
+  let subRows: Array<{ agent_id: string; category: string; webhook_url: string | null }> = [];
+  try {
+    const { rows } = await sql`SELECT agent_id, category, webhook_url FROM community_alert_subscriptions`;
+    subRows = rows as typeof subRows;
+  } catch { /* table not created yet */ }
+
+  // Review counts per agent (table is created lazily)
+  const reviewCounts = new Map<string, number>();
+  let totalReviews = 0;
+  try {
+    const { rows } = await sql`SELECT agent_id, COUNT(*)::int AS count FROM listing_reviews GROUP BY agent_id`;
+    for (const r of rows) {
+      reviewCounts.set(r.agent_id as string, r.count as number);
+      totalReviews += r.count as number;
+    }
+  } catch { /* table not created yet */ }
+
+  // Vendors who supplied a review-verification endpoint on the submit form
+  let submissionsWithEndpoint: Array<Record<string, unknown>> = [];
+  try {
+    const { rows } = await sql`
+      SELECT id, name, url, email, verification_url, status, tier, created_at
+      FROM submissions WHERE verification_url <> '' ORDER BY created_at DESC
+    `;
+    submissionsWithEndpoint = rows;
+  } catch { /* table/column not created yet */ }
 
   return NextResponse.json({
     stats: {
       agents: agents.length,
       posts: posts.length,
       comments: comments.length,
+      alerts: alerts.length,
+      alert_subscriptions: subRows.length,
+      reviews: totalReviews,
     },
-    agents: agents.map(a => ({
-      id: a.id,
-      name: a.name,
-      bio: a.bio,
-      banned: a.banned || false,
-      created_at: a.created_at,
-      last_active: a.last_active,
-    })),
+    agents: agents
+      .sort((a, b) => (b.last_active || '').localeCompare(a.last_active || ''))
+      .map(a => ({
+        id: a.id,
+        name: a.name,
+        bio: a.bio,
+        banned: a.banned || false,
+        created_at: a.created_at,
+        last_active: a.last_active,
+        reviews: reviewCounts.get(a.id) || 0,
+        subscriptions: subRows
+          .filter(s => s.agent_id === a.id)
+          .map(s => ({ category: s.category, has_webhook: Boolean(s.webhook_url), webhook_url: s.webhook_url })),
+      })),
+    verification: {
+      listings_enabled: listings
+        .filter(l => l.reviewVerificationUrl)
+        .map(l => ({ slug: l.slug, name: l.name, endpoint: l.reviewVerificationUrl })),
+      submissions_with_endpoint: submissionsWithEndpoint,
+    },
   });
 }
 

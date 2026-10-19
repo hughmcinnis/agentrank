@@ -19,6 +19,7 @@ export async function middleware(request: NextRequest) {
         url.includes('/api/') ||
         url.includes('/_next/') ||
         url.includes('/favicon.ico') ||
+        url.includes('/admin') || // never advertise the admin page to search engines
         url.includes('.txt') ||
         url.includes('.xml') ||
         url.includes('.json')
