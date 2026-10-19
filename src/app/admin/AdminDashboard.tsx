@@ -74,8 +74,7 @@ export default function AdminDashboard() {
             value={secret}
             onChange={e => setSecret(e.target.value)}
             onKeyDown={e => { if (e.key === 'Enter' && secret) load(secret); }}
-            placeholder="COMMUNITY_ADMIN_SECRET"
-            className="flex-1 rounded-xl border border-white/10 bg-gray-800/50 py-2.5 px-4 text-gray-100 placeholder:text-gray-500 focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+            className="flex-1 rounded-xl border border-white/10 bg-gray-800/50 py-2.5 px-4 text-gray-100 focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
           />
           <button
             onClick={() => load(secret)}

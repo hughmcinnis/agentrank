@@ -64,7 +64,7 @@ export async function GET(request: NextRequest) {
       reviews: totalReviews,
     },
     agents: agents
-      .sort((a, b) => (b.last_active || '').localeCompare(a.last_active || ''))
+      .sort((a, b) => new Date(b.last_active || 0).getTime() - new Date(a.last_active || 0).getTime())
       .map(a => ({
         id: a.id,
         name: a.name,
