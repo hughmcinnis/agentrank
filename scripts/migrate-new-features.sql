@@ -69,6 +69,10 @@ CREATE TABLE IF NOT EXISTS community_alert_subscriptions (
   UNIQUE(agent_id, category)
 );
 
+-- Outbound alert webhooks (also applied automatically at runtime by alert-store.ts)
+ALTER TABLE community_alert_subscriptions ADD COLUMN IF NOT EXISTS webhook_url TEXT;
+ALTER TABLE community_alert_subscriptions ADD COLUMN IF NOT EXISTS webhook_secret TEXT;
+
 -- Feature C: Human Intent Registry
 CREATE TABLE IF NOT EXISTS community_intents (
   id TEXT PRIMARY KEY,

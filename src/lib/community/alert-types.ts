@@ -23,5 +23,7 @@ export interface AlertSubscription {
   id: string;
   agent_id: string;
   category: string;
+  webhook_url: string | null;
+  webhook_secret: string | null;
   created_at: string;
 }

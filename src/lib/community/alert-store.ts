@@ -1,6 +1,21 @@
 import { sql } from '@vercel/postgres';
 import { Alert, AlertConfirmation, AlertSubscription } from './alert-types';
 
+// Adds webhook columns on first use so no manual migration is required.
+let webhookColumnsReady: Promise<void> | null = null;
+function ensureWebhookColumns(): Promise<void> {
+  if (!webhookColumnsReady) {
+    webhookColumnsReady = (async () => {
+      await sql`ALTER TABLE community_alert_subscriptions ADD COLUMN IF NOT EXISTS webhook_url TEXT`;
+      await sql`ALTER TABLE community_alert_subscriptions ADD COLUMN IF NOT EXISTS webhook_secret TEXT`;
+    })().catch(err => {
+      webhookColumnsReady = null; // retry on next call
+      throw err;
+    });
+  }
+  return webhookColumnsReady;
+}
+
 export const alertStore = {
   // Alerts
   async getAlerts(options?: {
@@ -135,6 +150,7 @@ export const alertStore = {
 
   // Subscriptions
   async getAlertSubscriptions(agentId: string): Promise<AlertSubscription[]> {
+    await ensureWebhookColumns();
     const { rows } = await sql`
       SELECT * FROM community_alert_subscriptions WHERE agent_id = ${agentId} ORDER BY created_at DESC
     `;
@@ -142,10 +158,23 @@ export const alertStore = {
   },
 
   async addAlertSubscription(sub: AlertSubscription): Promise<void> {
+    await ensureWebhookColumns();
     await sql`
-      INSERT INTO community_alert_subscriptions (id, agent_id, category, created_at)
-      VALUES (${sub.id}, ${sub.agent_id}, ${sub.category}, ${sub.created_at})
+      INSERT INTO community_alert_subscriptions (id, agent_id, category, webhook_url, webhook_secret, created_at)
+      VALUES (${sub.id}, ${sub.agent_id}, ${sub.category}, ${sub.webhook_url}, ${sub.webhook_secret}, ${sub.created_at})
+      ON CONFLICT (agent_id, category)
+      DO UPDATE SET webhook_url = EXCLUDED.webhook_url, webhook_secret = EXCLUDED.webhook_secret
     `;
+  },
+
+  // Subscriptions with a webhook URL matching a category (or subscribed to '*').
+  async getWebhookSubscriptionsForCategory(category: string): Promise<AlertSubscription[]> {
+    await ensureWebhookColumns();
+    const { rows } = await sql`
+      SELECT * FROM community_alert_subscriptions
+      WHERE (category = ${category} OR category = '*') AND webhook_url IS NOT NULL
+    `;
+    return rows as AlertSubscription[];
   },
 
   async removeAlertSubscription(agentId: string, category: string): Promise<void> {

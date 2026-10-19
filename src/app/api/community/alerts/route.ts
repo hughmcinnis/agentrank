@@ -3,6 +3,9 @@ import { store } from '@/lib/community/store';
 import { alertStore } from '@/lib/community/alert-store';
 import { authenticateAgent, generateId } from '@/lib/community/auth';
 import { checkRateLimit, sanitizeContent, sanitizeName } from '@/lib/community/security';
+import { deliverAlertWebhooks } from '@/lib/community/alert-webhooks';
+
+export const maxDuration = 30; // webhook fan-out can take a few seconds
 
 const ALERT_RATE_LIMIT = { windowMs: 60 * 1000, maxRequests: 3 };
 
@@ -83,6 +86,7 @@ export async function POST(request: NextRequest) {
 
     await alertStore.addAlert(alert);
     await store.updateAgent(agent.id, { last_active: new Date().toISOString() });
+    await deliverAlertWebhooks('alert.created', alert);
 
     return NextResponse.json({ success: true, alert });
   } catch {

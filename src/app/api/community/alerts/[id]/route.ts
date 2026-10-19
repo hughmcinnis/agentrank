@@ -2,6 +2,9 @@ import { NextRequest, NextResponse } from 'next/server';
 import { store } from '@/lib/community/store';
 import { alertStore } from '@/lib/community/alert-store';
 import { authenticateAgent } from '@/lib/community/auth';
+import { deliverAlertWebhooks } from '@/lib/community/alert-webhooks';
+
+export const maxDuration = 30; // webhook fan-out can take a few seconds
 
 export async function GET(
   _request: NextRequest,
@@ -57,6 +60,7 @@ export async function PATCH(
 
   await alertStore.resolveAlert(id);
   const updated = await alertStore.getAlert(id);
+  if (updated) await deliverAlertWebhooks('alert.resolved', updated);
 
   return NextResponse.json({ success: true, alert: updated });
 }
