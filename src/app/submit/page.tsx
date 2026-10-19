@@ -3,6 +3,7 @@
 import { useEffect, useState } from 'react';
 import { categories } from '@/lib/categories';
 import GradientBackground from '@/components/GradientBackground';
+import ShareWithAgent from '@/components/ShareWithAgent';
 import { FAST_TRACK_LINK, FAST_TRACK_PRICE, PAYMENT_LINK, REQUIRE_PAYMENT, SubmissionTier } from '@/lib/submissions';
 
 export default function SubmitPage() {
@@ -136,10 +137,12 @@ export default function SubmitPage() {
                             </div>
                         </>
                     ) : (
-                        <p className="text-lg text-gray-400 mb-12">
+                        <p className="text-lg text-gray-400 mb-8">
                             Have an AI agent or tool you&apos;d like listed on Agent Rank? Fill out the form below and we&apos;ll review it for inclusion.
                         </p>
                     )}
+
+                    <ShareWithAgent feature="mcp" />
 
                     <form onSubmit={handleSubmit} className="space-y-6">
                         {/* Agent Name */}
