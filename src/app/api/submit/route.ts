@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from 'next/server';
 import { sql } from '@vercel/postgres';
 import { randomUUID } from 'crypto';
 import { authenticateAdmin } from '@/lib/community/security';
-import { REQUIRE_PAYMENT } from '@/lib/submissions';
+import { REQUIRE_PAYMENT, SubmissionTier } from '@/lib/submissions';
 
 const MAX_PER_IP_PER_DAY = 5;
 
@@ -39,6 +39,7 @@ function ensureTable(): Promise<void> {
                 )
             `;
             await sql`CREATE INDEX IF NOT EXISTS submissions_ip_created_idx ON submissions (ip, created_at)`;
+            await sql`ALTER TABLE submissions ADD COLUMN IF NOT EXISTS tier TEXT NOT NULL DEFAULT 'free'`;
         })().catch(err => {
             tableReady = null; // retry on next request
             throw err;
@@ -74,6 +75,7 @@ export async function POST(request: NextRequest) {
     const categories = Array.isArray(body.categories)
         ? body.categories.filter((c): c is string => typeof c === 'string').slice(0, 20)
         : [];
+    const tier: SubmissionTier = body.tier === 'fast_track' ? 'fast_track' : 'free';
 
     if (!name || !url || !description || !email) {
         return NextResponse.json(
@@ -100,13 +102,13 @@ export async function POST(request: NextRequest) {
         }
 
         const id = randomUUID();
-        const status = REQUIRE_PAYMENT ? 'awaiting_payment' : 'pending';
+        const status = REQUIRE_PAYMENT || tier === 'fast_track' ? 'awaiting_payment' : 'pending';
         await sql`
             INSERT INTO submissions
-                (id, name, url, description, categories, other_category, pricing, email, notes, ip, status)
+                (id, name, url, description, categories, other_category, pricing, email, notes, ip, status, tier)
             VALUES
                 (${id}, ${name}, ${url}, ${description}, ${JSON.stringify(categories)},
-                 ${otherCategory}, ${pricing}, ${email}, ${notes}, ${ip}, ${status})
+                 ${otherCategory}, ${pricing}, ${email}, ${notes}, ${ip}, ${status}, ${tier})
         `;
 
         return NextResponse.json({ success: true, id });
@@ -121,7 +123,7 @@ export async function POST(request: NextRequest) {
 
 // List submissions (newest first). Requires header:
 //   Authorization: Admin <COMMUNITY_ADMIN_SECRET>
-// Optional query: ?status=pending (or awaiting_payment when REQUIRE_PAYMENT is on)
+// Optional query: ?status=pending (free) or ?status=awaiting_payment (fast track, or all when REQUIRE_PAYMENT is on)
 // Paid submissions are matched in Stripe by the Checkout session's client_reference_id (= submission id).
 export async function GET(request: NextRequest) {
     if (!authenticateAdmin(request.headers.get('authorization'))) {

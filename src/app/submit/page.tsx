@@ -3,7 +3,7 @@
 import { useEffect, useState } from 'react';
 import { categories } from '@/lib/categories';
 import GradientBackground from '@/components/GradientBackground';
-import { PAYMENT_LINK, REQUIRE_PAYMENT } from '@/lib/submissions';
+import { FAST_TRACK_LINK, FAST_TRACK_PRICE, PAYMENT_LINK, REQUIRE_PAYMENT, SubmissionTier } from '@/lib/submissions';
 
 export default function SubmitPage() {
     const [formData, setFormData] = useState({
@@ -17,6 +17,7 @@ export default function SubmitPage() {
         notes: '',
     });
     const [showOtherCategory, setShowOtherCategory] = useState(false);
+    const [tier, setTier] = useState<SubmissionTier>('free');
     const [status, setStatus] = useState<'idle' | 'submitting' | 'success' | 'paid' | 'error'>('idle');
     const [errorMessage, setErrorMessage] = useState('');
 
@@ -45,7 +46,7 @@ export default function SubmitPage() {
             const res = await fetch('/api/submit', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify(formData),
+                body: JSON.stringify({ ...formData, tier }),
             });
 
             const data = await res.json();
@@ -56,8 +57,8 @@ export default function SubmitPage() {
                 return;
             }
 
-            if (REQUIRE_PAYMENT) {
-                const checkout = new URL(PAYMENT_LINK);
+            if (REQUIRE_PAYMENT || tier === 'fast_track') {
+                const checkout = new URL(REQUIRE_PAYMENT ? PAYMENT_LINK : FAST_TRACK_LINK);
                 checkout.searchParams.set('client_reference_id', data.id);
                 checkout.searchParams.set('prefilled_email', formData.email);
                 window.location.href = checkout.toString();
@@ -67,6 +68,7 @@ export default function SubmitPage() {
             setStatus('success');
             setFormData({ name: '', url: '', description: '', categories: [], otherCategory: '', pricing: '', email: '', notes: '' });
             setShowOtherCategory(false);
+            setTier('free');
         } catch {
             setErrorMessage('Network error. Please try again.');
             setStatus('error');
@@ -87,8 +89,7 @@ export default function SubmitPage() {
                         <p className="text-lg text-gray-300 mb-8">
                             {status === 'paid' ? (
                                 <>
-                                    Thanks! Your tool will be live on Agent Rank within 48 hours, and we&apos;ll email you the link
-                                    as soon as it&apos;s published.
+                                    Thanks! We&apos;ll review your tool within 48 hours and email you the link as soon as it&apos;s live.
                                 </>
                             ) : (
                                 <>
@@ -280,6 +281,45 @@ export default function SubmitPage() {
                             />
                         </div>
 
+                        {!REQUIRE_PAYMENT && (
+                            <fieldset>
+                                <legend className="block text-sm font-medium text-gray-300 mb-3">
+                                    Review Speed
+                                </legend>
+                                <div className="grid sm:grid-cols-2 gap-3">
+                                    {([
+                                        {
+                                            id: 'free',
+                                            title: 'Free',
+                                            detail: 'Reviewed in our regular queue, usually within a few weeks.',
+                                        },
+                                        {
+                                            id: 'fast_track',
+                                            title: `Fast Track · $${FAST_TRACK_PRICE}`,
+                                            detail: 'Reviewed within 48 hours. Full refund if it isn\u2019t approved.',
+                                        },
+                                    ] as const).map(option => (
+                                        <button
+                                            key={option.id}
+                                            type="button"
+                                            onClick={() => setTier(option.id)}
+                                            aria-pressed={tier === option.id}
+                                            className={`text-left rounded-xl border p-4 transition-all duration-200 ${
+                                                tier === option.id
+                                                    ? 'border-cyan-400/50 bg-cyan-500/10'
+                                                    : 'border-white/10 bg-gray-800/30 hover:bg-gray-700/50'
+                                            }`}
+                                        >
+                                            <span className={`block font-semibold ${tier === option.id ? 'text-cyan-300' : 'text-gray-200'}`}>
+                                                {option.title}
+                                            </span>
+                                            <span className="block mt-1 text-sm text-gray-400">{option.detail}</span>
+                                        </button>
+                                    ))}
+                                </div>
+                            </fieldset>
+                        )}
+
                         {status === 'error' && (
                             <div className="rounded-xl border border-red-500/20 bg-red-500/10 p-4 text-sm text-red-300">
                                 {errorMessage}
@@ -293,7 +333,9 @@ export default function SubmitPage() {
                         >
                             {REQUIRE_PAYMENT
                                 ? (status === 'submitting' ? 'Redirecting to checkout...' : 'Continue to Payment ($50)')
-                                : (status === 'submitting' ? 'Submitting...' : 'Submit for Review')}
+                                : tier === 'fast_track'
+                                    ? (status === 'submitting' ? 'Redirecting to checkout...' : `Continue to Payment ($${FAST_TRACK_PRICE})`)
+                                    : (status === 'submitting' ? 'Submitting...' : 'Submit for Review')}
                         </button>
                     </form>
                 </div>
