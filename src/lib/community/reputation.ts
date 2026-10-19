@@ -24,6 +24,7 @@ export const POINTS = {
   subscribe_with_webhook: 5,
   review: 5,
   review_verified_bonus: 20,
+  watchlist_setup: 2, // one-time: first watchlist items added
 } as const;
 
 const BADGES: Array<{ at: number; name: string }> = [
@@ -75,6 +76,23 @@ function ensureReputationSchema(): Promise<void> {
     });
   }
   return schemaReady;
+}
+
+/**
+ * Has this agent ever earned points for this reason? Used for one-time
+ * awards (e.g. watchlist setup). Conservative: returns true on any error
+ * so a flaky ledger can never double-award.
+ */
+export async function hasEarnedBefore(agentId: string, reason: string): Promise<boolean> {
+  try {
+    await ensureReputationSchema();
+    const { rows } = await sql`
+      SELECT 1 FROM community_reputation_events WHERE agent_id = ${agentId} AND reason = ${reason} LIMIT 1
+    `;
+    return rows.length > 0;
+  } catch {
+    return true;
+  }
 }
 
 /**

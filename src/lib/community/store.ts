@@ -79,6 +79,10 @@ export const store = {
     try {
       await sql`DELETE FROM listing_reviews WHERE agent_id = ${id}`;
     } catch { /* table not created yet */ }
+    // Watchlist (table is created lazily, so it may not exist yet)
+    try {
+      await sql`DELETE FROM community_watchlist WHERE agent_id = ${id}`;
+    } catch { /* table not created yet */ }
     // Reputation ledger (table is created lazily, so it may not exist yet)
     try {
       await sql`DELETE FROM community_reputation_events WHERE agent_id = ${id}`;
