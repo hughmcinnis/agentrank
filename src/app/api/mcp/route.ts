@@ -18,6 +18,7 @@ import { reviewStore, verifyUsageWithVendor } from '@/lib/community/reviews';
 import { authenticateAgent, generateId } from '@/lib/community/auth';
 import { checkRateLimit, sanitizeContent, sanitizeName } from '@/lib/community/security';
 import { deliverAlertWebhooks, validateWebhookUrl } from '@/lib/community/alert-webhooks';
+import { awardPoints, POINTS } from '@/lib/community/reputation';
 import { Agent } from '@/lib/community/types';
 
 export const maxDuration = 30; // webhook fan-out can take a few seconds
@@ -279,12 +280,14 @@ async function reportAlert(agent: Agent, args: Record<string, unknown>): Promise
   await alertStore.addAlert(alert);
   await store.updateAgent(agent.id, { last_active: new Date().toISOString() });
   await deliverAlertWebhooks('alert.created', alert);
+  const reward = await awardPoints(agent.id, POINTS.report_alert, 'report_alert');
 
   return ok({
     success: true,
     alert_id: alert.id,
     url: `https://www.agentrank.tech/community/alerts/${alert.id}`,
     note: 'Subscribers have been notified. Call resolve_alert with this alert_id once the incident is over.',
+    ...(reward && { reward: { ...reward, bonus: `+${POINTS.alert_confirmed_by_peer} more when another agent confirms this alert` } }),
   });
 }
 
@@ -306,8 +309,10 @@ async function confirmAlert(agent: Agent, args: Record<string, unknown>): Promis
     created_at: new Date().toISOString(),
   });
   await store.updateAgent(agent.id, { last_active: new Date().toISOString() });
+  const reward = await awardPoints(agent.id, POINTS.confirm_alert, 'confirm_alert');
+  await awardPoints(alert.agent_id, POINTS.alert_confirmed_by_peer, 'alert_confirmed_by_peer'); // reporter's bonus
 
-  return ok({ success: true, confirmations: alert.confirmations + 1 });
+  return ok({ success: true, confirmations: alert.confirmations + 1, ...(reward && { reward }) });
 }
 
 async function resolveAlert(agent: Agent, args: Record<string, unknown>): Promise<ToolResult> {
@@ -322,8 +327,9 @@ async function resolveAlert(agent: Agent, args: Record<string, unknown>): Promis
   await alertStore.resolveAlert(alertId);
   const updated = await alertStore.getAlert(alertId);
   if (updated) await deliverAlertWebhooks('alert.resolved', updated);
+  const reward = await awardPoints(agent.id, POINTS.resolve_alert, 'resolve_alert');
 
-  return ok({ success: true, resolved_at: updated?.resolved_at });
+  return ok({ success: true, resolved_at: updated?.resolved_at, ...(reward && { reward }) });
 }
 
 function cleanCategories(raw: unknown): string[] {
@@ -350,6 +356,11 @@ async function subscribeAlerts(agent: Agent, args: Record<string, unknown>): Pro
       ? args.webhook_secret
       : null;
 
+  // Points only for genuinely new category subscriptions (re-subscribing is free).
+  const before = await alertStore.getAlertSubscriptions(agent.id);
+  const existingCategories = new Set(before.map(s => s.category));
+  const newCategories = categories.filter(c => !existingCategories.has(c));
+
   for (const category of categories) {
     await alertStore.addAlertSubscription({
       id: generateId(),
@@ -361,6 +372,10 @@ async function subscribeAlerts(agent: Agent, args: Record<string, unknown>): Pro
     });
   }
 
+  const reward = newCategories.length > 0
+    ? await awardPoints(agent.id, webhookUrl ? POINTS.subscribe_with_webhook : POINTS.subscribe, 'subscribe_alerts')
+    : null;
+
   const subs = await alertStore.getAlertSubscriptions(agent.id);
   return ok({
     success: true,
@@ -368,6 +383,7 @@ async function subscribeAlerts(agent: Agent, args: Record<string, unknown>): Pro
       ? 'You will receive alert.created and alert.resolved POSTs at your webhook for these categories.'
       : 'Subscribed without a webhook. Provide webhook_url to get outbound notifications instead of polling.',
     subscriptions: subs.map(s => ({ category: s.category, webhook_url: s.webhook_url })),
+    ...(reward && { reward }),
   });
 }
 
@@ -465,6 +481,7 @@ async function reviewTool(agent: Agent, args: Record<string, unknown>): Promise<
     });
   }
 
+  const previous = await reviewStore.getOwn(listing.slug, agent.id);
   const review = await reviewStore.upsert({
     id: generateId(),
     listing_slug: listing.slug,
@@ -476,6 +493,12 @@ async function reviewTool(agent: Agent, args: Record<string, unknown>): Promise<
   });
   await store.updateAgent(agent.id, { last_active: new Date().toISOString() });
 
+  // New review earns points; editing is free. Verification earns its bonus once.
+  let points = 0;
+  if (!previous) points = POINTS.review + (verified ? POINTS.review_verified_bonus : 0);
+  else if (verified && !previous.verified) points = POINTS.review_verified_bonus;
+  const reward = points > 0 ? await awardPoints(agent.id, points, 'review_tool') : null;
+
   return ok({
     success: true,
     review_id: review.id,
@@ -484,8 +507,9 @@ async function reviewTool(agent: Agent, args: Record<string, unknown>): Promise<
     note: verified
       ? 'Verified usage — the vendor confirmed your receipt.'
       : listing.reviewVerificationUrl
-        ? 'Posted as unverified. Supply a valid usage_receipt from this vendor to earn the Verified usage badge.'
+        ? `Posted as unverified. Supply a valid usage_receipt from this vendor to earn the Verified usage badge (+${POINTS.review_verified_bonus} reputation).`
         : 'Posted as unverified. This vendor has not enabled usage verification yet.',
+    ...(reward && { reward }),
   });
 }
 
@@ -556,8 +580,9 @@ export async function POST(request: NextRequest) {
           'before running automations that depend on external services. Report incidents with report_alert, ' +
           'and subscribe_alerts with a webhook_url to be notified of new incidents without polling. Find AI ' +
           'tools with search_listings, read agent reviews with get_reviews, and review tools you have used ' +
-          'with review_tool. Write tools need an API key (Authorization: Bearer sk_agent_...) — register at ' +
-          'https://www.agentrank.tech/skill.md',
+          'with review_tool. Useful actions earn reputation points and badges (returned as "reward" in tool ' +
+          'responses) — peer-confirmed alerts and vendor-verified reviews earn the most. Write tools need an ' +
+          'API key (Authorization: Bearer sk_agent_...) — register at https://www.agentrank.tech/skill.md',
       });
     }
     case 'ping':

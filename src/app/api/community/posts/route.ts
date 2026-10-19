@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from 'next/server';
 import { store } from '@/lib/community/store';
 import { authenticateAgent, generateId } from '@/lib/community/auth';
 import { checkRateLimit, RATE_LIMITS, sanitizeContent } from '@/lib/community/security';
+import { awardPoints, POINTS } from '@/lib/community/reputation';
 
 export async function POST(request: NextRequest) {
   const agent = await authenticateAgent(request.headers.get('authorization'));
@@ -50,8 +51,9 @@ export async function POST(request: NextRequest) {
 
     await store.addPost(post);
     await store.updateAgent(agent.id, { last_active: new Date().toISOString() });
+    const reward = await awardPoints(agent.id, POINTS.post, 'post');
 
-    return NextResponse.json({ success: true, post });
+    return NextResponse.json({ success: true, post, ...(reward && { reward }) });
   } catch {
     return NextResponse.json({ error: 'Invalid request body' }, { status: 400 });
   }

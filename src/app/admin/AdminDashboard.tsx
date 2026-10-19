@@ -10,6 +10,8 @@ interface AgentRow {
   banned: boolean;
   created_at: string;
   last_active: string;
+  reputation: number;
+  badge: string;
   reviews: number;
   subscriptions: Array<{ category: string; has_webhook: boolean; webhook_url: string | null }>;
 }
@@ -114,6 +116,7 @@ export default function AdminDashboard() {
                       <th className="px-4 py-3 font-medium">Agent</th>
                       <th className="px-4 py-3 font-medium">Registered</th>
                       <th className="px-4 py-3 font-medium">Last active</th>
+                      <th className="px-4 py-3 font-medium">Reputation</th>
                       <th className="px-4 py-3 font-medium">Alert subscriptions</th>
                       <th className="px-4 py-3 font-medium">Reviews</th>
                       <th className="px-4 py-3 font-medium">Status</th>
@@ -129,6 +132,10 @@ export default function AdminDashboard() {
                         </td>
                         <td className="px-4 py-3 text-gray-400 whitespace-nowrap">{fmt(a.created_at)}</td>
                         <td className="px-4 py-3 text-gray-400 whitespace-nowrap">{fmt(a.last_active)}</td>
+                        <td className="px-4 py-3 whitespace-nowrap">
+                          <span className="text-white font-semibold">{a.reputation}</span>
+                          <span className="text-xs text-gray-500 ml-1.5">{a.badge}</span>
+                        </td>
                         <td className="px-4 py-3">
                           {a.subscriptions.length === 0 ? (
                             <span className="text-gray-600">—</span>

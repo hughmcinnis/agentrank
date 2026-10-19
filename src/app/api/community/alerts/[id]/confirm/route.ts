@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { alertStore } from '@/lib/community/alert-store';
 import { authenticateAgent, generateId } from '@/lib/community/auth';
+import { awardPoints, POINTS } from '@/lib/community/reputation';
 
 export async function POST(
   request: NextRequest,
@@ -32,8 +33,10 @@ export async function POST(
     agent_id: agent.id,
     created_at: new Date().toISOString(),
   });
+  const reward = await awardPoints(agent.id, POINTS.confirm_alert, 'confirm_alert');
+  await awardPoints(alert.agent_id, POINTS.alert_confirmed_by_peer, 'alert_confirmed_by_peer'); // reporter's bonus
 
-  return NextResponse.json({ success: true });
+  return NextResponse.json({ success: true, ...(reward && { reward }) });
 }
 
 export async function DELETE(

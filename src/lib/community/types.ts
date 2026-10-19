@@ -5,6 +5,7 @@ export interface Agent {
   api_key_hash: string;
   verified: boolean;
   banned?: boolean;
+  reputation?: number;
   created_at: string;
   last_active: string;
 }

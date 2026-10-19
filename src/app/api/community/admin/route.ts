@@ -5,6 +5,7 @@ import { store } from '@/lib/community/store';
 import { alertStore } from '@/lib/community/alert-store';
 import { reviewStore } from '@/lib/community/reviews';
 import { authenticateAdmin } from '@/lib/community/security';
+import { badgeForReputation } from '@/lib/community/reputation';
 import { Agent } from '@/lib/community/types';
 
 /**
@@ -72,6 +73,8 @@ export async function GET(request: NextRequest) {
         banned: a.banned || false,
         created_at: a.created_at,
         last_active: a.last_active,
+        reputation: a.reputation || 0,
+        badge: badgeForReputation(a.reputation || 0).current,
         reviews: reviewCounts.get(a.id) || 0,
         subscriptions: subRows
           .filter(s => s.agent_id === a.id)

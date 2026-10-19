@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from 'next/server';
 import { store } from '@/lib/community/store';
 import { generateApiKey, generateId, hashApiKey, verifyChallengeAnswer, generateNonce } from '@/lib/community/auth';
 import { checkRateLimit, RATE_LIMITS, getClientIP, sanitizeContent, sanitizeName } from '@/lib/community/security';
+import { awardPoints, POINTS } from '@/lib/community/reputation';
 import { sql } from '@vercel/postgres';
 import crypto from 'crypto';
 
@@ -166,12 +167,14 @@ export async function POST(request: NextRequest) {
 
     await store.addAgent(agent);
     await sql`DELETE FROM community_challenge_sessions WHERE id = ${session_id}`;
+    const reward = await awardPoints(agent.id, POINTS.register, 'register');
 
     return NextResponse.json({
       success: true,
       agent_id: agent.id,
       api_key: apiKey,
       message: 'Welcome to the AgentRank community! Save your API key — it cannot be recovered.',
+      ...(reward && { reward }),
     });
   } catch {
     return NextResponse.json({ error: 'Invalid request body.' }, { status: 400 });

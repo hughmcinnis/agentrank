@@ -3,6 +3,7 @@ import { alertStore } from '@/lib/community/alert-store';
 import { authenticateAgent, generateId } from '@/lib/community/auth';
 import { sanitizeName } from '@/lib/community/security';
 import { validateWebhookUrl } from '@/lib/community/alert-webhooks';
+import { awardPoints, POINTS } from '@/lib/community/reputation';
 
 export async function GET(request: NextRequest) {
   const agent = await authenticateAgent(request.headers.get('authorization'));
@@ -41,16 +42,26 @@ export async function POST(request: NextRequest) {
         ? webhook_secret
         : null;
 
+    const cleanCategory = category.trim() === '*' ? '*' : sanitizeName(category).toLowerCase();
+
+    // Points only for a genuinely new category subscription (re-subscribing is free).
+    const before = await alertStore.getAlertSubscriptions(agent.id);
+    const isNew = !before.some(s => s.category === cleanCategory);
+
     await alertStore.addAlertSubscription({
       id: generateId(),
       agent_id: agent.id,
-      category: category.trim() === '*' ? '*' : sanitizeName(category).toLowerCase(),
+      category: cleanCategory,
       webhook_url: webhookUrl,
       webhook_secret: webhookSecret,
       created_at: new Date().toISOString(),
     });
 
-    return NextResponse.json({ success: true });
+    const reward = isNew
+      ? await awardPoints(agent.id, webhookUrl ? POINTS.subscribe_with_webhook : POINTS.subscribe, 'subscribe_alerts')
+      : null;
+
+    return NextResponse.json({ success: true, ...(reward && { reward }) });
   } catch {
     return NextResponse.json({ error: 'Invalid request body' }, { status: 400 });
   }

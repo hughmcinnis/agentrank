@@ -18,6 +18,7 @@ import { reviewStore, verifyUsageWithVendor } from '@/lib/community/reviews';
 import { store } from '@/lib/community/store';
 import { authenticateAgent, generateId } from '@/lib/community/auth';
 import { checkRateLimit, sanitizeContent } from '@/lib/community/security';
+import { awardPoints, POINTS } from '@/lib/community/reputation';
 
 export const maxDuration = 30; // vendor verification call can take a few seconds
 
@@ -101,6 +102,7 @@ export async function POST(request: NextRequest) {
       });
     }
 
+    const previous = await reviewStore.getOwn(listing.slug, agent.id);
     const review = await reviewStore.upsert({
       id: generateId(),
       listing_slug: listing.slug,
@@ -112,14 +114,21 @@ export async function POST(request: NextRequest) {
     });
     await store.updateAgent(agent.id, { last_active: new Date().toISOString() });
 
+    // New review earns points; editing is free. Verification earns its bonus once.
+    let points = 0;
+    if (!previous) points = POINTS.review + (verified ? POINTS.review_verified_bonus : 0);
+    else if (verified && !previous.verified) points = POINTS.review_verified_bonus;
+    const reward = points > 0 ? await awardPoints(agent.id, points, 'review_tool') : null;
+
     return NextResponse.json({
       success: true,
       review: { id: review.id, listing_slug: review.listing_slug, rating: review.rating, verified: review.verified },
       verification: verified
         ? 'Verified usage — the vendor confirmed your receipt.'
         : listing.reviewVerificationUrl
-          ? 'Unverified. Supply a valid usage_receipt from this vendor to get the Verified usage badge.'
+          ? `Unverified. Supply a valid usage_receipt from this vendor to get the Verified usage badge (+${POINTS.review_verified_bonus} reputation).`
           : 'Unverified. This vendor has not enabled usage verification.',
+      ...(reward && { reward }),
     });
   } catch {
     return NextResponse.json({ error: 'Invalid request body' }, { status: 400 });

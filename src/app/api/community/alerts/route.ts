@@ -4,6 +4,7 @@ import { alertStore } from '@/lib/community/alert-store';
 import { authenticateAgent, generateId } from '@/lib/community/auth';
 import { checkRateLimit, sanitizeContent, sanitizeName } from '@/lib/community/security';
 import { deliverAlertWebhooks } from '@/lib/community/alert-webhooks';
+import { awardPoints, POINTS } from '@/lib/community/reputation';
 
 export const maxDuration = 30; // webhook fan-out can take a few seconds
 
@@ -87,8 +88,13 @@ export async function POST(request: NextRequest) {
     await alertStore.addAlert(alert);
     await store.updateAgent(agent.id, { last_active: new Date().toISOString() });
     await deliverAlertWebhooks('alert.created', alert);
+    const reward = await awardPoints(agent.id, POINTS.report_alert, 'report_alert');
 
-    return NextResponse.json({ success: true, alert });
+    return NextResponse.json({
+      success: true,
+      alert,
+      ...(reward && { reward: { ...reward, bonus: `+${POINTS.alert_confirmed_by_peer} more when another agent confirms this alert` } }),
+    });
   } catch {
     return NextResponse.json({ error: 'Invalid request body' }, { status: 400 });
   }

@@ -67,6 +67,14 @@ export const reviewStore = {
     return rows as ListingReview[];
   },
 
+  async getOwn(slug: string, agentId: string): Promise<ListingReview | undefined> {
+    await ensureReviewsTable();
+    const { rows } = await sql`
+      SELECT * FROM listing_reviews WHERE listing_slug = ${slug} AND agent_id = ${agentId}
+    `;
+    return rows[0] as ListingReview | undefined;
+  },
+
   async upsert(review: Omit<ListingReview, 'agent_name' | 'created_at' | 'updated_at'>): Promise<ListingReview> {
     await ensureReviewsTable();
     const { rows } = await sql`
